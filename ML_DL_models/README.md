@@ -1,6 +1,6 @@
 # AI-based_Korean_Voice_Phishing_Detection
-## Detection of Voice Phishing in Korean language
-All my codes on Korean voice phishing detection using various Machine Learning and Deep Learning approaches.
-This repository contains multiples git submodule where different Korean voice phishing detection have been explored.
+## Sources
 
-This repository is organized as bellow:
+https://github.com/corazzon/inflearn-new-year-event-2020
+https://www.inflearn.com/pages/newyear-event-20200102
+https://youtu.be/OUSwQk79H8I
