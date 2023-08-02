@@ -6,9 +6,9 @@
 This repository hosts our code related to the research on Korean voice phishing detection using various approaches, including Machine Learning (ML), Deep Learning (DL), Language Models (LM), Hybrid Models, and Federated Learning (FL).
 
 The structure of the repository is as follows:
-- **[ML_Models/DL_Models]**: This folder contains the implementation code for machine learning-based and deep learning-based detection models. [Link to the paper 1](https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10583070), [Link to the paper 2](https://doi.org/10.3745/PKIPS.y2021m11a.297)
-- **[Language_Models] KoBERT**: This folder comprises the implementation code for language model-based detection models. [Link to the paper](https://doi.org/10.3745/KTSDE.2022.11.10.437)
-- **[Hybrid_Models] Attention**: This folder includes the implementation code for hybrid detection models. [Link to the paper 1](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11113590), [Link to the paper](https://www.mdpi.com/2227-7390/11/14/3217)
+- **ML_DL_models [ML/DL_Models]**: This folder contains the implementation code for machine learning-based and deep learning-based detection models. [Link to the paper 1](https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10583070), [Link to the paper 2](https://doi.org/10.3745/PKIPS.y2021m11a.297)
+- **KoBERT [Language_Models]**: This folder comprises the implementation code for language model-based detection models. [Link to the paper](https://doi.org/10.3745/KTSDE.2022.11.10.437)
+- **Attention [Hybrid_Models]**: This folder includes the implementation code for hybrid detection models. [Link to the paper 1](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11113590), [Link to the paper](https://www.mdpi.com/2227-7390/11/14/3217)
 - **[Federated_Learning] (To be uploaded soon)**: This folder contains the code related to the Federated Learning approach for detection. [Link to the paper](https://)
 - **Data_Collection_Preprocessing**: This folder contains code for raw data preprocessing and dataset creation.
 
