@@ -28,9 +28,11 @@ For additional experiments and more detailed discussions about the approaches us
 
 Should you wish to cite our papers, you may use the following:
 
-Attention Paper:
+Attention Papers:
 ```bibtex
 M. K. Moussavou Boussougou and D.-J. Park, “Attention-Based 1D CNN-BiLSTM Hybrid Model Enhanced with FastText Word Embedding for Korean Voice Phishing Detection,” Mathematics, vol. 11, no. 14, p. 3217, Jul. 2023, doi: 10.3390/math11143217.
+```
+```bibtex
 M. K. Moussavou Boussougou, M.-G. Park, and D.-J. Park, “An Attention-Based CNN-BiLSTM Model for Korean Voice Phishing Detection,” Proceedings of the Korean Institute of Information Scientists and Engineers Korea Computer Congress; Korean Institute of Information Scientists: Jeju, Republic of Korea, pp. 1139–1141, June. 2022.
 ```
 
