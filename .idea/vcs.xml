@@ -3,5 +3,8 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Data_Collection_Preprocessing" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Optimized_models/KorEDA" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Optimized_models/Mecab-ko-for-Google-Colab" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Optimized_models/pororo" vcs="Git" />
   </component>
 </project>
