@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="user_01@210.99.32.11:14122 password" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
       <paths name="user_01@210.99.32.11:14122 password">
         <serverdata>
           <mappings>
-            <mapping local="//wsl$/Ubuntu/home/mbmk92/.local/lib/python3.10/site-packages" web="/" />
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="user_01@210.99.32.11:14122 password (2)">
-        <serverdata>
-          <mappings>
-            <mapping local="//wsl$/Ubuntu/home/mbmk92/.local/lib/python3.10/site-packages" web="/" />
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/tmp/pycharm_project_473" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>
     </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>
