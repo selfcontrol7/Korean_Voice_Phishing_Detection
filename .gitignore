@@ -1,1 +1,106 @@
+# Audio files
+*.mp3
+*.wav
+*.ogg
+*.flac
+*.aac
+*.m4a
+*.wma
+*.aiff
+*.alac
+*.ape
+*.opus
+*.amr
+*.3gp
+*.au
+*.mid
+*.midi
+*.pcm
+*.aif
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.class
+*.whl
+*.cache
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage*
+.cache
+nosetests.xml
+coverage.xml
+*,cover.
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff
+*.log
+local_settings.py
+
+# Flask stuff
+instance/
+.webassets-cache
+
+# Scrapy stuff
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule.json
+
+# dotenv
+.env
+/Optimized_models/wiki.ko.vec
