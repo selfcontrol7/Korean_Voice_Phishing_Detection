@@ -104,3 +104,12 @@ celerybeat-schedule.json
 # dotenv
 .env
 /Optimized_models/wiki.ko.vec
+.idea/.name
+.idea/deployment.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/jupyter-settings.xml
+.idea/Korean_Voice_Phishing_Detection.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
