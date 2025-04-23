@@ -15,8 +15,8 @@ from pydub.utils import which
 # AudioSegment.converter = r'C:ffmpeg\bin\ffmpeg.exe'
 
 # point pydub at your ffmpeg/ffprobe
-AudioSegment.converter = which("C:ffmpeg/bin/ffmpeg.exe")
-AudioSegment.ffprobe   = which("C:ffmpeg/bin/ffprobe.exe")
+# AudioSegment.converter = which("C:ffmpeg/bin/ffmpeg.exe")
+# AudioSegment.ffprobe   = which("C:ffmpeg/bin/ffprobe.exe")
 
 # import the four feature‐extraction functions
 from .audio_features import (

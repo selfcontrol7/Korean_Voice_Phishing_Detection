@@ -73,7 +73,7 @@ def extract_wav2vec2(audio_path, sr=16000):
         outputs = _w2v_model(**inputs)
         # (1, seq_len, hidden_size)
     last_hidden_states = outputs.last_hidden_state.squeeze(0).cpu().numpy()  # Return the last hidden states as numpy array
-    pritn("Wav2Vec2 features extracted with shape:", last_hidden_states.shape)
+    print("Wav2Vec2 features extracted with shape:", last_hidden_states.shape)
     return last_hidden_states
 
 def extract_deepspectrum(audio_path, config_path, output_dir="../features/deep_spectrum/DeepSpectrum_output.csv"):
