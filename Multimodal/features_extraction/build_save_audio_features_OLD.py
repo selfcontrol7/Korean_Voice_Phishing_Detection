@@ -19,7 +19,7 @@ from pydub.utils import which
 # AudioSegment.ffprobe   = which("C:ffmpeg/bin/ffprobe.exe")
 
 # import the four feature‐extraction functions
-from .audio_features import (
+from .audio_features_OLD import (
     extract_mfcc,
     extract_egemaps,
     extract_deepspectrum,
@@ -36,48 +36,48 @@ for feat in ("mfcc", "egemaps", "wav2vec2", "deep_spectrum"):
     (FEATURES_DIR / feat).mkdir(parents=True, exist_ok=True)
 
 
-def prepare_audio(infile: Path, sr: int = 16000) -> Path:
-    """
-    Load any mp3/mp4/wav/… into a 16 kHz mono WAV file,
-    return a Path to the temporary WAV.
-    """
-    # check if the file exists
-    if not infile.exists():
-        raise FileNotFoundError(f"File {infile} does not exist.")
-    # check if the file is empty
-    if infile.stat().st_size == 0:
-        raise ValueError(f"File {infile} is empty.")
-    # check if the file is a valid audio file
-    if not infile.suffix in [".mp3", ".mp4", ".wav", ".flac"]:
-        raise ValueError(f"File {infile} is not a valid audio file.")
-
-    sound = AudioSegment.from_file(str(infile))
-    sound = sound.set_channels(1)
-    sound = sound.set_frame_rate(sr)
-
-    tmp_wav = Path(tempfile.mktemp(suffix=".wav"))
-    sound.export(str(tmp_wav), format="wav")
-    return tmp_wav
+# def prepare_audio(infile: Path, sr: int = 16000) -> Path:
+#     """
+#     Load any mp3/mp4/wav/… into a 16 kHz mono WAV file,
+#     return a Path to the temporary WAV.
+#     """
+#     # check if the file exists
+#     if not infile.exists():
+#         raise FileNotFoundError(f"File {infile} does not exist.")
+#     # check if the file is empty
+#     if infile.stat().st_size == 0:
+#         raise ValueError(f"File {infile} is empty.")
+#     # check if the file is a valid audio file
+#     if not infile.suffix in [".mp3", ".mp4", ".wav", ".flac"]:
+#         raise ValueError(f"File {infile} is not a valid audio file.")
+#
+#     sound = AudioSegment.from_file(str(infile))
+#     sound = sound.set_channels(1)
+#     sound = sound.set_frame_rate(sr)
+#
+#     tmp_wav = Path(tempfile.mktemp(suffix=".wav"))
+#     sound.export(str(tmp_wav), format="wav")
+#     return tmp_wav
 
 
 def process_file(audio_path: Path, label: int):
     call_id = audio_path.stem  # filename without extension
 
     # 1) normalize to WAV
-    wav_path = prepare_audio(audio_path)
-    # wav_path = audio_path
+    # wav_path = prepare_audio(audio_path)
+    wav_path = audio_path
     print(f"Processing {wav_path}...")
 
     # 2) load & extract
     mfcc_feats = extract_mfcc(str(wav_path))
     egemaps_feats = extract_egemaps(str(wav_path))
-    wav2vec_feats = extract_wav2vec2(str(wav_path))
+    # wav2vec_feats = extract_wav2vec2(str(wav_path))
     # ds_feats = extract_deepspectrum(str(wav_path))
 
     # 3) save out
     np.save(FEATURES_DIR / "mfcc"        / f"{call_id}.npy", mfcc_feats)
     np.save(FEATURES_DIR / "egemaps"     / f"{call_id}.npy", egemaps_feats)
-    np.save(FEATURES_DIR / "wav2vec2"    / f"{call_id}.npy", wav2vec_feats)
+    # np.save(FEATURES_DIR / "wav2vec2"    / f"{call_id}.npy", wav2vec_feats)
     # np.save(FEATURES_DIR / "deep_spectrum"/ f"{call_id}.npy", ds_feats)
 
     # optionally return metadata for a manifest
@@ -86,7 +86,7 @@ def process_file(audio_path: Path, label: int):
         "label": label,
         "mfcc":    str(FEATURES_DIR / "mfcc"         / f"{call_id}.npy"),
         "egemaps": str(FEATURES_DIR / "egemaps"      / f"{call_id}.npy"),
-        "wav2vec": str(FEATURES_DIR / "wav2vec2"     / f"{call_id}.npy"),
+        # "wav2vec": str(FEATURES_DIR / "wav2vec2"     / f"{call_id}.npy"),
         # "ds":      str(FEATURES_DIR / "deep_spectrum"/ f"{call_id}.npy"),
     }
 
@@ -101,7 +101,7 @@ def main():
         print(f"Processing {len(files)} audio files...")
         print("=" * 250)
 
-        for f in tqdm(files[:5], desc=f"→ {cls}"):
+        for f in tqdm(files, desc=f"→ {cls}"):
             # print("working on file:", f)
             # check if the file exists
             if not f.exists():
@@ -117,6 +117,7 @@ def main():
                     "file": str(f),
                     "error": str(e)
                 })
+            print("=" * 250)
 
     # Print the number of files processed
     print(f"Processed {len(metas)} audio files.")
