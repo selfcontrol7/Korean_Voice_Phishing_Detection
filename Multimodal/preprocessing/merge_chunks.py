@@ -9,6 +9,9 @@ def merge_audio_chunks(root_folder, delete_chunks=False, output_format="wav"):
         wav_files = sorted([f for f in filenames if f.endswith('.wav')])
         if wav_files:
             conversations.append((dirpath, wav_files))
+    # print the total number of subfolders
+    print(f"Found {len(conversations)} subfolders with audio chunks.")
+    print("-" * 50)
 
     for conv_path, chunks in tqdm(conversations, desc="Merging Conversations"):
         folder_name = os.path.basename(conv_path)
@@ -25,8 +28,11 @@ def merge_audio_chunks(root_folder, delete_chunks=False, output_format="wav"):
         # Export merged audio to data/audio/non_vishing folder with folder name
         export_folder = os.path.join("data", "audio", "non_vishing")
         os.makedirs(export_folder, exist_ok=True)
-        output_path = os.path.join(export_folder, f"{folder_name}.{output_format}")
-        # print(f"Exporting {output_path}")
+        # folder_name = os.path.basename(conv_path)
+        relative_path = os.path.relpath(conv_path, root_folder)
+        new_filename = "".join(relative_path.split(os.sep)).lower()
+        output_path = os.path.join(export_folder, f"{new_filename}.{output_format}")
+        print(f"Exporting {output_path}")
 
         combined.export(output_path, format=output_format)
 
