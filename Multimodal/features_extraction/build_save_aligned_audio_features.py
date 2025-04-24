@@ -9,12 +9,6 @@ from tqdm import tqdm
 from multiprocessing import Pool
 
 from .audio_features import extract_mfcc, extract_egemaps, extract_wav2vec2, extract_deepspectrum
-# from features_extraction.audio_features import (
-#     extract_mfcc,
-#     extract_egemaps,
-#     extract_wav2vec2,
-#     extract_deepspectrum
-# )
 
 FEATURES_DIR = Path("../features") # Directory to save features
 FEATURES_DIR.mkdir(exist_ok=True) # Create the directory if it doesn't exist
