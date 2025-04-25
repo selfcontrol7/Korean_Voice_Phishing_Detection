@@ -10,7 +10,7 @@ from multiprocessing import Pool
 
 from .audio_features import extract_mfcc, extract_egemaps, extract_wav2vec2, extract_deepspectrum
 
-FEATURES_DIR = Path("../features") # Directory to save features
+FEATURES_DIR = Path("features") # Directory to save features
 FEATURES_DIR.mkdir(exist_ok=True) # Create the directory if it doesn't exist
 
 
@@ -69,7 +69,7 @@ def process_segment(args):
 
     # MFCC
     mfcc_path = FEATURES_DIR / "mfcc" / f"{seg_id}.npy"
-    if overwrite or not mfcc_path.exists():
+    if overwrite or not mfcc_path.exists(): # Check if the MFCC file already exists
         mfcc_feats = extract_mfcc(y_seg, sr)
         np.save(mfcc_path, mfcc_feats)
     paths["mfcc_path"] = str(mfcc_path)

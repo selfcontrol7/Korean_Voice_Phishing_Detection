@@ -8,6 +8,8 @@ import os
 import json
 import sys
 
+from tqdm import tqdm
+
 
 def rename_json_files(directory):
     """
@@ -16,7 +18,7 @@ def rename_json_files(directory):
     :param directory: The path to the directory containing the JSON files.
     """
     # Iterate through all files in the directory
-    for filename in os.listdir(directory):
+    for filename in tqdm(os.listdir(directory), desc="Renaming JSON files", unit="file", total=len(os.listdir(directory))):
         # Check if the file is a JSON file
         if filename.endswith('.json'):
             # Construct the full file path
@@ -27,23 +29,23 @@ def rename_json_files(directory):
                 data = json.load(json_file)
 
             # Print the filename
-            print(f"filename: {filename}")
+            # print(f"filename: {filename}")
 
             # split the filename by underscore
             parts = filename.split('_')
             # print the parts
-            print(f"parts: {parts}")
+            # print(f"parts: {parts}")
             # remove the last two parts from the filename
             part = parts[:-2]
-            print(f"part: {part}")
+            # print(f"part: {part}")
             # join the parts back together
             new_filename = '_'.join(part) + '.json'
             # print the new filename
-            print(f"new_filename: {new_filename}")
+            # print(f"new_filename: {new_filename}")
             # Construct the new file path
             new_file_path = os.path.join(directory, new_filename)
-            print(f"new_file_path: {new_file_path}")
-            print("*" * 50)
+            # print(f"new_file_path: {new_file_path}")
+            # print("*" * 50)
 
             # Save the JSON data to the new file
             with open(new_file_path, 'w', encoding='utf-8') as json_file:
@@ -51,12 +53,12 @@ def rename_json_files(directory):
 
             # Remove the old file
             os.remove(file_path)
-            print(f'Renamed {filename} to {new_filename}')
+            # print(f'Renamed {filename} to {new_filename}')
 
 
 if __name__ == "__main__":
     #set the path to the directory containing the JSON files
-    directory_path = 'D:/DATASET/FSS/DATASET/2025/All transcripts'
+    directory_path = '../data/transcripts/non_vishing'
 
     # Call the function to rename JSON files
     rename_json_files(directory_path)

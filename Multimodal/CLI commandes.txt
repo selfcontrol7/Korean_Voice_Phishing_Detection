@@ -1,19 +1,28 @@
+conda deactivate
 source /home/mbmk92/.virtualenvs/vishing/bin/activate
 
 
 Command to normalyse the audio files
-	python3 audio_normalization.py   --src ../data/audio/vishing   --dest ../data/audio/vishing/wav   --sr 16000
+	python3 preprocessing/audio_normalization.py   --src data/audio/vishing   --dest data/audio/vishing/wav   --sr 16000
+	python3 preprocessing/audio_normalization.py   --src data/audio/non_vishing   --dest data/audio/non_vishing/wav   --sr 16000
 	
-Command to extract the features
-	python3 -m features_extraction.build_save_aligned_audio_features --split train --overwrite --workers 20
+
 
 Command to get the list of non-vishing files
 	python3 preprocessing/undersample_nonvishing.py --zip_folder /mnt/c/non_vishing_zips --output_folder data/non_vishing_balanced --sample_size 706
 	python3 preprocessing/undersample_nonvishing_mp.py --zip_folder /mnt/c/non_vishing_zips --output_folder data/non_vishing_balanced --sample_size 706 --num_workers 20
 
 command to merge the chunks from non-vishing folders
-	python3 preprocessing/merge_chunks.py --input_folder data/non_vishing_balanced
 	python3 preprocessing/merge_chunks.py --input_folder data/non_vishing_balanced --output_format wav
 	
 
 
+
+python preprocessing/build_manifest.py
+
+python preprocessing/dataset_split.py
+
+Command to extract the features
+	python3 -m features_extraction.build_save_aligned_audio_features --split train --overwrite --workers 5
+	python3 -m features_extraction.build_save_aligned_audio_features --split val --overwrite --workers 5
+	python3 -m features_extraction.build_save_aligned_audio_features --split test --overwrite --workers 5
