@@ -23,7 +23,7 @@ class MultimodalPhishingDataset(Dataset):
         """
         Returns the entry at the specified index.
         """
-        entry = self.entries[idx]
+        entry = self.entries[idx] # Get the entry at the specified index
 
         # Load the audio features
         mfcc = np.load(entry["mfcc_path"])
