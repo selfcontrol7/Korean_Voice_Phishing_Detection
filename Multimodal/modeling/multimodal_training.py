@@ -106,6 +106,7 @@ def main():
     # set the device
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu") # Use GPU if available, otherwise use CPU
     print(f"Using device: {device}") # Print the device being used
+    print("-" * 150) # Print a separator line
 
     # Create the training dataloader
     train_loader = get_dataloader(
@@ -170,7 +171,6 @@ def main():
         mode='min', # Mode to monitor
         factor=0.5, # Factor by which the learning rate will be reduced
         patience=5, # Number of epochs with no improvement after which learning rate will be reduced
-        verbose=True # Verbose output
     )
 
     # Initialize TensorBoard writer
