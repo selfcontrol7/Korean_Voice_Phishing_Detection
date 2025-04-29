@@ -1,6 +1,7 @@
 # multimodal_training.py
 
 import json
+import datetime
 import numpy as np
 import torch
 import torch.nn as nn
@@ -264,9 +265,12 @@ def main():
         "roc_auc": test_roc_auc,
         "confusion_matrix": test_cm.tolist() # Convert the confusion matrix to a list for JSON serialization
     }
-    with open("modeling/models/test_results.json", "w") as f: # Open the file for writing
-        json.dump(test_results, f, indent=4) # Write the test results to the file
-    print("Test results saved to modeling/models/test_results.json") # Print a message indicating the file location
+    # Create a timestamp for the filename
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    results_filename = f"modeling/logs/eval_results/test_results_{timestamp}.json"
+    with open(results_filename, "w") as f:  # Open the file for writing
+        json.dump(test_results, f, indent=4)  # Write the test results to the file
+    print(f"Test results saved to {results_filename}")  # Print a message indicating the file location
 
 if __name__ == "__main__":
     main() # Run the main function
