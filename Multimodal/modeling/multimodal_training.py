@@ -221,9 +221,8 @@ def main():
         if early_stop_count >= patience:
             print("⏹️ Early stopping triggered. Training stopped.")
             break # Stop training if early stopping is triggered
-
-    # Close the TensorBoard writer
-    writer.close() # Close the TensorBoard writer
+    print("Training completed.")
+    print("-" * 150) # Print a separator line
 
     # Load the best model and evaluate it on the test set
     model.load_state_dict(torch.load("modeling/models/best_multimodal_model.pth")) # Load the best model state
@@ -239,14 +238,21 @@ def main():
     print(test_cm) # Print the confusion matrix
     print("-" * 150)
 
-    # Plot the confusion matrix
+    # Plot the confusion matrix for the test set
     fig, ax = plt.subplots() # Create a figure and axis for the confusion matrix
-    sns.heatmap(test_cm, annot=True, fmt='d', cmap='Blues', ax=ax) # Plot the confusion matrix
+    sns.heatmap(test_cm, annot=True, fmt='d', cmap='Greens', ax=ax) # Plot the confusion matrix
     ax.set_xlabel("Predicted labels") # Set the x-axis label
     ax.set_ylabel("True labels") # Set the y-axis label
     ax.set_title("Test Confusion Matrix") # Set the title of the plot
+    writer.add_figure('ConfusionMatrix/test', fig)
     plt.show() # Show the plot
     plt.close(fig) # Close the figure to avoid display
+
+    # Close the TensorBoard writer
+    writer.close() # Close the TensorBoard writer
+    print("TensorBoard logs saved to modeling/logs/multimodal_experiment") # Print a message indicating the log location
+    print("Model saved to modeling/models/best_multimodal_model.pth") # Print a message indicating the model location
+    print("Test set evaluation completed.") # Print a message indicating the completion of the test set evaluation
     print("-" * 150)
 
     # Save the test results to a JSON file
