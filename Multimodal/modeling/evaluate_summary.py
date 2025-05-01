@@ -18,7 +18,7 @@ def evaluate_on_test():
     print(f"Using device: {device}")
 
     # Load test data
-    test_loader = get_dataloader("data/test_segment_manifest_merged.jsonl", batch_size=32, shuffle=False)
+    test_loader = get_dataloader("data/test_segment_manifest_merged.jsonl", batch_size=32, shuffle=False, text_feature="kobert", use_both_text=False)
 
     # Load the best model
     model = MultimodalFusionModel(audio_dim=869, text_dim=768, use_both_text=False)
