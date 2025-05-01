@@ -80,6 +80,7 @@ def train_model(model, train_loader, val_loader, device, epochs, lr, save_path):
             best_f1 = f1 # Update the best F1 score
             torch.save(model.state_dict(), save_path) # Save the model state
             print(f"✅ Best model saved at epoch {epoch} with F1 score: {best_f1:.4f}")
+            early_stop_count = 0 # Reset early stopping counter
         else:
             early_stop_count += 1 # Increment early stopping counter
             print(f"❌ No improvement in F1 score. Early stopping count: {early_stop_count}/{patience}")
