@@ -78,9 +78,9 @@ def train_model(model, train_loader, val_loader, device, epochs, lr, save_path):
         # Save the best model based on F1 score
         if f1 > best_f1:
             best_f1 = f1 # Update the best F1 score
+            early_stop_count = 0  # Reset early stopping counter
             torch.save(model.state_dict(), save_path) # Save the model state
             print(f"✅ Best model saved at epoch {epoch} with F1 score: {best_f1:.4f}")
-            early_stop_count = 0 # Reset early stopping counter
         else:
             early_stop_count += 1 # Increment early stopping counter
             print(f"❌ No improvement in F1 score. Early stopping count: {early_stop_count}/{patience}")
@@ -212,7 +212,9 @@ if __name__ == "__main__":
 
     results_path = f"modeling/logs/eval_results/audio_only_{args.feature_type}"
     # evaluate the model on the test set
-    test_acc, test_f1, test_precision, test_recall, test_roc, test_cm = evaluate_model(model, test_loader, device, output_dir=results_path, feature_type=args.feature_type)
+    test_acc, test_f1, test_precision, test_recall, test_roc, test_cm = evaluate_model(model, test_loader, device,
+                                                                                       output_dir=results_path,
+                                                                                       feature_type=args.feature_type)
     print(f"Test Accuracy: {test_acc:.4f}")  # Print the test accuracy
     print(f"Test F1 Score: {test_f1:.4f}")  # Print the test F1 score
     print(f"Test Precision: {test_precision:.4f}")  # Print the test test_precision
