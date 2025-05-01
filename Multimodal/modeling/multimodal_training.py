@@ -2,6 +2,8 @@
 
 import json
 import datetime
+import os
+
 import numpy as np
 import torch
 import torch.nn as nn
@@ -60,8 +62,8 @@ def evaluate(model, dataloader, device):
     # Compute evaluation metrics
     accuracy = accuracy_score(all_labels, preds_binary) # Compute accuracy
     f1 = f1_score(all_labels, preds_binary) # Compute F1 score
-    precision = precision_score(all_labels, preds_binary) # Compute precision
-    recall = recall_score(all_labels, preds_binary) # Compute recall
+    precision = precision_score(all_labels, preds_binary) # Compute test_precision
+    recall = recall_score(all_labels, preds_binary) # Compute test_recall
     try:
         roc_auc = roc_auc_score(all_labels, all_preds) # Compute ROC AUC score usning the probabilities not the binary predictions
     except ValueError:
@@ -75,7 +77,7 @@ def evaluate(model, dataloader, device):
 def log_epoch_metrics(epoch, num_epochs, train_loss, val_accuracy, val_f1, val_precision, val_recall, val_roc_auc):
     """
     Logs the performance metrics for a specific epoch during the training process. This function outputs details
-    about the training loss and validation metrics including accuracy, F1 score, precision, recall, and ROC AUC,
+    about the training loss and validation metrics including accuracy, F1 score, test_precision, test_recall, and ROC AUC,
     allowing for tracking and monitoring of model performance over epochs.
 
     Args:
@@ -84,8 +86,8 @@ def log_epoch_metrics(epoch, num_epochs, train_loss, val_accuracy, val_f1, val_p
         train_loss (float): The loss value for the training set.
         val_accuracy (float): The accuracy value for the validation set.
         val_f1 (float): The F1 score for the validation set.
-        val_precision (float): The precision value for the validation set.
-        val_recall (float): The recall value for the validation set.
+        val_precision (float): The test_precision value for the validation set.
+        val_recall (float): The test_recall value for the validation set.
         val_roc_auc (float): The ROC AUC score for the validation set.
 
     Returns:
@@ -113,8 +115,8 @@ def main():
         "data/train_segment_manifest_merged.jsonl",
         batch_size=16,
         shuffle=True,
-        text_feature="krsbert",
-        use_both_text=False
+        text_feature="kobert",
+        use_both_text=True
     )
 
     # Create the validation dataloader
@@ -122,8 +124,8 @@ def main():
         "data/val_segment_manifest_merged.jsonl",
         batch_size=16,
         shuffle=False,
-        text_feature="krsbert",
-        use_both_text=False
+        text_feature="kobert",
+        use_both_text=True
     )
 
     # Create the test dataloader
@@ -131,15 +133,15 @@ def main():
         "data/test_segment_manifest_merged.jsonl",
         batch_size=16,
         shuffle=False,
-        text_feature="krsbert",
-        use_both_text=False
+        text_feature="kobert",
+        use_both_text=True
     )
 
     # Initialize the model
     model = MultimodalFusionModel(
         audio_dim=869, # Dimension of the audio features
         text_dim=768, # Dimension of the text features
-        use_both_text=False # Use only one text feature
+        use_both_text=True # Use only one text feature
     )
     model.to(device) # Move the model to the device
 
@@ -156,7 +158,7 @@ def main():
     print("Model parameters (total):", sum(p.numel() for p in model.parameters())) # Print the total number of parameters in the model
     print("-" * 150)  # Print a separator line
 
-    print("Model parameters:", sum(p.numel() for p in model.parameters())) # Print the number of parameters in the model
+    # print("Model parameters:", sum(p.numel() for p in model.parameters())) # Print the number of parameters in the model
     print("Model parameters (trainable):", sum(p.numel() for p in model.parameters() if p.requires_grad)) # Print the number of trainable parameters in the model
     print("Model parameters (non-trainable):", sum(p.numel() for p in model.parameters() if not p.requires_grad)) # Print the number of non-trainable parameters in the model
     print("-" * 150) # Print a separator line
@@ -222,7 +224,7 @@ def main():
         if early_stop_count >= patience:
             print("⏹️ Early stopping triggered. Training stopped.")
             break # Stop training if early stopping is triggered
-    print("Training completed.")
+    print("\nTraining completed.")
     print("-" * 150) # Print a separator line
 
     # Load the best model and evaluate it on the test set
@@ -232,8 +234,8 @@ def main():
     print(f"\n🎯 Test Set Performance:")  # Print the evaluation metrics for the test set
     print(f"Test Accuracy: {test_accuracy:.4f}") # Print the test accuracy
     print(f"Test F1 Score: {test_f1:.4f}") # Print the test F1 score
-    print(f"Test Precision: {test_precision:.4f}") # Print the test precision
-    print(f"Test Recall: {test_recall:.4f}") # Print the test recall
+    print(f"Test Precision: {test_precision:.4f}") # Print the test test_precision
+    print(f"Test Recall: {test_recall:.4f}") # Print the test test_recall
     print(f"Test ROC AUC: {test_roc_auc:.4f}") # Print the test ROC AUC score
     print("Test Confusion Matrix:") # Print the confusion matrix for the test set
     print(test_cm) # Print the confusion matrix
@@ -260,14 +262,18 @@ def main():
     test_results = {
         "accuracy": test_accuracy,
         "f1_score": test_f1,
-        "precision": test_precision,
-        "recall": test_recall,
+        "test_precision": test_precision,
+        "test_recall": test_recall,
         "roc_auc": test_roc_auc,
         "confusion_matrix": test_cm.tolist() # Convert the confusion matrix to a list for JSON serialization
     }
     # Create a timestamp for the filename
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     results_filename = f"modeling/logs/eval_results/test_results_{timestamp}.json"
+
+    # Ensure that the target directory exists
+    os.makedirs(os.path.dirname(results_filename), exist_ok=True)
+
     with open(results_filename, "w") as f:  # Open the file for writing
         json.dump(test_results, f, indent=4)  # Write the test results to the file
     print(f"Test results saved to {results_filename}")  # Print a message indicating the file location
