@@ -23,7 +23,7 @@ class MultiBranchCrossModalModel(nn.Module):
     """
     def __init__(
         self,
-        mfcc_dim: int = 40,
+        mfcc_dim: int = 13,
         egemaps_dim: int = 88,
         wav2vec_dim: int = 768,
         text_dim: int = 768,
@@ -52,26 +52,45 @@ class MultiBranchCrossModalModel(nn.Module):
 
     def forward(self, mfcc_feats, egemaps_feats, wav2vec_feats, text_feats):
         # Project each stream
-        mfcc_p = self.mfcc_proj(mfcc_feats)
-        egemaps_p = self.egemaps_proj(egemaps_feats)
-        wav2vec_p = self.wav2vec_proj(wav2vec_feats)
-        text_p = self.text_proj(text_feats)
+        mfcc_p = self.mfcc_proj(mfcc_feats) # (B, T_m, H)
+        # print(f"shape mfcc: {mfcc_p.shape}")
+        egemaps_p = self.egemaps_proj(egemaps_feats) # (B, T_e, H)
+        # print(f"shape egemaps: {egemaps_p.shape}")
+        wav2vec_p = self.wav2vec_proj(wav2vec_feats) # (B, T_w, H)
+        # print(f"shape wav2vec: {wav2vec_p.shape}")
+        text_p = self.text_proj(text_feats) # (B, H)
+        # print(f"shape text: {text_p.shape}")
+
+        # text_p = text_p.unsqueeze(1).repeat(1, mfcc_p.size(1), 1) # (B, T_m, H) for cross-attention
+        # turn text into a length-1 sequence
+        text_q = text_p.unsqueeze(1)  # (B, 1, H)
+        # print(f"shape text_q: {text_q.shape}")
 
         # Cross-attention for each audio modality: queries=text, each audio as key/value
-        attn_m, _ = self.attn_mfcc(query=text_p, key=mfcc_p, value=mfcc_p)
-        attn_e, _ = self.attn_egemaps(query=text_p, key=egemaps_p, value=egemaps_p)
-        attn_w, _ = self.attn_wav2vec(query=text_p, key=wav2vec_p, value=wav2vec_p)
+        attn_m, _ = self.attn_mfcc(query=text_q, key=mfcc_p, value=mfcc_p) # (B, 1, H)
+        attn_e, _ = self.attn_egemaps(query=text_q, key=egemaps_p, value=egemaps_p)
+        attn_w, _ = self.attn_wav2vec(query=text_q, key=wav2vec_p, value=wav2vec_p)
 
-        # Pool over text sequence/tokens (mean pooling)
+        # # Pool over text sequence/tokens (mean pooling)
         pool_m = attn_m.mean(dim=1)
         pool_e = attn_e.mean(dim=1)
         pool_w = attn_w.mean(dim=1)
+        #
+        # # Concatenate pooled features and apply fusion
+        # fused = self.fusion(torch.cat([pool_m, pool_e, pool_w], dim=-1))
 
-        # Concatenate pooled features and apply fusion
-        fused = self.fusion(torch.cat([pool_m, pool_e, pool_w], dim=-1))
+        # squeeze out the seq dimension
+        attn_m = attn_m.squeeze(1)  # (B, H)
+        attn_e = attn_e.squeeze(1)
+        attn_w = attn_w.squeeze(1)
 
-        # Apply final classification layer
-        return self.classifier(fused)
+        # now fuse & classify exactly as before
+        concat = torch.cat([attn_m, attn_e, attn_w], dim=-1)  # (B, 3H)
+        fused = self.fusion(concat)  # (B, H)
+        logits = self.classifier(fused)  # (B, num_labels)
+
+        # Apply the final classification layer
+        return logits
 
 # ----------------------------------------
 # Dataset & DataLoader for precomputed .npy features using manifest
@@ -134,6 +153,7 @@ def collate_fn(batch):
     wav2vec = pad_sequence([b['wav2vec_feats'] for b in batch], batch_first=True)
     text_feats = pad_sequence([b['text_feats'] for b in batch], batch_first=True)
     labels = torch.stack([b['label'] for b in batch])
+
     return {
         'mfcc_feats': mfcc,
         'egemaps_feats': egemaps,
