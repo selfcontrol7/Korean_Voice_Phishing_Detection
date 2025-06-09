@@ -21,6 +21,32 @@ Command to split the dataset in train, val, test by creating manifests
 	python preprocessing/dataset_split.py
 
 Command to extract the audio features
-	python3 -m features_extraction.build_save_aligned_audio_features --split train --overwrite --workers 5
-	python3 -m features_extraction.build_save_aligned_audio_features --split val --overwrite --workers 5
-	python3 -m features_extraction.build_save_aligned_audio_features --split test --overwrite --workers 5
+	python3 -m features_extraction.build_save_aligned_audio_features --split train --overwrite --workers 12
+	python3 -m features_extraction.build_save_aligned_audio_features --split val --overwrite --workers 12
+	python3 -m features_extraction.build_save_aligned_audio_features --split test --overwrite --workers 12
+	
+Command to extract the text features
+	python features_extraction/extract_bert_text_features.py --split train --model krsbert
+	python features_extraction/extract_bert_text_features.py --split val --model krsbert
+	python features_extraction/extract_bert_text_features.py --split test --model krsbert
+	
+	python features_extraction/extract_bert_text_features.py --split train --model kobert --workers 20
+	python features_extraction/extract_bert_text_features.py --split val --model kobert --workers 20
+	python features_extraction/extract_bert_text_features.py --split test --model kobert --workers 20
+	
+Command to run the multimodal training
+	python modeling/multimodal_training.py
+	python modeling/evaluate_summary.py
+	tensorboard --logdir=modeling/logs/multimodal_experiment
+	
+Commande to run the unimodal training for audio
+	python modeling/train_audio_baseline.py --feature_type all
+	python modeling/train_audio_baseline.py --feature_type wav2vec2
+	python modeling/train_audio_baseline.py --feature_type egemaps
+	python modeling/train_audio_baseline.py --feature_type mfcc
+	
+Command to run the unimodal training for text
+	python modeling/train_text_baseline.py --text_feature both
+	python modeling/train_text_baseline.py --text_feature krsbert
+	python modeling/train_text_baseline.py --text_feature kobert
+	
