@@ -1,0 +1,113 @@
+{
+  "python": "3.13.13",
+  "platform": "Android-16-aarch64-64bit-ELF",
+  "machine": "aarch64",
+  "torch": "2.11.0",
+  "has_soundfile": true,
+  "has_librosa": false,
+  "has_opensmile_py": false,
+  "has_termux_api": true,
+  "smilextract_bin": "/data/data/com.termux/files/home/.local/bin/SMILExtract",
+  "egemaps_conf": "/data/data/com.termux/files/home/opensmile-src/config/egemaps/v02/eGeMAPSv02.conf",
+  "egemaps_backend": "precomputed",
+  "smilextract_parity": {
+    "checked": true,
+    "passed": false,
+    "tested": 3,
+    "max_abs_diff": 4.0228271484375,
+    "tolerance": 0.001,
+    "samples": [
+      {
+        "segment_id": "d02j12s000857_29",
+        "max_abs_diff": 0.3494873046875
+      },
+      {
+        "segment_id": "vishing_366_52",
+        "max_abs_diff": 0.42584228515625
+      },
+      {
+        "segment_id": "d01j020s006622_3",
+        "max_abs_diff": 4.0228271484375
+      }
+    ]
+  },
+  "feature_types": [
+    "mfcc",
+    "egemaps"
+  ],
+  "mode": "both",
+  "n_reps": 10,
+  "n_segments": 100,
+  "n_calls": 50,
+  "energy_duration_s": 600.0,
+  "energy_sample_interval_s": 30.0,
+  "latency_checkpoints": [
+    {
+      "label": "start",
+      "wall_s": 79268.928874342,
+      "cpu_s": 2.12,
+      "rss_mb": 223.9375,
+      "vm_hwm_mb": 227.30078125
+    },
+    {
+      "label": "mfcc/loaded",
+      "wall_s": 79268.961977831,
+      "cpu_s": 2.14,
+      "rss_mb": 227.34765625,
+      "vm_hwm_mb": 227.34765625
+    },
+    {
+      "label": "mfcc/segments_done",
+      "wall_s": 79274.702244444,
+      "cpu_s": 8.59,
+      "rss_mb": 236.00390625,
+      "vm_hwm_mb": 246.45703125
+    },
+    {
+      "label": "mfcc/calls_done",
+      "wall_s": 79287.002010637,
+      "cpu_s": 23.9,
+      "rss_mb": 235.578125,
+      "vm_hwm_mb": 519.57421875
+    },
+    {
+      "label": "egemaps/loaded",
+      "wall_s": 79287.005467356,
+      "cpu_s": 23.9,
+      "rss_mb": 235.23828125,
+      "vm_hwm_mb": 519.57421875
+    },
+    {
+      "label": "egemaps/segments_done",
+      "wall_s": 79287.536399439,
+      "cpu_s": 25.63,
+      "rss_mb": 235.24609375,
+      "vm_hwm_mb": 519.57421875
+    },
+    {
+      "label": "egemaps/calls_done",
+      "wall_s": 79288.625136365,
+      "cpu_s": 27.04,
+      "rss_mb": 235.24609375,
+      "vm_hwm_mb": 519.57421875
+    }
+  ],
+  "battery_at_start": {
+    "present": true,
+    "technology": "Li-ion",
+    "health": "GOOD",
+    "plugged": "UNPLUGGED",
+    "status": "DISCHARGING",
+    "temperature": 36.7,
+    "voltage": 3906,
+    "current": -810000,
+    "current_average": -1072,
+    "percentage": 62,
+    "level": 62,
+    "scale": 100,
+    "charge_counter": 3115247,
+    "energy": null,
+    "cycle": 0
+  },
+  "battery_capacity_wh_assumed": 19.4
+}

@@ -1,0 +1,16 @@
+{
+  "python": "3.13.13",
+  "platform": "Android-16-aarch64-64bit-ELF",
+  "machine": "aarch64",
+  "torch": "2.11.0",
+  "has_librosa": false,
+  "has_opensmile": false,
+  "use_precomputed_egemaps": true,
+  "feature_types": [
+    "mfcc",
+    "egemaps"
+  ],
+  "n_reps": 10,
+  "n_segments": 100,
+  "n_calls": 50
+}
