@@ -1,0 +1,141 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "8a8c9f5fbc8f4a069c8b70705d821032",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "vishing2025",
+            "_ncp_DomainId": 10978,
+            "_ncp_TaskId": 30064906,
+            "_ncp_TraceId": "460979eff6eb443e8aacfbcc29035c82"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 510,
+            "end": 9754,
+            "text": "여보세요 예 d씨 되십니까 여보세요",
+            "confidence": 0.6909,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    1320,
+                    1710,
+                    "여보세요"
+                ],
+                [
+                    2440,
+                    2590,
+                    "예"
+                ],
+                [
+                    2800,
+                    3230,
+                    "d씨"
+                ],
+                [
+                    3260,
+                    3670,
+                    "되십니까"
+                ],
+                [
+                    7120,
+                    7470,
+                    "여보세요"
+                ]
+            ],
+            "textEdited": "여보세요 예 d씨 되십니까 여보세요"
+        },
+        {
+            "start": 9754,
+            "end": 16725,
+            "text": "씨 되십니까? 예 수고하십니다. 금융범죄예방기획팀의 이광진 수사관입니다.",
+            "confidence": 0.8579,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    9924,
+                    10074,
+                    "씨"
+                ],
+                [
+                    10084,
+                    10514,
+                    "되십니까?"
+                ],
+                [
+                    12204,
+                    12354,
+                    "예"
+                ],
+                [
+                    12464,
+                    13054,
+                    "수고하십니다."
+                ],
+                [
+                    13344,
+                    14694,
+                    "금융범죄예방기획팀의"
+                ],
+                [
+                    14904,
+                    15314,
+                    "이광진"
+                ],
+                [
+                    15424,
+                    16014,
+                    "수사관입니다."
+                ]
+            ],
+            "textEdited": "씨 되십니까? 예 수고하십니다. 금융범죄예방기획팀의 이광진 수사관입니다."
+        }
+    ],
+    "text": "여보세요 예 d씨 되십니까 여보세요 씨 되십니까? 예 수고하십니다. 금융범죄예방기획팀의 이광진 수사관입니다.",
+    "confidence": 0.80413973,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

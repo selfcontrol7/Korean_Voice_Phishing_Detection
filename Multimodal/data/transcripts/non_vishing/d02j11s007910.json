@@ -1,0 +1,218 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "d33de9e6632a4148b638aa5918591bd7",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306671,
+            "_ncp_TraceId": "7ac0ad0af7364a30b945bbf9d1f74bb9"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 5435,
+            "text": "무엇을 도와드릴까요? 여보세요 조금 전에",
+            "confidence": 0.9256,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    470,
+                    740,
+                    "무엇을"
+                ],
+                [
+                    740,
+                    1340,
+                    "도와드릴까요?"
+                ],
+                [
+                    3130,
+                    3520,
+                    "여보세요"
+                ],
+                [
+                    3650,
+                    3900,
+                    "조금"
+                ],
+                [
+                    3900,
+                    4180,
+                    "전에"
+                ]
+            ],
+            "textEdited": "무엇을 도와드릴까요? 여보세요 조금 전에"
+        },
+        {
+            "start": 5435,
+            "end": 15270,
+            "text": "여권 담당 기자님하고 통화했었는데요. 거기 전화번호를 직통을 몰라가지고",
+            "confidence": 0.8199,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    5885,
+                    6195,
+                    "여권"
+                ],
+                [
+                    6325,
+                    6615,
+                    "담당"
+                ],
+                [
+                    7565,
+                    8375,
+                    "기자님하고"
+                ],
+                [
+                    8985,
+                    9975,
+                    "통화했었는데요."
+                ],
+                [
+                    11885,
+                    12115,
+                    "거기"
+                ],
+                [
+                    12145,
+                    12835,
+                    "전화번호를"
+                ],
+                [
+                    13165,
+                    13535,
+                    "직통을"
+                ],
+                [
+                    13625,
+                    14195,
+                    "몰라가지고"
+                ]
+            ],
+            "textEdited": "여권 담당 기자님하고 통화했었는데요. 거기 전화번호를 직통을 몰라가지고"
+        },
+        {
+            "start": 15270,
+            "end": 23570,
+            "text": "여권 담당자 직통번호 안내해 드릴 텐데 메모 가능하실까요? 예 맞습니다. 감사합니다.",
+            "confidence": 0.9207,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    15720,
+                    15950,
+                    "여권"
+                ],
+                [
+                    15980,
+                    16370,
+                    "담당자"
+                ],
+                [
+                    16540,
+                    16977,
+                    "직통번호"
+                ],
+                [
+                    16977,
+                    17184,
+                    "안내해"
+                ],
+                [
+                    17184,
+                    17350,
+                    "드릴"
+                ],
+                [
+                    17350,
+                    17530,
+                    "텐데"
+                ],
+                [
+                    17580,
+                    17790,
+                    "메모"
+                ],
+                [
+                    17840,
+                    18590,
+                    "가능하실까요?"
+                ],
+                [
+                    19900,
+                    20050,
+                    "예"
+                ],
+                [
+                    20080,
+                    20530,
+                    "맞습니다."
+                ],
+                [
+                    22540,
+                    23070,
+                    "감사합니다."
+                ]
+            ],
+            "textEdited": "여권 담당자 직통번호 안내해 드릴 텐데 메모 가능하실까요? 예 맞습니다. 감사합니다."
+        }
+    ],
+    "text": "무엇을 도와드릴까요? 여보세요 조금 전에 여권 담당 기자님하고 통화했었는데요. 거기 전화번호를 직통을 몰라가지고 여권 담당자 직통번호 안내해 드릴 텐데 메모 가능하실까요? 예 맞습니다. 감사합니다.",
+    "confidence": 0.88409364,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

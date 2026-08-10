@@ -1,0 +1,245 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "01a00f5124924f289dd49028bf81375d",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306847,
+            "_ncp_TraceId": "c0fd36a391dd476f93d11c8d76837df5"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 30,
+            "end": 8840,
+            "text": "학습지원센터입니다. 무엇을 도와드릴까요? 제가 회원정보 확인 먼저 하고 안내 도와드리겠습니다. 네 회원 확인 감사합니다.",
+            "confidence": 0.8729,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    420,
+                    1550,
+                    "학습지원센터입니다."
+                ],
+                [
+                    1800,
+                    2110,
+                    "무엇을"
+                ],
+                [
+                    2120,
+                    2750,
+                    "도와드릴까요?"
+                ],
+                [
+                    3220,
+                    3410,
+                    "제가"
+                ],
+                [
+                    3420,
+                    3930,
+                    "회원정보"
+                ],
+                [
+                    3930,
+                    4110,
+                    "확인"
+                ],
+                [
+                    4200,
+                    4450,
+                    "먼저"
+                ],
+                [
+                    4480,
+                    4690,
+                    "하고"
+                ],
+                [
+                    4760,
+                    4970,
+                    "안내"
+                ],
+                [
+                    5040,
+                    5910,
+                    "도와드리겠습니다."
+                ],
+                [
+                    6740,
+                    6890,
+                    "네"
+                ],
+                [
+                    6900,
+                    7090,
+                    "회원"
+                ],
+                [
+                    7090,
+                    7290,
+                    "확인"
+                ],
+                [
+                    7360,
+                    7950,
+                    "감사합니다."
+                ]
+            ],
+            "textEdited": "학습지원센터입니다. 무엇을 도와드릴까요? 제가 회원정보 확인 먼저 하고 안내 도와드리겠습니다. 네 회원 확인 감사합니다."
+        },
+        {
+            "start": 8840,
+            "end": 12485,
+            "text": "모의고사 말씀해 주시는 거죠. 회원님",
+            "confidence": 0.9578,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    9470,
+                    10040,
+                    "모의고사"
+                ],
+                [
+                    10170,
+                    10680,
+                    "말씀해"
+                ],
+                [
+                    10680,
+                    11060,
+                    "주시는"
+                ],
+                [
+                    11070,
+                    11300,
+                    "거죠."
+                ],
+                [
+                    11330,
+                    11660,
+                    "회원님"
+                ]
+            ],
+            "textEdited": "모의고사 말씀해 주시는 거죠. 회원님"
+        },
+        {
+            "start": 12485,
+            "end": 15365,
+            "text": "네 감사합니다.",
+            "confidence": 0.9578,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    13575,
+                    13725,
+                    "네"
+                ],
+                [
+                    13915,
+                    14565,
+                    "감사합니다."
+                ]
+            ],
+            "textEdited": "네 감사합니다."
+        },
+        {
+            "start": 15365,
+            "end": 17780,
+            "text": "감사합니다. 좋은 하루 되세요.",
+            "confidence": 0.9666,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    15935,
+                    16485,
+                    "감사합니다."
+                ],
+                [
+                    16755,
+                    16945,
+                    "좋은"
+                ],
+                [
+                    16955,
+                    17165,
+                    "하루"
+                ],
+                [
+                    17175,
+                    17465,
+                    "되세요."
+                ]
+            ],
+            "textEdited": "감사합니다. 좋은 하루 되세요."
+        }
+    ],
+    "text": "학습지원센터입니다. 무엇을 도와드릴까요? 제가 회원정보 확인 먼저 하고 안내 도와드리겠습니다. 네 회원 확인 감사합니다. 모의고사 말씀해 주시는 거죠. 회원님 네 감사합니다. 감사합니다. 좋은 하루 되세요.",
+    "confidence": 0.9078167,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

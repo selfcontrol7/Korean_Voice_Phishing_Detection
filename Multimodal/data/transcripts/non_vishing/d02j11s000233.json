@@ -1,0 +1,368 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "7172e60f57474696b596c403e9142e64",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306629,
+            "_ncp_TraceId": "5a00e491cce5476d8d0e314bcc7d7ad6"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 30,
+            "end": 4870,
+            "text": "네 안녕하세요. 어디로 가면 되죠? 위치가",
+            "confidence": 0.9709,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    640,
+                    790,
+                    "네"
+                ],
+                [
+                    920,
+                    1370,
+                    "안녕하세요."
+                ],
+                [
+                    2700,
+                    3030,
+                    "어디로"
+                ],
+                [
+                    3060,
+                    3270,
+                    "가면"
+                ],
+                [
+                    3270,
+                    3470,
+                    "되죠?"
+                ],
+                [
+                    3580,
+                    3950,
+                    "위치가"
+                ]
+            ],
+            "textEdited": "네 안녕하세요. 어디로 가면 되죠? 위치가"
+        },
+        {
+            "start": 4870,
+            "end": 13195,
+            "text": "네 확인해 드리겠습니다. 잠시만 기다려 주시겠습니까? 네. 기다려 주셔서 감사합니다. 저희 시청 본관 8층에 위치하고 있습니다.",
+            "confidence": 0.9443,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    5380,
+                    5530,
+                    "네"
+                ],
+                [
+                    5580,
+                    5930,
+                    "확인해"
+                ],
+                [
+                    5930,
+                    6410,
+                    "드리겠습니다."
+                ],
+                [
+                    6480,
+                    6810,
+                    "잠시만"
+                ],
+                [
+                    6810,
+                    7070,
+                    "기다려"
+                ],
+                [
+                    7080,
+                    7670,
+                    "주시겠습니까?"
+                ],
+                [
+                    8860,
+                    9010,
+                    "네."
+                ],
+                [
+                    9010,
+                    9290,
+                    "기다려"
+                ],
+                [
+                    9290,
+                    9610,
+                    "주셔서"
+                ],
+                [
+                    9620,
+                    10070,
+                    "감사합니다."
+                ],
+                [
+                    10160,
+                    10350,
+                    "저희"
+                ],
+                [
+                    10380,
+                    10650,
+                    "시청"
+                ],
+                [
+                    10820,
+                    11090,
+                    "본관"
+                ],
+                [
+                    11180,
+                    11610,
+                    "8층에"
+                ],
+                [
+                    11620,
+                    11990,
+                    "위치하고"
+                ],
+                [
+                    12000,
+                    12330,
+                    "있습니다."
+                ]
+            ],
+            "textEdited": "네 확인해 드리겠습니다. 잠시만 기다려 주시겠습니까? 네. 기다려 주셔서 감사합니다. 저희 시청 본관 8층에 위치하고 있습니다."
+        },
+        {
+            "start": 13195,
+            "end": 15145,
+            "text": "패킹이고요.",
+            "confidence": 0.7724,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    13705,
+                    14335,
+                    "패킹이고요."
+                ]
+            ],
+            "textEdited": "패킹이고요."
+        },
+        {
+            "start": 15145,
+            "end": 16918,
+            "text": "확인해 드리겠습니다. 잠시만",
+            "confidence": 0.9619,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    15615,
+                    15985,
+                    "확인해"
+                ],
+                [
+                    15985,
+                    16505,
+                    "드리겠습니다."
+                ],
+                [
+                    16595,
+                    16905,
+                    "잠시만"
+                ]
+            ],
+            "textEdited": "확인해 드리겠습니다. 잠시만"
+        },
+        {
+            "start": 16918,
+            "end": 18595,
+            "text": "아주세요.",
+            "confidence": 0.4595,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    17028,
+                    17398,
+                    "아주세요."
+                ]
+            ],
+            "textEdited": "아주세요."
+        },
+        {
+            "start": 18595,
+            "end": 20920,
+            "text": "5층에 위치하고 있습니다.",
+            "confidence": 0.9993,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    19145,
+                    19535,
+                    "5층에"
+                ],
+                [
+                    19535,
+                    19855,
+                    "위치하고"
+                ],
+                [
+                    19855,
+                    20175,
+                    "있습니다."
+                ]
+            ],
+            "textEdited": "5층에 위치하고 있습니다."
+        },
+        {
+            "start": 20920,
+            "end": 22920,
+            "text": "감사합니다.",
+            "confidence": 0.9996,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    21530,
+                    22020,
+                    "감사합니다."
+                ]
+            ],
+            "textEdited": "감사합니다."
+        },
+        {
+            "start": 22920,
+            "end": 24340,
+            "text": "좋은 하루 보내세요.",
+            "confidence": 0.9987,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    23430,
+                    23620,
+                    "좋은"
+                ],
+                [
+                    23620,
+                    23820,
+                    "하루"
+                ],
+                [
+                    23820,
+                    24140,
+                    "보내세요."
+                ]
+            ],
+            "textEdited": "좋은 하루 보내세요."
+        }
+    ],
+    "text": "네 안녕하세요. 어디로 가면 되죠? 위치가 네 확인해 드리겠습니다. 잠시만 기다려 주시겠습니까? 네. 기다려 주셔서 감사합니다. 저희 시청 본관 8층에 위치하고 있습니다. 패킹이고요. 확인해 드리겠습니다. 잠시만 아주세요. 5층에 위치하고 있습니다. 감사합니다. 좋은 하루 보내세요.",
+    "confidence": 0.937991,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [
+        {
+            "type": "laughter",
+            "label": "laughter",
+            "labelEdited": "laughter",
+            "start": 9600,
+            "end": 10700
+        }
+    ],
+    "eventTypes": [
+        "laughter"
+    ]
+}

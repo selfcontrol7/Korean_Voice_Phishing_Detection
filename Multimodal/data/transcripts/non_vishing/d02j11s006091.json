@@ -1,0 +1,252 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "1d2fde71b3d44d4d9a15dbfcb521c90a",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306663,
+            "_ncp_TraceId": "df54b5240dba432a922a1b8cc6d2940e"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 3030,
+            "text": "전화를 돌렸는데 끊어버렸어요.",
+            "confidence": 0.9614,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    530,
+                    920,
+                    "전화를"
+                ],
+                [
+                    950,
+                    1420,
+                    "돌렸는데"
+                ],
+                [
+                    1510,
+                    2140,
+                    "끊어버렸어요."
+                ]
+            ],
+            "textEdited": "전화를 돌렸는데 끊어버렸어요."
+        },
+        {
+            "start": 3030,
+            "end": 6145,
+            "text": "혹시 어떤 문의 때문에 그러시는지 여쭤봐도 될까요?",
+            "confidence": 0.9874,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    3440,
+                    3650,
+                    "혹시"
+                ],
+                [
+                    3650,
+                    3850,
+                    "어떤"
+                ],
+                [
+                    3880,
+                    4070,
+                    "문의"
+                ],
+                [
+                    4070,
+                    4330,
+                    "때문에"
+                ],
+                [
+                    4330,
+                    4677,
+                    "그러시는지"
+                ],
+                [
+                    4677,
+                    5050,
+                    "여쭤봐도"
+                ],
+                [
+                    5050,
+                    5410,
+                    "될까요?"
+                ]
+            ],
+            "textEdited": "혹시 어떤 문의 때문에 그러시는지 여쭤봐도 될까요?"
+        },
+        {
+            "start": 6145,
+            "end": 8675,
+            "text": "아니 그건 아주",
+            "confidence": 0.7058,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    6795,
+                    7025,
+                    "아니"
+                ],
+                [
+                    7115,
+                    7285,
+                    "그건"
+                ],
+                [
+                    7715,
+                    7985,
+                    "아주"
+                ]
+            ],
+            "textEdited": "아니 그건 아주"
+        },
+        {
+            "start": 8675,
+            "end": 14310,
+            "text": "고객님 서우라고 말씀해 주셨죠 잠시만요.",
+            "confidence": 0.7377,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    9165,
+                    9435,
+                    "고객님"
+                ],
+                [
+                    9865,
+                    10455,
+                    "서우라고"
+                ],
+                [
+                    10455,
+                    10782,
+                    "말씀해"
+                ],
+                [
+                    10782,
+                    11095,
+                    "주셨죠"
+                ],
+                [
+                    13045,
+                    13495,
+                    "잠시만요."
+                ]
+            ],
+            "textEdited": "고객님 서우라고 말씀해 주셨죠 잠시만요."
+        },
+        {
+            "start": 14310,
+            "end": 16160,
+            "text": "예 예 연결 좀 해주세요.",
+            "confidence": 0.7735,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    14840,
+                    14990,
+                    "예"
+                ],
+                [
+                    15060,
+                    15210,
+                    "예"
+                ],
+                [
+                    15320,
+                    15530,
+                    "연결"
+                ],
+                [
+                    15540,
+                    15690,
+                    "좀"
+                ],
+                [
+                    15690,
+                    16030,
+                    "해주세요."
+                ]
+            ],
+            "textEdited": "예 예 연결 좀 해주세요."
+        }
+    ],
+    "text": "전화를 돌렸는데 끊어버렸어요. 혹시 어떤 문의 때문에 그러시는지 여쭤봐도 될까요? 아니 그건 아주 고객님 서우라고 말씀해 주셨죠 잠시만요. 예 예 연결 좀 해주세요.",
+    "confidence": 0.8626885,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

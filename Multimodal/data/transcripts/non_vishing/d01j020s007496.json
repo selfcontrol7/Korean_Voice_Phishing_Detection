@@ -1,0 +1,238 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "25b5ca29491741c48f23cfb1910d9779",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306146,
+            "_ncp_TraceId": "5f0e6d15b99e42fab191846670176614"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 4740,
+            "text": "샌즈 뱅크스 팔았었는데 그거 혹시 언제 다시 팔았는지 알 수 있나요?",
+            "confidence": 0.7751,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    530,
+                    780,
+                    "샌즈"
+                ],
+                [
+                    890,
+                    1380,
+                    "뱅크스"
+                ],
+                [
+                    1450,
+                    2000,
+                    "팔았었는데"
+                ],
+                [
+                    2030,
+                    2167,
+                    "그거"
+                ],
+                [
+                    2167,
+                    2400,
+                    "혹시"
+                ],
+                [
+                    2470,
+                    2720,
+                    "언제"
+                ],
+                [
+                    2750,
+                    2960,
+                    "다시"
+                ],
+                [
+                    2990,
+                    3380,
+                    "팔았는지"
+                ],
+                [
+                    3380,
+                    3520,
+                    "알"
+                ],
+                [
+                    3520,
+                    3660,
+                    "수"
+                ],
+                [
+                    3710,
+                    3960,
+                    "있나요?"
+                ]
+            ],
+            "textEdited": "샌즈 뱅크스 팔았었는데 그거 혹시 언제 다시 팔았는지 알 수 있나요?"
+        },
+        {
+            "start": 4770,
+            "end": 8575,
+            "text": "현재 판매가 종료가 된 상태고요.",
+            "confidence": 0.9629,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    5460,
+                    5750,
+                    "현재"
+                ],
+                [
+                    6140,
+                    6450,
+                    "판매가"
+                ],
+                [
+                    6540,
+                    6890,
+                    "종료가"
+                ],
+                [
+                    6920,
+                    7070,
+                    "된"
+                ],
+                [
+                    7140,
+                    7610,
+                    "상태고요."
+                ]
+            ],
+            "textEdited": "현재 판매가 종료가 된 상태고요."
+        },
+        {
+            "start": 8575,
+            "end": 13640,
+            "text": "그래요 정확한 그런 계획은 아직 없는 거죠? 네네 알겠습니다.",
+            "confidence": 0.9845,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    9465,
+                    9715,
+                    "그래요"
+                ],
+                [
+                    9785,
+                    10115,
+                    "정확한"
+                ],
+                [
+                    10325,
+                    10495,
+                    "그런"
+                ],
+                [
+                    10545,
+                    10855,
+                    "계획은"
+                ],
+                [
+                    10855,
+                    11035,
+                    "아직"
+                ],
+                [
+                    11105,
+                    11335,
+                    "없는"
+                ],
+                [
+                    11345,
+                    11575,
+                    "거죠?"
+                ],
+                [
+                    12085,
+                    12315,
+                    "네네"
+                ],
+                [
+                    12325,
+                    12915,
+                    "알겠습니다."
+                ]
+            ],
+            "textEdited": "그래요 정확한 그런 계획은 아직 없는 거죠? 네네 알겠습니다."
+        }
+    ],
+    "text": "샌즈 뱅크스 팔았었는데 그거 혹시 언제 다시 팔았는지 알 수 있나요? 현재 판매가 종료가 된 상태고요. 그래요 정확한 그런 계획은 아직 없는 거죠? 네네 알겠습니다.",
+    "confidence": 0.89111584,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [
+        {
+            "type": "laughter",
+            "label": "laughter",
+            "labelEdited": "laughter",
+            "start": 800,
+            "end": 2800
+        }
+    ],
+    "eventTypes": [
+        "laughter"
+    ]
+}

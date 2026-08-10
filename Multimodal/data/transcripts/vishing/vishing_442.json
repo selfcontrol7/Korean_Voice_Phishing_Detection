@@ -1,0 +1,191 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "5681fa2623ee4c4f945aa113d0cc3e66",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "vishing2025",
+            "_ncp_DomainId": 10978,
+            "_ncp_TaskId": 30064964,
+            "_ncp_TraceId": "f2fc5fe0608d4dfe9968fae6246fc8e0"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 4580,
+            "text": "돈이 이쪽 거 필요해서 어머님 지하 창고에 잡아두고 있어.",
+            "confidence": 0.8933,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    370,
+                    660,
+                    "돈이"
+                ],
+                [
+                    660,
+                    880,
+                    "이쪽"
+                ],
+                [
+                    930,
+                    1080,
+                    "거"
+                ],
+                [
+                    1130,
+                    1560,
+                    "필요해서"
+                ],
+                [
+                    1970,
+                    2300,
+                    "어머님"
+                ],
+                [
+                    2410,
+                    2600,
+                    "지하"
+                ],
+                [
+                    2650,
+                    3020,
+                    "창고에"
+                ],
+                [
+                    3050,
+                    3460,
+                    "잡아두고"
+                ],
+                [
+                    3490,
+                    3660,
+                    "있어."
+                ]
+            ],
+            "textEdited": "돈이 이쪽 거 필요해서 어머님 지하 창고에 잡아두고 있어."
+        },
+        {
+            "start": 4610,
+            "end": 11090,
+            "text": "씨발 너 짭새한테 신고하거나 딴 짓거리 하면 어머님 내 손가락 다 잘라버릴게 알겠어.",
+            "confidence": 0.9156,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    5180,
+                    5530,
+                    "씨발"
+                ],
+                [
+                    5700,
+                    5850,
+                    "너"
+                ],
+                [
+                    6120,
+                    6630,
+                    "짭새한테"
+                ],
+                [
+                    6820,
+                    7390,
+                    "신고하거나"
+                ],
+                [
+                    7780,
+                    7930,
+                    "딴"
+                ],
+                [
+                    7930,
+                    8244,
+                    "짓거리"
+                ],
+                [
+                    8244,
+                    8450,
+                    "하면"
+                ],
+                [
+                    8640,
+                    8930,
+                    "어머님"
+                ],
+                [
+                    8980,
+                    9130,
+                    "내"
+                ],
+                [
+                    9240,
+                    9570,
+                    "손가락"
+                ],
+                [
+                    9580,
+                    9730,
+                    "다"
+                ],
+                [
+                    9740,
+                    10210,
+                    "잘라버릴게"
+                ],
+                [
+                    10220,
+                    10550,
+                    "알겠어."
+                ]
+            ],
+            "textEdited": "씨발 너 짭새한테 신고하거나 딴 짓거리 하면 어머님 내 손가락 다 잘라버릴게 알겠어."
+        }
+    ],
+    "text": "돈이 이쪽 거 필요해서 어머님 지하 창고에 잡아두고 있어. 씨발 너 짭새한테 신고하거나 딴 짓거리 하면 어머님 내 손가락 다 잘라버릴게 알겠어.",
+    "confidence": 0.90660995,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

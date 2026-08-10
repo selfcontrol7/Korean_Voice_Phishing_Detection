@@ -1,0 +1,344 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "60859c2b22524e5c9a9617cd9893c372",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30305045,
+            "_ncp_TraceId": "2653222d98674f03a3c6d488a39aaa40"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 30,
+            "end": 9560,
+            "text": "아 여보세요. 그러면 1분이 되는 거죠. 거기에 들어 해당하는 학교는",
+            "confidence": 0.7819,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    620,
+                    770,
+                    "아"
+                ],
+                [
+                    780,
+                    1150,
+                    "여보세요."
+                ],
+                [
+                    2780,
+                    3130,
+                    "그러면"
+                ],
+                [
+                    4500,
+                    5030,
+                    "1분이"
+                ],
+                [
+                    5120,
+                    5390,
+                    "되는"
+                ],
+                [
+                    5420,
+                    5670,
+                    "거죠."
+                ],
+                [
+                    6520,
+                    6870,
+                    "거기에"
+                ],
+                [
+                    6880,
+                    7070,
+                    "들어"
+                ],
+                [
+                    7120,
+                    7630,
+                    "해당하는"
+                ],
+                [
+                    8180,
+                    8630,
+                    "학교는"
+                ]
+            ],
+            "textEdited": "아 여보세요. 그러면 1분이 되는 거죠. 거기에 들어 해당하는 학교는"
+        },
+        {
+            "start": 9560,
+            "end": 11905,
+            "text": "황금 말씀이실까요?",
+            "confidence": 0.7819,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    10150,
+                    10380,
+                    "황금"
+                ],
+                [
+                    10470,
+                    11120,
+                    "말씀이실까요?"
+                ]
+            ],
+            "textEdited": "황금 말씀이실까요?"
+        },
+        {
+            "start": 11905,
+            "end": 14520,
+            "text": "예 황금 맞아",
+            "confidence": 0.8112,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    12495,
+                    12645,
+                    "예"
+                ],
+                [
+                    12835,
+                    13125,
+                    "황금"
+                ],
+                [
+                    13475,
+                    13685,
+                    "맞아"
+                ]
+            ],
+            "textEdited": "예 황금 맞아"
+        },
+        {
+            "start": 14610,
+            "end": 17430,
+            "text": "의원님 기다려 주셔서 감사합니다.",
+            "confidence": 0.8661,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    15140,
+                    15410,
+                    "의원님"
+                ],
+                [
+                    15410,
+                    15690,
+                    "기다려"
+                ],
+                [
+                    15690,
+                    15950,
+                    "주셔서"
+                ],
+                [
+                    15950,
+                    16370,
+                    "감사합니다."
+                ]
+            ],
+            "textEdited": "의원님 기다려 주셔서 감사합니다."
+        },
+        {
+            "start": 17430,
+            "end": 26680,
+            "text": "그럼 지금 확인 지금 제출하면 안 되나요? 3월 1일까지 해야 된다고요. 그럼 안 되는 거예요.",
+            "confidence": 0.7262,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    18020,
+                    18210,
+                    "그럼"
+                ],
+                [
+                    18320,
+                    18530,
+                    "지금"
+                ],
+                [
+                    18620,
+                    18870,
+                    "확인"
+                ],
+                [
+                    19260,
+                    19470,
+                    "지금"
+                ],
+                [
+                    19560,
+                    20030,
+                    "제출하면"
+                ],
+                [
+                    20040,
+                    20144,
+                    "안"
+                ],
+                [
+                    20144,
+                    20470,
+                    "되나요?"
+                ],
+                [
+                    21920,
+                    22150,
+                    "3월"
+                ],
+                [
+                    22260,
+                    22850,
+                    "1일까지"
+                ],
+                [
+                    22850,
+                    23050,
+                    "해야"
+                ],
+                [
+                    23060,
+                    23510,
+                    "된다고요."
+                ],
+                [
+                    24880,
+                    25050,
+                    "그럼"
+                ],
+                [
+                    25060,
+                    25210,
+                    "안"
+                ],
+                [
+                    25220,
+                    25490,
+                    "되는"
+                ],
+                [
+                    25490,
+                    25770,
+                    "거예요."
+                ]
+            ],
+            "textEdited": "그럼 지금 확인 지금 제출하면 안 되나요? 3월 1일까지 해야 된다고요. 그럼 안 되는 거예요."
+        },
+        {
+            "start": 26770,
+            "end": 28670,
+            "text": "예. 알겠습니다.",
+            "confidence": 0.9899,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    27340,
+                    27490,
+                    "예."
+                ],
+                [
+                    27520,
+                    28090,
+                    "알겠습니다."
+                ]
+            ],
+            "textEdited": "예. 알겠습니다."
+        }
+    ],
+    "text": "아 여보세요. 그러면 1분이 되는 거죠. 거기에 들어 해당하는 학교는 황금 말씀이실까요? 예 황금 맞아 의원님 기다려 주셔서 감사합니다. 그럼 지금 확인 지금 제출하면 안 되나요? 3월 1일까지 해야 된다고요. 그럼 안 되는 거예요. 예. 알겠습니다.",
+    "confidence": 0.78724134,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [
+        {
+            "type": "laughter",
+            "label": "laughter",
+            "labelEdited": "laughter",
+            "start": 18400,
+            "end": 20000
+        }
+    ],
+    "eventTypes": [
+        "laughter"
+    ]
+}

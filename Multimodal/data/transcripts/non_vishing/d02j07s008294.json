@@ -1,0 +1,203 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "69f719fd63ea4ced8f963d131c798195",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306382,
+            "_ncp_TraceId": "5d4e31e69853473c9a37ea622a3d0d70"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 2580,
+            "text": "무엇을 도와드릴까요?",
+            "confidence": 0.9375,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    550,
+                    820,
+                    "무엇을"
+                ],
+                [
+                    830,
+                    1640,
+                    "도와드릴까요?"
+                ]
+            ],
+            "textEdited": "무엇을 도와드릴까요?"
+        },
+        {
+            "start": 2680,
+            "end": 5595,
+            "text": "강이 됐거든요. 물이 넘쳐 가지고",
+            "confidence": 0.857,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    3330,
+                    3580,
+                    "강이"
+                ],
+                [
+                    3580,
+                    3980,
+                    "됐거든요."
+                ],
+                [
+                    4230,
+                    4440,
+                    "물이"
+                ],
+                [
+                    4440,
+                    4607,
+                    "넘쳐"
+                ],
+                [
+                    4607,
+                    4900,
+                    "가지고"
+                ]
+            ],
+            "textEdited": "강이 됐거든요. 물이 넘쳐 가지고"
+        },
+        {
+            "start": 5595,
+            "end": 12720,
+            "text": "그러시군요. 선생님 제가 하수도 담당 부서 빠르게 연결해 드릴 텐데요. 잠시만 기다려 주시겠습니까?",
+            "confidence": 0.9768,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    6445,
+                    7075,
+                    "그러시군요."
+                ],
+                [
+                    7785,
+                    8002,
+                    "선생님"
+                ],
+                [
+                    8002,
+                    8175,
+                    "제가"
+                ],
+                [
+                    8175,
+                    8555,
+                    "하수도"
+                ],
+                [
+                    8565,
+                    8795,
+                    "담당"
+                ],
+                [
+                    8865,
+                    9095,
+                    "부서"
+                ],
+                [
+                    9105,
+                    9395,
+                    "빠르게"
+                ],
+                [
+                    9425,
+                    9775,
+                    "연결해"
+                ],
+                [
+                    9785,
+                    9995,
+                    "드릴"
+                ],
+                [
+                    10025,
+                    10335,
+                    "텐데요."
+                ],
+                [
+                    10505,
+                    10875,
+                    "잠시만"
+                ],
+                [
+                    10905,
+                    11215,
+                    "기다려"
+                ],
+                [
+                    11285,
+                    11895,
+                    "주시겠습니까?"
+                ]
+            ],
+            "textEdited": "그러시군요. 선생님 제가 하수도 담당 부서 빠르게 연결해 드릴 텐데요. 잠시만 기다려 주시겠습니까?"
+        }
+    ],
+    "text": "무엇을 도와드릴까요? 강이 됐거든요. 물이 넘쳐 가지고 그러시군요. 선생님 제가 하수도 담당 부서 빠르게 연결해 드릴 텐데요. 잠시만 기다려 주시겠습니까?",
+    "confidence": 0.94600296,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

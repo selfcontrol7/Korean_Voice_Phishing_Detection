@@ -1,0 +1,171 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "810a9068074a493398c6738c4df00df6",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306801,
+            "_ncp_TraceId": "af09b24d7cdd405e9ae6378e7d028c7e"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 10710,
+            "text": "재발송 접수 도와드릴 텐데요. 혹시 받으시는 주소랑 연락처 동일하실까요? 네 이 주소로 다시 배송 도와드리도록 하겠습니다.",
+            "confidence": 0.9188,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    610,
+                    1060,
+                    "재발송"
+                ],
+                [
+                    1110,
+                    1420,
+                    "접수"
+                ],
+                [
+                    1490,
+                    1920,
+                    "도와드릴"
+                ],
+                [
+                    1990,
+                    2320,
+                    "텐데요."
+                ],
+                [
+                    2570,
+                    2820,
+                    "혹시"
+                ],
+                [
+                    2870,
+                    3460,
+                    "받으시는"
+                ],
+                [
+                    3730,
+                    4200,
+                    "주소랑"
+                ],
+                [
+                    4470,
+                    4940,
+                    "연락처"
+                ],
+                [
+                    5050,
+                    5840,
+                    "동일하실까요?"
+                ],
+                [
+                    7190,
+                    7340,
+                    "네"
+                ],
+                [
+                    7490,
+                    7640,
+                    "이"
+                ],
+                [
+                    7650,
+                    7980,
+                    "주소로"
+                ],
+                [
+                    8130,
+                    8340,
+                    "다시"
+                ],
+                [
+                    8450,
+                    8680,
+                    "배송"
+                ],
+                [
+                    8690,
+                    9320,
+                    "도와드리도록"
+                ],
+                [
+                    9330,
+                    9920,
+                    "하겠습니다."
+                ]
+            ],
+            "textEdited": "재발송 접수 도와드릴 텐데요. 혹시 받으시는 주소랑 연락처 동일하실까요? 네 이 주소로 다시 배송 도와드리도록 하겠습니다."
+        },
+        {
+            "start": 10710,
+            "end": 12500,
+            "text": "네 알겠습니다.",
+            "confidence": 0.9993,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    11180,
+                    11330,
+                    "네"
+                ],
+                [
+                    11480,
+                    12110,
+                    "알겠습니다."
+                ]
+            ],
+            "textEdited": "네 알겠습니다."
+        }
+    ],
+    "text": "재발송 접수 도와드릴 텐데요. 혹시 받으시는 주소랑 연락처 동일하실까요? 네 이 주소로 다시 배송 도와드리도록 하겠습니다. 네 알겠습니다.",
+    "confidence": 0.9271125,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

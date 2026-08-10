@@ -1,0 +1,339 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "45e695a3ef6841dda7a4c37846c5256b",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "vishing2025",
+            "_ncp_DomainId": 10978,
+            "_ncp_TaskId": 30050763,
+            "_ncp_TraceId": "d26d66aa00984e8eacf84af2d7257473"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 1320,
+            "end": 9469,
+            "text": "일단 씨는 강서 광명시 쪽에 오셔가지고 금융 거래라든지 이런 거 하신 적 없으세요?",
+            "confidence": 0.8149,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    2270,
+                    2500,
+                    "일단"
+                ],
+                [
+                    3770,
+                    4320,
+                    "씨는"
+                ],
+                [
+                    4650,
+                    5000,
+                    "강서"
+                ],
+                [
+                    5010,
+                    5500,
+                    "광명시"
+                ],
+                [
+                    5510,
+                    5780,
+                    "쪽에"
+                ],
+                [
+                    5780,
+                    6220,
+                    "오셔가지고"
+                ],
+                [
+                    7150,
+                    7380,
+                    "금융"
+                ],
+                [
+                    7530,
+                    8200,
+                    "거래라든지"
+                ],
+                [
+                    8200,
+                    8314,
+                    "이런"
+                ],
+                [
+                    8314,
+                    8440,
+                    "거"
+                ],
+                [
+                    8440,
+                    8640,
+                    "하신"
+                ],
+                [
+                    8640,
+                    8780,
+                    "적"
+                ],
+                [
+                    8790,
+                    9120,
+                    "없으세요?"
+                ]
+            ],
+            "textEdited": "일단 씨는 강서 광명시 쪽에 오셔가지고 금융 거래라든지 이런 거 하신 적 없으세요?"
+        },
+        {
+            "start": 9469,
+            "end": 10400,
+            "text": "네 없어요.",
+            "confidence": 0.9973,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    9659,
+                    9809,
+                    "네"
+                ],
+                [
+                    9809,
+                    10069,
+                    "없어요."
+                ]
+            ],
+            "textEdited": "네 없어요."
+        },
+        {
+            "start": 10400,
+            "end": 14115,
+            "text": "경기도 광명시 쪽으로는 한 번도 가본 적이 없다.",
+            "confidence": 0.9828,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    10610,
+                    10940,
+                    "경기도"
+                ],
+                [
+                    10950,
+                    11327,
+                    "광명시"
+                ],
+                [
+                    11327,
+                    11780,
+                    "쪽으로는"
+                ],
+                [
+                    12190,
+                    12340,
+                    "한"
+                ],
+                [
+                    12340,
+                    12620,
+                    "번도"
+                ],
+                [
+                    12850,
+                    13140,
+                    "가본"
+                ],
+                [
+                    13190,
+                    13440,
+                    "적이"
+                ],
+                [
+                    13440,
+                    13640,
+                    "없다."
+                ]
+            ],
+            "textEdited": "경기도 광명시 쪽으로는 한 번도 가본 적이 없다."
+        },
+        {
+            "start": 14115,
+            "end": 15950,
+            "text": "때문에 광명 가본 적은 있는데",
+            "confidence": 0.989,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    14245,
+                    14555,
+                    "때문에"
+                ],
+                [
+                    14725,
+                    14955,
+                    "광명"
+                ],
+                [
+                    14955,
+                    15122,
+                    "가본"
+                ],
+                [
+                    15122,
+                    15282,
+                    "적은"
+                ],
+                [
+                    15282,
+                    15515,
+                    "있는데"
+                ]
+            ],
+            "textEdited": "때문에 광명 가본 적은 있는데"
+        },
+        {
+            "start": 15950,
+            "end": 19138,
+            "text": "따로 금융 거래라든지 그런 건 해보신 적은 없어",
+            "confidence": 0.913,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    16420,
+                    16630,
+                    "따로"
+                ],
+                [
+                    16980,
+                    17210,
+                    "금융"
+                ],
+                [
+                    17280,
+                    17990,
+                    "거래라든지"
+                ],
+                [
+                    18020,
+                    18190,
+                    "그런"
+                ],
+                [
+                    18200,
+                    18350,
+                    "건"
+                ],
+                [
+                    18350,
+                    18670,
+                    "해보신"
+                ],
+                [
+                    18670,
+                    18870,
+                    "적은"
+                ],
+                [
+                    18880,
+                    19030,
+                    "없어"
+                ]
+            ],
+            "textEdited": "따로 금융 거래라든지 그런 건 해보신 적은 없어"
+        },
+        {
+            "start": 19138,
+            "end": 20010,
+            "text": "10만원.",
+            "confidence": 0.6214,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    19188,
+                    19538,
+                    "10만원."
+                ]
+            ],
+            "textEdited": "10만원."
+        }
+    ],
+    "text": "일단 씨는 강서 광명시 쪽에 오셔가지고 금융 거래라든지 이런 거 하신 적 없으세요? 네 없어요. 경기도 광명시 쪽으로는 한 번도 가본 적이 없다. 때문에 광명 가본 적은 있는데 따로 금융 거래라든지 그런 건 해보신 적은 없어 10만원.",
+    "confidence": 0.897604,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

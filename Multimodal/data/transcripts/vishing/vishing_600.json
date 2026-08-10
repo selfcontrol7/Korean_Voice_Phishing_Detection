@@ -1,0 +1,186 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "754f3c6e45a64909bd146b4e4b450e11",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "vishing2025",
+            "_ncp_DomainId": 10978,
+            "_ncp_TaskId": 30065141,
+            "_ncp_TraceId": "2156f567bd6445c0baaf4e919be27bd2"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 8685,
+            "text": "여보세요. 네 우리 금융인데요. 고객님 저희 서류 없이 대출 가능하신데 필요하신 자금 있으세요",
+            "confidence": 0.8755,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    10,
+                    320,
+                    "여보세요."
+                ],
+                [
+                    1470,
+                    1620,
+                    "네"
+                ],
+                [
+                    1790,
+                    2000,
+                    "우리"
+                ],
+                [
+                    2110,
+                    2700,
+                    "금융인데요."
+                ],
+                [
+                    3810,
+                    4100,
+                    "고객님"
+                ],
+                [
+                    4100,
+                    4300,
+                    "저희"
+                ],
+                [
+                    4390,
+                    4720,
+                    "서류"
+                ],
+                [
+                    4720,
+                    5000,
+                    "없이"
+                ],
+                [
+                    5270,
+                    5520,
+                    "대출"
+                ],
+                [
+                    5590,
+                    6260,
+                    "가능하신데"
+                ],
+                [
+                    6650,
+                    7040,
+                    "필요하신"
+                ],
+                [
+                    7110,
+                    7340,
+                    "자금"
+                ],
+                [
+                    7410,
+                    7760,
+                    "있으세요"
+                ]
+            ],
+            "textEdited": "여보세요. 네 우리 금융인데요. 고객님 저희 서류 없이 대출 가능하신데 필요하신 자금 있으세요"
+        },
+        {
+            "start": 8685,
+            "end": 13580,
+            "text": "계획 전혀 없으세요. 고객님 신용대출은 아닌데요. 네 알겠습니다.",
+            "confidence": 0.9059,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    9395,
+                    9605,
+                    "계획"
+                ],
+                [
+                    9635,
+                    9865,
+                    "전혀"
+                ],
+                [
+                    9865,
+                    10205,
+                    "없으세요."
+                ],
+                [
+                    10235,
+                    10485,
+                    "고객님"
+                ],
+                [
+                    10515,
+                    11125,
+                    "신용대출은"
+                ],
+                [
+                    11135,
+                    11545,
+                    "아닌데요."
+                ],
+                [
+                    12195,
+                    12345,
+                    "네"
+                ],
+                [
+                    12345,
+                    12825,
+                    "알겠습니다."
+                ]
+            ],
+            "textEdited": "계획 전혀 없으세요. 고객님 신용대출은 아닌데요. 네 알겠습니다."
+        }
+    ],
+    "text": "여보세요. 네 우리 금융인데요. 고객님 저희 서류 없이 대출 가능하신데 필요하신 자금 있으세요 계획 전혀 없으세요. 고객님 신용대출은 아닌데요. 네 알겠습니다.",
+    "confidence": 0.8877465,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

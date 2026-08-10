@@ -1,0 +1,257 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "9cf30e74e07c4439bff6689e9555ec3f",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "vishing2025",
+            "_ncp_DomainId": 10978,
+            "_ncp_TaskId": 30065133,
+            "_ncp_TraceId": "60a897cba9dc481e902000f3214ea89f"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 7940,
+            "text": "여보세요 이 씨 되십니까?",
+            "confidence": 0.6354,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    2250,
+                    2660,
+                    "여보세요"
+                ],
+                [
+                    5270,
+                    5420,
+                    "이"
+                ],
+                [
+                    5610,
+                    5760,
+                    "씨"
+                ],
+                [
+                    5770,
+                    6220,
+                    "되십니까?"
+                ]
+            ],
+            "textEdited": "여보세요 이 씨 되십니까?"
+        },
+        {
+            "start": 8029,
+            "end": 11825,
+            "text": "네 서울중앙지검입니다. 통화 가능하세요?",
+            "confidence": 0.9821,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    8559,
+                    8709,
+                    "네"
+                ],
+                [
+                    8799,
+                    9869,
+                    "서울중앙지검입니다."
+                ],
+                [
+                    10379,
+                    10569,
+                    "통화"
+                ],
+                [
+                    10599,
+                    11049,
+                    "가능하세요?"
+                ]
+            ],
+            "textEdited": "네 서울중앙지검입니다. 통화 가능하세요?"
+        },
+        {
+            "start": 11825,
+            "end": 14616,
+            "text": "아니요. 제가 좀 바빠서요. 죄송합니다.",
+            "confidence": 0.9953,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    12175,
+                    12505,
+                    "아니요."
+                ],
+                [
+                    12735,
+                    12925,
+                    "제가"
+                ],
+                [
+                    13035,
+                    13185,
+                    "좀"
+                ],
+                [
+                    13215,
+                    13725,
+                    "바빠서요."
+                ],
+                [
+                    13995,
+                    14485,
+                    "죄송합니다."
+                ]
+            ],
+            "textEdited": "아니요. 제가 좀 바빠서요. 죄송합니다."
+        },
+        {
+            "start": 14616,
+            "end": 17940,
+            "text": "언제 통화가 언제 가능하세요?",
+            "confidence": 0.6133,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    14926,
+                    15156,
+                    "언제"
+                ],
+                [
+                    15306,
+                    15676,
+                    "통화가"
+                ],
+                [
+                    15806,
+                    16036,
+                    "언제"
+                ],
+                [
+                    16286,
+                    16756,
+                    "가능하세요?"
+                ]
+            ],
+            "textEdited": "언제 통화가 언제 가능하세요?"
+        },
+        {
+            "start": 17970,
+            "end": 21120,
+            "text": "죄송합니다. 전화번호를 남겨주시면 제가 환가할 때 전화할.",
+            "confidence": 0.9457,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    18520,
+                    18930,
+                    "죄송합니다."
+                ],
+                [
+                    18980,
+                    19510,
+                    "전화번호를"
+                ],
+                [
+                    19510,
+                    20050,
+                    "남겨주시면"
+                ],
+                [
+                    20160,
+                    20330,
+                    "제가"
+                ],
+                [
+                    20380,
+                    20677,
+                    "환가할"
+                ],
+                [
+                    20677,
+                    20810,
+                    "때"
+                ],
+                [
+                    20840,
+                    21120,
+                    "전화할."
+                ]
+            ],
+            "textEdited": "죄송합니다. 전화번호를 남겨주시면 제가 환가할 때 전화할."
+        }
+    ],
+    "text": "여보세요 이 씨 되십니까? 네 서울중앙지검입니다. 통화 가능하세요? 아니요. 제가 좀 바빠서요. 죄송합니다. 언제 통화가 언제 가능하세요? 죄송합니다. 전화번호를 남겨주시면 제가 환가할 때 전화할.",
+    "confidence": 0.8713621,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

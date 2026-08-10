@@ -1,0 +1,195 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "415089997337419fb5415318410ed994",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30305067,
+            "_ncp_TraceId": "c113e572f88f4fb386a238423d1797d0"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 6789,
+            "text": "그 어디죠? 아 우체국 아니에요 아 그러니까 우체국 쪽이에요",
+            "confidence": 0.7599,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    870,
+                    1020,
+                    "그"
+                ],
+                [
+                    1030,
+                    1380,
+                    "어디죠?"
+                ],
+                [
+                    1870,
+                    2020,
+                    "아"
+                ],
+                [
+                    2550,
+                    2940,
+                    "우체국"
+                ],
+                [
+                    2970,
+                    3300,
+                    "아니에요"
+                ],
+                [
+                    4490,
+                    4640,
+                    "아"
+                ],
+                [
+                    4730,
+                    4980,
+                    "그러니까"
+                ],
+                [
+                    4980,
+                    5360,
+                    "우체국"
+                ],
+                [
+                    5590,
+                    5980,
+                    "쪽이에요"
+                ]
+            ],
+            "textEdited": "그 어디죠? 아 우체국 아니에요 아 그러니까 우체국 쪽이에요"
+        },
+        {
+            "start": 6789,
+            "end": 8900,
+            "text": "어떤 우체국이요",
+            "confidence": 0.8954,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    7379,
+                    7609,
+                    "어떤"
+                ],
+                [
+                    7639,
+                    8149,
+                    "우체국이요"
+                ]
+            ],
+            "textEdited": "어떤 우체국이요"
+        },
+        {
+            "start": 8930,
+            "end": 11060,
+            "text": "아 죄송합니다.",
+            "confidence": 0.8606,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    9480,
+                    9630,
+                    "아"
+                ],
+                [
+                    9720,
+                    10150,
+                    "죄송합니다."
+                ]
+            ],
+            "textEdited": "아 죄송합니다."
+        },
+        {
+            "start": 11090,
+            "end": 13140,
+            "text": "네. 감사합니다.",
+            "confidence": 0.9994,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    11700,
+                    11850,
+                    "네."
+                ],
+                [
+                    11960,
+                    12450,
+                    "감사합니다."
+                ]
+            ],
+            "textEdited": "네. 감사합니다."
+        }
+    ],
+    "text": "그 어디죠? 아 우체국 아니에요 아 그러니까 우체국 쪽이에요 어떤 우체국이요 아 죄송합니다. 네. 감사합니다.",
+    "confidence": 0.8273629,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

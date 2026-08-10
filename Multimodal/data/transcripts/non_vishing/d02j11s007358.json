@@ -1,0 +1,223 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "07efcea5470d42dc9b4433ecfd3347f6",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306670,
+            "_ncp_TraceId": "5843a451216b4432bf9f0f7391e9fab2"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 7984,
+            "text": "무엇을 도와드릴까요? 네. 안녕하세요. 오늘 민원 업무를 좀 보려고 하는데 몇 시까지 하시나요?",
+            "confidence": 0.872,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    490,
+                    760,
+                    "무엇을"
+                ],
+                [
+                    760,
+                    1360,
+                    "도와드릴까요?"
+                ],
+                [
+                    3450,
+                    3600,
+                    "네."
+                ],
+                [
+                    3610,
+                    4140,
+                    "안녕하세요."
+                ],
+                [
+                    4370,
+                    4560,
+                    "오늘"
+                ],
+                [
+                    4650,
+                    4880,
+                    "민원"
+                ],
+                [
+                    4970,
+                    5300,
+                    "업무를"
+                ],
+                [
+                    5300,
+                    5440,
+                    "좀"
+                ],
+                [
+                    5470,
+                    5800,
+                    "보려고"
+                ],
+                [
+                    5830,
+                    6140,
+                    "하는데"
+                ],
+                [
+                    6190,
+                    6340,
+                    "몇"
+                ],
+                [
+                    6340,
+                    6740,
+                    "시까지"
+                ],
+                [
+                    6750,
+                    7160,
+                    "하시나요?"
+                ]
+            ],
+            "textEdited": "무엇을 도와드릴까요? 네. 안녕하세요. 오늘 민원 업무를 좀 보려고 하는데 몇 시까지 하시나요?"
+        },
+        {
+            "start": 7984,
+            "end": 16435,
+            "text": "평일 오전 9시부터 오후 6시까지입니다. 아 네 알겠습니다.",
+            "confidence": 0.9851,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    8474,
+                    8744,
+                    "평일"
+                ],
+                [
+                    8754,
+                    8984,
+                    "오전"
+                ],
+                [
+                    9114,
+                    9704,
+                    "9시부터"
+                ],
+                [
+                    9834,
+                    10064,
+                    "오후"
+                ],
+                [
+                    10274,
+                    11144,
+                    "6시까지입니다."
+                ],
+                [
+                    13794,
+                    13944,
+                    "아"
+                ],
+                [
+                    14654,
+                    14804,
+                    "네"
+                ],
+                [
+                    14974,
+                    15564,
+                    "알겠습니다."
+                ]
+            ],
+            "textEdited": "평일 오전 9시부터 오후 6시까지입니다. 아 네 알겠습니다."
+        },
+        {
+            "start": 16435,
+            "end": 19220,
+            "text": "다른 궁금하신 점 있으십니까?",
+            "confidence": 0.9993,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    16925,
+                    17135,
+                    "다른"
+                ],
+                [
+                    17205,
+                    17655,
+                    "궁금하신"
+                ],
+                [
+                    17705,
+                    17855,
+                    "점"
+                ],
+                [
+                    17965,
+                    18455,
+                    "있으십니까?"
+                ]
+            ],
+            "textEdited": "다른 궁금하신 점 있으십니까?"
+        }
+    ],
+    "text": "무엇을 도와드릴까요? 네. 안녕하세요. 오늘 민원 업무를 좀 보려고 하는데 몇 시까지 하시나요? 평일 오전 9시부터 오후 6시까지입니다. 아 네 알겠습니다. 다른 궁금하신 점 있으십니까?",
+    "confidence": 0.9287392,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

@@ -1,0 +1,287 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "55da9bccc7494eeea0288f2eb37d3536",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306371,
+            "_ncp_TraceId": "e842b69e0635463a9ca4f80f5bfa5bcc"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 2195,
+            "text": "무엇을 도와드릴까요?",
+            "confidence": 0.6517,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    470,
+                    740,
+                    "무엇을"
+                ],
+                [
+                    740,
+                    1440,
+                    "도와드릴까요?"
+                ]
+            ],
+            "textEdited": "무엇을 도와드릴까요?"
+        },
+        {
+            "start": 2195,
+            "end": 6100,
+            "text": "수도과 좀 연결해 줄래요 수도 요금 때문에",
+            "confidence": 0.8752,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    2765,
+                    3115,
+                    "수도과"
+                ],
+                [
+                    3185,
+                    3335,
+                    "좀"
+                ],
+                [
+                    3385,
+                    3755,
+                    "연결해"
+                ],
+                [
+                    3755,
+                    4035,
+                    "줄래요"
+                ],
+                [
+                    4365,
+                    4575,
+                    "수도"
+                ],
+                [
+                    4605,
+                    4855,
+                    "요금"
+                ],
+                [
+                    4885,
+                    5155,
+                    "때문에"
+                ]
+            ],
+            "textEdited": "수도과 좀 연결해 줄래요 수도 요금 때문에"
+        },
+        {
+            "start": 6190,
+            "end": 9840,
+            "text": "선생님 그럼 수도 요금 조회하신단 말씀이신 건가요?",
+            "confidence": 0.9386,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    6780,
+                    7037,
+                    "선생님"
+                ],
+                [
+                    7037,
+                    7190,
+                    "그럼"
+                ],
+                [
+                    7190,
+                    7410,
+                    "수도"
+                ],
+                [
+                    7410,
+                    7610,
+                    "요금"
+                ],
+                [
+                    7680,
+                    8230,
+                    "조회하신단"
+                ],
+                [
+                    8260,
+                    8730,
+                    "말씀이신"
+                ],
+                [
+                    8730,
+                    9150,
+                    "건가요?"
+                ]
+            ],
+            "textEdited": "선생님 그럼 수도 요금 조회하신단 말씀이신 건가요?"
+        },
+        {
+            "start": 9840,
+            "end": 12190,
+            "text": "계좌번호가 잘못 왔네.",
+            "confidence": 0.8022,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    10390,
+                    10960,
+                    "계좌번호가"
+                ],
+                [
+                    10970,
+                    11200,
+                    "잘못"
+                ],
+                [
+                    11250,
+                    11480,
+                    "왔네."
+                ]
+            ],
+            "textEdited": "계좌번호가 잘못 왔네."
+        },
+        {
+            "start": 12190,
+            "end": 18880,
+            "text": "아 그렇습니까? 선생님 그러면은 담당자 연결해 드릴 텐데 잠시만 기다려 주시겠습니까?",
+            "confidence": 0.9166,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    12780,
+                    12930,
+                    "아"
+                ],
+                [
+                    12980,
+                    13550,
+                    "그렇습니까?"
+                ],
+                [
+                    13740,
+                    13990,
+                    "선생님"
+                ],
+                [
+                    13990,
+                    14430,
+                    "그러면은"
+                ],
+                [
+                    15600,
+                    16010,
+                    "담당자"
+                ],
+                [
+                    16080,
+                    16430,
+                    "연결해"
+                ],
+                [
+                    16460,
+                    16670,
+                    "드릴"
+                ],
+                [
+                    16720,
+                    16970,
+                    "텐데"
+                ],
+                [
+                    17080,
+                    17470,
+                    "잠시만"
+                ],
+                [
+                    17480,
+                    17770,
+                    "기다려"
+                ],
+                [
+                    17780,
+                    18410,
+                    "주시겠습니까?"
+                ]
+            ],
+            "textEdited": "아 그렇습니까? 선생님 그러면은 담당자 연결해 드릴 텐데 잠시만 기다려 주시겠습니까?"
+        }
+    ],
+    "text": "무엇을 도와드릴까요? 수도과 좀 연결해 줄래요 수도 요금 때문에 선생님 그럼 수도 요금 조회하신단 말씀이신 건가요? 계좌번호가 잘못 왔네. 아 그렇습니까? 선생님 그러면은 담당자 연결해 드릴 텐데 잠시만 기다려 주시겠습니까?",
+    "confidence": 0.8779558,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

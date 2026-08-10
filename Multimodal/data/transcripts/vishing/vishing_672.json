@@ -1,0 +1,178 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "56cdeb3f23f94882bb0a4a28807e90a5",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "vishing2025",
+            "_ncp_DomainId": 10978,
+            "_ncp_TaskId": 30065918,
+            "_ncp_TraceId": "c540cae9f1334465b155fd1451fdb63d"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 8115,
+            "text": "여보세요. 네. 혹시 되십니까? 네. 안녕하세요 서울중앙지검이고요.",
+            "confidence": 0.8683,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    770,
+                    1080,
+                    "여보세요."
+                ],
+                [
+                    2830,
+                    2980,
+                    "네."
+                ],
+                [
+                    3270,
+                    3680,
+                    "혹시"
+                ],
+                [
+                    3870,
+                    4280,
+                    "되십니까?"
+                ],
+                [
+                    6030,
+                    6180,
+                    "네."
+                ],
+                [
+                    6190,
+                    6560,
+                    "안녕하세요"
+                ],
+                [
+                    6610,
+                    7600,
+                    "서울중앙지검이고요."
+                ]
+            ],
+            "textEdited": "여보세요. 네. 혹시 되십니까? 네. 안녕하세요 서울중앙지검이고요."
+        },
+        {
+            "start": 8115,
+            "end": 11940,
+            "text": "저는 첨단범죄수사팀의 박진석 수사관입니다.",
+            "confidence": 0.9577,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    8265,
+                    8515,
+                    "저는"
+                ],
+                [
+                    8745,
+                    9735,
+                    "첨단범죄수사팀의"
+                ],
+                [
+                    9885,
+                    10335,
+                    "박진석"
+                ],
+                [
+                    10465,
+                    11015,
+                    "수사관입니다."
+                ]
+            ],
+            "textEdited": "저는 첨단범죄수사팀의 박진석 수사관입니다."
+        },
+        {
+            "start": 12380,
+            "end": 14180,
+            "text": "네. 전화 잘못 거셨어요.",
+            "confidence": 0.84,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    13090,
+                    13240,
+                    "네."
+                ],
+                [
+                    13250,
+                    13394,
+                    "전화"
+                ],
+                [
+                    13394,
+                    13560,
+                    "잘못"
+                ],
+                [
+                    13560,
+                    13840,
+                    "거셨어요."
+                ]
+            ],
+            "textEdited": "네. 전화 잘못 거셨어요."
+        }
+    ],
+    "text": "여보세요. 네. 혹시 되십니까? 네. 안녕하세요 서울중앙지검이고요. 저는 첨단범죄수사팀의 박진석 수사관입니다. 네. 전화 잘못 거셨어요.",
+    "confidence": 0.89424825,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

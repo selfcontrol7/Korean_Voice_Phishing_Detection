@@ -1,0 +1,171 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "b337cf558fcb4adf8b2ff0efa4650327",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "vishing2025",
+            "_ncp_DomainId": 10978,
+            "_ncp_TaskId": 30050950,
+            "_ncp_TraceId": "97b4aebbbec74e75897fa84278007332"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 30,
+            "end": 9320,
+            "text": "캐피탈 대부업 등 고금리 대출을 낮은 금리로 바꿔드리는 정부 지원 자금 안내를 원하시면 1번을 눌러주세요.",
+            "confidence": 0.8824,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    1220,
+                    1650,
+                    "캐피탈"
+                ],
+                [
+                    1860,
+                    2210,
+                    "대부업"
+                ],
+                [
+                    2260,
+                    2410,
+                    "등"
+                ],
+                [
+                    2560,
+                    2890,
+                    "고금리"
+                ],
+                [
+                    2940,
+                    3350,
+                    "대출을"
+                ],
+                [
+                    3560,
+                    3790,
+                    "낮은"
+                ],
+                [
+                    3940,
+                    4250,
+                    "금리로"
+                ],
+                [
+                    4320,
+                    4870,
+                    "바꿔드리는"
+                ],
+                [
+                    5080,
+                    5350,
+                    "정부"
+                ],
+                [
+                    5400,
+                    5650,
+                    "지원"
+                ],
+                [
+                    5760,
+                    6010,
+                    "자금"
+                ],
+                [
+                    6440,
+                    6790,
+                    "안내를"
+                ],
+                [
+                    6800,
+                    7250,
+                    "원하시면"
+                ],
+                [
+                    7520,
+                    7850,
+                    "1번을"
+                ],
+                [
+                    7940,
+                    8350,
+                    "눌러주세요."
+                ]
+            ],
+            "textEdited": "캐피탈 대부업 등 고금리 대출을 낮은 금리로 바꿔드리는 정부 지원 자금 안내를 원하시면 1번을 눌러주세요."
+        },
+        {
+            "start": 11580,
+            "end": 13340,
+            "text": "신청되었습니다.",
+            "confidence": 0.9975,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    12150,
+                    12900,
+                    "신청되었습니다."
+                ]
+            ],
+            "textEdited": "신청되었습니다."
+        }
+    ],
+    "text": "캐피탈 대부업 등 고금리 대출을 낮은 금리로 바꿔드리는 정부 지원 자금 안내를 원하시면 1번을 눌러주세요. 신청되었습니다.",
+    "confidence": 0.89704907,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        }
+    ],
+    "events": [
+        {
+            "type": "music",
+            "label": "music",
+            "labelEdited": "music",
+            "start": 600,
+            "end": 7000
+        }
+    ],
+    "eventTypes": [
+        "music"
+    ]
+}

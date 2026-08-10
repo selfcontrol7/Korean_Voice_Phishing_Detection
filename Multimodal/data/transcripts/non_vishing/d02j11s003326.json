@@ -1,0 +1,190 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "a8f2544f212a44118970ceb645f0f911",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306647,
+            "_ncp_TraceId": "0839be0f8e024128847db37cb5b454e9"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 1985,
+            "text": "5층에 있나요?",
+            "confidence": 0.9885,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    510,
+                    920,
+                    "5층에"
+                ],
+                [
+                    950,
+                    1220,
+                    "있나요?"
+                ]
+            ],
+            "textEdited": "5층에 있나요?"
+        },
+        {
+            "start": 1985,
+            "end": 8045,
+            "text": "위치 말씀하시는 건가요? 예. 맞습니다. 5층에 위치하고 있습니다.",
+            "confidence": 0.9833,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    2495,
+                    2725,
+                    "위치"
+                ],
+                [
+                    2735,
+                    3225,
+                    "말씀하시는"
+                ],
+                [
+                    3225,
+                    3525,
+                    "건가요?"
+                ],
+                [
+                    4635,
+                    4785,
+                    "예."
+                ],
+                [
+                    4835,
+                    5245,
+                    "맞습니다."
+                ],
+                [
+                    6455,
+                    6805,
+                    "5층에"
+                ],
+                [
+                    6805,
+                    7125,
+                    "위치하고"
+                ],
+                [
+                    7135,
+                    7445,
+                    "있습니다."
+                ]
+            ],
+            "textEdited": "위치 말씀하시는 건가요? 예. 맞습니다. 5층에 위치하고 있습니다."
+        },
+        {
+            "start": 8045,
+            "end": 10754,
+            "text": "네네. 감사합니다.",
+            "confidence": 0.9458,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    9115,
+                    9445,
+                    "네네."
+                ],
+                [
+                    9575,
+                    10065,
+                    "감사합니다."
+                ]
+            ],
+            "textEdited": "네네. 감사합니다."
+        },
+        {
+            "start": 10754,
+            "end": 12500,
+            "text": "네. 감사합니다.",
+            "confidence": 0.9925,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    11204,
+                    11354,
+                    "네."
+                ],
+                [
+                    11384,
+                    11834,
+                    "감사합니다."
+                ]
+            ],
+            "textEdited": "네. 감사합니다."
+        }
+    ],
+    "text": "5층에 있나요? 위치 말씀하시는 건가요? 예. 맞습니다. 5층에 위치하고 있습니다. 네네. 감사합니다. 네. 감사합니다.",
+    "confidence": 0.9793156,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

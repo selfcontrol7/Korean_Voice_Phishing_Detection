@@ -1,0 +1,292 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "97d6bba322eb4f879181291e303ac95c",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306166,
+            "_ncp_TraceId": "c3711cf31f214831b5d5383931a5e90d"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 30,
+            "end": 5435,
+            "text": "그러면은 그 전에 시작했던 거랑 지금이랑 가격이 다른 건가요?",
+            "confidence": 0.8956,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    720,
+                    1150,
+                    "그러면은"
+                ],
+                [
+                    1240,
+                    1390,
+                    "그"
+                ],
+                [
+                    1400,
+                    1750,
+                    "전에"
+                ],
+                [
+                    1960,
+                    2530,
+                    "시작했던"
+                ],
+                [
+                    2560,
+                    2830,
+                    "거랑"
+                ],
+                [
+                    2960,
+                    3450,
+                    "지금이랑"
+                ],
+                [
+                    3520,
+                    3890,
+                    "가격이"
+                ],
+                [
+                    4120,
+                    4350,
+                    "다른"
+                ],
+                [
+                    4440,
+                    4770,
+                    "건가요?"
+                ]
+            ],
+            "textEdited": "그러면은 그 전에 시작했던 거랑 지금이랑 가격이 다른 건가요?"
+        },
+        {
+            "start": 5435,
+            "end": 8350,
+            "text": "네. 금액은 차이가 조금 있으세요",
+            "confidence": 0.9951,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    5885,
+                    6035,
+                    "네."
+                ],
+                [
+                    6145,
+                    6475,
+                    "금액은"
+                ],
+                [
+                    6545,
+                    6855,
+                    "차이가"
+                ],
+                [
+                    6855,
+                    7015,
+                    "조금"
+                ],
+                [
+                    7065,
+                    7435,
+                    "있으세요"
+                ]
+            ],
+            "textEdited": "네. 금액은 차이가 조금 있으세요"
+        },
+        {
+            "start": 8350,
+            "end": 12400,
+            "text": "그때보다는 저렴해진 거죠.",
+            "confidence": 0.9996,
+            "diarization": {
+                "label": "3"
+            },
+            "speaker": {
+                "label": "3",
+                "name": "C",
+                "edited": false
+            },
+            "words": [
+                [
+                    9800,
+                    10470,
+                    "그때보다는"
+                ],
+                [
+                    10740,
+                    11250,
+                    "저렴해진"
+                ],
+                [
+                    11280,
+                    11510,
+                    "거죠."
+                ]
+            ],
+            "textEdited": "그때보다는 저렴해진 거죠."
+        },
+        {
+            "start": 12400,
+            "end": 17655,
+            "text": "이용 기간이 짧아짐에 따라서 금액 차이는 조금 있는 거예요.",
+            "confidence": 0.8987,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    12870,
+                    13100,
+                    "이용"
+                ],
+                [
+                    13130,
+                    13480,
+                    "기간이"
+                ],
+                [
+                    14310,
+                    14860,
+                    "짧아짐에"
+                ],
+                [
+                    14860,
+                    15180,
+                    "따라서"
+                ],
+                [
+                    15570,
+                    15760,
+                    "금액"
+                ],
+                [
+                    15810,
+                    16120,
+                    "차이는"
+                ],
+                [
+                    16130,
+                    16320,
+                    "조금"
+                ],
+                [
+                    16350,
+                    16560,
+                    "있는"
+                ],
+                [
+                    16570,
+                    16860,
+                    "거예요."
+                ]
+            ],
+            "textEdited": "이용 기간이 짧아짐에 따라서 금액 차이는 조금 있는 거예요."
+        },
+        {
+            "start": 17655,
+            "end": 19970,
+            "text": "네. 그래 알겠습니다.",
+            "confidence": 0.9282,
+            "diarization": {
+                "label": "4"
+            },
+            "speaker": {
+                "label": "4",
+                "name": "D",
+                "edited": false
+            },
+            "words": [
+                [
+                    18325,
+                    18475,
+                    "네."
+                ],
+                [
+                    18545,
+                    18735,
+                    "그래"
+                ],
+                [
+                    18745,
+                    19475,
+                    "알겠습니다."
+                ]
+            ],
+            "textEdited": "네. 그래 알겠습니다."
+        }
+    ],
+    "text": "그러면은 그 전에 시작했던 거랑 지금이랑 가격이 다른 건가요? 네. 금액은 차이가 조금 있으세요 그때보다는 저렴해진 거죠. 이용 기간이 짧아짐에 따라서 금액 차이는 조금 있는 거예요. 네. 그래 알겠습니다.",
+    "confidence": 0.9293607,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        },
+        {
+            "label": "3",
+            "name": "C",
+            "edited": false
+        },
+        {
+            "label": "4",
+            "name": "D",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

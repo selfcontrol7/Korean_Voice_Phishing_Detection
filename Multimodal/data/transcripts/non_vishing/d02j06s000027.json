@@ -1,0 +1,287 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "024b0fe6dbac492c8d5a1b5550ab096a",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306315,
+            "_ncp_TraceId": "297d8f8f69ea45f0912dc78ce07f3619"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 30,
+            "end": 1825,
+            "text": "여보세요.",
+            "confidence": 0.9999,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    660,
+                    1010,
+                    "여보세요."
+                ]
+            ],
+            "textEdited": "여보세요."
+        },
+        {
+            "start": 1825,
+            "end": 4520,
+            "text": "대약과 환부 도와드릴까요?",
+            "confidence": 0.4723,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    2375,
+                    2765,
+                    "대약과"
+                ],
+                [
+                    2765,
+                    2965,
+                    "환부"
+                ],
+                [
+                    2965,
+                    3485,
+                    "도와드릴까요?"
+                ]
+            ],
+            "textEdited": "대약과 환부 도와드릴까요?"
+        },
+        {
+            "start": 4680,
+            "end": 8320,
+            "text": "예 검사 유효기간 지나서 돌아 한번 그러는데요.",
+            "confidence": 0.8051,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    5230,
+                    5380,
+                    "예"
+                ],
+                [
+                    5690,
+                    5920,
+                    "검사"
+                ],
+                [
+                    5990,
+                    6480,
+                    "유효기간"
+                ],
+                [
+                    6570,
+                    6880,
+                    "지나서"
+                ],
+                [
+                    6890,
+                    7034,
+                    "돌아"
+                ],
+                [
+                    7034,
+                    7200,
+                    "한번"
+                ],
+                [
+                    7210,
+                    7640,
+                    "그러는데요."
+                ]
+            ],
+            "textEdited": "예 검사 유효기간 지나서 돌아 한번 그러는데요."
+        },
+        {
+            "start": 8320,
+            "end": 16130,
+            "text": "아 그럼 죄송합니다. 자동차 검사에 대한 과태료 부분은 제가 바로 확인이 어려워서요. 담당자 바로 연결해 드릴 텐데요.",
+            "confidence": 0.9648,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    8830,
+                    8980,
+                    "아"
+                ],
+                [
+                    9010,
+                    9180,
+                    "그럼"
+                ],
+                [
+                    9250,
+                    9740,
+                    "죄송합니다."
+                ],
+                [
+                    9950,
+                    10320,
+                    "자동차"
+                ],
+                [
+                    10330,
+                    10667,
+                    "검사에"
+                ],
+                [
+                    10667,
+                    10840,
+                    "대한"
+                ],
+                [
+                    10930,
+                    11280,
+                    "과태료"
+                ],
+                [
+                    11280,
+                    11620,
+                    "부분은"
+                ],
+                [
+                    11670,
+                    11860,
+                    "제가"
+                ],
+                [
+                    11910,
+                    12100,
+                    "바로"
+                ],
+                [
+                    12150,
+                    12480,
+                    "확인이"
+                ],
+                [
+                    12490,
+                    13000,
+                    "어려워서요."
+                ],
+                [
+                    13510,
+                    13920,
+                    "담당자"
+                ],
+                [
+                    13930,
+                    14100,
+                    "바로"
+                ],
+                [
+                    14130,
+                    14500,
+                    "연결해"
+                ],
+                [
+                    14500,
+                    14680,
+                    "드릴"
+                ],
+                [
+                    14690,
+                    15020,
+                    "텐데요."
+                ]
+            ],
+            "textEdited": "아 그럼 죄송합니다. 자동차 검사에 대한 과태료 부분은 제가 바로 확인이 어려워서요. 담당자 바로 연결해 드릴 텐데요."
+        },
+        {
+            "start": 16320,
+            "end": 18050,
+            "text": "예 알았습니다.",
+            "confidence": 0.9345,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    16890,
+                    17040,
+                    "예"
+                ],
+                [
+                    17110,
+                    17580,
+                    "알았습니다."
+                ]
+            ],
+            "textEdited": "예 알았습니다."
+        }
+    ],
+    "text": "여보세요. 대약과 환부 도와드릴까요? 예 검사 유효기간 지나서 돌아 한번 그러는데요. 아 그럼 죄송합니다. 자동차 검사에 대한 과태료 부분은 제가 바로 확인이 어려워서요. 담당자 바로 연결해 드릴 텐데요. 예 알았습니다.",
+    "confidence": 0.8688102,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

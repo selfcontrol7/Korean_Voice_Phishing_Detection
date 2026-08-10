@@ -1,0 +1,111 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "86475c8d4c9e4e8f8cf1098be3285fa1",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306853,
+            "_ncp_TraceId": "49ac9469662549f4ab4252ef56741eb7"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 3115,
+            "text": "모의고사를 받았는데요.",
+            "confidence": 0.997,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    510,
+                    1120,
+                    "모의고사를"
+                ],
+                [
+                    1530,
+                    2120,
+                    "받았는데요."
+                ]
+            ],
+            "textEdited": "모의고사를 받았는데요."
+        },
+        {
+            "start": 5175,
+            "end": 7890,
+            "text": "네 아 예 알겠습니다.",
+            "confidence": 0.9296,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    5665,
+                    5815,
+                    "네"
+                ],
+                [
+                    6505,
+                    6655,
+                    "아"
+                ],
+                [
+                    6765,
+                    6915,
+                    "예"
+                ],
+                [
+                    6965,
+                    7515,
+                    "알겠습니다."
+                ]
+            ],
+            "textEdited": "네 아 예 알겠습니다."
+        }
+    ],
+    "text": "모의고사를 받았는데요. 네 아 예 알겠습니다.",
+    "confidence": 0.9656241,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

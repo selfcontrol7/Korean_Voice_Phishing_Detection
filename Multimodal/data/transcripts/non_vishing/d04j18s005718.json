@@ -1,0 +1,228 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "84f90918d86146a4aab73f981bbe4eb4",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306766,
+            "_ncp_TraceId": "75a8b215407543858fcc4ff25121beef"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 4949,
+            "text": "네네. 지금 혹시 예전에 바르셨던 게 분홍색이셨어요?",
+            "confidence": 0.7961,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    610,
+                    880,
+                    "네네."
+                ],
+                [
+                    1690,
+                    1900,
+                    "지금"
+                ],
+                [
+                    1910,
+                    2200,
+                    "혹시"
+                ],
+                [
+                    2200,
+                    2540,
+                    "예전에"
+                ],
+                [
+                    2570,
+                    3040,
+                    "바르셨던"
+                ],
+                [
+                    3070,
+                    3220,
+                    "게"
+                ],
+                [
+                    3250,
+                    4140,
+                    "분홍색이셨어요?"
+                ]
+            ],
+            "textEdited": "네네. 지금 혹시 예전에 바르셨던 게 분홍색이셨어요?"
+        },
+        {
+            "start": 4949,
+            "end": 14800,
+            "text": "아 그러면 예전에 받으셨던 거랑 이제 동일한 색상으로 받으신다고 하시니까요. 네. 그 동일한 색상으로 아마 받으실 거예요.",
+            "confidence": 0.9181,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    5519,
+                    5669,
+                    "아"
+                ],
+                [
+                    6079,
+                    6329,
+                    "그러면"
+                ],
+                [
+                    6339,
+                    6729,
+                    "예전에"
+                ],
+                [
+                    6999,
+                    7449,
+                    "받으셨던"
+                ],
+                [
+                    7479,
+                    7696,
+                    "거랑"
+                ],
+                [
+                    7696,
+                    7849,
+                    "이제"
+                ],
+                [
+                    7879,
+                    8209,
+                    "동일한"
+                ],
+                [
+                    8279,
+                    8769,
+                    "색상으로"
+                ],
+                [
+                    8899,
+                    9449,
+                    "받으신다고"
+                ],
+                [
+                    9449,
+                    10009,
+                    "하시니까요."
+                ],
+                [
+                    11319,
+                    11469,
+                    "네."
+                ],
+                [
+                    11999,
+                    12149,
+                    "그"
+                ],
+                [
+                    12539,
+                    12849,
+                    "동일한"
+                ],
+                [
+                    12859,
+                    13329,
+                    "색상으로"
+                ],
+                [
+                    13359,
+                    13529,
+                    "아마"
+                ],
+                [
+                    13579,
+                    13949,
+                    "받으실"
+                ],
+                [
+                    13979,
+                    14269,
+                    "거예요."
+                ]
+            ],
+            "textEdited": "아 그러면 예전에 받으셨던 거랑 이제 동일한 색상으로 받으신다고 하시니까요. 네. 그 동일한 색상으로 아마 받으실 거예요."
+        },
+        {
+            "start": 14800,
+            "end": 16750,
+            "text": "네. 감사합니다.",
+            "confidence": 0.944,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    15290,
+                    15440,
+                    "네."
+                ],
+                [
+                    15590,
+                    16140,
+                    "감사합니다."
+                ]
+            ],
+            "textEdited": "네. 감사합니다."
+        }
+    ],
+    "text": "네네. 지금 혹시 예전에 바르셨던 게 분홍색이셨어요? 아 그러면 예전에 받으셨던 거랑 이제 동일한 색상으로 받으신다고 하시니까요. 네. 그 동일한 색상으로 아마 받으실 거예요. 네. 감사합니다.",
+    "confidence": 0.88652277,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

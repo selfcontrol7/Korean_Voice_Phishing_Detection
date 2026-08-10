@@ -1,0 +1,245 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "164a18761761411cba2e62cdac88824a",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306655,
+            "_ncp_TraceId": "095b830b12cc4e99b179f5dfd9a92b3e"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 1495,
+            "text": "예 여보세요",
+            "confidence": 0.9458,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    430,
+                    580,
+                    "예"
+                ],
+                [
+                    580,
+                    840,
+                    "여보세요"
+                ]
+            ],
+            "textEdited": "예 여보세요"
+        },
+        {
+            "start": 1495,
+            "end": 6510,
+            "text": "연결해 드릴까요? 고객님 고객님 직원이 여러 명인데",
+            "confidence": 0.8346,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    2045,
+                    2362,
+                    "연결해"
+                ],
+                [
+                    2362,
+                    2755,
+                    "드릴까요?"
+                ],
+                [
+                    2825,
+                    3115,
+                    "고객님"
+                ],
+                [
+                    4145,
+                    4475,
+                    "고객님"
+                ],
+                [
+                    4625,
+                    4975,
+                    "직원이"
+                ],
+                [
+                    5045,
+                    5255,
+                    "여러"
+                ],
+                [
+                    5265,
+                    5675,
+                    "명인데"
+                ]
+            ],
+            "textEdited": "연결해 드릴까요? 고객님 고객님 직원이 여러 명인데"
+        },
+        {
+            "start": 6510,
+            "end": 9240,
+            "text": "보고 물어볼 거 있어서 전화했거든요.",
+            "confidence": 0.9827,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    6940,
+                    7150,
+                    "보고"
+                ],
+                [
+                    7400,
+                    7710,
+                    "물어볼"
+                ],
+                [
+                    7720,
+                    7870,
+                    "거"
+                ],
+                [
+                    7870,
+                    8090,
+                    "있어서"
+                ],
+                [
+                    8100,
+                    8610,
+                    "전화했거든요."
+                ]
+            ],
+            "textEdited": "보고 물어볼 거 있어서 전화했거든요."
+        },
+        {
+            "start": 9240,
+            "end": 16460,
+            "text": "담당자 연락처 안내해 드릴 텐데 연결해 드리겠습니다. 네. 좋은 상담 이어가세요.",
+            "confidence": 0.9165,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    9730,
+                    10160,
+                    "담당자"
+                ],
+                [
+                    10210,
+                    10580,
+                    "연락처"
+                ],
+                [
+                    10650,
+                    11040,
+                    "안내해"
+                ],
+                [
+                    11040,
+                    11220,
+                    "드릴"
+                ],
+                [
+                    11250,
+                    11520,
+                    "텐데"
+                ],
+                [
+                    12850,
+                    13220,
+                    "연결해"
+                ],
+                [
+                    13220,
+                    13840,
+                    "드리겠습니다."
+                ],
+                [
+                    14870,
+                    15020,
+                    "네."
+                ],
+                [
+                    15190,
+                    15360,
+                    "좋은"
+                ],
+                [
+                    15430,
+                    15660,
+                    "상담"
+                ],
+                [
+                    15750,
+                    16240,
+                    "이어가세요."
+                ]
+            ],
+            "textEdited": "담당자 연락처 안내해 드릴 텐데 연결해 드리겠습니다. 네. 좋은 상담 이어가세요."
+        }
+    ],
+    "text": "예 여보세요 연결해 드릴까요? 고객님 고객님 직원이 여러 명인데 보고 물어볼 거 있어서 전화했거든요. 담당자 연락처 안내해 드릴 텐데 연결해 드리겠습니다. 네. 좋은 상담 이어가세요.",
+    "confidence": 0.9084228,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

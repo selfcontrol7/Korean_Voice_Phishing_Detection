@@ -1,0 +1,181 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "78fec7942567405aba8d112559d56b2f",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306658,
+            "_ncp_TraceId": "9e38f4ac985d46bd981bba80e87d214c"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 30,
+            "end": 9710,
+            "text": "네 다름이 아니라 거기 법인 인감증명도 떼어주나요? 법인세 위반명령서는 고객님 등기소에서 발급하는 서류입니다.",
+            "confidence": 0.8622,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    680,
+                    830,
+                    "네"
+                ],
+                [
+                    900,
+                    1157,
+                    "다름이"
+                ],
+                [
+                    1157,
+                    1390,
+                    "아니라"
+                ],
+                [
+                    1600,
+                    1830,
+                    "거기"
+                ],
+                [
+                    3080,
+                    3310,
+                    "법인"
+                ],
+                [
+                    3400,
+                    4070,
+                    "인감증명도"
+                ],
+                [
+                    4070,
+                    4550,
+                    "떼어주나요?"
+                ],
+                [
+                    5700,
+                    5977,
+                    "법인세"
+                ],
+                [
+                    5977,
+                    6650,
+                    "위반명령서는"
+                ],
+                [
+                    6650,
+                    6950,
+                    "고객님"
+                ],
+                [
+                    7040,
+                    7610,
+                    "등기소에서"
+                ],
+                [
+                    7660,
+                    8290,
+                    "발급하는"
+                ],
+                [
+                    8320,
+                    8790,
+                    "서류입니다."
+                ]
+            ],
+            "textEdited": "네 다름이 아니라 거기 법인 인감증명도 떼어주나요? 법인세 위반명령서는 고객님 등기소에서 발급하는 서류입니다."
+        },
+        {
+            "start": 9800,
+            "end": 15720,
+            "text": "등기소로만 가야 돼요 네 맞습니다. 네 알았습니다.",
+            "confidence": 0.8757,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    10770,
+                    11220,
+                    "등기소로만"
+                ],
+                [
+                    11220,
+                    11387,
+                    "가야"
+                ],
+                [
+                    11387,
+                    11560,
+                    "돼요"
+                ],
+                [
+                    12570,
+                    12720,
+                    "네"
+                ],
+                [
+                    12830,
+                    13200,
+                    "맞습니다."
+                ],
+                [
+                    14570,
+                    14720,
+                    "네"
+                ],
+                [
+                    14770,
+                    15260,
+                    "알았습니다."
+                ]
+            ],
+            "textEdited": "등기소로만 가야 돼요 네 맞습니다. 네 알았습니다."
+        }
+    ],
+    "text": "네 다름이 아니라 거기 법인 인감증명도 떼어주나요? 법인세 위반명령서는 고객님 등기소에서 발급하는 서류입니다. 등기소로만 가야 돼요 네 맞습니다. 네 알았습니다.",
+    "confidence": 0.8662686,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

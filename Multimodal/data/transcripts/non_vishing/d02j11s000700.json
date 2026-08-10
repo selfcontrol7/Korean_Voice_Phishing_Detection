@@ -1,0 +1,304 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "a5760d04e09544828af3493cec0bde5d",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306635,
+            "_ncp_TraceId": "1a22cf1717344d4faf6df9d5824f6b70"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 30,
+            "end": 2260,
+            "text": "어디로 전화해야 돼요.",
+            "confidence": 0.9768,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    600,
+                    890,
+                    "어디로"
+                ],
+                [
+                    940,
+                    1297,
+                    "전화해야"
+                ],
+                [
+                    1297,
+                    1490,
+                    "돼요."
+                ]
+            ],
+            "textEdited": "어디로 전화해야 돼요."
+        },
+        {
+            "start": 2350,
+            "end": 5029,
+            "text": "지금 어디시라고 하셨습니까?",
+            "confidence": 0.9365,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    3120,
+                    3310,
+                    "지금"
+                ],
+                [
+                    3310,
+                    3824,
+                    "어디시라고"
+                ],
+                [
+                    3824,
+                    4270,
+                    "하셨습니까?"
+                ]
+            ],
+            "textEdited": "지금 어디시라고 하셨습니까?"
+        },
+        {
+            "start": 5029,
+            "end": 7205,
+            "text": "관련 문의 좀 하려고",
+            "confidence": 0.9735,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    5619,
+                    5889,
+                    "관련"
+                ],
+                [
+                    5939,
+                    6149,
+                    "문의"
+                ],
+                [
+                    6179,
+                    6329,
+                    "좀"
+                ],
+                [
+                    6329,
+                    6629,
+                    "하려고"
+                ]
+            ],
+            "textEdited": "관련 문의 좀 하려고"
+        },
+        {
+            "start": 7205,
+            "end": 15985,
+            "text": "아 그러셨어요 그러면 저희 담당자분 연결하겠습니다. 혹시라도 연결 중에 전화 끊어지면",
+            "confidence": 0.9657,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    7655,
+                    7805,
+                    "아"
+                ],
+                [
+                    7915,
+                    8405,
+                    "그러셨어요"
+                ],
+                [
+                    9655,
+                    9945,
+                    "그러면"
+                ],
+                [
+                    10055,
+                    10245,
+                    "저희"
+                ],
+                [
+                    11255,
+                    11765,
+                    "담당자분"
+                ],
+                [
+                    11795,
+                    12505,
+                    "연결하겠습니다."
+                ],
+                [
+                    13515,
+                    13905,
+                    "혹시라도"
+                ],
+                [
+                    13935,
+                    14225,
+                    "연결"
+                ],
+                [
+                    14275,
+                    14505,
+                    "중에"
+                ],
+                [
+                    14515,
+                    14705,
+                    "전화"
+                ],
+                [
+                    14755,
+                    15165,
+                    "끊어지면"
+                ]
+            ],
+            "textEdited": "아 그러셨어요 그러면 저희 담당자분 연결하겠습니다. 혹시라도 연결 중에 전화 끊어지면"
+        },
+        {
+            "start": 15985,
+            "end": 17710,
+            "text": "알겠습니다.",
+            "confidence": 0.9999,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    16455,
+                    17045,
+                    "알겠습니다."
+                ]
+            ],
+            "textEdited": "알겠습니다."
+        },
+        {
+            "start": 17710,
+            "end": 24540,
+            "text": "좋은 상담 이어가세요. 담당자분 통화 요청을 하셔가지고요. 연결하겠습니다.",
+            "confidence": 0.9907,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    18200,
+                    18370,
+                    "좋은"
+                ],
+                [
+                    18400,
+                    18630,
+                    "상담"
+                ],
+                [
+                    18660,
+                    19070,
+                    "이어가세요."
+                ],
+                [
+                    20300,
+                    20790,
+                    "담당자분"
+                ],
+                [
+                    20840,
+                    21050,
+                    "통화"
+                ],
+                [
+                    21060,
+                    21390,
+                    "요청을"
+                ],
+                [
+                    21390,
+                    21930,
+                    "하셔가지고요."
+                ],
+                [
+                    23200,
+                    23890,
+                    "연결하겠습니다."
+                ]
+            ],
+            "textEdited": "좋은 상담 이어가세요. 담당자분 통화 요청을 하셔가지고요. 연결하겠습니다."
+        }
+    ],
+    "text": "어디로 전화해야 돼요. 지금 어디시라고 하셨습니까? 관련 문의 좀 하려고 아 그러셨어요 그러면 저희 담당자분 연결하겠습니다. 혹시라도 연결 중에 전화 끊어지면 알겠습니다. 좋은 상담 이어가세요. 담당자분 통화 요청을 하셔가지고요. 연결하겠습니다.",
+    "confidence": 0.9731493,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

@@ -1,0 +1,299 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "45fda1979b664525a1dc48255800578c",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306622,
+            "_ncp_TraceId": "840757d8bd9d43e0b69b211c066c8e7d"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 2420,
+            "text": "무엇이 어디일까요?",
+            "confidence": 0.5075,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    490,
+                    820,
+                    "무엇이"
+                ],
+                [
+                    850,
+                    1380,
+                    "어디일까요?"
+                ]
+            ],
+            "textEdited": "무엇이 어디일까요?"
+        },
+        {
+            "start": 2680,
+            "end": 4626,
+            "text": "예 혹시 문화",
+            "confidence": 0.9285,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    3270,
+                    3420,
+                    "예"
+                ],
+                [
+                    3670,
+                    4020,
+                    "혹시"
+                ],
+                [
+                    4290,
+                    4540,
+                    "문화"
+                ]
+            ],
+            "textEdited": "예 혹시 문화"
+        },
+        {
+            "start": 5750,
+            "end": 8420,
+            "text": "연결 부탁드려도 되겠습니까?",
+            "confidence": 0.827,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    6580,
+                    6890,
+                    "연결"
+                ],
+                [
+                    6920,
+                    7304,
+                    "부탁드려도"
+                ],
+                [
+                    7304,
+                    7710,
+                    "되겠습니까?"
+                ]
+            ],
+            "textEdited": "연결 부탁드려도 되겠습니까?"
+        },
+        {
+            "start": 8510,
+            "end": 17480,
+            "text": "문화해설사 담당하는 기자 말씀이십니까? 혹시 문화해설사 신청 관련된 문의를 하실 예정이신가요?",
+            "confidence": 0.8812,
+            "diarization": {
+                "label": "3"
+            },
+            "speaker": {
+                "label": "3",
+                "name": "C",
+                "edited": false
+            },
+            "words": [
+                [
+                    9140,
+                    10090,
+                    "문화해설사"
+                ],
+                [
+                    10320,
+                    10750,
+                    "담당하는"
+                ],
+                [
+                    10760,
+                    10950,
+                    "기자"
+                ],
+                [
+                    10980,
+                    11570,
+                    "말씀이십니까?"
+                ],
+                [
+                    13140,
+                    13410,
+                    "혹시"
+                ],
+                [
+                    13680,
+                    14450,
+                    "문화해설사"
+                ],
+                [
+                    14840,
+                    15050,
+                    "신청"
+                ],
+                [
+                    15160,
+                    15490,
+                    "관련된"
+                ],
+                [
+                    15540,
+                    15810,
+                    "문의를"
+                ],
+                [
+                    15810,
+                    15990,
+                    "하실"
+                ],
+                [
+                    16040,
+                    16670,
+                    "예정이신가요?"
+                ]
+            ],
+            "textEdited": "문화해설사 담당하는 기자 말씀이십니까? 혹시 문화해설사 신청 관련된 문의를 하실 예정이신가요?"
+        },
+        {
+            "start": 17480,
+            "end": 19160,
+            "text": "예 맞습니다.",
+            "confidence": 0.9988,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    17910,
+                    18060,
+                    "예"
+                ],
+                [
+                    18090,
+                    18500,
+                    "맞습니다."
+                ]
+            ],
+            "textEdited": "예 맞습니다."
+        },
+        {
+            "start": 19160,
+            "end": 25160,
+            "text": "관광과 바로 연결할 텐데요. 잠시만 기다려 주시겠습니까?",
+            "confidence": 0.9872,
+            "diarization": {
+                "label": "3"
+            },
+            "speaker": {
+                "label": "3",
+                "name": "C",
+                "edited": false
+            },
+            "words": [
+                [
+                    19810,
+                    20260,
+                    "관광과"
+                ],
+                [
+                    20350,
+                    20540,
+                    "바로"
+                ],
+                [
+                    20550,
+                    20960,
+                    "연결할"
+                ],
+                [
+                    20960,
+                    21240,
+                    "텐데요."
+                ],
+                [
+                    22970,
+                    23380,
+                    "잠시만"
+                ],
+                [
+                    23570,
+                    23840,
+                    "기다려"
+                ],
+                [
+                    23850,
+                    24420,
+                    "주시겠습니까?"
+                ]
+            ],
+            "textEdited": "관광과 바로 연결할 텐데요. 잠시만 기다려 주시겠습니까?"
+        }
+    ],
+    "text": "무엇이 어디일까요? 예 혹시 문화 연결 부탁드려도 되겠습니까? 문화해설사 담당하는 기자 말씀이십니까? 혹시 문화해설사 신청 관련된 문의를 하실 예정이신가요? 예 맞습니다. 관광과 바로 연결할 텐데요. 잠시만 기다려 주시겠습니까?",
+    "confidence": 0.8786539,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        },
+        {
+            "label": "3",
+            "name": "C",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

@@ -1,0 +1,213 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "2343d31c6789466cad1e785b6cc84275",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30305066,
+            "_ncp_TraceId": "df5e1253e2194d58ab0157c2a1adc6f5"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 4805,
+            "text": "댓글 이벤트 지금 재발송해 드렸는데 받으셨나요?",
+            "confidence": 0.7773,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    330,
+                    560,
+                    "댓글"
+                ],
+                [
+                    570,
+                    920,
+                    "이벤트"
+                ],
+                [
+                    1570,
+                    1740,
+                    "지금"
+                ],
+                [
+                    2530,
+                    3060,
+                    "재발송해"
+                ],
+                [
+                    3070,
+                    3500,
+                    "드렸는데"
+                ],
+                [
+                    3550,
+                    4080,
+                    "받으셨나요?"
+                ]
+            ],
+            "textEdited": "댓글 이벤트 지금 재발송해 드렸는데 받으셨나요?"
+        },
+        {
+            "start": 4805,
+            "end": 8240,
+            "text": "아니요 지금 다시 확인해 봐",
+            "confidence": 0.8835,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    5795,
+                    6085,
+                    "아니요"
+                ],
+                [
+                    6615,
+                    6845,
+                    "지금"
+                ],
+                [
+                    6875,
+                    7085,
+                    "다시"
+                ],
+                [
+                    7155,
+                    7525,
+                    "확인해"
+                ],
+                [
+                    7525,
+                    7645,
+                    "봐"
+                ]
+            ],
+            "textEdited": "아니요 지금 다시 확인해 봐"
+        },
+        {
+            "start": 8240,
+            "end": 14640,
+            "text": "아 네 저희가 재발송 확인 재발송 처리해 드렸어요. 아 네. 감사합니다.",
+            "confidence": 0.8311,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    8770,
+                    8920,
+                    "아"
+                ],
+                [
+                    8920,
+                    9040,
+                    "네"
+                ],
+                [
+                    9150,
+                    9420,
+                    "저희가"
+                ],
+                [
+                    9490,
+                    9900,
+                    "재발송"
+                ],
+                [
+                    9900,
+                    10120,
+                    "확인"
+                ],
+                [
+                    10450,
+                    10880,
+                    "재발송"
+                ],
+                [
+                    10910,
+                    11260,
+                    "처리해"
+                ],
+                [
+                    11260,
+                    11640,
+                    "드렸어요."
+                ],
+                [
+                    12990,
+                    13140,
+                    "아"
+                ],
+                [
+                    13150,
+                    13300,
+                    "네."
+                ],
+                [
+                    13310,
+                    13800,
+                    "감사합니다."
+                ]
+            ],
+            "textEdited": "아 네 저희가 재발송 확인 재발송 처리해 드렸어요. 아 네. 감사합니다."
+        }
+    ],
+    "text": "댓글 이벤트 지금 재발송해 드렸는데 받으셨나요? 아니요 지금 다시 확인해 봐 아 네 저희가 재발송 확인 재발송 처리해 드렸어요. 아 네. 감사합니다.",
+    "confidence": 0.8230264,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

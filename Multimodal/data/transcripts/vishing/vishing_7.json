@@ -1,0 +1,211 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "2fc8befac23440abaa233e1412cfbbf2",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "vishing2025",
+            "_ncp_DomainId": 10978,
+            "_ncp_TaskId": 30050681,
+            "_ncp_TraceId": "0dac3ccf0dcc4e0b9ff43676ba86b48b"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 9160,
+            "text": "복을 약속하는 신한은행입니다. 국민 행복기금 정부 지원 자금으로 고금리 부채를 마이너스 통장 개설로 통합 가능하십니다.",
+            "confidence": 0.9793,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    30,
+                    280,
+                    "복을"
+                ],
+                [
+                    330,
+                    860,
+                    "약속하는"
+                ],
+                [
+                    1050,
+                    1880,
+                    "신한은행입니다."
+                ],
+                [
+                    2470,
+                    2680,
+                    "국민"
+                ],
+                [
+                    2810,
+                    3340,
+                    "행복기금"
+                ],
+                [
+                    3730,
+                    4020,
+                    "정부"
+                ],
+                [
+                    4090,
+                    4340,
+                    "지원"
+                ],
+                [
+                    4410,
+                    4820,
+                    "자금으로"
+                ],
+                [
+                    5210,
+                    5580,
+                    "고금리"
+                ],
+                [
+                    5670,
+                    6040,
+                    "부채를"
+                ],
+                [
+                    6150,
+                    6640,
+                    "마이너스"
+                ],
+                [
+                    6710,
+                    6980,
+                    "통장"
+                ],
+                [
+                    7030,
+                    7400,
+                    "개설로"
+                ],
+                [
+                    7590,
+                    7820,
+                    "통합"
+                ],
+                [
+                    7950,
+                    8640,
+                    "가능하십니다."
+                ]
+            ],
+            "textEdited": "복을 약속하는 신한은행입니다. 국민 행복기금 정부 지원 자금으로 고금리 부채를 마이너스 통장 개설로 통합 가능하십니다."
+        },
+        {
+            "start": 9160,
+            "end": 13970,
+            "text": "마이너스 통장 발급 신청은 1번, 수신, 거부는 9번을 눌러주세요.",
+            "confidence": 0.9937,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    9290,
+                    9720,
+                    "마이너스"
+                ],
+                [
+                    9790,
+                    10060,
+                    "통장"
+                ],
+                [
+                    10190,
+                    10440,
+                    "발급"
+                ],
+                [
+                    10490,
+                    10860,
+                    "신청은"
+                ],
+                [
+                    10950,
+                    11240,
+                    "1번,"
+                ],
+                [
+                    11770,
+                    12000,
+                    "수신,"
+                ],
+                [
+                    12030,
+                    12380,
+                    "거부는"
+                ],
+                [
+                    12530,
+                    12860,
+                    "9번을"
+                ],
+                [
+                    12930,
+                    13380,
+                    "눌러주세요."
+                ]
+            ],
+            "textEdited": "마이너스 통장 발급 신청은 1번, 수신, 거부는 9번을 눌러주세요."
+        }
+    ],
+    "text": "복을 약속하는 신한은행입니다. 국민 행복기금 정부 지원 자금으로 고금리 부채를 마이너스 통장 개설로 통합 가능하십니다. 마이너스 통장 발급 신청은 1번, 수신, 거부는 9번을 눌러주세요.",
+    "confidence": 0.98410004,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        }
+    ],
+    "events": [
+        {
+            "type": "music",
+            "label": "music",
+            "labelEdited": "music",
+            "start": 2200,
+            "end": 9900
+        }
+    ],
+    "eventTypes": [
+        "music"
+    ]
+}

@@ -1,0 +1,156 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "88b7e1ef57eb4ff4ad4606e2d5090375",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306384,
+            "_ncp_TraceId": "4051d8cba1a845f8b21fe4fec2e34ae6"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 10030,
+            "text": "저희 외환 접수 들어와서 연락드렸는데요. 확인하신 위치는 시간은 5시 47분 정도 된다라고 하셨고요.",
+            "confidence": 0.9125,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    490,
+                    680,
+                    "저희"
+                ],
+                [
+                    710,
+                    940,
+                    "외환"
+                ],
+                [
+                    990,
+                    1240,
+                    "접수"
+                ],
+                [
+                    1250,
+                    1580,
+                    "들어와서"
+                ],
+                [
+                    1590,
+                    2360,
+                    "연락드렸는데요."
+                ],
+                [
+                    4450,
+                    4900,
+                    "확인하신"
+                ],
+                [
+                    4990,
+                    5340,
+                    "위치는"
+                ],
+                [
+                    6430,
+                    6820,
+                    "시간은"
+                ],
+                [
+                    6970,
+                    7260,
+                    "5시"
+                ],
+                [
+                    7290,
+                    7940,
+                    "47분"
+                ],
+                [
+                    7990,
+                    8300,
+                    "정도"
+                ],
+                [
+                    8310,
+                    8760,
+                    "된다라고"
+                ],
+                [
+                    8760,
+                    9200,
+                    "하셨고요."
+                ]
+            ],
+            "textEdited": "저희 외환 접수 들어와서 연락드렸는데요. 확인하신 위치는 시간은 5시 47분 정도 된다라고 하셨고요."
+        },
+        {
+            "start": 10220,
+            "end": 12070,
+            "text": "네. 감사합니다.",
+            "confidence": 0.9925,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    10810,
+                    10960,
+                    "네."
+                ],
+                [
+                    10970,
+                    11460,
+                    "감사합니다."
+                ]
+            ],
+            "textEdited": "네. 감사합니다."
+        }
+    ],
+    "text": "저희 외환 접수 들어와서 연락드렸는데요. 확인하신 위치는 시간은 5시 47분 정도 된다라고 하셨고요. 네. 감사합니다.",
+    "confidence": 0.9225663,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

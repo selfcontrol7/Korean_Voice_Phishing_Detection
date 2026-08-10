@@ -1,0 +1,166 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "bbfbefacad644dc29c341a6820658f86",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30305025,
+            "_ncp_TraceId": "3a649361ed6f4403b79477903be12b9c"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 8450,
+            "text": "네 안녕하세요 뭐 좀 여쭤볼게요. 네. 저희 아이가 아 네 알겠습니다.",
+            "confidence": 0.9116,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    430,
+                    580,
+                    "네"
+                ],
+                [
+                    610,
+                    1100,
+                    "안녕하세요"
+                ],
+                [
+                    1190,
+                    1294,
+                    "뭐"
+                ],
+                [
+                    1294,
+                    1420,
+                    "좀"
+                ],
+                [
+                    1420,
+                    2000,
+                    "여쭤볼게요."
+                ],
+                [
+                    3690,
+                    3840,
+                    "네."
+                ],
+                [
+                    3930,
+                    4160,
+                    "저희"
+                ],
+                [
+                    4170,
+                    4480,
+                    "아이가"
+                ],
+                [
+                    5870,
+                    6020,
+                    "아"
+                ],
+                [
+                    6730,
+                    6880,
+                    "네"
+                ],
+                [
+                    6910,
+                    7540,
+                    "알겠습니다."
+                ]
+            ],
+            "textEdited": "네 안녕하세요 뭐 좀 여쭤볼게요. 네. 저희 아이가 아 네 알겠습니다."
+        },
+        {
+            "start": 8450,
+            "end": 10640,
+            "text": "어머니 좋은 하루 되세요. 어머니.",
+            "confidence": 0.7901,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    8860,
+                    9110,
+                    "어머니"
+                ],
+                [
+                    9110,
+                    9290,
+                    "좋은"
+                ],
+                [
+                    9290,
+                    9417,
+                    "하루"
+                ],
+                [
+                    9417,
+                    9690,
+                    "되세요."
+                ],
+                [
+                    9690,
+                    9970,
+                    "어머니."
+                ]
+            ],
+            "textEdited": "어머니 좋은 하루 되세요. 어머니."
+        }
+    ],
+    "text": "네 안녕하세요 뭐 좀 여쭤볼게요. 네. 저희 아이가 아 네 알겠습니다. 어머니 좋은 하루 되세요. 어머니.",
+    "confidence": 0.8717183,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

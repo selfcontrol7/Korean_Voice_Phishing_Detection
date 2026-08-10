@@ -1,0 +1,114 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "6c83c565f95b47c6a72f2b6c7a4146fe",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306207,
+            "_ncp_TraceId": "e242a6791f214490b4b05ee0b1d21271"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 6090,
+            "text": "교재 구매 진행해 주시면 될 것 같아요. 지금 구매 가능하다는.",
+            "confidence": 0.6573,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    450,
+                    680,
+                    "교재"
+                ],
+                [
+                    750,
+                    960,
+                    "구매"
+                ],
+                [
+                    1010,
+                    1307,
+                    "진행해"
+                ],
+                [
+                    1307,
+                    1620,
+                    "주시면"
+                ],
+                [
+                    1620,
+                    1760,
+                    "될"
+                ],
+                [
+                    1760,
+                    1900,
+                    "것"
+                ],
+                [
+                    1900,
+                    2120,
+                    "같아요."
+                ],
+                [
+                    3830,
+                    4020,
+                    "지금"
+                ],
+                [
+                    4890,
+                    5100,
+                    "구매"
+                ],
+                [
+                    5210,
+                    5860,
+                    "가능하다는."
+                ]
+            ],
+            "textEdited": "교재 구매 진행해 주시면 될 것 같아요. 지금 구매 가능하다는."
+        }
+    ],
+    "text": "교재 구매 진행해 주시면 될 것 같아요. 지금 구매 가능하다는.",
+    "confidence": 0.6573,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

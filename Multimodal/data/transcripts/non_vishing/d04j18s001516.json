@@ -1,0 +1,169 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "962699b34e594b818425935f07018196",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306744,
+            "_ncp_TraceId": "c267cf872d46485d8f7c1f02c10e2f29"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 9490,
+            "text": "네 어머니 안녕하세요 네. 어머니 일단 저희가 좀 배송 의료 송이 지연된 점에 대해서 정말 죄송하다는 말씀 먼저 제가 대신해서 드리겠습니다.",
+            "confidence": 0.9089,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    510,
+                    660,
+                    "네"
+                ],
+                [
+                    670,
+                    940,
+                    "어머니"
+                ],
+                [
+                    950,
+                    1400,
+                    "안녕하세요"
+                ],
+                [
+                    2470,
+                    2620,
+                    "네."
+                ],
+                [
+                    2630,
+                    2900,
+                    "어머니"
+                ],
+                [
+                    2900,
+                    3100,
+                    "일단"
+                ],
+                [
+                    3310,
+                    3560,
+                    "저희가"
+                ],
+                [
+                    3690,
+                    3840,
+                    "좀"
+                ],
+                [
+                    3890,
+                    4160,
+                    "배송"
+                ],
+                [
+                    4750,
+                    4940,
+                    "의료"
+                ],
+                [
+                    5310,
+                    5600,
+                    "송이"
+                ],
+                [
+                    5670,
+                    6020,
+                    "지연된"
+                ],
+                [
+                    6050,
+                    6287,
+                    "점에"
+                ],
+                [
+                    6287,
+                    6560,
+                    "대해서"
+                ],
+                [
+                    6630,
+                    6820,
+                    "정말"
+                ],
+                [
+                    7130,
+                    7620,
+                    "죄송하다는"
+                ],
+                [
+                    7630,
+                    7900,
+                    "말씀"
+                ],
+                [
+                    7910,
+                    8160,
+                    "먼저"
+                ],
+                [
+                    8370,
+                    8560,
+                    "제가"
+                ],
+                [
+                    8590,
+                    9020,
+                    "대신해서"
+                ],
+                [
+                    9020,
+                    9460,
+                    "드리겠습니다."
+                ]
+            ],
+            "textEdited": "네 어머니 안녕하세요 네. 어머니 일단 저희가 좀 배송 의료 송이 지연된 점에 대해서 정말 죄송하다는 말씀 먼저 제가 대신해서 드리겠습니다."
+        }
+    ],
+    "text": "네 어머니 안녕하세요 네. 어머니 일단 저희가 좀 배송 의료 송이 지연된 점에 대해서 정말 죄송하다는 말씀 먼저 제가 대신해서 드리겠습니다.",
+    "confidence": 0.9089,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

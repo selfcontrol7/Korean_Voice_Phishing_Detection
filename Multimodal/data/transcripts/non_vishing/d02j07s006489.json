@@ -1,0 +1,250 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "89f4e11223f34afeb0fee43483ad6d52",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306365,
+            "_ncp_TraceId": "78b32c7849534cacab6a314b76242c9b"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 10520,
+            "text": "무엇을 도와드릴까요? 예. 수고하십니다. 저수지 청소 때문에 그러는데 수도 시설과 좀",
+            "confidence": 0.8859,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    570,
+                    900,
+                    "무엇을"
+                ],
+                [
+                    930,
+                    1600,
+                    "도와드릴까요?"
+                ],
+                [
+                    3270,
+                    3420,
+                    "예."
+                ],
+                [
+                    3530,
+                    4020,
+                    "수고하십니다."
+                ],
+                [
+                    5710,
+                    6180,
+                    "저수지"
+                ],
+                [
+                    6290,
+                    6540,
+                    "청소"
+                ],
+                [
+                    6540,
+                    6860,
+                    "때문에"
+                ],
+                [
+                    6870,
+                    7260,
+                    "그러는데"
+                ],
+                [
+                    8490,
+                    8740,
+                    "수도"
+                ],
+                [
+                    8910,
+                    9380,
+                    "시설과"
+                ],
+                [
+                    9470,
+                    9620,
+                    "좀"
+                ]
+            ],
+            "textEdited": "무엇을 도와드릴까요? 예. 수고하십니다. 저수지 청소 때문에 그러는데 수도 시설과 좀"
+        },
+        {
+            "start": 10770,
+            "end": 13400,
+            "text": "연결시켜 주시겠습니까?",
+            "confidence": 0.9517,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    11540,
+                    12030,
+                    "연결시켜"
+                ],
+                [
+                    12060,
+                    12670,
+                    "주시겠습니까?"
+                ]
+            ],
+            "textEdited": "연결시켜 주시겠습니까?"
+        },
+        {
+            "start": 13400,
+            "end": 20105,
+            "text": "네. 저는 수리시설과의 저수조 청소 담당자 연결해 보겠습니다. 잠시만 기다려 주시겠습니까?",
+            "confidence": 0.8143,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    14050,
+                    14200,
+                    "네."
+                ],
+                [
+                    14210,
+                    14400,
+                    "저는"
+                ],
+                [
+                    14410,
+                    15180,
+                    "수리시설과의"
+                ],
+                [
+                    15810,
+                    16180,
+                    "저수조"
+                ],
+                [
+                    16230,
+                    16500,
+                    "청소"
+                ],
+                [
+                    16550,
+                    16980,
+                    "담당자"
+                ],
+                [
+                    17050,
+                    17380,
+                    "연결해"
+                ],
+                [
+                    17380,
+                    17900,
+                    "보겠습니다."
+                ],
+                [
+                    18030,
+                    18360,
+                    "잠시만"
+                ],
+                [
+                    18370,
+                    18640,
+                    "기다려"
+                ],
+                [
+                    18650,
+                    19240,
+                    "주시겠습니까?"
+                ]
+            ],
+            "textEdited": "네. 저는 수리시설과의 저수조 청소 담당자 연결해 보겠습니다. 잠시만 기다려 주시겠습니까?"
+        },
+        {
+            "start": 20105,
+            "end": 21210,
+            "text": "예 예.",
+            "confidence": 0.7315,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    20495,
+                    20645,
+                    "예"
+                ],
+                [
+                    20775,
+                    20925,
+                    "예."
+                ]
+            ],
+            "textEdited": "예 예."
+        }
+    ],
+    "text": "무엇을 도와드릴까요? 예. 수고하십니다. 저수지 청소 때문에 그러는데 수도 시설과 좀 연결시켜 주시겠습니까? 네. 저는 수리시설과의 저수조 청소 담당자 연결해 보겠습니다. 잠시만 기다려 주시겠습니까? 예 예.",
+    "confidence": 0.8574697,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

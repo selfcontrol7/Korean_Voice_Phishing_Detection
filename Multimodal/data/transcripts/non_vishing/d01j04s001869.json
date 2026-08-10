@@ -1,0 +1,245 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "0d96a176191447ddafd412c4d0620e26",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30305060,
+            "_ncp_TraceId": "b0a96279e40f4c0e951e3ebdfd060765"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 4350,
+            "text": "학습지원센터입니다. 무엇을 도와드릴까요?",
+            "confidence": 0.9781,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    430,
+                    1780,
+                    "학습지원센터입니다."
+                ],
+                [
+                    2130,
+                    2500,
+                    "무엇을"
+                ],
+                [
+                    2650,
+                    3380,
+                    "도와드릴까요?"
+                ]
+            ],
+            "textEdited": "학습지원센터입니다. 무엇을 도와드릴까요?"
+        },
+        {
+            "start": 4350,
+            "end": 13000,
+            "text": "결제일이어 가지고 카드가 나가려고 하는 것 같은데 저희가 카드가 분실돼 가지고 다른 카드를 불러드려야 될 것 같아가지고요.",
+            "confidence": 0.8853,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    5240,
+                    6270,
+                    "결제일이어"
+                ],
+                [
+                    6280,
+                    6590,
+                    "가지고"
+                ],
+                [
+                    6600,
+                    6910,
+                    "카드가"
+                ],
+                [
+                    6910,
+                    7290,
+                    "나가려고"
+                ],
+                [
+                    7290,
+                    7390,
+                    "하는"
+                ],
+                [
+                    7390,
+                    7464,
+                    "것"
+                ],
+                [
+                    7464,
+                    7710,
+                    "같은데"
+                ],
+                [
+                    7960,
+                    8190,
+                    "저희가"
+                ],
+                [
+                    8220,
+                    8590,
+                    "카드가"
+                ],
+                [
+                    8680,
+                    9070,
+                    "분실돼"
+                ],
+                [
+                    9070,
+                    9410,
+                    "가지고"
+                ],
+                [
+                    10100,
+                    10310,
+                    "다른"
+                ],
+                [
+                    10400,
+                    10730,
+                    "카드를"
+                ],
+                [
+                    10800,
+                    11237,
+                    "불러드려야"
+                ],
+                [
+                    11237,
+                    11370,
+                    "될"
+                ],
+                [
+                    11370,
+                    11510,
+                    "것"
+                ],
+                [
+                    11510,
+                    12150,
+                    "같아가지고요."
+                ]
+            ],
+            "textEdited": "결제일이어 가지고 카드가 나가려고 하는 것 같은데 저희가 카드가 분실돼 가지고 다른 카드를 불러드려야 될 것 같아가지고요."
+        },
+        {
+            "start": 13000,
+            "end": 15965,
+            "text": "아 예 알겠습니다.",
+            "confidence": 0.8393,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    13710,
+                    13860,
+                    "아"
+                ],
+                [
+                    14050,
+                    14200,
+                    "예"
+                ],
+                [
+                    14370,
+                    15000,
+                    "알겠습니다."
+                ]
+            ],
+            "textEdited": "아 예 알겠습니다."
+        },
+        {
+            "start": 15965,
+            "end": 17830,
+            "text": "네. 감사합니다.",
+            "confidence": 0.999,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    16435,
+                    16585,
+                    "네."
+                ],
+                [
+                    16695,
+                    17225,
+                    "감사합니다."
+                ]
+            ],
+            "textEdited": "네. 감사합니다."
+        }
+    ],
+    "text": "학습지원센터입니다. 무엇을 도와드릴까요? 결제일이어 가지고 카드가 나가려고 하는 것 같은데 저희가 카드가 분실돼 가지고 다른 카드를 불러드려야 될 것 같아가지고요. 아 예 알겠습니다. 네. 감사합니다.",
+    "confidence": 0.9088921,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

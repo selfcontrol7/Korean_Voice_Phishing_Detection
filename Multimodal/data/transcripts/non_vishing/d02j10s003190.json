@@ -1,0 +1,420 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "34f78d1aa94b4e939ee515e0ee11ceb8",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306605,
+            "_ncp_TraceId": "4e839eff6b304502bfa0596c0a8cd7ac"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 9205,
+            "text": "네 뭐 좀 문의드리려고 하는데요. 종합경기장하고 월드컵 경기장이랑 물놀이장 개장 했잖아요",
+            "confidence": 0.921,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    570,
+                    720,
+                    "네"
+                ],
+                [
+                    930,
+                    1080,
+                    "뭐"
+                ],
+                [
+                    1080,
+                    1200,
+                    "좀"
+                ],
+                [
+                    1230,
+                    1920,
+                    "문의드리려고"
+                ],
+                [
+                    1920,
+                    2320,
+                    "하는데요."
+                ],
+                [
+                    3630,
+                    4620,
+                    "종합경기장하고"
+                ],
+                [
+                    4690,
+                    5080,
+                    "월드컵"
+                ],
+                [
+                    5130,
+                    5980,
+                    "경기장이랑"
+                ],
+                [
+                    6830,
+                    7300,
+                    "물놀이장"
+                ],
+                [
+                    7410,
+                    7640,
+                    "개장"
+                ],
+                [
+                    7670,
+                    8160,
+                    "했잖아요"
+                ]
+            ],
+            "textEdited": "네 뭐 좀 문의드리려고 하는데요. 종합경기장하고 월드컵 경기장이랑 물놀이장 개장 했잖아요"
+        },
+        {
+            "start": 9205,
+            "end": 12270,
+            "text": "다 월요일 날은 휴장인가요?",
+            "confidence": 0.9563,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    9675,
+                    9825,
+                    "다"
+                ],
+                [
+                    10195,
+                    10585,
+                    "월요일"
+                ],
+                [
+                    10585,
+                    10845,
+                    "날은"
+                ],
+                [
+                    10935,
+                    11605,
+                    "휴장인가요?"
+                ]
+            ],
+            "textEdited": "다 월요일 날은 휴장인가요?"
+        },
+        {
+            "start": 12270,
+            "end": 18030,
+            "text": "죄송하게도 말씀해 주신 것처럼 월요일 날에는 휴관으로",
+            "confidence": 0.8107,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    12880,
+                    13330,
+                    "죄송하게도"
+                ],
+                [
+                    13640,
+                    13944,
+                    "말씀해"
+                ],
+                [
+                    13944,
+                    14044,
+                    "주신"
+                ],
+                [
+                    14044,
+                    14270,
+                    "것처럼"
+                ],
+                [
+                    14300,
+                    14630,
+                    "월요일"
+                ],
+                [
+                    14660,
+                    15030,
+                    "날에는"
+                ],
+                [
+                    16340,
+                    16750,
+                    "휴관으로"
+                ]
+            ],
+            "textEdited": "죄송하게도 말씀해 주신 것처럼 월요일 날에는 휴관으로"
+        },
+        {
+            "start": 18060,
+            "end": 20580,
+            "text": "세 군데 다요.",
+            "confidence": 0.7558,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    18970,
+                    19120,
+                    "세"
+                ],
+                [
+                    19120,
+                    19400,
+                    "군데"
+                ],
+                [
+                    19410,
+                    19660,
+                    "다요."
+                ]
+            ],
+            "textEdited": "세 군데 다요."
+        },
+        {
+            "start": 20610,
+            "end": 23550,
+            "text": "종합경기장 월급 경기장 모두",
+            "confidence": 0.8379,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    21300,
+                    21870,
+                    "종합경기장"
+                ],
+                [
+                    22040,
+                    22270,
+                    "월급"
+                ],
+                [
+                    22270,
+                    22570,
+                    "경기장"
+                ],
+                [
+                    22620,
+                    22850,
+                    "모두"
+                ]
+            ],
+            "textEdited": "종합경기장 월급 경기장 모두"
+        },
+        {
+            "start": 23580,
+            "end": 28270,
+            "text": "알겠습니다.",
+            "confidence": 0.9536,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    26570,
+                    27180,
+                    "알겠습니다."
+                ]
+            ],
+            "textEdited": "알겠습니다."
+        },
+        {
+            "start": 28270,
+            "end": 32045,
+            "text": "죄송합니다. 혹시 다른 더 확인해 드릴 말씀 없으십니까?",
+            "confidence": 0.9232,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    28760,
+                    29170,
+                    "죄송합니다."
+                ],
+                [
+                    29580,
+                    29830,
+                    "혹시"
+                ],
+                [
+                    29840,
+                    30030,
+                    "다른"
+                ],
+                [
+                    30060,
+                    30210,
+                    "더"
+                ],
+                [
+                    30210,
+                    30437,
+                    "확인해"
+                ],
+                [
+                    30437,
+                    30630,
+                    "드릴"
+                ],
+                [
+                    30630,
+                    30870,
+                    "말씀"
+                ],
+                [
+                    30870,
+                    31290,
+                    "없으십니까?"
+                ]
+            ],
+            "textEdited": "죄송합니다. 혹시 다른 더 확인해 드릴 말씀 없으십니까?"
+        },
+        {
+            "start": 32045,
+            "end": 34140,
+            "text": "아니 없어요.",
+            "confidence": 0.8237,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    32595,
+                    32785,
+                    "아니"
+                ],
+                [
+                    32915,
+                    33265,
+                    "없어요."
+                ]
+            ],
+            "textEdited": "아니 없어요."
+        },
+        {
+            "start": 34140,
+            "end": 35640,
+            "text": "불편 드려 죄송합니다.",
+            "confidence": 0.8485,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    34590,
+                    34800,
+                    "불편"
+                ],
+                [
+                    34810,
+                    35000,
+                    "드려"
+                ],
+                [
+                    35000,
+                    35400,
+                    "죄송합니다."
+                ]
+            ],
+            "textEdited": "불편 드려 죄송합니다."
+        }
+    ],
+    "text": "네 뭐 좀 문의드리려고 하는데요. 종합경기장하고 월드컵 경기장이랑 물놀이장 개장 했잖아요 다 월요일 날은 휴장인가요? 죄송하게도 말씀해 주신 것처럼 월요일 날에는 휴관으로 세 군데 다요. 종합경기장 월급 경기장 모두 알겠습니다. 죄송합니다. 혹시 다른 더 확인해 드릴 말씀 없으십니까? 아니 없어요. 불편 드려 죄송합니다.",
+    "confidence": 0.88329315,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

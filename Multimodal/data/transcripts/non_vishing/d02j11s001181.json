@@ -1,0 +1,196 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "80fadac5ee9b422e892879386c1e19c5",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306637,
+            "_ncp_TraceId": "08db540b9e594fe2b9b486dce432161d"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 189,
+            "end": 10594,
+            "text": "거기 지금 상담하러 간다고 하는데 점심시간이 몇 시부터 몇 시인가요? 점심시간 말씀하시는 건가요? 다른 일로 상담을 하러",
+            "confidence": 0.8022,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    739,
+                    969,
+                    "거기"
+                ],
+                [
+                    1079,
+                    1269,
+                    "지금"
+                ],
+                [
+                    2219,
+                    2709,
+                    "상담하러"
+                ],
+                [
+                    2739,
+                    2963,
+                    "간다고"
+                ],
+                [
+                    2963,
+                    3149,
+                    "하는데"
+                ],
+                [
+                    3159,
+                    3809,
+                    "점심시간이"
+                ],
+                [
+                    3859,
+                    4009,
+                    "몇"
+                ],
+                [
+                    4009,
+                    4389,
+                    "시부터"
+                ],
+                [
+                    4599,
+                    4749,
+                    "몇"
+                ],
+                [
+                    4749,
+                    5089,
+                    "시인가요?"
+                ],
+                [
+                    6359,
+                    6829,
+                    "점심시간"
+                ],
+                [
+                    6859,
+                    7349,
+                    "말씀하시는"
+                ],
+                [
+                    7349,
+                    7629,
+                    "건가요?"
+                ],
+                [
+                    8879,
+                    9109,
+                    "다른"
+                ],
+                [
+                    9159,
+                    9389,
+                    "일로"
+                ],
+                [
+                    9579,
+                    9909,
+                    "상담을"
+                ],
+                [
+                    9909,
+                    10089,
+                    "하러"
+                ]
+            ],
+            "textEdited": "거기 지금 상담하러 간다고 하는데 점심시간이 몇 시부터 몇 시인가요? 점심시간 말씀하시는 건가요? 다른 일로 상담을 하러"
+        },
+        {
+            "start": 10594,
+            "end": 16480,
+            "text": "12시부터 1시까지입니다. 알겠습니다. 좋은 하루 보내세요.",
+            "confidence": 0.8759,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    11044,
+                    11614,
+                    "12시부터"
+                ],
+                [
+                    11614,
+                    12314,
+                    "1시까지입니다."
+                ],
+                [
+                    13924,
+                    14454,
+                    "알겠습니다."
+                ],
+                [
+                    15544,
+                    15714,
+                    "좋은"
+                ],
+                [
+                    15724,
+                    15914,
+                    "하루"
+                ],
+                [
+                    15914,
+                    16254,
+                    "보내세요."
+                ]
+            ],
+            "textEdited": "12시부터 1시까지입니다. 알겠습니다. 좋은 하루 보내세요."
+        }
+    ],
+    "text": "거기 지금 상담하러 간다고 하는데 점심시간이 몇 시부터 몇 시인가요? 점심시간 말씀하시는 건가요? 다른 일로 상담을 하러 12시부터 1시까지입니다. 알겠습니다. 좋은 하루 보내세요.",
+    "confidence": 0.8252118,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

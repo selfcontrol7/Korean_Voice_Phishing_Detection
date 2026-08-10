@@ -1,0 +1,144 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "3dcc97e735eb44ddbc35dcc2c83b6619",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "vishing2025",
+            "_ncp_DomainId": 10978,
+            "_ncp_TaskId": 30064985,
+            "_ncp_TraceId": "42b4364c4d1e4dd182658789d514c96a"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 30,
+            "end": 9870,
+            "text": "제가 몇 가지 확인차 연락드렸고요. 도 출신의 42세 남성 그 이승철 씨를 혹시 알고 계시는 겁니까?",
+            "confidence": 0.8974,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    720,
+                    910,
+                    "제가"
+                ],
+                [
+                    960,
+                    1064,
+                    "몇"
+                ],
+                [
+                    1064,
+                    1290,
+                    "가지"
+                ],
+                [
+                    1320,
+                    1670,
+                    "확인차"
+                ],
+                [
+                    1700,
+                    2330,
+                    "연락드렸고요."
+                ],
+                [
+                    5800,
+                    5950,
+                    "도"
+                ],
+                [
+                    5980,
+                    6330,
+                    "출신의"
+                ],
+                [
+                    6380,
+                    6850,
+                    "42세"
+                ],
+                [
+                    6880,
+                    7190,
+                    "남성"
+                ],
+                [
+                    7240,
+                    7390,
+                    "그"
+                ],
+                [
+                    7390,
+                    7730,
+                    "이승철"
+                ],
+                [
+                    7780,
+                    7964,
+                    "씨를"
+                ],
+                [
+                    7964,
+                    8137,
+                    "혹시"
+                ],
+                [
+                    8137,
+                    8330,
+                    "알고"
+                ],
+                [
+                    8380,
+                    8750,
+                    "계시는"
+                ],
+                [
+                    8750,
+                    9070,
+                    "겁니까?"
+                ]
+            ],
+            "textEdited": "제가 몇 가지 확인차 연락드렸고요. 도 출신의 42세 남성 그 이승철 씨를 혹시 알고 계시는 겁니까?"
+        }
+    ],
+    "text": "제가 몇 가지 확인차 연락드렸고요. 도 출신의 42세 남성 그 이승철 씨를 혹시 알고 계시는 겁니까?",
+    "confidence": 0.8974,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

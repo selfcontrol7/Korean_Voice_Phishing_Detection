@@ -1,0 +1,218 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "9a1e4086f27047ddb6b753ffd44b029b",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30305057,
+            "_ncp_TraceId": "3fffbc6a0971488ebc7887d7b2ab2672"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 189,
+            "end": 7092,
+            "text": "코딩 상태에서 연락 주셨는데 어떤 건으로 문의 주신 걸까요?",
+            "confidence": 0.7313,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    799,
+                    1029,
+                    "코딩"
+                ],
+                [
+                    1119,
+                    1489,
+                    "상태에서"
+                ],
+                [
+                    1489,
+                    1689,
+                    "연락"
+                ],
+                [
+                    1699,
+                    2189,
+                    "주셨는데"
+                ],
+                [
+                    2299,
+                    2509,
+                    "어떤"
+                ],
+                [
+                    2579,
+                    2889,
+                    "건으로"
+                ],
+                [
+                    2919,
+                    3109,
+                    "문의"
+                ],
+                [
+                    3159,
+                    3389,
+                    "주신"
+                ],
+                [
+                    3399,
+                    3769,
+                    "걸까요?"
+                ]
+            ],
+            "textEdited": "코딩 상태에서 연락 주셨는데 어떤 건으로 문의 주신 걸까요?"
+        },
+        {
+            "start": 7092,
+            "end": 11260,
+            "text": "다시 연락하니까 어떤 상담사분이 받으셔서 이제 괜찮을 것 같아요.",
+            "confidence": 0.964,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    7182,
+                    7412,
+                    "다시"
+                ],
+                [
+                    7412,
+                    7932,
+                    "연락하니까"
+                ],
+                [
+                    8182,
+                    8372,
+                    "어떤"
+                ],
+                [
+                    8442,
+                    9052,
+                    "상담사분이"
+                ],
+                [
+                    9062,
+                    9512,
+                    "받으셔서"
+                ],
+                [
+                    9542,
+                    9712,
+                    "이제"
+                ],
+                [
+                    9762,
+                    10112,
+                    "괜찮을"
+                ],
+                [
+                    10162,
+                    10312,
+                    "것"
+                ],
+                [
+                    10312,
+                    10572,
+                    "같아요."
+                ]
+            ],
+            "textEdited": "다시 연락하니까 어떤 상담사분이 받으셔서 이제 괜찮을 것 같아요."
+        },
+        {
+            "start": 11260,
+            "end": 13730,
+            "text": "아 그러세요 네. 알겠습니다.",
+            "confidence": 0.9717,
+            "diarization": {
+                "label": "3"
+            },
+            "speaker": {
+                "label": "3",
+                "name": "C",
+                "edited": false
+            },
+            "words": [
+                [
+                    11750,
+                    11900,
+                    "아"
+                ],
+                [
+                    12030,
+                    12360,
+                    "그러세요"
+                ],
+                [
+                    12730,
+                    12880,
+                    "네."
+                ],
+                [
+                    12910,
+                    13480,
+                    "알겠습니다."
+                ]
+            ],
+            "textEdited": "아 그러세요 네. 알겠습니다."
+        }
+    ],
+    "text": "코딩 상태에서 연락 주셨는데 어떤 건으로 문의 주신 걸까요? 다시 연락하니까 어떤 상담사분이 받으셔서 이제 괜찮을 것 같아요. 아 그러세요 네. 알겠습니다.",
+    "confidence": 0.87454236,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        },
+        {
+            "label": "3",
+            "name": "C",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

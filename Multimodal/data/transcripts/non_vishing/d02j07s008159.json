@@ -1,0 +1,223 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "b9c3868520bc49d1be08cf855a6e02fd",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30306381,
+            "_ncp_TraceId": "1d1481a1f4754de2a212025cf0b4f509"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 9790,
+            "text": "무엇을 도와드릴까요? 상하수도과 말씀이십니까? 아 선생님 실례지만 혹시 어떤 업무를 보실 예정이십니까?",
+            "confidence": 0.9199,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    490,
+                    800,
+                    "무엇을"
+                ],
+                [
+                    800,
+                    1460,
+                    "도와드릴까요?"
+                ],
+                [
+                    3050,
+                    3620,
+                    "상하수도과"
+                ],
+                [
+                    3730,
+                    4460,
+                    "말씀이십니까?"
+                ],
+                [
+                    5750,
+                    5900,
+                    "아"
+                ],
+                [
+                    5930,
+                    6200,
+                    "선생님"
+                ],
+                [
+                    6250,
+                    6720,
+                    "실례지만"
+                ],
+                [
+                    7070,
+                    7280,
+                    "혹시"
+                ],
+                [
+                    7350,
+                    7580,
+                    "어떤"
+                ],
+                [
+                    7670,
+                    8000,
+                    "업무를"
+                ],
+                [
+                    8030,
+                    8260,
+                    "보실"
+                ],
+                [
+                    8310,
+                    9000,
+                    "예정이십니까?"
+                ]
+            ],
+            "textEdited": "무엇을 도와드릴까요? 상하수도과 말씀이십니까? 아 선생님 실례지만 혹시 어떤 업무를 보실 예정이십니까?"
+        },
+        {
+            "start": 9790,
+            "end": 15110,
+            "text": "예 상하수도 누수 관계 때문에 문의하려고요.",
+            "confidence": 0.9336,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    10360,
+                    10510,
+                    "예"
+                ],
+                [
+                    10880,
+                    11470,
+                    "상하수도"
+                ],
+                [
+                    11560,
+                    11830,
+                    "누수"
+                ],
+                [
+                    11920,
+                    12170,
+                    "관계"
+                ],
+                [
+                    12260,
+                    12630,
+                    "때문에"
+                ],
+                [
+                    13660,
+                    14270,
+                    "문의하려고요."
+                ]
+            ],
+            "textEdited": "예 상하수도 누수 관계 때문에 문의하려고요."
+        },
+        {
+            "start": 15110,
+            "end": 18490,
+            "text": "아 예 알겠습니다. 잠시만 기다려 주시겠습니까?",
+            "confidence": 0.9769,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    15560,
+                    15710,
+                    "아"
+                ],
+                [
+                    15710,
+                    15850,
+                    "예"
+                ],
+                [
+                    15850,
+                    16410,
+                    "알겠습니다."
+                ],
+                [
+                    16540,
+                    16930,
+                    "잠시만"
+                ],
+                [
+                    16940,
+                    17230,
+                    "기다려"
+                ],
+                [
+                    17240,
+                    17850,
+                    "주시겠습니까?"
+                ]
+            ],
+            "textEdited": "아 예 알겠습니다. 잠시만 기다려 주시겠습니까?"
+        }
+    ],
+    "text": "무엇을 도와드릴까요? 상하수도과 말씀이십니까? 아 선생님 실례지만 혹시 어떤 업무를 보실 예정이십니까? 예 상하수도 누수 관계 때문에 문의하려고요. 아 예 알겠습니다. 잠시만 기다려 주시겠습니까?",
+    "confidence": 0.93653715,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

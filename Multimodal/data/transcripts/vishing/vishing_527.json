@@ -1,0 +1,218 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "fe73543308ac40f298a1411fd9af8c58",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "vishing2025",
+            "_ncp_DomainId": 10978,
+            "_ncp_TaskId": 30065058,
+            "_ncp_TraceId": "2b370330a2594ecba30fdc78e1d1dc6c"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 350,
+            "end": 3390,
+            "text": "여보세요.",
+            "confidence": 0.7696,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    960,
+                    1270,
+                    "여보세요."
+                ]
+            ],
+            "textEdited": "여보세요."
+        },
+        {
+            "start": 4030,
+            "end": 12595,
+            "text": "다름이 아니고 지금 명의도용 관련돼서 이 사건의 유력한 용의자인 최동철이라는 사람이 있는데 혹시",
+            "confidence": 0.8848,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    4740,
+                    4977,
+                    "다름이"
+                ],
+                [
+                    4977,
+                    5190,
+                    "아니고"
+                ],
+                [
+                    5190,
+                    5350,
+                    "지금"
+                ],
+                [
+                    5350,
+                    5810,
+                    "명의도용"
+                ],
+                [
+                    5840,
+                    6330,
+                    "관련돼서"
+                ],
+                [
+                    7160,
+                    7310,
+                    "이"
+                ],
+                [
+                    7320,
+                    7710,
+                    "사건의"
+                ],
+                [
+                    7740,
+                    8050,
+                    "유력한"
+                ],
+                [
+                    8140,
+                    8630,
+                    "용의자인"
+                ],
+                [
+                    9260,
+                    10190,
+                    "최동철이라는"
+                ],
+                [
+                    10190,
+                    10490,
+                    "사람이"
+                ],
+                [
+                    10500,
+                    10810,
+                    "있는데"
+                ],
+                [
+                    11800,
+                    12050,
+                    "혹시"
+                ]
+            ],
+            "textEdited": "다름이 아니고 지금 명의도용 관련돼서 이 사건의 유력한 용의자인 최동철이라는 사람이 있는데 혹시"
+        },
+        {
+            "start": 12595,
+            "end": 19530,
+            "text": "회동 처리 관련해서 기존에 알고 있던 사람입니까? 전혀 모르는 사람이세요.",
+            "confidence": 0.8476,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    12765,
+                    12962,
+                    "회동"
+                ],
+                [
+                    12962,
+                    13215,
+                    "처리"
+                ],
+                [
+                    13215,
+                    13635,
+                    "관련해서"
+                ],
+                [
+                    14185,
+                    14475,
+                    "기존에"
+                ],
+                [
+                    14605,
+                    14855,
+                    "알고"
+                ],
+                [
+                    14865,
+                    15055,
+                    "있던"
+                ],
+                [
+                    15055,
+                    15575,
+                    "사람입니까?"
+                ],
+                [
+                    17705,
+                    17915,
+                    "전혀"
+                ],
+                [
+                    17925,
+                    18255,
+                    "모르는"
+                ],
+                [
+                    18255,
+                    18675,
+                    "사람이세요."
+                ]
+            ],
+            "textEdited": "회동 처리 관련해서 기존에 알고 있던 사람입니까? 전혀 모르는 사람이세요."
+        }
+    ],
+    "text": "여보세요. 다름이 아니고 지금 명의도용 관련돼서 이 사건의 유력한 용의자인 최동철이라는 사람이 있는데 혹시 회동 처리 관련해서 기존에 알고 있던 사람입니까? 전혀 모르는 사람이세요.",
+    "confidence": 0.86420983,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}

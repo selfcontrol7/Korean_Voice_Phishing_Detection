@@ -1,0 +1,267 @@
+{
+    "result": "SUCCEEDED",
+    "message": "Succeeded",
+    "token": "cfc10d50dfa34d65a2d9c82f2d25f30d",
+    "version": "ncp_v2_v2.3.8-22e1a5c-20241203_240905-28192935-dirty_v4.2.12_ko_firedepartment_20240624_",
+    "params": {
+        "service": "ncp",
+        "domain": "general",
+        "lang": "ko",
+        "completion": "async",
+        "diarization": {
+            "enable": true,
+            "speakerCountMin": -1,
+            "speakerCountMax": -1
+        },
+        "sed": {
+            "enable": true
+        },
+        "boostings": [],
+        "forbiddens": "",
+        "wordAlignment": true,
+        "fullText": true,
+        "noiseFiltering": true,
+        "priority": 0,
+        "userdata": {
+            "_ncp_DomainCode": "nonvishing",
+            "_ncp_DomainId": 11204,
+            "_ncp_TaskId": 30305038,
+            "_ncp_TraceId": "ffb63aab209249ccb3e3ad7a0d4c24f1"
+        }
+    },
+    "progress": 100,
+    "keywords": {},
+    "segments": [
+        {
+            "start": 0,
+            "end": 3325,
+            "text": "스터디 학습센터입니다. 무엇을 도와드릴까요?",
+            "confidence": 0.9839,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    370,
+                    680,
+                    "스터디"
+                ],
+                [
+                    690,
+                    1500,
+                    "학습센터입니다."
+                ],
+                [
+                    1610,
+                    1920,
+                    "무엇을"
+                ],
+                [
+                    1930,
+                    2520,
+                    "도와드릴까요?"
+                ]
+            ],
+            "textEdited": "스터디 학습센터입니다. 무엇을 도와드릴까요?"
+        },
+        {
+            "start": 3325,
+            "end": 13950,
+            "text": "네. 그 물어볼 게 있어서 조카 부신 있잖아요. 그거 환급 받으려면",
+            "confidence": 0.8696,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    3855,
+                    4005,
+                    "네."
+                ],
+                [
+                    4395,
+                    4545,
+                    "그"
+                ],
+                [
+                    4755,
+                    5185,
+                    "물어볼"
+                ],
+                [
+                    5255,
+                    5405,
+                    "게"
+                ],
+                [
+                    5475,
+                    5765,
+                    "있어서"
+                ],
+                [
+                    7355,
+                    7605,
+                    "조카"
+                ],
+                [
+                    8195,
+                    8485,
+                    "부신"
+                ],
+                [
+                    8735,
+                    9205,
+                    "있잖아요."
+                ],
+                [
+                    10655,
+                    10885,
+                    "그거"
+                ],
+                [
+                    11955,
+                    12265,
+                    "환급"
+                ],
+                [
+                    12355,
+                    12905,
+                    "받으려면"
+                ]
+            ],
+            "textEdited": "네. 그 물어볼 게 있어서 조카 부신 있잖아요. 그거 환급 받으려면"
+        },
+        {
+            "start": 13950,
+            "end": 16890,
+            "text": "꼭 고3이어야 하는 거 아니죠?",
+            "confidence": 0.9774,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    14440,
+                    14590,
+                    "꼭"
+                ],
+                [
+                    14740,
+                    15430,
+                    "고3이어야"
+                ],
+                [
+                    15460,
+                    15710,
+                    "하는"
+                ],
+                [
+                    15710,
+                    15817,
+                    "거"
+                ],
+                [
+                    15817,
+                    16070,
+                    "아니죠?"
+                ]
+            ],
+            "textEdited": "꼭 고3이어야 하는 거 아니죠?"
+        },
+        {
+            "start": 16890,
+            "end": 19905,
+            "text": "아니에요 그거는 독학은",
+            "confidence": 0.923,
+            "diarization": {
+                "label": "1"
+            },
+            "speaker": {
+                "label": "1",
+                "name": "A",
+                "edited": false
+            },
+            "words": [
+                [
+                    17540,
+                    17870,
+                    "아니에요"
+                ],
+                [
+                    18120,
+                    18410,
+                    "그거는"
+                ],
+                [
+                    18640,
+                    19010,
+                    "독학은"
+                ]
+            ],
+            "textEdited": "아니에요 그거는 독학은"
+        },
+        {
+            "start": 19905,
+            "end": 21730,
+            "text": "제주 생용도 되나요?",
+            "confidence": 0.4663,
+            "diarization": {
+                "label": "2"
+            },
+            "speaker": {
+                "label": "2",
+                "name": "B",
+                "edited": false
+            },
+            "words": [
+                [
+                    20455,
+                    20725,
+                    "제주"
+                ],
+                [
+                    20725,
+                    21025,
+                    "생용도"
+                ],
+                [
+                    21055,
+                    21345,
+                    "되나요?"
+                ]
+            ],
+            "textEdited": "제주 생용도 되나요?"
+        }
+    ],
+    "text": "스터디 학습센터입니다. 무엇을 도와드릴까요? 네. 그 물어볼 게 있어서 조카 부신 있잖아요. 그거 환급 받으려면 꼭 고3이어야 하는 거 아니죠? 아니에요 그거는 독학은 제주 생용도 되나요?",
+    "confidence": 0.8786348,
+    "speakers": [
+        {
+            "label": "1",
+            "name": "A",
+            "edited": false
+        },
+        {
+            "label": "2",
+            "name": "B",
+            "edited": false
+        }
+    ],
+    "events": [],
+    "eventTypes": []
+}
