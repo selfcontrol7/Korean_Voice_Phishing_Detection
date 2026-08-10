@@ -3,22 +3,28 @@
 # AI-based_Korean_Voice_Phishing_Detection
 ## Detection of Korean Voice Phishing
 
-This repository hosts our code related to the research on Korean voice phishing detection using various approaches, including Machine Learning (ML), Deep Learning (DL), Language Models (LM), Hybrid Models, and Federated Learning (FL).
+This repository hosts our code related to the research on Korean voice phishing detection using various approaches, including Machine Learning (ML), Deep Learning (DL), Language Models (LM), Hybrid Models, Federated Learning (FL), and Multimodal (audio + text) learning.
+
+> **License and data terms:** the source code is MIT-licensed (see [LICENSE](LICENSE)). The speech data is **not ours to license** — please read [DATA.md](DATA.md) for provenance, terms, and known limitations of the KorCCVi corpus before using any data in this repository.
 
 The structure of the repository is as follows:
+- **Multimodal**: the most recent and actively developed work — lightweight acoustic detection (MFCC, eGeMAPS, Wav2Vec2.0) and multimodal audio–text fusion on the KorCCVi v2 corpus, including preprocessing, feature extraction, model training/evaluation, call-level aggregation, channel-robustness analysis, and on-device benchmarking. Also contains the published dataset manifests and the full speaker-diarized transcripts (`Multimodal/data/`). [Link to the KCC 2025 paper](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12318548)
 - **ML_DL_models [ML/DL_Models]**: This folder contains the implementation code for machine learning-based and deep learning-based detection models. [Link to the paper 1](https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10583070), [Link to the paper 2](https://doi.org/10.3745/PKIPS.y2021m11a.297)
 - **KoBERT [Language_Models]**: This folder comprises the implementation code for language model-based detection models. [Link to the paper](https://doi.org/10.3745/KTSDE.2022.11.10.437)
 - **Attention [Hybrid_Models]**: This folder includes the implementation code for hybrid detection models. [Link to the paper 1](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11113590), [Link to the paper](https://www.mdpi.com/2227-7390/11/14/3217)
-- **FL model with KoBERTA [Federated_Learning]**: This folder contains the code related to the Federated Learning approach for detection. [Link to the paper](https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11488126)
+- **FL model with KoBERTA [Federated_Learning / FL]**: These folders contain the code related to the Federated Learning approach for detection. [Link to the paper](https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11488126)
+- **Multilingual_BT_approach**: back-translation data augmentation experiments.
 - **Data_Collection_Preprocessing**: This folder contains code for raw data preprocessing and dataset creation.
 
 ## Datasets
 
-In our research, we primarily created and employed the Korean Call Content Vishing (KorCCVi) dataset, a comprehensive collection of transcriptions of voice phishing attempts in Korean. This dataset was curated to address the increasing incidence of voice phishing activities in Korea and provide a robust foundation for training and testing diverse voice phishing detection models.
+In our research, we primarily created and employed the Korean Call Content Vishing (KorCCVi) dataset. It began as a collection of transcriptions of voice phishing attempts in Korean; the current version (**KorCCVi v2**) is a multimodal corpus of **1,417 calls (706 vishing / 711 non-vishing), 39,429 utterance-level segments, and roughly 67 hours of speech**, combining real voice-phishing recordings published by the Financial Supervisory Service with legitimate telephone conversations from AI Hub.
 
-The KorCCVi dataset features a wide variety of scenarios, mimicking the diverse strategies employed by voice phishers. It includes both successful and failed phishing attempts, making it an invaluable resource for studying the linguistic and paralinguistic characteristics inherent in voice phishing activities. This breadth of data helps in creating models that are capable of recognizing and mitigating a range of voice phishing tactics.
+This repository publishes the parts of the corpus that we are able to share: the segment manifests (with labels, transcript text, and speaker-diarization fields) and the full ASR transcript JSON files for all 1,417 calls, under `Multimodal/data/`. The audio itself and the precomputed feature arrays are **not** distributed here — see [DATA.md](DATA.md) for the terms of the two data providers and how to obtain the source material.
 
-Details of the collection, preprocessing, and structure of the KorCCVi dataset can be found in the 'Data_Collection_Preprocessing' folder. Moreover, the exact implementation of the models on the KorCCVi dataset can be found within each respective approach folder (ML_Models, DL_Models, Language_Models, Hybrid_Models, Federated_Learning).
+> **Important limitation:** in KorCCVi v2, the data source and the class label are perfectly correlated (all vishing calls come from FSS, all non-vishing calls from AI Hub). Very high scores on this corpus can partly reflect recording-channel differences rather than vishing content. Please read [DATA.md](DATA.md) §4 before reporting results on this data.
+
+Details of the collection and preprocessing can be found in [DATA.md](DATA.md) and in the `Multimodal/preprocessing/` folder; the earlier text-only pipeline is in 'Data_Collection_Preprocessing'. The exact implementation of the models can be found within each respective approach folder.
 
 ## Related Work
 
@@ -27,6 +33,11 @@ For additional experiments and more detailed discussions about the approaches us
 ## Citations
 
 Should you wish to cite our papers, you may use the following:
+
+Multimodal Paper:
+```bibtex
+M. K. Moussavou Boussougou, M. Song, B. Jeong, Y. Hwang, and D.-J. Park, “Multimodal Detection of Korean Voice Phishing Using Audio and Text Fusion,” Proceedings of the Korea Computer Congress (KCC), Korean Institute of Information Scientists and Engineers, pp. 1467–1469, 2025.
+```
 
 Attention Papers:
 ```bibtex
