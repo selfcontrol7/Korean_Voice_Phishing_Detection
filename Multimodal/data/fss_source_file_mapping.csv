@@ -686,7 +686,7 @@ vishing_680.wav,취업빙자 통장편취사기.mp3,exact,204.17,203.32,
 vishing_681.wav,카드비밀번호 CVC번호등 알려주시면 되요.mp3,offset_corrected,651.21,648.47,metadata bias ~2.45s
 vishing_682.wav,하나은행과는 전혀 거래한적이 없다고요.mp3,exact,248.95,247.02,
 vishing_683.wav,"경고하는데, 경찰에 신고하거나 주변 사람한테 알리면 애 배를 칼로 찌릅니다..mp3",exact,89.76,90.23,
-vishing_684.wav,,unmatched_local,544.18,,no source found in backup folder
+vishing_684.wav,,unmatched_local,544.18,,original FSS download missing; verified corpus copy placed in backup 2026-08-20
 vishing_685.wav,4차례 신고된 남성 전화금융사기범 음성 7.mpeg-03.wav,exact,92.68,92.76,
 vishing_686.wav,통장 임대 요청 (한달 임대료 250만원 드려요).mp3,exact,40.31,40.31,
 vishing_687.wav,대출받으실때 '정부상품 대출 위해 상환처리 하려고 하는거다'라고 말씀하시면 안됩니다.mp3,exact,149.93,150.41,
