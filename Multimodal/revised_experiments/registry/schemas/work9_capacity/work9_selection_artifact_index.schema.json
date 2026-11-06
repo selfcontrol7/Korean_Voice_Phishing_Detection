@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.paper2.v2/work9/work9_selection_artifact_index.schema.json",
+  "title": "Work 9 selection artifact inventory",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "run_id", "protocol_id", "run_family", "condition",
+    "partition_repeat", "outer_fold", "seed", "artifacts"
+  ],
+  "properties": {
+    "schema_version": {"const": "paper2-v2-work9-capacity-selection-artifact-index-1"},
+    "run_id": {"type": "string", "minLength": 1},
+    "protocol_id": {"type": "string", "minLength": 1},
+    "run_family": {"const": "capacity_matched_sensitivity"},
+    "condition": {"type": "string", "minLength": 1},
+    "partition_repeat": {"const": 0},
+    "outer_fold": {"type": "integer", "minimum": 0, "maximum": 4},
+    "seed": {"type": "integer"},
+    "artifacts": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "selection_seal", "selection_run_record", "checkpoint",
+        "validation_segment_ledger", "validation_call_ledger", "epoch_trace",
+        "threshold_trace"
+      ],
+      "properties": {
+        "selection_seal": {"$ref": "#/$defs/artifact"},
+        "selection_run_record": {"$ref": "#/$defs/artifact"},
+        "checkpoint": {"$ref": "#/$defs/artifact"},
+        "validation_segment_ledger": {"$ref": "#/$defs/artifact"},
+        "validation_call_ledger": {"$ref": "#/$defs/artifact"},
+        "epoch_trace": {"$ref": "#/$defs/artifact"},
+        "threshold_trace": {"$ref": "#/$defs/artifact"},
+        "pairing_plan": {"$ref": "#/$defs/artifact"}
+      }
+    }
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "sha256", "bytes", "row_count"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "bytes": {"type": "integer", "minimum": 1},
+        "row_count": {"type": ["integer", "null"], "minimum": 1}
+      }
+    }
+  }
+}

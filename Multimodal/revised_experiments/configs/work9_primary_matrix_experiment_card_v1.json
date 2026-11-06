@@ -1,0 +1,72 @@
+{
+  "aggregation_rule": "complete_call_arithmetic_mean_probability",
+  "claims_not_enabled": [
+    "source_independent_fraud_detection",
+    "external_or_confirmatory_validation",
+    "real_world_deployment_utility",
+    "practical_utility_without_a_pre_outcome_cost_policy",
+    "utterance_specific_alignment_from_global_random_pairing_alone"
+  ],
+  "comparison_family": [
+    "AT-cross_minus_A-query",
+    "AT-cross_minus_AT-concat",
+    "AT-cross_minus_AT-gate"
+  ],
+  "conditions": [
+    "T",
+    "A-mean",
+    "A-query",
+    "A-temp",
+    "AT-concat",
+    "AT-gate",
+    "AT-cross",
+    "AT-cross-randtrain"
+  ],
+  "decision_policy": {
+    "path": "revised_experiments/configs/work9_gate1_decision_policy_v1.json",
+    "sha256": "a6697bebd0df3d6dca99bcfd82dd07bf874f2cf7923fae5d07d0b1201444880b"
+  },
+  "grouping_policy_id": "hard-components-exact-audio-dedup-v1",
+  "independent_unit": "call",
+  "outer_evaluation_release": "only_after_all_200_selection_seals_are_frozen_and_indexed",
+  "partition_design": {
+    "outer_folds": [0, 1, 2, 3, 4],
+    "partition_repeat": 0,
+    "partition_repeat_count": 1,
+    "terminology": "outer_eval_is_within_corpus_outer_development_evaluation"
+  },
+  "primary_metric": "call_macro_f1",
+  "protocol_id": "paper2-v2-mfcc-matched-within-corpus-v1",
+  "purpose": "Matched within-corpus test of whether correctly paired transcript conditioning adds reproducible call-level value beyond learned acoustic pooling and simpler fusion.",
+  "random_pairing_control": {
+    "condition": "AT-cross-randtrain",
+    "donor_universe": "same_frozen_fold_train_manifest_only",
+    "label_policy": "unconstrained_global_random",
+    "randomized_roles": ["train"],
+    "roles_with_correct_pairing": ["validation", "outer_eval"]
+  },
+  "run_family": "primary_matrix",
+  "schema_version": "paper2-v2-work9-experiment-card-1",
+  "seeds": [17, 29, 43, 71, 101],
+  "selection": {
+    "checkpoint_monitor": "validation_call_nll",
+    "checkpoint_tie_break": "earlier_epoch",
+    "threshold_grid": "0.01_to_0.99_step_0.01",
+    "threshold_tie_break": [
+      "lower_fpr",
+      "higher_sensitivity",
+      "closest_to_0.5",
+      "higher_threshold"
+    ]
+  },
+  "source_label_limitation": "All retained benign calls are AIHub and all retained vishing calls are FSS; results remain source-confounded within-corpus methodological evidence.",
+  "status": "frozen_before_work9_model_outcomes",
+  "work8_config": {
+    "path": "revised_experiments/configs/work8_mfcc_matched_within_corpus_v1.json",
+    "sha256": "ab04b6c00979ae94b1adc4cb952cf1d7a3db7e7f2c98c87cda520b8ad18b2fb4"
+  },
+  "work8_receipt": {
+    "path": "revised_experiments/artifacts/work8_preregistration_v1/dry_run_receipt.json",
+    "sha256": "5c81d5367be670f9bb863a31c54c847ff7b7340c8bfd80b63fe16e057d1860ed"
+  }
+}

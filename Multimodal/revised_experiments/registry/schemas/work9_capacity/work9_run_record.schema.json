@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.paper2.v2/work9/work9_run_record.schema.json",
+  "title": "Work 9 primary-matrix run record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "run_id", "protocol_id", "run_family", "condition",
+    "partition_repeat", "outer_fold", "seed", "phase", "status", "lineage",
+    "data", "model", "randomness", "training", "selection", "artifacts",
+    "compute", "failure"
+  ],
+  "properties": {
+    "schema_version": {"const": "paper2-v2-work9-capacity-run-record-1"},
+    "run_id": {"type": "string"}, "protocol_id": {"type": "string"},
+    "run_family": {"const": "capacity_matched_sensitivity"}, "condition": {"type": "string"},
+    "partition_repeat": {"const": 0},
+    "outer_fold": {"type": "integer", "minimum": 0, "maximum": 4},
+    "seed": {"type": "integer"},
+    "phase": {"enum": ["selection", "outer_eval"]},
+    "status": {"enum": ["selection_complete", "outer_complete", "failed"]},
+    "lineage": {"type": "object"},
+    "data": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "train_manifest_sha256", "validation_manifest_sha256",
+        "outer_eval_manifest_sha256", "grouping_policy_id", "feature_store_ids",
+        "mfcc_cache_policy", "mfcc_cache_sha256"
+      ],
+      "properties": {
+        "train_manifest_sha256": {"type": "string"},
+        "validation_manifest_sha256": {"type": "string"},
+        "outer_eval_manifest_sha256": {"type": ["string", "null"]},
+        "grouping_policy_id": {"type": "string"},
+        "feature_store_ids": {"type": "object"},
+        "mfcc_cache_policy": {"type": "string"},
+        "mfcc_cache_sha256": {
+          "oneOf": [
+            {"type": "null"},
+            {
+              "type": "object", "additionalProperties": false,
+              "required": ["train", "validation"],
+              "properties": {
+                "train": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+                "validation": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+                "outer_eval": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"}
+              }
+            }
+          ]
+        }
+      }
+    },
+    "model": {"type": "object"}, "randomness": {"type": "object"},
+    "training": {"type": "object"}, "selection": {"type": "object"},
+    "artifacts": {"type": "object"}, "compute": {"type": "object"},
+    "failure": {"type": ["object", "null"]}
+  }
+}

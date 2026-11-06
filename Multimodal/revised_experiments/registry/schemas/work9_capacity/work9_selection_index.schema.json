@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.paper2.v2/work9/work9_selection_index.schema.json",
+  "title": "Work 9 complete 200-coordinate selection release index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "protocol_id", "run_family", "status",
+    "expected_coordinate_count", "config", "work8_receipt", "runner_acceptance",
+    "experiment_card", "anchor_policy", "capacity_analysis_protocol",
+    "figure_spec", "execution_addendum", "primary_runner_acceptance",
+    "primary_selection_index", "completed_gate1_hash_manifest",
+    "new_coordinate_count", "anchor_coordinate_count", "entries"
+  ],
+  "properties": {
+    "schema_version": {"const": "paper2-v2-work9-capacity-selection-index-1"},
+    "protocol_id": {"type": "string"}, "run_family": {"const": "capacity_matched_sensitivity"},
+    "status": {"const": "frozen_complete"}, "expected_coordinate_count": {"const": 200},
+    "config": {"$ref": "#/$defs/artifact"},
+    "work8_receipt": {"$ref": "#/$defs/artifact"},
+    "runner_acceptance": {"$ref": "#/$defs/artifact"},
+    "experiment_card": {"$ref": "#/$defs/artifact"},
+    "anchor_policy": {"$ref": "#/$defs/artifact"},
+    "capacity_analysis_protocol": {"$ref": "#/$defs/artifact"},
+    "figure_spec": {"$ref": "#/$defs/artifact"},
+    "execution_addendum": {"$ref": "#/$defs/artifact"},
+    "primary_runner_acceptance": {"$ref": "#/$defs/artifact"},
+    "primary_selection_index": {"$ref": "#/$defs/artifact"},
+    "completed_gate1_hash_manifest": {"$ref": "#/$defs/artifact"},
+    "new_coordinate_count": {"const": 150},
+    "anchor_coordinate_count": {"const": 50},
+    "entries": {
+      "type": "array", "minItems": 200, "maxItems": 200,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": [
+          "run_id", "condition", "partition_repeat", "outer_fold", "seed",
+          "entry_role", "source_run_family",
+          "selection_seal", "selection_run_record", "epoch_trace", "threshold_trace"
+        ],
+        "properties": {
+          "run_id": {"type": "string"}, "condition": {"type": "string"},
+          "partition_repeat": {"const": 0},
+          "outer_fold": {"type": "integer", "minimum": 0, "maximum": 4},
+          "seed": {"type": "integer"},
+          "entry_role": {"enum": ["new_capacity_fit", "immutable_primary_anchor"]},
+          "source_run_family": {"enum": ["capacity_matched_sensitivity", "primary_matrix"]},
+          "selection_seal": {"$ref": "#/$defs/artifact"},
+          "selection_run_record": {"$ref": "#/$defs/artifact"},
+          "epoch_trace": {"$ref": "#/$defs/artifact"},
+          "threshold_trace": {"$ref": "#/$defs/artifact"}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "sha256", "bytes", "row_count"],
+      "properties": {
+        "path": {"type": "string"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "bytes": {"type": "integer", "minimum": 1},
+        "row_count": {"type": ["integer", "null"], "minimum": 1}
+      }
+    }
+  }
+}

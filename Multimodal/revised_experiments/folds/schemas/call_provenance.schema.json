@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Paper 2 v2 Work 5 call provenance row",
+  "type": "object",
+  "required": ["call_id", "label", "historical_split"],
+  "properties": {
+    "call_id": {"type": "string", "minLength": 1},
+    "label": {"type": "integer", "enum": [0, 1]},
+    "historical_split": {"type": "string", "enum": ["train", "val", "test"]},
+    "source": {"type": "string", "minLength": 1},
+    "is_burned": {"type": "boolean"},
+    "relation_component_id": {"type": "string", "minLength": 1},
+    "canonical_call_id": {"type": "string", "minLength": 1},
+    "provisional_primary_status": {
+      "type": "string",
+      "enum": [
+        "historical_burned",
+        "quarantine_burned_related_component",
+        "exclude_redundant_exact_audio",
+        "eligible_for_work6"
+      ]
+    },
+    "audio": {
+      "type": "object",
+      "properties": {
+        "byte_sha256": {
+          "anyOf": [
+            {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+            {"type": "string", "const": "unknown"},
+            {"type": "null"}
+          ]
+        },
+        "pcm_sha256": {
+          "anyOf": [
+            {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+            {"type": "string", "const": "unknown"},
+            {"type": "null"}
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "audio_sha256": {
+      "anyOf": [
+        {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        {"type": "string", "const": "unknown"},
+        {"type": "null"}
+      ]
+    }
+  },
+  "additionalProperties": true
+}

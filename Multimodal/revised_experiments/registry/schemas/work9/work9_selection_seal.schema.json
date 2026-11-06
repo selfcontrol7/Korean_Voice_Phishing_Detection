@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.paper2.v2/work9/work9_selection_seal.schema.json",
+  "title": "Work 9 fully bound selection seal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "run_id", "protocol_id", "run_family", "condition",
+    "partition_repeat", "outer_fold", "seed", "config_sha256",
+    "work8_receipt_sha256", "runner_acceptance_sha256",
+    "experiment_card_sha256", "gate1_policy_sha256", "gate1_analysis_protocol_sha256", "train_manifest_sha256",
+    "validation_manifest_sha256", "feature_store_metadata_sha256",
+    "feature_store_index_sha256", "feature_store_vectors_sha256",
+    "pairing_plan_sha256", "pairing_plan_artifact", "selected_epoch", "validation_call_nll", "threshold",
+    "checkpoint", "validation_segment_ledger", "validation_call_ledger",
+    "epoch_trace", "threshold_trace"
+  ],
+  "properties": {
+    "schema_version": {"const": "paper2-v2-work9-selection-seal-1"},
+    "run_id": {"type": "string"}, "protocol_id": {"type": "string"},
+    "run_family": {"const": "primary_matrix"}, "condition": {"type": "string"},
+    "partition_repeat": {"const": 0},
+    "outer_fold": {"type": "integer", "minimum": 0, "maximum": 4},
+    "seed": {"type": "integer"},
+    "config_sha256": {"$ref": "#/$defs/sha"},
+    "work8_receipt_sha256": {"$ref": "#/$defs/sha"},
+    "runner_acceptance_sha256": {"$ref": "#/$defs/sha"},
+    "experiment_card_sha256": {"$ref": "#/$defs/sha"},
+    "gate1_policy_sha256": {"$ref": "#/$defs/sha"},
+    "gate1_analysis_protocol_sha256": {"$ref": "#/$defs/sha"},
+    "train_manifest_sha256": {"$ref": "#/$defs/sha"},
+    "validation_manifest_sha256": {"$ref": "#/$defs/sha"},
+    "feature_store_metadata_sha256": {"$ref": "#/$defs/sha"},
+    "feature_store_index_sha256": {"$ref": "#/$defs/sha"},
+    "feature_store_vectors_sha256": {"$ref": "#/$defs/sha"},
+    "pairing_plan_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "pairing_plan_artifact": {
+      "oneOf": [
+        {"type": "null"},
+        {"$ref": "#/$defs/artifact"}
+      ]
+    },
+    "selected_epoch": {"type": "integer", "minimum": 1},
+    "validation_call_nll": {"type": "number", "minimum": 0},
+    "threshold": {"type": "number", "minimum": 0, "maximum": 1},
+    "checkpoint": {"$ref": "#/$defs/artifact"},
+    "validation_segment_ledger": {"$ref": "#/$defs/artifact"},
+    "validation_call_ledger": {"$ref": "#/$defs/artifact"},
+    "epoch_trace": {"$ref": "#/$defs/artifact"},
+    "threshold_trace": {"$ref": "#/$defs/artifact"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"condition": {"const": "AT-cross-randtrain"}}},
+      "then": {
+        "properties": {
+          "pairing_plan_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "pairing_plan_artifact": {"$ref": "#/$defs/artifact"}
+        }
+      },
+      "else": {
+        "properties": {
+          "pairing_plan_sha256": {"type": "null"},
+          "pairing_plan_artifact": {"type": "null"}
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "sha": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "artifact": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "sha256", "bytes", "row_count"],
+      "properties": {
+        "path": {"type": "string"}, "sha256": {"$ref": "#/$defs/sha"},
+        "bytes": {"type": "integer", "minimum": 1},
+        "row_count": {"type": ["integer", "null"], "minimum": 1}
+      }
+    }
+  }
+}

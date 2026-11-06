@@ -1,0 +1,26 @@
+schema_version: "1.0.0"
+comparison_id: "REPLACE_ME"
+status: planned
+scientific_question: "REPLACE_ME"
+threat_or_uncertainty_addressed: "REPLACE_ME"
+previous_work: "REPLACE_ME"
+change_in_this_experiment: "REPLACE_ME"
+held_constant: []
+independent_unit: call
+grouping_policy_id: "REPLACE_ME"
+primary_outcome: "REPLACE_ME"
+secondary_outcomes: []
+possible_result_patterns: []
+decision_rule: "REPLACE_ME"
+claim_enabled_if_successful: "REPLACE_ME"
+claims_not_enabled: []
+required_artifacts:
+  - run_record.json
+  - predictions.jsonl
+  - call_metrics.json
+  - warnings.log
+preregistered_seeds: []
+preregistered_outer_folds: []
+threshold_rule: "REPLACE_ME"
+aggregation_rule: "REPLACE_ME"
+calibration_rule: "REPLACE_ME"

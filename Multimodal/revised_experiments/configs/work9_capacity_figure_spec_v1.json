@@ -1,0 +1,60 @@
+{
+  "analysis_protocol": {
+    "path": "revised_experiments/configs/work9_capacity_analysis_protocol_v1.json",
+    "sha256": "012efe50fb604443d6db29f375ff181ff1c87a82056949693da4e98a5483b212"
+  },
+  "anchor_policy_sha256": "4c34fc816bdd9d577d0dcc669f5ed5a703124d9afe151860972cc3846a4e3ff6",
+  "completed_gate1_hash_manifest_sha256": "b51da584d8e325d211f188d422f9fa26247be25da4af4aaa5d80f1d5e32a4bbc",
+  "evidence_label": "Capacity-matched secondary within-corpus sensitivity; cannot reopen Gate 1 or Gate 2",
+  "figures": [
+    {
+      "figure_id": "capacity_parameter_match",
+      "inferential": false,
+      "purpose": "Show exact matched widths, parameter counts, and residual gap from the AT-cross target."
+    },
+    {
+      "figure_id": "capacity_condition_macro_f1",
+      "inferential": false,
+      "purpose": "Show capacity-family call macro-F1 by condition with seed dispersion."
+    },
+    {
+      "figure_id": "capacity_primary_effects",
+      "inferential": true,
+      "purpose": "Show only the three frozen secondary paired effects with clustered intervals and Holm-adjusted permutation results."
+    },
+    {
+      "figure_id": "primary_vs_capacity_condition_change",
+      "inferential": false,
+      "purpose": "Show descriptive within-condition change from the primary H=256 matrix to the capacity-matched family."
+    },
+    {
+      "figure_id": "capacity_fold_seed_stability",
+      "inferential": false,
+      "purpose": "Show fold/seed direction and dispersion without treating folds or seeds as additional independent tests."
+    },
+    {
+      "figure_id": "capacity_metric_profile",
+      "inferential": false,
+      "purpose": "Show the predeclared call-level metric profile under matched parameter count."
+    },
+    {
+      "figure_id": "capacity_compute_profile",
+      "inferential": false,
+      "purpose": "Show downstream parameter, wall-time, and peak-memory differences; exclude ASR, encoder extraction, and mobile claims."
+    }
+  ],
+  "formats": ["svg", "pdf", "png_300dpi"],
+  "forbidden_figures_or_annotations": [
+    "new_gate1_pass_fail_plot",
+    "gate2_reopening",
+    "deployment_or_mobile_utility",
+    "external_generalization",
+    "source_independent_fraud_performance",
+    "post_hoc_best_seed_or_best_fold_ranking",
+    "formal_primary_vs_capacity_p_values"
+  ],
+  "protocol_id": "paper2-v2-mfcc-matched-within-corpus-v1",
+  "run_family": "capacity_matched_sensitivity",
+  "schema_version": "paper2-v2-work9-capacity-figure-spec-1",
+  "status": "frozen_before_capacity_model_outcomes"
+}

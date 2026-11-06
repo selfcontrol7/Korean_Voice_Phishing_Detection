@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.paper2.v2/work9/work9_threshold_trace.schema.json",
+  "title": "Work 9 immutable 99-candidate threshold trace",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "run_id", "protocol_id", "run_family", "partition",
+    "partition_repeat", "outer_fold", "seed", "condition",
+    "validation_call_ledger", "threshold_grid", "threshold_tie_break",
+    "candidates", "selected_threshold"
+  ],
+  "properties": {
+    "schema_version": {"const": "paper2-v2-work9-threshold-trace-1"},
+    "run_id": {"type": "string"}, "protocol_id": {"type": "string"},
+    "run_family": {"const": "primary_matrix"}, "partition": {"const": "validation"},
+    "partition_repeat": {"const": 0},
+    "outer_fold": {"type": "integer", "minimum": 0, "maximum": 4},
+    "seed": {"type": "integer"}, "condition": {"type": "string"},
+    "validation_call_ledger": {"$ref": "#/$defs/artifact"},
+    "threshold_grid": {
+      "type": "object", "additionalProperties": false,
+      "required": ["start", "end", "step", "count"],
+      "properties": {
+        "start": {"const": 0.01}, "end": {"const": 0.99},
+        "step": {"const": 0.01}, "count": {"const": 99}
+      }
+    },
+    "threshold_tie_break": {
+      "const": ["lower_fpr", "higher_sensitivity", "closest_to_0.5", "higher_threshold"]
+    },
+    "candidates": {
+      "type": "array", "minItems": 99, "maxItems": 99,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["threshold", "metrics", "selection_key"],
+        "properties": {
+          "threshold": {"type": "number", "minimum": 0.01, "maximum": 0.99},
+          "metrics": {"type": "object"},
+          "selection_key": {
+            "type": "array", "minItems": 5, "maxItems": 5,
+            "items": {"type": "number"}
+          }
+        }
+      }
+    },
+    "selected_threshold": {"type": "number", "minimum": 0.01, "maximum": 0.99}
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "sha256", "bytes", "row_count"],
+      "properties": {
+        "path": {"type": "string"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "bytes": {"type": "integer", "minimum": 1},
+        "row_count": {"type": ["integer", "null"], "minimum": 1}
+      }
+    }
+  }
+}

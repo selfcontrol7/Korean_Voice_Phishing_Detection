@@ -1,0 +1,154 @@
+{
+  "schema_version": "paper2-v2-work9-phase-a-figure-spec-1",
+  "status": "specified_before_outer_evaluation",
+  "protocol_id": "paper2-v2-mfcc-matched-within-corpus-v1",
+  "selection_index": {
+    "path": "revised_experiments/artifacts/work9_runs_v1/_matrix/selection_index.json",
+    "sha256": "59b36e478902bc4cfdcd04aa95e8e9faf9473ee59ed5e0d9ffdf9c4e570764a8"
+  },
+  "diagnostic_boundary": {
+    "phase_a_label": "Phase A development/model-selection diagnostic — not outer-evaluation performance",
+    "outcome_free_label": "Outcome-free protocol schematic — no model outcomes shown",
+    "phase_a_claim_role": "descriptive_model_selection_diagnostics_only",
+    "outer_performance_claim_enabled": false,
+    "direct_outer_artifact_access_permitted": false,
+    "inferential_fold_seed_replicate_claim_enabled": false
+  },
+  "export": {
+    "formats": ["svg", "pdf", "png"],
+    "png_dpi": 300,
+    "vector_text_policy": "embedded_or_editable_dejavu_sans",
+    "font_family": "DejaVu Sans",
+    "color_policy": "fixed_condition_palette_colorblind_conscious",
+    "background": "white"
+  },
+  "aggregation_rules": {
+    "all_25_coordinates_per_condition_required": true,
+    "cherry_picking_permitted": false,
+    "learning_curve_alignment": "actual_integer_epoch_only",
+    "last_observation_carried_forward": false,
+    "aggregate_learning_curve_center": "pointwise_median_among_observed_coordinates",
+    "aggregate_learning_curve_band": "pointwise_interquartile_range_among_observed_coordinates",
+    "aggregate_learning_curve_observed_n_reported": true,
+    "threshold_response_center": "median_across_all_25_coordinates_at_each_common_threshold",
+    "threshold_response_band": "interquartile_range_across_all_25_coordinates_at_each_common_threshold",
+    "confidence_intervals_or_p_values_in_phase_a_figures": false,
+    "coordinate_points_interpretation": "descriptive_dependent_fold_seed_coordinates_not_independent_replicates"
+  },
+  "figures": [
+    {
+      "figure_id": "protocol_pipeline",
+      "availability": "outcome_free",
+      "title": "Paper 2 revised experiment: relation-aware data and evidence flow",
+      "required_label": "outcome_free_label"
+    },
+    {
+      "figure_id": "architecture_comparison",
+      "availability": "outcome_free",
+      "title": "Eight-condition primary multimodal experiment matrix",
+      "required_label": "outcome_free_label"
+    },
+    {
+      "figure_id": "phase_a_learning_curves_aggregate",
+      "availability": "after_frozen_selection_index",
+      "title": "Phase A learning trajectories across 25 fold–seed coordinates per condition",
+      "required_label": "phase_a_label"
+    },
+    {
+      "figure_id": "phase_a_learning_curves_T_all25",
+      "availability": "after_frozen_selection_index",
+      "title": "T: all 25 Phase A learning trajectories",
+      "required_label": "phase_a_label"
+    },
+    {
+      "figure_id": "phase_a_learning_curves_A-mean_all25",
+      "availability": "after_frozen_selection_index",
+      "title": "A-mean: all 25 Phase A learning trajectories",
+      "required_label": "phase_a_label"
+    },
+    {
+      "figure_id": "phase_a_learning_curves_A-query_all25",
+      "availability": "after_frozen_selection_index",
+      "title": "A-query: all 25 Phase A learning trajectories",
+      "required_label": "phase_a_label"
+    },
+    {
+      "figure_id": "phase_a_learning_curves_A-temp_all25",
+      "availability": "after_frozen_selection_index",
+      "title": "A-temp: all 25 Phase A learning trajectories",
+      "required_label": "phase_a_label"
+    },
+    {
+      "figure_id": "phase_a_learning_curves_AT-concat_all25",
+      "availability": "after_frozen_selection_index",
+      "title": "AT-concat: all 25 Phase A learning trajectories",
+      "required_label": "phase_a_label"
+    },
+    {
+      "figure_id": "phase_a_learning_curves_AT-gate_all25",
+      "availability": "after_frozen_selection_index",
+      "title": "AT-gate: all 25 Phase A learning trajectories",
+      "required_label": "phase_a_label"
+    },
+    {
+      "figure_id": "phase_a_learning_curves_AT-cross_all25",
+      "availability": "after_frozen_selection_index",
+      "title": "AT-cross: all 25 Phase A learning trajectories",
+      "required_label": "phase_a_label"
+    },
+    {
+      "figure_id": "phase_a_learning_curves_AT-cross-randtrain_all25",
+      "availability": "after_frozen_selection_index",
+      "title": "AT-cross-randtrain: all 25 Phase A learning trajectories",
+      "required_label": "phase_a_label"
+    },
+    {
+      "figure_id": "phase_a_epoch_and_stopping_distributions",
+      "availability": "after_frozen_selection_index",
+      "title": "Selected checkpoints and stopping epochs",
+      "required_label": "phase_a_label"
+    },
+    {
+      "figure_id": "phase_a_selected_epoch_heatmaps",
+      "availability": "after_frozen_selection_index",
+      "title": "Selected checkpoint epoch by fold and seed",
+      "required_label": "phase_a_label"
+    },
+    {
+      "figure_id": "phase_a_selected_threshold_heatmaps",
+      "availability": "after_frozen_selection_index",
+      "title": "Validation-selected threshold by fold and seed",
+      "required_label": "phase_a_label"
+    },
+    {
+      "figure_id": "phase_a_selected_threshold_distribution",
+      "availability": "after_frozen_selection_index",
+      "title": "Distribution of validation-selected thresholds",
+      "required_label": "phase_a_label"
+    },
+    {
+      "figure_id": "phase_a_threshold_response",
+      "availability": "after_frozen_selection_index",
+      "title": "Validation threshold-response diagnostics",
+      "required_label": "phase_a_label"
+    },
+    {
+      "figure_id": "phase_a_runtime_distribution",
+      "availability": "after_frozen_selection_index",
+      "title": "Phase A coordinate runtime",
+      "required_label": "phase_a_label"
+    },
+    {
+      "figure_id": "phase_a_parameter_counts",
+      "availability": "after_frozen_selection_index",
+      "title": "Model capacity in the executed Phase A matrix",
+      "required_label": "phase_a_label"
+    },
+    {
+      "figure_id": "phase_a_gpu_memory_distribution",
+      "availability": "after_frozen_selection_index",
+      "title": "Phase A peak GPU-memory footprint",
+      "required_label": "phase_a_label"
+    }
+  ]
+}

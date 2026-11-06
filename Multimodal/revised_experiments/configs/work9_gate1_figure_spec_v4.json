@@ -1,0 +1,294 @@
+{
+  "schema_version": "paper2-v2-work9-gate1-figure-spec-4",
+  "status": "frozen_post_gate1_visual_correction",
+  "freeze_date": "2026-08-10",
+  "protocol_id": "paper2-v2-mfcc-matched-within-corpus-v1",
+  "purpose": "Freeze a presentation-only v4 correction overlay while inheriting the pre-outcome v1 figure inventory, inputs, estimands, aggregation rules, labels, claim boundary, and scientific values without change.",
+  "visual_correction": {
+    "scope": "presentation_only",
+    "scientific_values_changed": false,
+    "figure_inventory_changed": false,
+    "aggregation_changed": false,
+    "inference_changed": false,
+    "probability_density_panel_y_scale_disclosure": "Panel-specific y-axis limits; compare distribution shape, not peak height across conditions.",
+    "changes": [
+      "metric_profile_upper_headroom_prevents_ceiling_marker_clipping",
+      "primary_effect_annotation_region_prevents_ci_label_overlap",
+      "probability_density_panels_disclose_panel_specific_y_axis_limits",
+      "manifest_generation_identity_matches_v4_bundle"
+    ]
+  },
+  "upstream_bindings": [
+    {
+      "role": "frozen_work8_matrix_config",
+      "path": "revised_experiments/configs/work8_mfcc_matched_within_corpus_v1.json",
+      "sha256": "ab04b6c00979ae94b1adc4cb952cf1d7a3db7e7f2c98c87cda520b8ad18b2fb4"
+    },
+    {
+      "role": "frozen_gate1_decision_policy",
+      "path": "revised_experiments/configs/work9_gate1_decision_policy_v1.json",
+      "sha256": "a6697bebd0df3d6dca99bcfd82dd07bf874f2cf7923fae5d07d0b1201444880b"
+    },
+    {
+      "role": "frozen_gate1_analysis_protocol",
+      "path": "revised_experiments/configs/work9_gate1_analysis_protocol_v1.json",
+      "sha256": "793ca1dfcb1cb339eafeb504d229c7a5a3d07431060d38c1d2d75a89ac79b9fa"
+    },
+    {
+      "role": "gate1_report_schema",
+      "path": "revised_experiments/registry/schemas/work9_gate1_report.schema.json",
+      "sha256": "b67d0743b93f8ef2706799245a6a25ac71495512d7dc586eb59b622a4412e582"
+    },
+    {
+      "role": "outer_ledger_index_schema",
+      "path": "revised_experiments/registry/schemas/work9/work9_outer_ledger_index.schema.json",
+      "sha256": "99b599c10bec162d8e3c5e42a16c04d7914354c05bbdd9e2ceece24b85a38196"
+    },
+    {
+      "role": "outer_call_prediction_schema",
+      "path": "revised_experiments/registry/schemas/work9/work9_call_prediction.schema.json",
+      "sha256": "22b33eee49d334b67d0b67b09e00567332aaa9f900f0c629cd6d8992cd730cad"
+    },
+    {
+      "role": "frozen_gate1_analysis_implementation",
+      "path": "revised_experiments/src/paper2_v2/work9_gate1.py",
+      "sha256": "b08d4e773e1c58343ef064cf3e47691c68f2f5cf7be1b8e0445c2d6bb309e564"
+    },
+    {
+      "role": "passing_work8_preregistration_receipt",
+      "path": "revised_experiments/artifacts/work8_preregistration_v1/dry_run_receipt.json",
+      "sha256": "5c81d5367be670f9bb863a31c54c847ff7b7340c8bfd80b63fe16e057d1860ed"
+    },
+    {
+      "role": "frozen_complete_phase_a_selection_index",
+      "path": "revised_experiments/artifacts/work9_runs_v1/_matrix/selection_index.json",
+      "sha256": "59b36e478902bc4cfdcd04aa95e8e9faf9473ee59ed5e0d9ffdf9c4e570764a8"
+    },
+    {
+      "role": "base_preoutcome_gate1_figure_spec",
+      "path": "revised_experiments/configs/work9_gate1_figure_spec_v1.json",
+      "sha256": "80be3a1294d55677f3393dc34a403475ab68a2c60e8640c7073177ffa6aec080"
+    },
+    {
+      "role": "superseded_v3_figure_manifest",
+      "path": "revised_experiments/artifacts/work9_gate1_figures_v3/figure_manifest.json",
+      "sha256": "36ecccc4656d61294ea1cdebfdc4eafc364a902d0cd97908f414a04e6be38a9a"
+    }
+  ],
+  "implementation_bindings": [
+    {
+      "role": "retained_v1_scientific_figure_core",
+      "path": "revised_experiments/src/paper2_v2/work9_gate1_figures.py",
+      "sha256": "87b72b37e93940c05fb3c710cf404a4403b27f7adf5d61ea914fc7a91a9203c0"
+    },
+    {
+      "role": "presentation_corrected_gate1_figure_source_v4",
+      "path": "revised_experiments/src/paper2_v2/work9_gate1_figures_v4.py",
+      "sha256": "170360bb9d797a7f6f427dc3d5551f393ad61398af2df82063c13d7a49a2c7f4"
+    },
+    {
+      "role": "presentation_corrected_gate1_figure_cli_v4",
+      "path": "revised_experiments/scripts/generate_work9_gate1_figures_v4.py",
+      "sha256": "2649d60a6a40de8c33d4d9dfe62a3b8d01933848272c529691a8b639e0a4e5f6"
+    },
+    {
+      "role": "synthetic_visual_regression_tests_v4",
+      "path": "revised_experiments/tests/test_work9_gate1_figures_v4.py",
+      "sha256": "7b50789d7a6f380575909e62db6bc483ece705cfcf97f2065c35c9e886bb0acd"
+    }
+  ],
+  "runtime_gate1_binding": {
+    "gate1_directory_must_be_sealed": true,
+    "literal_gate1_hashes_sha256_required_on_cli": true,
+    "report_outer_ledger_index_path_and_sha256_must_match_disk": true,
+    "every_consumed_outer_call_ledger_sha256_bytes_and_row_count_must_match_index": true,
+    "expected_outer_coordinate_count": 200,
+    "expected_condition_metric_record_count": 240,
+    "expected_primary_comparison_count": 3
+  },
+  "data_access": {
+    "gate1_outputs_required": true,
+    "outer_complete_call_ledgers_permitted": true,
+    "outer_complete_call_ledgers_role": "threshold_free_descriptive_curve_and_probability_diagnostics_only_after_gate1_hash_validation",
+    "outer_segment_ledgers_permitted": false,
+    "checkpoints_permitted": false,
+    "phase_a_validation_prediction_ledgers_permitted": false,
+    "raw_audio_permitted": false,
+    "transcripts_permitted": false,
+    "source_labels_permitted_for_subgroup_claims": false,
+    "named_call_ids_permitted_in_figures": false
+  },
+  "claim_boundary": {
+    "required_primary_label": "Within-corpus outer-development evaluation — complete-call predictions",
+    "required_descriptive_label": "Five neural seeds; seed/fold displays and curve envelopes are descriptive, not inferential",
+    "independent_unit": "call",
+    "external_generalization_claim_permitted": false,
+    "practical_utility_claim_permitted": false,
+    "deployment_or_real_time_claim_permitted": false,
+    "folds_or_seeds_treated_as_independent_sample_units": false,
+    "only_inferential_figure": "gate1_primary_effects",
+    "inferential_source": "canonical_gate1_primary_comparisons_without_recomputation"
+  },
+  "aggregation_rules": {
+    "primary_condition_estimator": "compute_metric_per_seed_after_pooling_all_five_disjoint_outer_fold_call_ledgers_then_arithmetic_mean_across_five_seeds",
+    "average_of_fold_macro_f1_as_primary_estimate_permitted": false,
+    "pooling_seeded_predictions_as_independent_calls_permitted": false,
+    "averaging_probabilities_across_seeds_into_an_unregistered_ensemble_permitted": false,
+    "seed_based_ci_sem_or_significance_permitted": false,
+    "fold_seed_cells_as_n25_independent_replicates_permitted": false,
+    "condition_profile": "five_per_seed_pooled_fold_metrics_plus_arithmetic_mean_and_seed_min_max_no_ci",
+    "primary_effect_forest": "exact_observed_effect_and_relation_group_clustered_percentile_95_ci_from_gate1_plus_holm_adjusted_permutation_p",
+    "primary_effect_ci_multiplicity_adjusted": false,
+    "primary_effect_grouping": "AT_cross_minus_A_query_is_incremental_text_conditioning; mechanism_superiority_requires_both_AT_cross_minus_AT_concat_and_AT_cross_minus_AT_gate",
+    "fold_seed_stability": "three_fixed_5_fold_by_5_seed_macro_f1_difference_heatmaps_descriptive_only",
+    "confusion": "row_normalize_each_seed_pooled_five_fold_confusion_then_unweighted_mean_across_seeds_never_sum_seed_counts",
+    "confusion_threshold_note": "pooled_out_of_fold_confusion_uses_each_folds_sealed_validation_selected_threshold_not_one_common_threshold",
+    "roc": {
+      "unit": "one_pooled_five_outer_fold_curve_per_seed_and_condition",
+      "interpolation_grid": "false_positive_rate_0_to_1_inclusive_201_equally_spaced_points",
+      "display": "unweighted_mean_curve_and_seed_min_max_envelope",
+      "envelope_role": "descriptive_not_confidence_interval"
+    },
+    "precision_recall": {
+      "unit": "one_pooled_five_outer_fold_curve_per_seed_and_condition",
+      "implementation": "sklearn_precision_recall_curve",
+      "interpolation_grid": "recall_0_to_1_inclusive_201_equally_spaced_points",
+      "display": "unweighted_mean_curve_and_seed_min_max_envelope",
+      "scalar_label_rule": "Gate1_pr_auc_is_sklearn_average_precision_score_and_must_be_labelled_average_precision_AP_not_trapezoidal_PR_AUC",
+      "envelope_role": "descriptive_not_confidence_interval"
+    },
+    "calibration": {
+      "bins": "ten_equal_width_bins_[0.0,0.1),...,[0.9,1.0]_matching_gate1_ece10",
+      "unit": "per_seed_after_pooling_five_outer_folds",
+      "display": "five_seed_traces_plus_unweighted_binwise_mean_of_nonempty_seed_bins",
+      "pooling_seeded_predictions_for_bold_curve_permitted": false,
+      "role": "descriptive_reliability_diagnostic_not_new_pass_rule"
+    },
+    "probability_distribution": {
+      "bins": "twenty_equal_width_bins_from_0_to_1_inclusive",
+      "normalization": "density_separately_within_each_true_label_and_seed",
+      "display": "unweighted_mean_seed_density_and_seed_min_max_envelope",
+      "role": "threshold_free_supplementary_diagnostic_not_error_case_ranking"
+    },
+    "new_posthoc_ci_pvalue_or_gate_rule_permitted": false
+  },
+  "export": {
+    "formats": ["svg", "pdf", "png"],
+    "png_dpi": 300,
+    "font_family": "DejaVu Sans",
+    "background": "white",
+    "fixed_condition_order": [
+      "T",
+      "A-mean",
+      "A-query",
+      "A-temp",
+      "AT-concat",
+      "AT-gate",
+      "AT-cross",
+      "AT-cross-randtrain"
+    ],
+    "fixed_seed_order": [17, 29, 43, 71, 101],
+    "fixed_outer_fold_order": [0, 1, 2, 3, 4]
+  },
+  "figures": [
+    {
+      "figure_id": "outer_condition_macro_f1",
+      "title": "Outer-development call macro-F1 across five frozen seeds",
+      "placement": "main_candidate",
+      "analysis_role": "descriptive_condition_performance_primary_estimator_components",
+      "canonical_inputs": ["condition_metrics.jsonl"]
+    },
+    {
+      "figure_id": "outer_condition_metric_profile",
+      "title": "Outer-development condition metric profile",
+      "placement": "supplement_candidate",
+      "analysis_role": "descriptive_frozen_reported_metric_family",
+      "canonical_inputs": ["condition_metrics.jsonl"]
+    },
+    {
+      "figure_id": "gate1_primary_effects",
+      "title": "Preregistered Gate-1 paired effects",
+      "placement": "main_candidate",
+      "analysis_role": "sole_inferential_figure_exact_gate1_clustered_ci_and_holm_p",
+      "canonical_inputs": ["primary_comparisons.jsonl", "report.json"]
+    },
+    {
+      "figure_id": "gate1_seed_stability",
+      "title": "Gate-1 effect stability across seeds",
+      "placement": "supplement_candidate",
+      "analysis_role": "descriptive_only_not_additional_gate_rule",
+      "canonical_inputs": ["primary_comparisons.jsonl"]
+    },
+    {
+      "figure_id": "gate1_fold_stability",
+      "title": "Gate-1 effect stability across folds and seeds",
+      "placement": "main_or_supplement_candidate",
+      "analysis_role": "descriptive_three_comparison_5x5_heatmaps_not_n25_inference",
+      "canonical_inputs": ["primary_comparisons.jsonl"]
+    },
+    {
+      "figure_id": "outer_macro_f1_fold_seed",
+      "title": "Call-level macro-F1 by outer fold and seed",
+      "placement": "supplement_candidate",
+      "analysis_role": "descriptive_condition_stability_not_n25_inference",
+      "canonical_inputs": ["condition_metrics.jsonl"]
+    },
+    {
+      "figure_id": "outer_confusion_matrices",
+      "title": "Mean true-label-normalized confusion matrices across seeds",
+      "placement": "supplement_candidate",
+      "analysis_role": "descriptive_error_type_summary_using_fold_specific_sealed_thresholds",
+      "canonical_inputs": ["condition_metrics.jsonl"]
+    },
+    {
+      "figure_id": "outer_roc_curves",
+      "title": "Outer-development ROC curves",
+      "placement": "supplement_candidate",
+      "analysis_role": "threshold_free_descriptive_discrimination_curves",
+      "canonical_inputs": ["report_bound_outer_call_ledgers"]
+    },
+    {
+      "figure_id": "outer_pr_curves",
+      "title": "Outer-development precision-recall curves",
+      "placement": "supplement_candidate",
+      "analysis_role": "threshold_free_descriptive_precision_recall_curves",
+      "canonical_inputs": ["report_bound_outer_call_ledgers"]
+    },
+    {
+      "figure_id": "outer_calibration_curves",
+      "title": "Fixed 10-bin calibration diagnostics",
+      "placement": "supplement_candidate",
+      "analysis_role": "descriptive_calibration_diagnostic_matching_ece10_bins",
+      "canonical_inputs": ["report_bound_outer_call_ledgers"]
+    },
+    {
+      "figure_id": "outer_probability_distributions",
+      "title": "Threshold-free call-probability distributions by true label",
+      "placement": "supplement_candidate",
+      "analysis_role": "descriptive_probability_diagnostic_without_seed_pooling_or_error_ranking",
+      "canonical_inputs": ["report_bound_outer_call_ledgers"]
+    }
+  ],
+  "excluded_figures": [
+    {
+      "figure_id": "named_or_ranked_error_examples",
+      "reason": "Not a frozen Gate-1 estimand; risks cherry-picking and disclosing identifiable call content or IDs."
+    },
+    {
+      "figure_id": "source_stratified_error_or_generalization_claims",
+      "reason": "No subgroup estimand or multiplicity policy was frozen and source is confounded with provenance and label."
+    },
+    {
+      "figure_id": "decision_curve_or_operational_utility",
+      "reason": "The frozen policy has neither a cost function nor a smallest practically meaningful effect."
+    },
+    {
+      "figure_id": "seed_or_fold_confidence_intervals",
+      "reason": "The five seeds and five overlapping-training folds are not independent corpus replicates."
+    },
+    {
+      "figure_id": "segment_level_primary_performance",
+      "reason": "The independent primary unit is the complete call; segment metrics have only a secondary weak-label role."
+    }
+  ]
+}

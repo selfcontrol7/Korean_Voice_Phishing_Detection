@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.paper2.v2/work9/work9_validation_segment_score.schema.json",
+  "title": "Work 9 per-epoch validation segment probability",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "run_id", "protocol_id", "run_family", "partition",
+    "partition_repeat", "outer_fold", "seed", "condition", "epoch",
+    "segment_id", "call_id", "group_id", "source", "label", "probability",
+    "start", "end", "duration_seconds", "checkpoint_sha256", "manifest_sha256"
+  ],
+  "properties": {
+    "schema_version": {"const": "paper2-v2-work9-validation-segment-score-1"},
+    "run_id": {"type": "string", "minLength": 1},
+    "protocol_id": {"type": "string", "minLength": 1},
+    "run_family": {"const": "primary_matrix"},
+    "partition": {"const": "validation"},
+    "partition_repeat": {"const": 0},
+    "outer_fold": {"type": "integer", "minimum": 0, "maximum": 4},
+    "seed": {"type": "integer"},
+    "condition": {"type": "string"},
+    "epoch": {"type": "integer", "minimum": 1},
+    "segment_id": {"type": "string", "minLength": 1},
+    "call_id": {"type": "string", "minLength": 1},
+    "group_id": {"type": "string", "minLength": 1},
+    "source": {"type": "string"},
+    "label": {"type": "integer", "enum": [0, 1]},
+    "probability": {"type": "number", "minimum": 0, "maximum": 1},
+    "start": {"type": "number"},
+    "end": {"type": "number"},
+    "duration_seconds": {"type": "number", "minimum": 0},
+    "checkpoint_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

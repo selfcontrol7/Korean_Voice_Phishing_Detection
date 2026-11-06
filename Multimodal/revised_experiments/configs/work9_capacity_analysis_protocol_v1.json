@@ -1,0 +1,88 @@
+{
+  "anchor_policy": {
+    "path": "revised_experiments/configs/work9_capacity_anchor_policy_v1.json",
+    "sha256": "4c34fc816bdd9d577d0dcc669f5ed5a703124d9afe151860972cc3846a4e3ff6"
+  },
+  "bootstrap": {
+    "confidence_level": 0.95,
+    "interval": "percentile",
+    "method": "paired_relation_group_cluster_keep_all_calls_segments_seeds",
+    "numpy_bit_generator": "PCG64",
+    "numpy_generator": "default_rng",
+    "quantile_method": "linear",
+    "replicates": 10000,
+    "seed": 20260809
+  },
+  "call_primary": {
+    "complete_call_aggregation": "arithmetic_mean_probability_over_all_manifest_segments",
+    "independent_unit": "call",
+    "threshold_source": "sealed_validation_only_per_coordinate"
+  },
+  "claim_boundary": {
+    "can_change_completed_gate1_decision": false,
+    "can_reopen_gate2": false,
+    "external_generalization_authorized": false,
+    "practical_utility_authorized": false,
+    "role": "preregistered_secondary_parameter_budget_sensitivity_not_a_second_primary_test",
+    "source_scope": "within_corpus_source_confounded"
+  },
+  "completed_gate1": {
+    "gate2_decision": "do_not_proceed",
+    "hash_manifest_sha256": "b51da584d8e325d211f188d422f9fa26247be25da4af4aaa5d80f1d5e32a4bbc",
+    "report_sha256": "e52c8d4fa07d9cbd77d36c1901220c5e7c286251f95ec75911209e1dcb77ed72"
+  },
+  "coordinate_contract": {
+    "anchor_coordinate_count": 50,
+    "conditions": [
+      "T",
+      "A-mean",
+      "A-query",
+      "A-temp",
+      "AT-concat",
+      "AT-gate",
+      "AT-cross",
+      "AT-cross-randtrain"
+    ],
+    "expected_coordinate_count": 200,
+    "new_coordinate_count": 150,
+    "outer_folds": [0, 1, 2, 3, 4],
+    "partition_repeat": 0,
+    "seeds": [17, 29, 43, 71, 101]
+  },
+  "descriptive_primary_vs_capacity": {
+    "formal_hypothesis_tests_authorized": false,
+    "outputs": [
+      "per_condition_macro_f1_change",
+      "per_condition_metric_profile_change",
+      "fold_seed_direction_and_dispersion",
+      "exact_parameter_and_downstream_compute_change"
+    ]
+  },
+  "estimand": "mean_across_seeds_of_paired_call_macro_f1_difference",
+  "interpretation_rule": "report_whether_parameter_matching_strengthens_weakens_or_changes_the_descriptive_primary_pattern_without_overwriting_gate1",
+  "multiplicity": {
+    "family": [
+      ["AT-cross", "A-query"],
+      ["AT-cross", "AT-concat"],
+      ["AT-cross", "AT-gate"]
+    ],
+    "familywise_alpha": 0.05,
+    "method": "holm",
+    "role": "secondary_sensitivity_inference"
+  },
+  "parameter_matching_caveat": "matched_trainable_parameter_count_does_not_match_flops_memory_latency_or_optimization_geometry",
+  "permutation": {
+    "alternative": "two_sided_absolute_effect",
+    "finite_sample_correction": "plus_one_numerator_and_denominator",
+    "method": "paired_relation_group_cluster_swap_all_calls_seeds",
+    "replicates": 10000,
+    "seed": 20260810,
+    "swap_unit": "relation_group_shared_across_all_calls_and_seeds"
+  },
+  "protocol_id": "paper2-v2-mfcc-matched-within-corpus-v1",
+  "run_family": "capacity_matched_sensitivity",
+  "schema_version": "paper2-v2-work9-capacity-analysis-protocol-1",
+  "status": "frozen_before_capacity_model_outcomes",
+  "work8_config_sha256": "ab04b6c00979ae94b1adc4cb952cf1d7a3db7e7f2c98c87cda520b8ad18b2fb4",
+  "work8_receipt_sha256": "5c81d5367be670f9bb863a31c54c847ff7b7340c8bfd80b63fe16e057d1860ed"
+}

@@ -1,0 +1,217 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.paper2.v2/work9_capacity/work9_capacity_figure_manifest_v2.schema.json",
+  "title": "Work 9 capacity-matched presentation-corrected seven-figure manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "renderer_version", "status", "protocol_id", "run_family",
+    "evidence_label", "analysis_report", "analysis_report_schema_version",
+    "analysis_protocol_sha256", "figure_spec_sha256", "execution_addendum_sha256",
+    "presentation_correction", "renderer_source", "renderer_cli", "renderer_schema",
+    "renderer_tests", "supersedes_v1_figure_manifest", "supersession_scope",
+    "scientific_content_unchanged", "figure_count", "figure_ids", "formats",
+    "figures", "completed_gate1", "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "paper2-v2-work9-capacity-figure-manifest-2"},
+    "renderer_version": {"const": "paper2-v2-work9-capacity-figure-renderer-2"},
+    "status": {"enum": ["secondary_sensitivity_figures_presentation_corrected", "synthetic_contract_test"]},
+    "protocol_id": {"const": "paper2-v2-mfcc-matched-within-corpus-v1"},
+    "run_family": {"const": "capacity_matched_sensitivity"},
+    "evidence_label": {
+      "const": "Capacity-matched secondary within-corpus sensitivity; cannot reopen Gate 1 or Gate 2"
+    },
+    "analysis_report": {"$ref": "#/$defs/artifact"},
+    "analysis_report_schema_version": {"const": "paper2-v2-work9-capacity-analysis-report-1"},
+    "analysis_protocol_sha256": {
+      "const": "012efe50fb604443d6db29f375ff181ff1c87a82056949693da4e98a5483b212"
+    },
+    "figure_spec_sha256": {
+      "const": "8a17cd066a9859407b7a51080daa29c4a79176ec9c62d22bc548cf6b64f7a033"
+    },
+    "execution_addendum_sha256": {
+      "const": "1be1f731584c0527d6fa4a9eaff84866947cfe129abfb1e791635e5f60862b76"
+    },
+    "presentation_correction": {"$ref": "#/$defs/artifact"},
+    "renderer_source": {"$ref": "#/$defs/artifact"},
+    "renderer_cli": {"$ref": "#/$defs/artifact"},
+    "renderer_schema": {"$ref": "#/$defs/artifact"},
+    "renderer_tests": {"$ref": "#/$defs/artifact"},
+    "supersedes_v1_figure_manifest": {"$ref": "#/$defs/artifact"},
+    "supersession_scope": {
+      "const": "presentation_only_v1_remains_immutable_and_scientifically_valid"
+    },
+    "scientific_content_unchanged": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "analysis_report_sha256", "figure_ids_and_purposes",
+        "condition_metrics_and_aggregations", "effects_confidence_intervals_p_values_and_holm",
+        "gate1_gate2_and_claim_boundary"
+      ],
+      "properties": {
+        "analysis_report_sha256": {
+          "const": "cae39e462a083b20f6963912c1837cefa138441a0dd91bea5c4c0d56cf3f5a0b"
+        },
+        "figure_ids_and_purposes": {"const": true},
+        "condition_metrics_and_aggregations": {"const": true},
+        "effects_confidence_intervals_p_values_and_holm": {"const": true},
+        "gate1_gate2_and_claim_boundary": {"const": true}
+      }
+    },
+    "figure_count": {"const": 7},
+    "figure_ids": {
+      "type": "array",
+      "prefixItems": [
+        {"const": "capacity_parameter_match"},
+        {"const": "capacity_condition_macro_f1"},
+        {"const": "capacity_primary_effects"},
+        {"const": "primary_vs_capacity_condition_change"},
+        {"const": "capacity_fold_seed_stability"},
+        {"const": "capacity_metric_profile"},
+        {"const": "capacity_compute_profile"}
+      ],
+      "items": false,
+      "minItems": 7,
+      "maxItems": 7
+    },
+    "formats": {
+      "type": "array",
+      "prefixItems": [
+        {"const": "svg"}, {"const": "pdf"}, {"const": "png_300dpi"}
+      ],
+      "items": false,
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "figures": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "prefixItems": [
+        {"$ref": "#/$defs/parameter_match"},
+        {"$ref": "#/$defs/condition_macro_f1"},
+        {"$ref": "#/$defs/primary_effects"},
+        {"$ref": "#/$defs/primary_change"},
+        {"$ref": "#/$defs/fold_seed"},
+        {"$ref": "#/$defs/metric_profile"},
+        {"$ref": "#/$defs/compute_profile"}
+      ],
+      "items": false
+    },
+    "completed_gate1": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hash_manifest_sha256", "report_sha256", "gate2_decision",
+        "may_be_reopened", "role"
+      ],
+      "properties": {
+        "hash_manifest_sha256": {
+          "const": "b51da584d8e325d211f188d422f9fa26247be25da4af4aaa5d80f1d5e32a4bbc"
+        },
+        "report_sha256": {
+          "const": "e52c8d4fa07d9cbd77d36c1901220c5e7c286251f95ec75911209e1dcb77ed72"
+        },
+        "gate2_decision": {"const": "do_not_proceed"},
+        "may_be_reopened": {"const": false},
+        "role": {"const": "sealed_descriptive_primary_baseline_only"}
+      }
+    },
+    "claim_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "can_change_completed_gate1_decision", "can_reopen_gate2",
+        "external_generalization_authorized", "practical_utility_authorized",
+        "deployment_or_mobile_claim_authorized", "source_scope"
+      ],
+      "properties": {
+        "can_change_completed_gate1_decision": {"const": false},
+        "can_reopen_gate2": {"const": false},
+        "external_generalization_authorized": {"const": false},
+        "practical_utility_authorized": {"const": false},
+        "deployment_or_mobile_claim_authorized": {"const": false},
+        "source_scope": {"const": "within_corpus_source_confounded"}
+      }
+    }
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "bytes", "row_count"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "bytes": {"type": "integer", "minimum": 1},
+        "row_count": {"type": "null"}
+      }
+    },
+    "files": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["svg", "pdf", "png_300dpi"],
+      "properties": {
+        "svg": {"$ref": "#/$defs/artifact"},
+        "pdf": {"$ref": "#/$defs/artifact"},
+        "png_300dpi": {"$ref": "#/$defs/artifact"}
+      }
+    },
+    "figure_base": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["figure_id", "inferential", "purpose", "files", "presentation_revision"],
+      "properties": {
+        "figure_id": {"type": "string"},
+        "inferential": {"type": "boolean"},
+        "purpose": {"type": "string", "minLength": 1},
+        "files": {"$ref": "#/$defs/files"},
+        "presentation_revision": {"enum": ["unchanged_from_v1", "ceiling_zoom_disclosed_v2"]}
+      }
+    },
+    "parameter_match": {
+      "allOf": [
+        {"$ref": "#/$defs/figure_base"},
+        {"properties": {"figure_id": {"const": "capacity_parameter_match"}, "inferential": {"const": false}, "presentation_revision": {"const": "unchanged_from_v1"}}}
+      ]
+    },
+    "condition_macro_f1": {
+      "allOf": [
+        {"$ref": "#/$defs/figure_base"},
+        {"properties": {"figure_id": {"const": "capacity_condition_macro_f1"}, "inferential": {"const": false}, "presentation_revision": {"const": "ceiling_zoom_disclosed_v2"}}}
+      ]
+    },
+    "primary_effects": {
+      "allOf": [
+        {"$ref": "#/$defs/figure_base"},
+        {"properties": {"figure_id": {"const": "capacity_primary_effects"}, "inferential": {"const": true}, "presentation_revision": {"const": "unchanged_from_v1"}}}
+      ]
+    },
+    "primary_change": {
+      "allOf": [
+        {"$ref": "#/$defs/figure_base"},
+        {"properties": {"figure_id": {"const": "primary_vs_capacity_condition_change"}, "inferential": {"const": false}, "presentation_revision": {"const": "unchanged_from_v1"}}}
+      ]
+    },
+    "fold_seed": {
+      "allOf": [
+        {"$ref": "#/$defs/figure_base"},
+        {"properties": {"figure_id": {"const": "capacity_fold_seed_stability"}, "inferential": {"const": false}, "presentation_revision": {"const": "unchanged_from_v1"}}}
+      ]
+    },
+    "metric_profile": {
+      "allOf": [
+        {"$ref": "#/$defs/figure_base"},
+        {"properties": {"figure_id": {"const": "capacity_metric_profile"}, "inferential": {"const": false}, "presentation_revision": {"const": "ceiling_zoom_disclosed_v2"}}}
+      ]
+    },
+    "compute_profile": {
+      "allOf": [
+        {"$ref": "#/$defs/figure_base"},
+        {"properties": {"figure_id": {"const": "capacity_compute_profile"}, "inferential": {"const": false}, "presentation_revision": {"const": "unchanged_from_v1"}}}
+      ]
+    }
+  }
+}

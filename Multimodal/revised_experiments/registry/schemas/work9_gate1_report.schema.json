@@ -1,0 +1,564 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.paper2.v2/schemas/work9_gate1_report.schema.json",
+  "title": "Work 9 Gate-1 immutable-ledger statistical report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "status",
+    "analysis_role",
+    "protocol_id",
+    "within_corpus_only",
+    "inputs",
+    "validation",
+    "call_primary_policy",
+    "condition_summaries",
+    "primary_comparisons",
+    "gate1_continuation_classification",
+    "multiplicity",
+    "practical_utility"
+  ],
+  "properties": {
+    "schema_version": {"const": "paper2-v2-work9-gate1-report-1"},
+    "status": {"const": "pass"},
+    "analysis_role": {"const": "post_run_gate1_immutable_ledger_statistics"},
+    "protocol_id": {"type": "string", "minLength": 1},
+    "within_corpus_only": {"const": true},
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "matrix_config", "outer_ledger_index", "selection_index",
+        "gate1_decision_policy", "gate1_analysis_protocol"
+      ],
+      "properties": {
+        "matrix_config": {"$ref": "#/$defs/input_artifact"},
+        "outer_ledger_index": {"$ref": "#/$defs/input_artifact"},
+        "selection_index": {"$ref": "#/$defs/input_artifact"},
+        "gate1_decision_policy": {"$ref": "#/$defs/input_artifact"},
+        "gate1_analysis_protocol": {"$ref": "#/$defs/input_artifact"}
+      }
+    },
+    "validation": {"type": "object"},
+    "call_primary_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "independent_unit",
+        "complete_call_aggregation",
+        "outer_folds_combined_before_per_seed_metric",
+        "seeds_combined_by",
+        "reported_call_metrics",
+        "segment_metrics_role"
+      ],
+      "properties": {
+        "independent_unit": {"const": "call"},
+        "complete_call_aggregation": {"const": "mean_probability_over_all_manifest_segments"},
+        "outer_folds_combined_before_per_seed_metric": {"const": 5},
+        "seeds_combined_by": {"const": "arithmetic_mean_of_five_per_seed_metrics"},
+        "reported_call_metrics": {
+          "const": [
+            "macro_f1", "positive_f1", "sensitivity", "specificity",
+            "precision", "negative_predictive_value", "balanced_accuracy",
+            "mcc", "roc_auc", "pr_auc", "fpr", "fnr", "brier", "nll",
+            "ece_10"
+          ]
+        },
+        "segment_metrics_role": {"const": "secondary_weak_label"}
+      }
+    },
+    "condition_summaries": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "T", "A-mean", "A-query", "A-temp", "AT-concat", "AT-gate",
+        "AT-cross", "AT-cross-randtrain"
+      ],
+      "properties": {
+        "T": {"$ref": "#/$defs/condition_summary"},
+        "A-mean": {"$ref": "#/$defs/condition_summary"},
+        "A-query": {"$ref": "#/$defs/condition_summary"},
+        "A-temp": {"$ref": "#/$defs/condition_summary"},
+        "AT-concat": {"$ref": "#/$defs/condition_summary"},
+        "AT-gate": {"$ref": "#/$defs/condition_summary"},
+        "AT-cross": {"$ref": "#/$defs/condition_summary"},
+        "AT-cross-randtrain": {"$ref": "#/$defs/condition_summary"}
+      }
+    },
+    "primary_comparisons": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "prefixItems": [
+        {
+          "allOf": [
+            {"$ref": "#/$defs/comparison"},
+            {"properties": {
+              "comparison_index": {"const": 0},
+              "comparison_id": {"const": "AT-cross_minus_A-query"},
+              "comparator_condition": {"const": "A-query"}
+            }}
+          ]
+        },
+        {
+          "allOf": [
+            {"$ref": "#/$defs/comparison"},
+            {"properties": {
+              "comparison_index": {"const": 1},
+              "comparison_id": {"const": "AT-cross_minus_AT-concat"},
+              "comparator_condition": {"const": "AT-concat"}
+            }}
+          ]
+        },
+        {
+          "allOf": [
+            {"$ref": "#/$defs/comparison"},
+            {"properties": {
+              "comparison_index": {"const": 2},
+              "comparison_id": {"const": "AT-cross_minus_AT-gate"},
+              "comparator_condition": {"const": "AT-gate"}
+            }}
+          ]
+        }
+      ],
+      "items": false
+    },
+    "gate1_continuation_classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "decision_policy_sha256",
+        "classification_is_statistical_not_practical",
+        "statistical_incremental_text_conditioning",
+        "cross_mechanism_superiority",
+        "gate2_cross_specific_pairing_controls",
+        "cross_mechanism_superiority_claim",
+        "seed_and_fold_signs_role",
+        "practical_utility_claim",
+        "policy_snapshot"
+      ],
+      "properties": {
+        "schema_version": {"const": "paper2-v2-work9-gate1-continuation-classification-1"},
+        "decision_policy_sha256": {"const": "a6697bebd0df3d6dca99bcfd82dd07bf874f2cf7923fae5d07d0b1201444880b"},
+        "classification_is_statistical_not_practical": {"const": true},
+        "statistical_incremental_text_conditioning": {
+          "$ref": "#/$defs/incremental_classification"
+        },
+        "cross_mechanism_superiority": {
+          "$ref": "#/$defs/mechanism_classification"
+        },
+        "gate2_cross_specific_pairing_controls": {"enum": ["proceed", "do_not_proceed"]},
+        "cross_mechanism_superiority_claim": {
+          "enum": [
+            "statistically_supported",
+            "unsupported_no_claim",
+            "inconclusive_no_claim"
+          ]
+        },
+        "seed_and_fold_signs_role": {"const": "descriptive_only_not_additional_post_hoc_pass_rules"},
+        "practical_utility_claim": {"const": "forbidden_not_made"},
+        "policy_snapshot": {"type": "object"}
+      }
+    },
+    "multiplicity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "familywise_alpha", "family"],
+      "properties": {
+        "method": {"const": "holm"},
+        "familywise_alpha": {"const": 0.05},
+        "family": {
+          "const": [
+            ["AT-cross", "A-query"],
+            ["AT-cross", "AT-concat"],
+            ["AT-cross", "AT-gate"]
+          ]
+        }
+      }
+    },
+    "practical_utility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "frozen_rule",
+        "cost_policy_available",
+        "smallest_practically_meaningful_effect",
+        "claim_permitted",
+        "claim_made"
+      ],
+      "properties": {
+        "frozen_rule": {"const": "no_practical_utility_claim_without_pre_work9_cost_policy"},
+        "cost_policy_available": {"const": false},
+        "smallest_practically_meaningful_effect": {"type": "null"},
+        "claim_permitted": {"const": false},
+        "claim_made": {"const": false}
+      }
+    }
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "input_artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "comparison": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "comparison_index",
+        "comparison_id",
+        "primary_condition",
+        "comparator_condition",
+        "metric",
+        "estimand",
+        "observed_effect",
+        "effect_direction",
+        "effect_sizes",
+        "seed_stability",
+        "fold_stability",
+        "relation_group_clusters",
+        "call_count",
+        "seed_count",
+        "bootstrap",
+        "permutation",
+        "multiplicity",
+        "practical_utility_claim"
+      ],
+      "properties": {
+        "schema_version": {"const": "paper2-v2-work9-gate1-primary-comparison-1"},
+        "comparison_index": {"type": "integer", "minimum": 0, "maximum": 2},
+        "comparison_id": {
+          "enum": [
+            "AT-cross_minus_A-query",
+            "AT-cross_minus_AT-concat",
+            "AT-cross_minus_AT-gate"
+          ]
+        },
+        "primary_condition": {"const": "AT-cross"},
+        "comparator_condition": {"enum": ["A-query", "AT-concat", "AT-gate"]},
+        "metric": {"const": "macro_f1"},
+        "estimand": {
+          "const": "mean_across_seeds_of_paired_call_macro_f1_difference"
+        },
+        "observed_effect": {"type": "number"},
+        "effect_direction": {"const": "primary_minus_comparator"},
+        "effect_sizes": {"$ref": "#/$defs/effect_sizes"},
+        "seed_stability": {"$ref": "#/$defs/seed_stability"},
+        "fold_stability": {"$ref": "#/$defs/fold_stability"},
+        "relation_group_clusters": {"type": "integer", "minimum": 1},
+        "call_count": {"type": "integer", "minimum": 2},
+        "seed_count": {"const": 5},
+        "bootstrap": {"$ref": "#/$defs/bootstrap"},
+        "permutation": {"$ref": "#/$defs/permutation"},
+        "multiplicity": {"$ref": "#/$defs/comparison_multiplicity"},
+        "practical_utility_claim": {"const": "forbidden_not_made"}
+      }
+    },
+    "effect_sizes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "macro_f1_difference",
+        "absolute_macro_f1_difference_magnitude",
+        "paired_seed_cohens_dz",
+        "positive_seed_fraction",
+        "nonnegative_seed_fraction"
+      ],
+      "properties": {
+        "macro_f1_difference": {"type": "number"},
+        "absolute_macro_f1_difference_magnitude": {"type": "number", "minimum": 0},
+        "paired_seed_cohens_dz": {"type": ["number", "null"]},
+        "positive_seed_fraction": {"type": "number", "minimum": 0, "maximum": 1},
+        "nonnegative_seed_fraction": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "seed_stability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "per_seed_differences", "sample_standard_deviation", "minimum", "maximum"
+      ],
+      "properties": {
+        "per_seed_differences": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["17", "29", "43", "71", "101"],
+          "properties": {
+            "17": {"type": "number"}, "29": {"type": "number"},
+            "43": {"type": "number"}, "71": {"type": "number"},
+            "101": {"type": "number"}
+          }
+        },
+        "sample_standard_deviation": {"type": "number", "minimum": 0},
+        "minimum": {"type": "number"},
+        "maximum": {"type": "number"}
+      }
+    },
+    "fold_stability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "per_fold_per_seed_differences", "per_fold_mean_across_seeds", "mean_summary"
+      ],
+      "properties": {
+        "per_fold_per_seed_differences": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["0", "1", "2", "3", "4"],
+          "properties": {
+            "0": {"$ref": "#/$defs/five_numbers"},
+            "1": {"$ref": "#/$defs/five_numbers"},
+            "2": {"$ref": "#/$defs/five_numbers"},
+            "3": {"$ref": "#/$defs/five_numbers"},
+            "4": {"$ref": "#/$defs/five_numbers"}
+          }
+        },
+        "per_fold_mean_across_seeds": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["0", "1", "2", "3", "4"],
+          "properties": {
+            "0": {"type": "number"}, "1": {"type": "number"},
+            "2": {"type": "number"}, "3": {"type": "number"},
+            "4": {"type": "number"}
+          }
+        },
+        "mean_summary": {"$ref": "#/$defs/metric_summary"}
+      }
+    },
+    "five_numbers": {
+      "type": "array", "minItems": 5, "maxItems": 5,
+      "items": {"type": "number"}
+    },
+    "bootstrap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method", "replicates", "seed", "interval_method", "confidence_level",
+        "ci_lower", "ci_upper"
+      ],
+      "properties": {
+        "method": {"const": "paired_relation_group_cluster_keep_all_calls_segments_seeds"},
+        "replicates": {"const": 10000},
+        "seed": {"const": 20260809},
+        "interval_method": {"const": "percentile_linear_quantile"},
+        "confidence_level": {"const": 0.95},
+        "ci_lower": {"type": "number"},
+        "ci_upper": {"type": "number"}
+      }
+    },
+    "permutation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method", "replicates", "seed", "alternative",
+        "finite_sample_correction", "raw_p_value"
+      ],
+      "properties": {
+        "method": {"const": "paired_relation_group_cluster_swap_all_calls_seeds"},
+        "replicates": {"const": 10000},
+        "seed": {"const": 20260810},
+        "alternative": {"const": "two_sided_absolute_effect"},
+        "finite_sample_correction": {"const": "plus_one_numerator_and_denominator"},
+        "raw_p_value": {"type": "number", "exclusiveMinimum": 0, "maximum": 1}
+      }
+    },
+    "comparison_multiplicity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method", "family_size", "adjusted_p_value", "familywise_alpha",
+        "reject_after_holm"
+      ],
+      "properties": {
+        "method": {"const": "holm"},
+        "family_size": {"const": 3},
+        "adjusted_p_value": {"type": "number", "minimum": 0, "maximum": 1},
+        "familywise_alpha": {"const": 0.05},
+        "reject_after_holm": {"type": "boolean"}
+      }
+    },
+    "continuation_check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "comparison_id", "observed_effect", "clustered_bootstrap_ci_lower",
+        "holm_adjusted_permutation_p", "checks", "all_requirements_met"
+      ],
+      "properties": {
+        "comparison_id": {
+          "enum": [
+            "AT-cross_minus_A-query", "AT-cross_minus_AT-concat",
+            "AT-cross_minus_AT-gate"
+          ]
+        },
+        "observed_effect": {"type": "number"},
+        "clustered_bootstrap_ci_lower": {"type": "number"},
+        "holm_adjusted_permutation_p": {"type": "number", "minimum": 0, "maximum": 1},
+        "checks": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "observed_effect_strictly_positive",
+            "clustered_bootstrap_ci_lower_strictly_positive",
+            "holm_adjusted_permutation_p_strictly_below_0_05"
+          ],
+          "properties": {
+            "observed_effect_strictly_positive": {"type": "boolean"},
+            "clustered_bootstrap_ci_lower_strictly_positive": {"type": "boolean"},
+            "holm_adjusted_permutation_p_strictly_below_0_05": {"type": "boolean"}
+          }
+        },
+        "all_requirements_met": {"type": "boolean"}
+      }
+    },
+    "incremental_classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "comparison"],
+      "properties": {
+        "status": {"enum": ["supported", "unsupported", "inconclusive"]},
+        "comparison": {
+          "allOf": [
+            {"$ref": "#/$defs/continuation_check"},
+            {"properties": {
+              "comparison_id": {"const": "AT-cross_minus_A-query"}
+            }}
+          ]
+        }
+      }
+    },
+    "mechanism_classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "all_comparisons_required"],
+      "properties": {
+        "status": {"enum": ["supported", "unsupported", "inconclusive"]},
+        "all_comparisons_required": {
+          "type": "array", "minItems": 2, "maxItems": 2,
+          "prefixItems": [
+            {
+              "allOf": [
+                {"$ref": "#/$defs/continuation_check"},
+                {"properties": {
+                  "comparison_id": {"const": "AT-cross_minus_AT-concat"}
+                }}
+              ]
+            },
+            {
+              "allOf": [
+                {"$ref": "#/$defs/continuation_check"},
+                {"properties": {
+                  "comparison_id": {"const": "AT-cross_minus_AT-gate"}
+                }}
+              ]
+            }
+          ],
+          "items": false
+        }
+      }
+    },
+    "metric_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "defined_count", "mean", "sample_standard_deviation", "minimum", "maximum"
+      ],
+      "properties": {
+        "defined_count": {"type": "integer", "minimum": 0, "maximum": 5},
+        "mean": {"type": ["number", "null"]},
+        "sample_standard_deviation": {"type": ["number", "null"], "minimum": 0},
+        "minimum": {"type": ["number", "null"]},
+        "maximum": {"type": ["number", "null"]}
+      }
+    },
+    "metric_summary_map": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "macro_f1", "positive_f1", "sensitivity", "specificity", "precision",
+        "negative_predictive_value", "balanced_accuracy", "mcc", "roc_auc",
+        "pr_auc", "fpr", "fnr", "brier", "nll", "ece_10"
+      ],
+      "properties": {
+        "macro_f1": {"$ref": "#/$defs/metric_summary"},
+        "positive_f1": {"$ref": "#/$defs/metric_summary"},
+        "sensitivity": {"$ref": "#/$defs/metric_summary"},
+        "specificity": {"$ref": "#/$defs/metric_summary"},
+        "precision": {"$ref": "#/$defs/metric_summary"},
+        "negative_predictive_value": {"$ref": "#/$defs/metric_summary"},
+        "balanced_accuracy": {"$ref": "#/$defs/metric_summary"},
+        "mcc": {"$ref": "#/$defs/metric_summary"},
+        "roc_auc": {"$ref": "#/$defs/metric_summary"},
+        "pr_auc": {"$ref": "#/$defs/metric_summary"},
+        "fpr": {"$ref": "#/$defs/metric_summary"},
+        "fnr": {"$ref": "#/$defs/metric_summary"},
+        "brier": {"$ref": "#/$defs/metric_summary"},
+        "nll": {"$ref": "#/$defs/metric_summary"},
+        "ece_10": {"$ref": "#/$defs/metric_summary"}
+      }
+    },
+    "metric_value_map": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "macro_f1", "positive_f1", "sensitivity", "specificity", "precision",
+        "negative_predictive_value", "balanced_accuracy", "mcc", "roc_auc",
+        "pr_auc", "fpr", "fnr", "brier", "nll", "ece_10"
+      ],
+      "properties": {
+        "macro_f1": {"type": ["number", "null"]},
+        "positive_f1": {"type": ["number", "null"]},
+        "sensitivity": {"type": ["number", "null"]},
+        "specificity": {"type": ["number", "null"]},
+        "precision": {"type": ["number", "null"]},
+        "negative_predictive_value": {"type": ["number", "null"]},
+        "balanced_accuracy": {"type": ["number", "null"]},
+        "mcc": {"type": ["number", "null"]},
+        "roc_auc": {"type": ["number", "null"]},
+        "pr_auc": {"type": ["number", "null"]},
+        "fpr": {"type": ["number", "null"]},
+        "fnr": {"type": ["number", "null"]},
+        "brier": {"type": ["number", "null"]},
+        "nll": {"type": ["number", "null"]},
+        "ece_10": {"type": ["number", "null"]}
+      }
+    },
+    "fold_metric_values": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["0", "1", "2", "3", "4"],
+      "properties": {
+        "0": {"$ref": "#/$defs/metric_value_map"},
+        "1": {"$ref": "#/$defs/metric_value_map"},
+        "2": {"$ref": "#/$defs/metric_value_map"},
+        "3": {"$ref": "#/$defs/metric_value_map"},
+        "4": {"$ref": "#/$defs/metric_value_map"}
+      }
+    },
+    "condition_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "combined_estimator", "metrics_across_seeds",
+        "per_outer_fold_mean_across_seeds", "metrics_across_outer_fold_means"
+      ],
+      "properties": {
+        "combined_estimator": {
+          "const": "mean_of_per_seed_metrics_after_pooling_all_five_outer_folds"
+        },
+        "metrics_across_seeds": {"$ref": "#/$defs/metric_summary_map"},
+        "per_outer_fold_mean_across_seeds": {"$ref": "#/$defs/fold_metric_values"},
+        "metrics_across_outer_fold_means": {"$ref": "#/$defs/metric_summary_map"}
+      }
+    }
+  }
+}

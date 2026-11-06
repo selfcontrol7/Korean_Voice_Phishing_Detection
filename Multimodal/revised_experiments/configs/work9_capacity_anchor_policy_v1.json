@@ -1,0 +1,76 @@
+{
+  "anchor_conditions": [
+    "AT-cross",
+    "AT-cross-randtrain"
+  ],
+  "anchor_coordinate_count": 50,
+  "anchor_identity_fields": [
+    "protocol_id",
+    "condition",
+    "partition_repeat",
+    "outer_fold",
+    "seed"
+  ],
+  "anchor_reuse_rule": "reuse_exact_immutable_primary_selection_and_outer_artifacts_without_copy_or_retraining",
+  "capacity_run_family": "capacity_matched_sensitivity",
+  "completed_gate1": {
+    "decision_is_immutable": true,
+    "gate2_decision": "do_not_proceed",
+    "hash_manifest": {
+      "bytes": 672,
+      "path": "revised_experiments/artifacts/work9_gate1_v2/hashes.sha256",
+      "sha256": "b51da584d8e325d211f188d422f9fa26247be25da4af4aaa5d80f1d5e32a4bbc"
+    },
+    "report": {
+      "bytes": 99292,
+      "path": "revised_experiments/artifacts/work9_gate1_v2/report.json",
+      "sha256": "e52c8d4fa07d9cbd77d36c1901220c5e7c286251f95ec75911209e1dcb77ed72"
+    }
+  },
+  "hybrid_index_contract": {
+    "anchor_entries": 50,
+    "expected_coordinate_count": 200,
+    "new_entries": 150,
+    "outer_index_may_freeze_only_after_all_new_outer_entries_are_terminal": true,
+    "selection_index_must_freeze_before_any_new_outer_authorization": true
+  },
+  "new_fit_conditions": [
+    "T",
+    "A-mean",
+    "A-query",
+    "A-temp",
+    "AT-concat",
+    "AT-gate"
+  ],
+  "new_fit_coordinate_count": 150,
+  "primary_outer_index": {
+    "bytes": 297762,
+    "path": "revised_experiments/artifacts/work9_runs_v1/_matrix/outer_ledger_index.json",
+    "sha256": "640ce46c8f4717b29dc97ee7936d3b3331f92878185a1510833ac6dab5c1684e"
+  },
+  "primary_run_family": "primary_matrix",
+  "primary_selection_index": {
+    "bytes": 276403,
+    "path": "revised_experiments/artifacts/work9_runs_v1/_matrix/selection_index.json",
+    "sha256": "59b36e478902bc4cfdcd04aa95e8e9faf9473ee59ed5e0d9ffdf9c4e570764a8"
+  },
+  "prohibited_actions": [
+    "modify_primary_registry",
+    "copy_anchor_artifacts_into_capacity_run_directories",
+    "retrain_anchor_conditions",
+    "authorize_new_outer_evaluation_before_hybrid_selection_freeze",
+    "reinterpret_capacity_results_as_a_new_gate1",
+    "reopen_gate2"
+  ],
+  "protocol_id": "paper2-v2-mfcc-matched-within-corpus-v1",
+  "schema_version": "paper2-v2-work9-capacity-anchor-policy-1",
+  "status": "frozen_before_capacity_model_outcomes",
+  "work8_config": {
+    "path": "revised_experiments/configs/work8_mfcc_matched_within_corpus_v1.json",
+    "sha256": "ab04b6c00979ae94b1adc4cb952cf1d7a3db7e7f2c98c87cda520b8ad18b2fb4"
+  },
+  "work8_receipt": {
+    "path": "revised_experiments/artifacts/work8_preregistration_v1/dry_run_receipt.json",
+    "sha256": "5c81d5367be670f9bb863a31c54c847ff7b7340c8bfd80b63fe16e057d1860ed"
+  }
+}

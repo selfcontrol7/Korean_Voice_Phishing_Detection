@@ -1,0 +1,442 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.paper2.v2/work9_error_analysis/work9_blinded_error_analysis_protocol_draft.schema.json",
+  "title": "Paper 2 draft blinded call-level error-analysis protocol",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol_id",
+    "status",
+    "created_date",
+    "scientific_protocol_frozen",
+    "case_selection_authorized",
+    "prediction_ledger_access_authorized",
+    "reviewer_packet_creation_authorized",
+    "purpose",
+    "evidence_scope",
+    "evidence_bindings",
+    "case_construction",
+    "review_design",
+    "annotation_codebook",
+    "agreement_and_reconciliation",
+    "privacy_and_governance",
+    "post_unblind_merge",
+    "analysis_rules",
+    "stop_rules",
+    "claim_boundaries",
+    "unresolved_pi_decisions",
+    "freeze_readiness_checklist"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "paper2-v2-work9-blinded-error-analysis-protocol-draft-1"
+    },
+    "protocol_id": {
+      "const": "paper2-v2-work9-blinded-call-error-analysis-v1"
+    },
+    "status": {"const": "draft_not_frozen"},
+    "created_date": {"type": "string", "format": "date"},
+    "scientific_protocol_frozen": {"const": false},
+    "case_selection_authorized": {"const": false},
+    "prediction_ledger_access_authorized": {"const": false},
+    "reviewer_packet_creation_authorized": {"const": false},
+    "purpose": {"type": "string", "minLength": 40},
+    "evidence_scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evaluation_name",
+        "independent_confirmatory_set",
+        "source_label_confounded",
+        "eligible_calls",
+        "eligible_relation_groups",
+        "primary_conditions_for_case_selection",
+        "diagnostic_condition_for_flip_sampling",
+        "capacity_role",
+        "language",
+        "unit_of_review"
+      ],
+      "properties": {
+        "evaluation_name": {"type": "string"},
+        "independent_confirmatory_set": {"const": false},
+        "source_label_confounded": {"const": true},
+        "eligible_calls": {"const": 1188},
+        "eligible_relation_groups": {"const": 1073},
+        "primary_conditions_for_case_selection": {
+          "const": ["A-query", "AT-concat", "AT-gate", "AT-cross"]
+        },
+        "diagnostic_condition_for_flip_sampling": {
+          "const": "AT-cross-randtrain"
+        },
+        "capacity_role": {
+          "const": "post_annotation_sensitivity_overlay_only"
+        },
+        "language": {"const": "Korean"},
+        "unit_of_review": {"const": "call"}
+      }
+    },
+    "evidence_bindings": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/evidence_binding"}
+    },
+    "case_construction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "seed_collapse",
+        "relation_group_safeguards",
+        "stratum_priority",
+        "multi_tag_rule",
+        "empty_cell_rule",
+        "tie_breaking",
+        "strata",
+        "unavailable_strata"
+      ],
+      "properties": {
+        "seed_collapse": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "seeds",
+            "consensus_hard_prediction",
+            "consensus_error",
+            "stable_decision",
+            "unanimous_correct",
+            "signed_margin_per_seed",
+            "distance_to_threshold",
+            "no_best_seed_selection"
+          ],
+          "properties": {
+            "seeds": {"const": [17, 29, 43, 71, 101]},
+            "consensus_hard_prediction": {"type": "string"},
+            "consensus_error": {"type": "string"},
+            "stable_decision": {"type": "string"},
+            "unanimous_correct": {"type": "string"},
+            "signed_margin_per_seed": {"type": "string"},
+            "distance_to_threshold": {"type": "string"},
+            "no_best_seed_selection": {"const": true}
+          }
+        },
+        "relation_group_safeguards": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "known_independence_unit",
+            "quota_sampling",
+            "exhaustive_error_exception",
+            "analysis_requirement",
+            "speaker_disjointness_claim_permitted"
+          ],
+          "properties": {
+            "known_independence_unit": {"const": "recovered_work5_relation_group"},
+            "quota_sampling": {"type": "string"},
+            "exhaustive_error_exception": {"type": "string"},
+            "analysis_requirement": {"type": "string"},
+            "speaker_disjointness_claim_permitted": {"const": false}
+          }
+        },
+        "stratum_priority": {
+          "const": [
+            "E_consensus_errors",
+            "N_near_threshold",
+            "H_high_confidence_correct",
+            "F_high_confidence_flips",
+            "C_random_correct_controls"
+          ]
+        },
+        "multi_tag_rule": {"type": "string", "minLength": 40},
+        "empty_cell_rule": {"type": "string", "minLength": 20},
+        "tie_breaking": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "key_method",
+            "message",
+            "secret_requirement",
+            "case_id_method",
+            "public_seed_label",
+            "secret_commitment"
+          ],
+          "properties": {
+            "key_method": {"const": "HMAC-SHA256"},
+            "message": {"type": "string"},
+            "secret_requirement": {"type": "string"},
+            "case_id_method": {"type": "string"},
+            "public_seed_label": {"const": 20260812},
+            "secret_commitment": {"type": "null"}
+          }
+        },
+        "strata": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {"$ref": "#/$defs/stratum"}
+        },
+        "unavailable_strata": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "reason"],
+            "properties": {
+              "name": {"type": "string"},
+              "reason": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "review_design": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "minimum_reviewer_count",
+        "reviewer_count",
+        "reviewer_roster_commitment_sha256",
+        "all_reviewers_korean_fluent",
+        "at_least_one_reviewer_independent_of_model_development",
+        "packet_steward_confirmed",
+        "packet_steward_is_not_a_reviewer",
+        "independent_annotation_required",
+        "all_cases_dual_annotated",
+        "practice_material",
+        "reviewer_packet_hidden_fields",
+        "reviewer_packet_visible_fields",
+        "per_reviewer_order",
+        "model_output_unblinding_time",
+        "review_mode",
+        "review_mode_choices",
+        "mode_consequence",
+        "annotation_schema",
+        "post_unblind_schema"
+      ],
+      "properties": {
+        "minimum_reviewer_count": {"const": 2},
+        "reviewer_count": {"type": "null"},
+        "reviewer_roster_commitment_sha256": {"type": "null"},
+        "all_reviewers_korean_fluent": {"type": "null"},
+        "at_least_one_reviewer_independent_of_model_development": {"type": "null"},
+        "packet_steward_confirmed": {"type": "null"},
+        "packet_steward_is_not_a_reviewer": {"type": "null"},
+        "independent_annotation_required": {"const": true},
+        "all_cases_dual_annotated": {"const": true},
+        "practice_material": {"type": "string"},
+        "reviewer_packet_hidden_fields": {
+          "type": "array",
+          "minItems": 10,
+          "uniqueItems": true,
+          "items": {"type": "string"}
+        },
+        "reviewer_packet_visible_fields": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 3,
+          "uniqueItems": true,
+          "items": {"type": "string"}
+        },
+        "per_reviewer_order": {"type": "string"},
+        "model_output_unblinding_time": {"type": "string"},
+        "review_mode": {"type": "null"},
+        "review_mode_choices": {
+          "const": [
+            "redacted_audio_and_redacted_transcript",
+            "redacted_transcript_only"
+          ]
+        },
+        "mode_consequence": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "redacted_audio_and_redacted_transcript",
+            "redacted_transcript_only"
+          ],
+          "properties": {
+            "redacted_audio_and_redacted_transcript": {"type": "string"},
+            "redacted_transcript_only": {"type": "string"}
+          }
+        },
+        "annotation_schema": {"type": "string"},
+        "post_unblind_schema": {"type": "string"}
+      }
+    },
+    "annotation_codebook": {"$ref": "#/$defs/string_policy_object"},
+    "agreement_and_reconciliation": {"$ref": "#/$defs/policy_object"},
+    "privacy_and_governance": {
+      "type": "object",
+      "required": [
+        "authorized_for_human_review",
+        "authorization_reference",
+        "irb_or_exemption_status",
+        "source_license_and_permitted_use_reviewed",
+        "restricted_access_location_confirmed",
+        "retention_and_deletion_plan_confirmed",
+        "external_service_upload_permitted",
+        "raw_content_to_generative_AI_permitted",
+        "typed_redaction_tokens",
+        "audio_redaction_rule",
+        "redaction_verification",
+        "packet_metadata_rule",
+        "privacy_incident_rule",
+        "public_release_rule"
+      ],
+      "properties": {
+        "authorized_for_human_review": {"type": "null"},
+        "authorization_reference": {"type": "null"},
+        "irb_or_exemption_status": {"type": "null"},
+        "source_license_and_permitted_use_reviewed": {"type": "null"},
+        "restricted_access_location_confirmed": {"type": "null"},
+        "retention_and_deletion_plan_confirmed": {"type": "null"},
+        "external_service_upload_permitted": {"const": false},
+        "raw_content_to_generative_AI_permitted": {"const": false},
+        "typed_redaction_tokens": {
+          "type": "array",
+          "minItems": 10,
+          "uniqueItems": true,
+          "items": {"type": "string"}
+        },
+        "audio_redaction_rule": {"type": "string"},
+        "redaction_verification": {"type": "string"},
+        "packet_metadata_rule": {"type": "string"},
+        "privacy_incident_rule": {"type": "string"},
+        "public_release_rule": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "post_unblind_merge": {"$ref": "#/$defs/policy_object"},
+    "analysis_rules": {"$ref": "#/$defs/policy_object"},
+    "stop_rules": {
+      "type": "array",
+      "minItems": 7,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 20}
+    },
+    "claim_boundaries": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["permitted", "forbidden"],
+      "properties": {
+        "permitted": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": {"type": "string"}
+        },
+        "forbidden": {
+          "type": "array",
+          "minItems": 10,
+          "uniqueItems": true,
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "unresolved_pi_decisions": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {"$ref": "#/$defs/pi_decision"}
+    },
+    "freeze_readiness_checklist": {
+      "type": "array",
+      "minItems": 10,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 20}
+    }
+  },
+  "$defs": {
+    "evidence_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["artifact_role", "path", "sha256", "draft_validator_may_open"],
+      "properties": {
+        "artifact_role": {"type": "string", "minLength": 3},
+        "path": {"type": "string", "minLength": 3},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "draft_validator_may_open": {"const": false}
+      }
+    },
+    "stratum": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stratum_id",
+        "purpose",
+        "conditions",
+        "eligibility",
+        "cells",
+        "quota_per_cell",
+        "maximum_cases",
+        "selection_order",
+        "exclusions"
+      ],
+      "properties": {
+        "stratum_id": {
+          "enum": [
+            "E_consensus_errors",
+            "N_near_threshold",
+            "H_high_confidence_correct",
+            "F_high_confidence_flips",
+            "C_random_correct_controls"
+          ]
+        },
+        "purpose": {"type": "string", "minLength": 20},
+        "conditions": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "A-query",
+              "AT-concat",
+              "AT-gate",
+              "AT-cross",
+              "AT-cross-randtrain"
+            ]
+          }
+        },
+        "eligibility": {"type": "string", "minLength": 20},
+        "cells": {"type": "string", "minLength": 5},
+        "quota_per_cell": {"type": ["integer", "null"], "minimum": 1},
+        "maximum_cases": {"type": ["integer", "null"], "minimum": 1},
+        "selection_order": {"type": "string"},
+        "exclusions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "pi_decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decision_id",
+        "question",
+        "required_choice",
+        "current_value",
+        "blocking"
+      ],
+      "properties": {
+        "decision_id": {
+          "enum": ["review_team", "governance_authorization", "review_mode"]
+        },
+        "question": {"type": "string", "minLength": 20},
+        "required_choice": {"type": "string", "minLength": 40},
+        "current_value": {"type": "null"},
+        "blocking": {"const": true}
+      }
+    },
+    "policy_object": {
+      "type": "object",
+      "minProperties": 3
+    },
+    "string_policy_object": {
+      "type": "object",
+      "minProperties": 4
+    }
+  }
+}

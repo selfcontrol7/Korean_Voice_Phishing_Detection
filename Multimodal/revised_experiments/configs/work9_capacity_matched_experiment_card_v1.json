@@ -1,0 +1,124 @@
+{
+  "analysis_protocol": {
+    "path": "revised_experiments/configs/work9_capacity_analysis_protocol_v1.json",
+    "sha256": "012efe50fb604443d6db29f375ff181ff1c87a82056949693da4e98a5483b212"
+  },
+  "anchor_policy": {
+    "path": "revised_experiments/configs/work9_capacity_anchor_policy_v1.json",
+    "sha256": "4c34fc816bdd9d577d0dcc669f5ed5a703124d9afe151860972cc3846a4e3ff6"
+  },
+  "capacity_contract": {
+    "matching_rule": "nearest_count_width_multiple_of_8_search_8_to_1024",
+    "maximum_relative_gap": 0.05,
+    "target_condition": "AT-cross",
+    "target_parameter_count": 530689
+  },
+  "claims_not_enabled": [
+    "a_new_or_reopened_gate1",
+    "gate2_continuation",
+    "source_independent_fraud_detection",
+    "external_or_confirmatory_validation",
+    "real_world_deployment_utility",
+    "practical_utility",
+    "mobile_or_real_time_operation"
+  ],
+  "completed_gate1": {
+    "gate2_decision": "do_not_proceed",
+    "hash_manifest_sha256": "b51da584d8e325d211f188d422f9fa26247be25da4af4aaa5d80f1d5e32a4bbc",
+    "report_sha256": "e52c8d4fa07d9cbd77d36c1901220c5e7c286251f95ec75911209e1dcb77ed72"
+  },
+  "conditions": [
+    "T",
+    "A-mean",
+    "A-query",
+    "A-temp",
+    "AT-concat",
+    "AT-gate",
+    "AT-cross",
+    "AT-cross-randtrain"
+  ],
+  "figure_spec": {
+    "path": "revised_experiments/configs/work9_capacity_figure_spec_v1.json",
+    "sha256": "8a17cd066a9859407b7a51080daa29c4a79176ec9c62d22bc548cf6b64f7a033"
+  },
+  "hidden_dims": {
+    "A-mean": 720,
+    "A-query": 320,
+    "A-temp": 320,
+    "AT-concat": 240,
+    "AT-cross": 256,
+    "AT-cross-randtrain": 256,
+    "AT-gate": 224,
+    "T": 440
+  },
+  "hybrid_matrix": {
+    "anchor_conditions": ["AT-cross", "AT-cross-randtrain"],
+    "anchor_coordinates": 50,
+    "expected_coordinates": 200,
+    "new_fit_conditions": ["T", "A-mean", "A-query", "A-temp", "AT-concat", "AT-gate"],
+    "new_fit_coordinates": 150,
+    "new_outer_evaluations": 150
+  },
+  "parameter_counts": {
+    "A-mean": 531361,
+    "A-query": 519361,
+    "A-temp": 519361,
+    "AT-concat": 536161,
+    "AT-cross": 530689,
+    "AT-cross-randtrain": 530689,
+    "AT-gate": 529537,
+    "T": 533721
+  },
+  "partition_design": {
+    "outer_folds": [0, 1, 2, 3, 4],
+    "partition_repeat": 0,
+    "seeds": [17, 29, 43, 71, 101],
+    "terminology": "outer_eval_is_within_corpus_outer_development_evaluation"
+  },
+  "primary_lineage": {
+    "outer_index_sha256": "640ce46c8f4717b29dc97ee7936d3b3331f92878185a1510833ac6dab5c1684e",
+    "run_family": "primary_matrix",
+    "selection_index_sha256": "59b36e478902bc4cfdcd04aa95e8e9faf9473ee59ed5e0d9ffdf9c4e570764a8"
+  },
+  "protocol_id": "paper2-v2-mfcc-matched-within-corpus-v1",
+  "purpose": "Secondary sensitivity testing whether the completed matched-mechanism conclusion is robust to trainable parameter-budget imbalance.",
+  "registry_root": "revised_experiments/artifacts/work9_capacity_matched_runs_v1",
+  "run_family": "capacity_matched_sensitivity",
+  "schema_version": "paper2-v2-work9-capacity-experiment-card-1",
+  "selection_and_training": {
+    "aggregation_rule": "complete_call_arithmetic_mean_probability",
+    "augmentation": "none",
+    "batch_size": 16,
+    "calibration": "none",
+    "checkpoint_monitor": "validation_call_nll",
+    "checkpoint_tie_break": "earlier_epoch",
+    "deterministic_algorithms": true,
+    "early_stop_patience": 8,
+    "epoch_budget": 50,
+    "learning_rate": 0.0002,
+    "loss": "BCEWithLogitsLoss_with_inverse_segments_per_call_weights",
+    "mixed_precision": false,
+    "optimizer": "AdamW",
+    "scheduler": "ReduceLROnPlateau",
+    "threshold_grid": "0.01_to_0.99_step_0.01",
+    "weight_decay": 0.0001
+  },
+  "smoke_contract": {
+    "production_registry_access_forbidden": true,
+    "required_branches": [
+      {"condition": "A-mean", "hidden_dim": 720, "purpose": "maximum_hidden_width_audio_branch"},
+      {"condition": "AT-cross-randtrain", "hidden_dim": 256, "purpose": "text_and_random_training_pair_branch"}
+    ],
+    "two_independent_smoke_receipts_required": true
+  },
+  "source_label_limitation": "All retained benign calls are AIHub and all retained vishing calls are FSS; this remains a source-confounded within-corpus sensitivity.",
+  "status": "frozen_before_capacity_model_outcomes",
+  "work8_config": {
+    "path": "revised_experiments/configs/work8_mfcc_matched_within_corpus_v1.json",
+    "sha256": "ab04b6c00979ae94b1adc4cb952cf1d7a3db7e7f2c98c87cda520b8ad18b2fb4"
+  },
+  "work8_receipt": {
+    "path": "revised_experiments/artifacts/work8_preregistration_v1/dry_run_receipt.json",
+    "sha256": "5c81d5367be670f9bb863a31c54c847ff7b7340c8bfd80b63fe16e057d1860ed"
+  }
+}

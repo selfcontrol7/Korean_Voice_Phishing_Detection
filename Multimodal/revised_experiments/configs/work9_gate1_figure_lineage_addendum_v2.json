@@ -1,0 +1,66 @@
+{
+  "schema_version": "paper2-v2-work9-gate1-figure-lineage-addendum-2",
+  "status": "frozen_before_successful_gate1_v2_outcomes",
+  "freeze_date": "2026-08-10",
+  "protocol_id": "paper2-v2-mfcc-matched-within-corpus-v1",
+  "purpose": "Require the final post-Gate1 figure deliverable to bind the validator-v2 lineage supersession even though the immutable v1 renderer and its native figure manifest retain their v1 generation identity.",
+  "scientific_base_figure_spec": {
+    "path": "revised_experiments/configs/work9_gate1_figure_spec_v1.json",
+    "sha256": "80be3a1294d55677f3393dc34a403475ab68a2c60e8640c7073177ffa6aec080"
+  },
+  "validator_lineage_supersession": {
+    "path": "revised_experiments/configs/work9_gate1_figure_spec_v2.json",
+    "sha256": "d7832ed7a5d9119fc8a568d3b7ab201b95128447f5a1875b6234cfdfc724c8d8"
+  },
+  "renderer_preservation": {
+    "source_path": "revised_experiments/src/paper2_v2/work9_gate1_figures.py",
+    "source_sha256": "87b72b37e93940c05fb3c710cf404a4403b27f7adf5d61ea914fc7a91a9203c0",
+    "cli_path": "revised_experiments/scripts/generate_work9_gate1_figures.py",
+    "cli_sha256": "17167d91210660e6f8baafe3933dba59e9e20505acf256a4a6b1ca6d937034e3",
+    "modification_permitted": false
+  },
+  "required_final_companion_receipt": {
+    "schema_version": "paper2-v2-work9-gate1-figure-lineage-receipt-2",
+    "status": "sealed_complete",
+    "default_path": "revised_experiments/artifacts/work9_gate1_figures_v2_lineage/lineage_receipt.json",
+    "must_bind_by_path_sha256_bytes": [
+      "final v1-rendered figure_manifest.json",
+      "frozen scientific base figure spec v1",
+      "frozen validator-lineage figure spec v2",
+      "frozen Gate1 validator v2 acceptance_receipt.json",
+      "sealed work9_gate1_v2/hashes.sha256",
+      "frozen v1 renderer source and CLI"
+    ],
+    "must_copy_from_verified_final_manifest": [
+      "protocol_id",
+      "figure_count",
+      "file_count",
+      "ordered figure_id list",
+      "per-figure title and analysis_role"
+    ],
+    "must_assert": {
+      "native_figure_manifest_verified_by_frozen_v1_verifier": true,
+      "gate1_artifact_paths_all_within_work9_gate1_v2": true,
+      "figure_choices_changed_after_outcomes": false,
+      "aggregation_rules_changed_after_outcomes": false,
+      "new_posthoc_figure_added": false,
+      "plot_files_modified_by_lineage_binding": false
+    },
+    "must_include_canonical_json_digests": {
+      "figure_choices": "e8d62835292bd09c1ac63d59cc72744269ae0efb22a2883bb89c6e1e30ee9013",
+      "aggregation_rules": "6340021cd291ad38a7fc79b56d07c3e4d7ef5a62f824d247cb1a18ddb0d43b4e"
+    },
+    "must_be_accompanied_by": [
+      "hashes.sha256 covering lineage_receipt.json and READ_ONLY_NOTICE.txt",
+      "READ_ONLY_NOTICE.txt",
+      "read-only file modes"
+    ]
+  },
+  "acceptance_rule": "The post-Gate1 figure deliverable is incomplete and must not be cited or copied into Paper 2 until both the native verified figure bundle and the separately sealed v2 lineage companion receipt exist and cross-bind the same final figure_manifest.json.",
+  "evidence_boundary": {
+    "successful_gate1_v2_report_accessed_before_freeze": false,
+    "final_figure_manifest_exists_before_freeze": false,
+    "outer_predictions_or_metrics_accessed": false,
+    "figure_definition_or_aggregation_changed": false
+  }
+}

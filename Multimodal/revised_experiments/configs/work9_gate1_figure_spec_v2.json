@@ -1,0 +1,86 @@
+{
+  "schema_version": "paper2-v2-work9-gate1-figure-spec-lineage-supersession-2",
+  "status": "frozen_before_successful_gate1_v2_outcomes",
+  "freeze_date": "2026-08-10",
+  "protocol_id": "paper2-v2-mfcc-matched-within-corpus-v1",
+  "scope": "lineage_only_supersession",
+  "purpose": "Supersede only the Gate-1 validator implementation binding in the frozen post-outer figure specification. Every figure choice, exclusion, aggregation, export rule, data-access boundary, label, and claim boundary remains inherited exactly from v1.",
+  "supersedes": {
+    "path": "revised_experiments/configs/work9_gate1_figure_spec_v1.json",
+    "sha256": "80be3a1294d55677f3393dc34a403475ab68a2c60e8640c7073177ffa6aec080",
+    "status": "superseded_for_gate1_validator_implementation_lineage_only",
+    "retention": "retain_immutable_v1"
+  },
+  "gate1_validator_v2_bindings": [
+    {
+      "role": "frozen_scientific_analysis_implementation_v1_delegated_by_v2",
+      "path": "revised_experiments/src/paper2_v2/work9_gate1.py",
+      "sha256": "b08d4e773e1c58343ef064cf3e47691c68f2f5cf7be1b8e0445c2d6bb309e564"
+    },
+    {
+      "role": "gate1_validator_v2_checkpoint_identity_shim",
+      "path": "revised_experiments/src/paper2_v2/work9_gate1_v2.py",
+      "sha256": "f23ac7d6c0265c21a1a9a775d841fe9c3f8e96d6d0235df6759d474bf026e177"
+    },
+    {
+      "role": "gate1_validator_v2_cli",
+      "path": "revised_experiments/scripts/run_work9_gate1_analysis_v2.py",
+      "sha256": "bdec0fc5efb4387065db409f7e3efaf001e174e789d7aa255dc09d213320459d"
+    },
+    {
+      "role": "gate1_validator_v2_regression_tests",
+      "path": "revised_experiments/tests/test_work9_gate1_v2.py",
+      "sha256": "1d275898e62f40d966fc05d8ed66eb5d6dddd8e9dfc7bb883183ea48ea4c29f8"
+    }
+  ],
+  "validator_delta": {
+    "only_changed_equivalence": "selected epoch checkpoint versus selection-seal indexed checkpoint",
+    "v1_rejected": "different full immutable-reference mappings because canonical paths differ",
+    "v2_accepts_only_when": [
+      "epoch checkpoint path matches same-run/epochs/epoch_NNN/model.safetensors for the selected epoch",
+      "indexed checkpoint path matches same-run/selection/checkpoint.safetensors",
+      "both paths share the identical canonical run root",
+      "both regular non-symlink files are independently verified against their declared SHA-256 and byte count",
+      "verified sha256, bytes, and row_count identities are equal"
+    ],
+    "scientific_logic_changed": false,
+    "metrics_changed": false,
+    "estimands_changed": false,
+    "inference_changed": false,
+    "decision_policy_changed": false
+  },
+  "inherited_scientific_sections": {
+    "canonical_json_rule": "UTF-8 JSON with ensure_ascii=false, sort_keys=true, separators=[comma,colon], then SHA-256",
+    "figures": {
+      "count": 11,
+      "sha256": "e8d62835292bd09c1ac63d59cc72744269ae0efb22a2883bb89c6e1e30ee9013"
+    },
+    "excluded_figures": {
+      "count": 5,
+      "sha256": "dba33f518e1f953e9f0bc08a2b70d85d6f791f9035dbaec4058aab7e3b3fea3d"
+    },
+    "aggregation_rules": {
+      "sha256": "6340021cd291ad38a7fc79b56d07c3e4d7ef5a62f824d247cb1a18ddb0d43b4e"
+    },
+    "export": {
+      "sha256": "3207520072300505554cdd56898fc5511794870f0e8ecc7788ad0eeb98b30d65"
+    },
+    "claim_boundary": {
+      "sha256": "6e9fcfcaa3e6142fcde8280d519a314cb25bcaa9c03b313ff4007749b235d0c5"
+    },
+    "data_access": {
+      "sha256": "c2edb448eeff4b61a79bbd2ab0e74ebce511afb33fc761d532433c1d7a05d50b"
+    },
+    "runtime_gate1_binding": {
+      "sha256": "a79194da31205b82fa651ef0cb148bf1cb548ce7747f05442ae058d61a5887e3"
+    }
+  },
+  "authorized_gate1_output": "revised_experiments/artifacts/work9_gate1_v2",
+  "evidence_boundary": {
+    "successful_gate1_v2_report_accessed_before_freeze": false,
+    "gate1_continuation_classification_accessed_before_freeze": false,
+    "outer_predictions_or_metrics_accessed_to_design_this_supersession": false,
+    "path_identity_audit_only": true
+  },
+  "use_rule": "For Gate-1 v2 figures, retain the immutable v1 figure specification as the scientific base and cite this frozen v2 lineage supersession plus its acceptance receipt; do not revise figure choices or aggregation after outcomes."
+}

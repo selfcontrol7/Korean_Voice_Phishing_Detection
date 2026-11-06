@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.paper2.v2/schemas/prediction_record.schema.json",
+  "title": "Paper 2 v2 prediction ledger record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id", "condition", "outer_fold", "inner_fold", "seed", "call_id",
+    "segment_id", "label", "probability", "hard_prediction", "duration_seconds",
+    "source", "group_id", "aggregation_probability", "aggregation_prediction"
+  ],
+  "properties": {
+    "run_id": {"type": "string"},
+    "condition": {"type": "string"},
+    "outer_fold": {"type": "integer", "minimum": 0},
+    "inner_fold": {"type": ["integer", "null"], "minimum": 0},
+    "seed": {"type": "integer"},
+    "call_id": {"type": "string"},
+    "segment_id": {"type": ["string", "integer"]},
+    "label": {"type": "integer", "enum": [0, 1]},
+    "probability": {"type": "number", "minimum": 0, "maximum": 1},
+    "hard_prediction": {"type": "integer", "enum": [0, 1]},
+    "duration_seconds": {"type": ["number", "null"], "minimum": 0},
+    "source": {"type": ["string", "null"]},
+    "group_id": {"type": "string"},
+    "subgroups": {"type": "object"},
+    "aggregation_probability": {"type": "number", "minimum": 0, "maximum": 1},
+    "aggregation_prediction": {"type": "integer", "enum": [0, 1]},
+    "prefix_index": {"type": ["integer", "null"], "minimum": 0},
+    "elapsed_seconds": {"type": ["number", "null"], "minimum": 0}
+  }
+}

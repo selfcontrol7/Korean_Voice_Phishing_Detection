@@ -1,0 +1,258 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.paper2.v2/work9_error_analysis/work9_unblinded_case_merge.schema.json",
+  "title": "Restricted post-reconciliation error-analysis case merge",
+  "description": "Contains no raw call ID, filename, path, audio, transcript, reviewer name, or verbatim quotation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol_id",
+    "case_id",
+    "relation_group_case_key",
+    "sampling_tags",
+    "frozen_label",
+    "source_provenance",
+    "topic",
+    "asr_metadata",
+    "channel_metadata",
+    "relation_metadata",
+    "annotation_lineage",
+    "primary_model_signatures",
+    "capacity_model_signatures",
+    "error_overlap",
+    "public_release_eligible"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "paper2-v2-work9-unblinded-error-case-merge-1"
+    },
+    "protocol_id": {
+      "const": "paper2-v2-work9-blinded-call-error-analysis-v1"
+    },
+    "case_id": {"type": "string", "pattern": "^EA-[A-Z2-7]{16}$"},
+    "relation_group_case_key": {
+      "type": "string",
+      "pattern": "^RG-[A-Z2-7]{16}$"
+    },
+    "sampling_tags": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "E_consensus_errors",
+          "N_near_threshold",
+          "H_high_confidence_correct",
+          "F_high_confidence_flips",
+          "C_random_correct_controls"
+        ]
+      }
+    },
+    "frozen_label": {"type": "integer", "enum": [0, 1]},
+    "source_provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "collection_source",
+        "category",
+        "subcategory",
+        "taxonomy_missing",
+        "source_label_perfectly_associated_warning"
+      ],
+      "properties": {
+        "collection_source": {"enum": ["FSS", "AllHub", "unknown"]},
+        "category": {"type": ["string", "null"]},
+        "subcategory": {"type": ["string", "null"]},
+        "taxonomy_missing": {"type": "boolean"},
+        "source_label_perfectly_associated_warning": {"const": true}
+      }
+    },
+    "topic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reviewer_reconciled", "source_taxonomy", "disagreement_retained"],
+      "properties": {
+        "reviewer_reconciled": {"type": ["string", "null"]},
+        "source_taxonomy": {"type": ["string", "null"]},
+        "disagreement_retained": {"type": "boolean"}
+      }
+    },
+    "asr_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "engine_version",
+        "domain_code",
+        "domain_id",
+        "call_confidence",
+        "reviewer_correctness",
+        "metadata_missing"
+      ],
+      "properties": {
+        "engine_version": {"type": ["string", "number", "null"]},
+        "domain_code": {"type": ["string", "number", "null"]},
+        "domain_id": {"type": ["string", "number", "null"]},
+        "call_confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "reviewer_correctness": {"type": ["string", "null"]},
+        "metadata_missing": {"type": "boolean"}
+      }
+    },
+    "channel_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sample_rate_hz",
+        "channels",
+        "sample_width_bytes",
+        "telephone_networks",
+        "reviewer_artifacts",
+        "source_asymmetric_metadata_warning"
+      ],
+      "properties": {
+        "sample_rate_hz": {"type": ["integer", "null"], "minimum": 1},
+        "channels": {"type": ["integer", "null"], "minimum": 1},
+        "sample_width_bytes": {"type": ["integer", "null"], "minimum": 1},
+        "telephone_networks": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string"}
+        },
+        "reviewer_artifacts": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string"}
+        },
+        "source_asymmetric_metadata_warning": {"const": true}
+      }
+    },
+    "relation_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "member_count",
+        "known_relation_evidence_types",
+        "multiple_selected_calls_in_group",
+        "global_speaker_identity_available"
+      ],
+      "properties": {
+        "member_count": {"type": "integer", "minimum": 1},
+        "known_relation_evidence_types": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string"}
+        },
+        "multiple_selected_calls_in_group": {"type": "boolean"},
+        "global_speaker_identity_available": {"const": false}
+      }
+    },
+    "annotation_lineage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "independent_annotation_sha256",
+        "reconciliation_annotation_sha256",
+        "independent_form_count",
+        "unresolved_fields"
+      ],
+      "properties": {
+        "independent_annotation_sha256": {
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        },
+        "reconciliation_annotation_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "independent_form_count": {"type": "integer", "minimum": 2},
+        "unresolved_fields": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "primary_model_signatures": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {"$ref": "#/$defs/model_signature"}
+    },
+    "capacity_model_signatures": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 8,
+      "items": {"$ref": "#/$defs/model_signature"}
+    },
+    "error_overlap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary_consensus_error_conditions",
+        "primary_seed_error_conditions",
+        "AT_cross_capacity_changed_consensus_status",
+        "capacity_overlay_changed_sampling"
+      ],
+      "properties": {
+        "primary_consensus_error_conditions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/condition"}
+        },
+        "primary_seed_error_conditions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/condition"}
+        },
+        "AT_cross_capacity_changed_consensus_status": {"type": ["boolean", "null"]},
+        "capacity_overlay_changed_sampling": {"const": false}
+      }
+    },
+    "public_release_eligible": {"const": false}
+  },
+  "$defs": {
+    "condition": {
+      "type": "string",
+      "enum": [
+        "T",
+        "A-mean",
+        "A-query",
+        "A-temp",
+        "AT-concat",
+        "AT-gate",
+        "AT-cross",
+        "AT-cross-randtrain"
+      ]
+    },
+    "model_signature": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "run_family",
+        "condition",
+        "seed_count",
+        "positive_vote_count",
+        "consensus_prediction",
+        "consensus_correct",
+        "seed_error_count",
+        "median_signed_margin",
+        "median_absolute_margin",
+        "validation_selected_thresholds_only"
+      ],
+      "properties": {
+        "run_family": {"enum": ["primary_matrix", "capacity_matched_sensitivity"]},
+        "condition": {"$ref": "#/$defs/condition"},
+        "seed_count": {"const": 5},
+        "positive_vote_count": {"type": "integer", "minimum": 0, "maximum": 5},
+        "consensus_prediction": {"type": "integer", "enum": [0, 1]},
+        "consensus_correct": {"type": "boolean"},
+        "seed_error_count": {"type": "integer", "minimum": 0, "maximum": 5},
+        "median_signed_margin": {"type": "number", "minimum": -1, "maximum": 1},
+        "median_absolute_margin": {"type": "number", "minimum": 0, "maximum": 1},
+        "validation_selected_thresholds_only": {"const": true}
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "analysis_report": {
+    "bytes": 351600,
+    "path": "revised_experiments/artifacts/work9_capacity_analysis_v1/report.json",
+    "sha256": "cae39e462a083b20f6963912c1837cefa138441a0dd91bea5c4c0d56cf3f5a0b"
+  },
+  "citable_bundle": "work9_capacity_figures_v3",
+  "correction_scope": {
+    "affected_figure_id": "capacity_metric_profile",
+    "affected_insets": [
+      "roc_auc",
+      "pr_auc"
+    ],
+    "formatter_rule": {
+      "format_if_zoom_span_at_most_0_003": "%.4f",
+      "format_other_zoom_spans": "%.3f",
+      "zoom_span_threshold_inclusive": 0.003
+    },
+    "reason": "The preserved v2 ROC-AUC and average-precision insets used three decimal places, which could display distinct near-ceiling tick positions with duplicate labels. Four decimals are required only for zoom spans no larger than 0.003."
+  },
+  "figure_ids": [
+    "capacity_parameter_match",
+    "capacity_condition_macro_f1",
+    "capacity_primary_effects",
+    "primary_vs_capacity_condition_change",
+    "capacity_fold_seed_stability",
+    "capacity_metric_profile",
+    "capacity_compute_profile"
+  ],
+  "formats": [
+    "svg",
+    "pdf",
+    "png_300dpi"
+  ],
+  "preservation": {
+    "analysis_report_changes_allowed": false,
+    "effect_ci_p_or_holm_changes_allowed": false,
+    "figure_id_or_purpose_changes_allowed": false,
+    "frozen_figure_spec_changes_allowed": false,
+    "plotting_array_changes_allowed": false,
+    "v1_bundle_changes_allowed": false,
+    "v2_bundle_changes_allowed": false,
+    "v2_correction_contract_changes_allowed": false,
+    "zoom_limit_changes_allowed": false
+  },
+  "schema_version": "paper2-v2-work9-capacity-figure-presentation-supersession-3",
+  "status": "post_v2_visual_qa_tick_label_correction_frozen_before_v3_render",
+  "superseded_v2_figure_manifest": {
+    "bytes": 11993,
+    "path": "revised_experiments/artifacts/work9_capacity_figures_v2/figure_manifest.json",
+    "sha256": "5b0ae401cf237b01502c581a605b9640552971cf0fafc991e013c9d873f089c5"
+  },
+  "superseded_v2_hash_manifest": {
+    "bytes": 2391,
+    "path": "revised_experiments/artifacts/work9_capacity_figures_v2/hashes.sha256",
+    "sha256": "b683c83712f6eaacb99302870ec44022fcd5b1790bf5567d01b9a06cb1a46436"
+  },
+  "superseded_v2_renderer": {
+    "bytes": 29374,
+    "path": "revised_experiments/src/paper2_v2/work9_capacity_figures_v2.py",
+    "sha256": "9acf7919d0257d57364283c6f12fa483776c952820fd5be33974fc35b7b8e40c"
+  },
+  "superseded_v2_renderer_cli": {
+    "bytes": 2280,
+    "path": "revised_experiments/scripts/generate_work9_capacity_figures_v2.py",
+    "sha256": "429240f61a262ba96a17c38759efe37d9a3847dec8963dc52c39cf3e06dcf257"
+  },
+  "superseded_v2_renderer_schema": {
+    "bytes": 8783,
+    "path": "revised_experiments/registry/schemas/work9_capacity/work9_capacity_figure_manifest_v2.schema.json",
+    "sha256": "f65d598c86cb3110b2fa87dddab7f01c8d3d1ae49fc4f21f83a4f3ea8d178fd6"
+  },
+  "superseded_v2_renderer_tests": {
+    "bytes": 12380,
+    "path": "revised_experiments/tests/test_work9_capacity_figures_v2.py",
+    "sha256": "fa0ce6d7c82f17e8f76a031bc5fc03d93f30ab958e8e9719dee9b3aa57fef34f"
+  },
+  "v2_citable": false,
+  "v2_presentation_correction": {
+    "bytes": 3541,
+    "path": "revised_experiments/configs/work9_capacity_figure_presentation_correction_v2.json",
+    "sha256": "2a6a4870b216e15db2c47ce1a76ce33b60569fef3a625541c6fa05766a763129"
+  },
+  "v2_preservation_status": "immutable_superseded_presentation_candidate_not_citable",
+  "v3_citable_after_integrity_and_visual_qa": true
+}

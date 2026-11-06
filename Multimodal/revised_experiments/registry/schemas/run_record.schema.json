@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.paper2.v2/schemas/run_record.schema.json",
+  "title": "Paper 2 v2 immutable run record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "run_id", "created_at_utc", "status", "purpose",
+    "comparison_id", "code", "data", "model", "randomness", "training",
+    "selection", "artifacts", "compute"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "run_id": {"type": "string", "minLength": 8},
+    "created_at_utc": {"type": "string", "format": "date-time"},
+    "status": {"enum": ["planned", "running", "completed", "failed", "cancelled"]},
+    "purpose": {"type": "string", "minLength": 1},
+    "comparison_id": {"type": "string", "minLength": 1},
+    "code": {
+      "type": "object", "additionalProperties": false,
+      "required": ["git_commit", "git_dirty", "dirty_patch_sha256", "command", "environment_lock_sha256"],
+      "properties": {
+        "git_commit": {"type": "string"},
+        "git_dirty": {"type": "boolean"},
+        "dirty_patch_sha256": {"type": ["string", "null"]},
+        "command": {"type": "array", "items": {"type": "string"}},
+        "environment_lock_sha256": {"type": "string"}
+      }
+    },
+    "data": {
+      "type": "object", "additionalProperties": false,
+      "required": ["train_manifest_sha256", "validation_manifest_sha256", "test_manifest_sha256", "feature_store_ids", "normalization_fit_split", "grouping_policy_id"],
+      "properties": {
+        "train_manifest_sha256": {"type": "string"},
+        "validation_manifest_sha256": {"type": "string"},
+        "test_manifest_sha256": {"type": ["string", "null"]},
+        "feature_store_ids": {"type": "object", "additionalProperties": {"type": "string"}},
+        "normalization_fit_split": {"type": "string"},
+        "grouping_policy_id": {"type": "string"}
+      }
+    },
+    "model": {
+      "type": "object", "additionalProperties": false,
+      "required": ["model_id", "class_name", "architecture", "parameter_counts", "pretrained_revisions", "text_representation"],
+      "properties": {
+        "model_id": {"type": "string"},
+        "class_name": {"type": "string"},
+        "architecture": {"type": "object"},
+        "parameter_counts": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+        "pretrained_revisions": {"type": "object", "additionalProperties": {"type": "string"}},
+        "text_representation": {"type": "object"}
+      }
+    },
+    "randomness": {
+      "type": "object", "additionalProperties": false,
+      "required": ["python", "numpy", "torch_cpu", "torch_cuda", "dataloader", "fold", "deterministic_algorithms"],
+      "properties": {
+        "python": {"type": "integer"}, "numpy": {"type": "integer"},
+        "torch_cpu": {"type": "integer"}, "torch_cuda": {"type": "integer"},
+        "dataloader": {"type": "integer"}, "fold": {"type": "integer"},
+        "deterministic_algorithms": {"type": "boolean"},
+        "known_nondeterministic_operations": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "training": {
+      "type": "object", "additionalProperties": true,
+      "required": ["optimizer", "scheduler", "loss", "sampler", "epoch_budget", "early_stopping"]
+    },
+    "selection": {
+      "type": "object", "additionalProperties": true,
+      "required": ["selected_epoch", "validation_metric", "threshold_rule", "aggregation_rule", "calibration_rule"]
+    },
+    "artifacts": {
+      "type": "object", "additionalProperties": false,
+      "required": ["checkpoint", "prediction_ledger", "metrics", "warnings"],
+      "properties": {
+        "checkpoint": {"$ref": "#/$defs/artifact"},
+        "prediction_ledger": {"$ref": "#/$defs/artifact"},
+        "metrics": {"$ref": "#/$defs/artifact"},
+        "warnings": {"$ref": "#/$defs/artifact"}
+      }
+    },
+    "compute": {
+      "type": "object", "additionalProperties": true,
+      "required": ["device", "wall_time_seconds", "peak_memory_bytes"]
+    },
+    "failure": {"type": ["object", "null"]}
+  },
+  "$defs": {
+    "artifact": {
+      "type": ["object", "null"],
+      "required": ["path", "sha256"],
+      "properties": {"path": {"type": "string"}, "sha256": {"type": "string"}},
+      "additionalProperties": false
+    }
+  }
+}

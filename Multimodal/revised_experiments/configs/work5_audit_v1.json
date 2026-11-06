@@ -1,0 +1,70 @@
+{
+  "schema_version": "paper2-v2-work5-config-1",
+  "artifact_id": "work5_data_audit_v1",
+  "audit_date": "2026-08-09",
+  "inputs": {
+    "master_manifest": "data/master_manifest.jsonl",
+    "split_manifests": {
+      "train": "data/train_manifest.jsonl",
+      "val": "data/val_manifest.jsonl",
+      "test": "data/test_manifest.jsonl"
+    },
+    "aihub_archive_dir": "/mnt/c/non_vishing_zips",
+    "fss_wsl_root": "/mnt/d/DATASET/FSS/DATASET/2025",
+    "fss_windows_audio_dir": "D:\\DATASET\\FSS\\DATASET\\2025\\All audios",
+    "fss_windows_transcript_dir": "D:\\DATASET\\FSS\\DATASET\\2025\\All transcripts",
+    "windows_cmd": "/mnt/c/Windows/System32/cmd.exe",
+    "windows_powershell": "/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+  },
+  "expected": {
+    "calls": 1417,
+    "labels": {
+      "0": 711,
+      "1": 706
+    },
+    "splits": {
+      "train": 1134,
+      "val": 141,
+      "test": 142
+    },
+    "aihub_exact_mappings": 711,
+    "fss_sorted_source_pairs": 706
+  },
+  "text_similarity": {
+    "method_id": "full-call-asr-nfkc-ws-char3to5-tfidf-cosine-v1",
+    "source_field": "text",
+    "unicode_normalization": "NFKC",
+    "whitespace": "collapse-to-one-space-and-strip",
+    "analyzer": "char",
+    "ngram_range": [3, 5],
+    "lowercase": false,
+    "min_df": 1,
+    "max_df": 1.0,
+    "norm": "l2",
+    "use_idf": true,
+    "smooth_idf": true,
+    "sublinear_tf": false,
+    "dtype": "float64",
+    "candidate_threshold_inclusive": 0.9,
+    "auto_accept_min_characters": 100,
+    "auto_accept_min_length_ratio": 0.8,
+    "pairwise_block_rows": 128
+  },
+  "exact_text": {
+    "strict_representation": "NFKC plus collapsed whitespace",
+    "canonical_representation": "NFKC alphanumeric characters only",
+    "auto_accept_min_characters": 40
+  },
+  "fss_mapping": {
+    "enumeration": "cmd.exe /u /c dir /b, decoded UTF-16LE",
+    "sort": "Python sorted() Unicode code-point order, matching shorten_names.py",
+    "stem_join": "NFKC-normalized stem bijection",
+    "audio_validation_sample_indices": [1]
+  },
+  "privacy": {
+    "publish_raw_external_paths": false,
+    "publish_original_filenames": false,
+    "publish_demographics_per_call": false,
+    "external_identifiers": "namespace-separated SHA-256 pseudonyms"
+  }
+}

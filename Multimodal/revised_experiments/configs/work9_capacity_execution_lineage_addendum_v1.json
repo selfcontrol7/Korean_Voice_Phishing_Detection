@@ -1,0 +1,74 @@
+{
+  "analysis_publication_gate": {
+    "analyzer_and_renderer_may_be_implemented_later": true,
+    "capacity_outcomes_must_not_be_opened_before_analyzer_renderer_source_tests_and_acceptance_are_frozen": true,
+    "mixed_input_families": {
+      "capacity_matched_sensitivity": 150,
+      "primary_matrix": 50
+    },
+    "required_normalization": "verify_each_native_family_schema_and_lineage_before_normalizing_to_one_hybrid_analysis_table"
+  },
+  "bound_pre_outcome_policies": {
+    "analysis_protocol_sha256": "012efe50fb604443d6db29f375ff181ff1c87a82056949693da4e98a5483b212",
+    "anchor_policy_sha256": "4c34fc816bdd9d577d0dcc669f5ed5a703124d9afe151860972cc3846a4e3ff6",
+    "experiment_card_sha256": "38ad1c95aab53a7a0a77699d1dd9f8d5ad28bafcf38484ac8fb3c08348b13002",
+    "figure_spec_sha256": "8a17cd066a9859407b7a51080daa29c4a79176ec9c62d22bc548cf6b64f7a033"
+  },
+  "completed_gate1": {
+    "gate2_decision": "do_not_proceed",
+    "hash_manifest_sha256": "b51da584d8e325d211f188d422f9fa26247be25da4af4aaa5d80f1d5e32a4bbc",
+    "may_be_reopened": false
+  },
+  "dry_receipt_binding": {
+    "acceptance_draft_must_recompute_and_exactly_match_source_contracts": true,
+    "acceptance_draft_must_recompute_and_exactly_match_source_schema_test_bundle_digests": true,
+    "acceptance_draft_must_reverify_core_lineage_and_safety": true
+  },
+  "environment_and_device_contract": {
+    "compute_capability": [8, 9],
+    "cuda_version": "12.4",
+    "cudnn_version": 90100,
+    "device_name": "NVIDIA GeForce RTX 4070 SUPER",
+    "environment_lock_sha256": "1b86de4ede7260724ff8e7f0ed1e0f38ad738de10798fac797aec688949e9a4a",
+    "torch_version": "2.6.0+cu124",
+    "two_smokes_and_every_production_coordinate_must_match": true
+  },
+  "hybrid_contract": {
+    "anchor_coordinate_count": 50,
+    "anchor_role": "immutable_primary_anchor",
+    "anchor_run_family": "primary_matrix",
+    "exact_condition_fold_seed_set_required": true,
+    "logical_coordinate_count": 200,
+    "new_coordinate_count": 150,
+    "new_role": "new_capacity_fit",
+    "new_run_family": "capacity_matched_sensitivity",
+    "unique_coordinates_required": true
+  },
+  "outer_access_boundary": {
+    "phase_a_dry_smoke_and_fit_may_open_primary_outer_index_or_artifacts": false,
+    "primary_outer_anchor_verification_first_allowed_after_hybrid_selection_index_is_frozen": true,
+    "selection_phase_may_verify_only_primary_selection_index_and_selection_artifacts": true
+  },
+  "path_isolation": {
+    "custom_outputs_must_be_under_dedicated_capacity_acceptance_or_test_artifact_roots": true,
+    "primary_registry": "revised_experiments/artifacts/work9_runs_v1",
+    "production_capacity_registry": "revised_experiments/artifacts/work9_capacity_matched_runs_v1",
+    "reject_absolute_relative_escape_and_symlink_components": true,
+    "test_or_acceptance_outputs_may_overlap_either_production_registry": false,
+    "test_or_acceptance_outputs_may_write_source_configs_or_frozen_inputs": false
+  },
+  "primary_runner_acceptance": {
+    "bytes": 108969,
+    "path": "revised_experiments/artifacts/work9_runner_acceptance_v3/runner_acceptance.json",
+    "sha256": "c2055896634626f2de303fa1586e616039423313766075b71eb9f051fce2933b"
+  },
+  "protocol_id": "paper2-v2-mfcc-matched-within-corpus-v1",
+  "run_family": "capacity_matched_sensitivity",
+  "schema_version": "paper2-v2-work9-capacity-execution-lineage-addendum-1",
+  "selection_seal_verification": {
+    "all_lineage_fields_must_be_reverified_at_resume_freeze_and_outer_release": true,
+    "authorization_and_global_claim_must_be_bound_by_outer_artifact_index_and_terminal": true,
+    "schema_validation_alone_is_insufficient": true
+  },
+  "status": "frozen_before_capacity_model_outcomes"
+}

@@ -1,0 +1,131 @@
+{
+  "accepted_contract_boundary": {
+    "accepted_contract_count": 38,
+    "accepted_runner_source_bundle_sha256": "97051fab63a9ab0e36f07a39d5e7cb6d82722f77b954a8f2c1fe80af4ddc830b",
+    "accepted_schema_bundle_sha256": "930050780656fd5f0598e138e1ae21a6afd26a1ef58ed0859f61ba08d3d73ff0",
+    "accepted_test_bundle_sha256": "0a0a31a89987f912937456c4c0bd7dc1f30c293465acde3f1b60a7e0d1ac6cfb",
+    "changed_accepted_contracts_required": 0,
+    "current_contract_count": 40,
+    "expected_additions": [
+      {
+        "bytes": 8783,
+        "path": "revised_experiments/registry/schemas/work9_capacity/work9_capacity_figure_manifest_v2.schema.json",
+        "row_count": null,
+        "sha256": "f65d598c86cb3110b2fa87dddab7f01c8d3d1ae49fc4f21f83a4f3ea8d178fd6"
+      },
+      {
+        "bytes": 10056,
+        "path": "revised_experiments/registry/schemas/work9_capacity/work9_capacity_figure_manifest_v3.schema.json",
+        "row_count": null,
+        "sha256": "637d5d98d28d688b085387429301f71ed7e925b50b9ca311e12ebb894c6e901b"
+      }
+    ],
+    "removed_accepted_contracts_required": 0,
+    "scope": "immutable_pre_outcome_acceptance_plus_exact_post_outcome_figure_schema_additions"
+  },
+  "artifact_bindings": {
+    "analysis_report": {
+      "bytes": 351600,
+      "path": "revised_experiments/artifacts/work9_capacity_analysis_v1/report.json",
+      "sha256": "cae39e462a083b20f6963912c1837cefa138441a0dd91bea5c4c0d56cf3f5a0b"
+    },
+    "dry_run_receipt": {
+      "bytes": 12835,
+      "path": "revised_experiments/artifacts/work9_capacity_preregistration_v1/dry_run_receipt.json",
+      "sha256": "e37ed6c700fd6f4ca0b7adb0e5e0dd9f76ffb1b9697da1714825e56b2e38612b"
+    },
+    "final_runner_acceptance": {
+      "bytes": 112933,
+      "path": "revised_experiments/artifacts/work9_capacity_runner_acceptance_v1/runner_acceptance.json",
+      "sha256": "a512796af195f82d57e072024109089e4e0c8e2734ce393460f606e7eafaa304"
+    },
+    "figure_v1_hash_manifest": {
+      "bytes": 2304,
+      "path": "revised_experiments/artifacts/work9_capacity_figures_v1/hashes.sha256",
+      "sha256": "59fff3a87f6d98ed0df76bca53d47f6701ca8e1fdb0475951fdfe0850cb4bba6"
+    },
+    "figure_v1_manifest": {
+      "bytes": 9718,
+      "path": "revised_experiments/artifacts/work9_capacity_figures_v1/figure_manifest.json",
+      "sha256": "bd17b32d0366ad22a38ce9262f4f617edf08860eca29d4abf0a05be0d8d31763"
+    },
+    "figure_v2_hash_manifest": {
+      "bytes": 2391,
+      "path": "revised_experiments/artifacts/work9_capacity_figures_v2/hashes.sha256",
+      "sha256": "b683c83712f6eaacb99302870ec44022fcd5b1790bf5567d01b9a06cb1a46436"
+    },
+    "figure_v2_manifest": {
+      "bytes": 11993,
+      "path": "revised_experiments/artifacts/work9_capacity_figures_v2/figure_manifest.json",
+      "sha256": "5b0ae401cf237b01502c581a605b9640552971cf0fafc991e013c9d873f089c5"
+    },
+    "figure_v3_hash_manifest": {
+      "bytes": 2391,
+      "path": "revised_experiments/artifacts/work9_capacity_figures_v3/hashes.sha256",
+      "sha256": "7c23ff3e9e1fd5a2911c925d648dee79e420ec0a268bd096ba83f2800f84f948"
+    },
+    "figure_v3_manifest": {
+      "bytes": 12981,
+      "path": "revised_experiments/artifacts/work9_capacity_figures_v3/figure_manifest.json",
+      "sha256": "56f6194d97eeab0646177f67c0599261402e9c0083dad31b7c211dbb8a0514de"
+    },
+    "outer_ledger_index": {
+      "bytes": 339553,
+      "path": "revised_experiments/artifacts/work9_capacity_matched_runs_v1/_matrix/outer_ledger_index.json",
+      "sha256": "a4757a44a7c8d38e7194c26ffd0af6e9da3cf94ce5a5f47db39896b6a759db3a"
+    },
+    "runner_acceptance_draft": {
+      "bytes": 102132,
+      "path": "revised_experiments/artifacts/work9_capacity_runner_acceptance_v1/DRAFT.json",
+      "sha256": "ae52885edc2c130a7d79f34f42458bfbd613c86809fc669692c2c189257f8304"
+    },
+    "selection_index": {
+      "bytes": 317926,
+      "path": "revised_experiments/artifacts/work9_capacity_matched_runs_v1/_matrix/selection_index.json",
+      "sha256": "d7089c5ccb351ebbeabd5e0276ef5463d28ede1b10f25d3d3a54cfc74d78f015"
+    },
+    "v2_presentation_correction": {
+      "bytes": 3541,
+      "path": "revised_experiments/configs/work9_capacity_figure_presentation_correction_v2.json",
+      "sha256": "2a6a4870b216e15db2c47ce1a76ce33b60569fef3a625541c6fa05766a763129"
+    },
+    "v3_presentation_supersession": {
+      "bytes": 3514,
+      "path": "revised_experiments/configs/work9_capacity_figure_presentation_supersession_v3.json",
+      "sha256": "1375fbe9f9f4b2dda3d82934e2454ab42235cfb2beb4bc92d9d89246955c68a6"
+    }
+  },
+  "citation_boundary": {
+    "analysis_or_inference_changed": false,
+    "gate1_or_gate2_reopened": false,
+    "v1_citable": false,
+    "v2_citable": false,
+    "v3_citable_after_closure_and_visual_qa": true
+  },
+  "historical_boundary_signal": {
+    "cause": "The accepted source_contracts function dynamically globs work9_capacity/*.schema.json, so immutable post-outcome v2 and v3 figure schemas appear as additions to the 38-file pre-outcome inventory.",
+    "expected_exception_chain": [
+      "paper2_v2.work9_capacity_acceptance.Work9AcceptanceError: dry receipt source inventory differs from current code",
+      "paper2_v2.work9_capacity_training.CapacityTrainingError: capacity dry receipt no longer matches current runner code"
+    ],
+    "expected_failure_location": "tests/test_work9_capacity_training.py:60 CapacityContractTests.setUpClass",
+    "full_discover_command": "PYTHONPATH=src python -m unittest discover -s tests -p test*.py -v",
+    "full_discover_failures": 0,
+    "full_discover_reported_errors": 1,
+    "full_discover_reported_test_count": 190,
+    "interpretation": "expected_historical_boundary_signal_not_a_pass_and_not_scientific_drift",
+    "must_not_be_suppressed_or_relabelled_as_pass": true
+  },
+  "safety": {
+    "cuda_smoke_launched": false,
+    "model_outcome_values_recomputed": false,
+    "new_outer_evaluation_launched": false,
+    "new_training_launched": false,
+    "outer_outcome_ledgers_opened": false,
+    "primary_or_capacity_registry_modified": false,
+    "selection_or_reselection_launched": false,
+    "source_artifact_role": "post_completion_read_only_lineage_and_presentation_validation"
+  },
+  "schema_version": "paper2-v2-work9-capacity-postcompletion-closure-1",
+  "status": "frozen_post_completion_closure_contract"
+}

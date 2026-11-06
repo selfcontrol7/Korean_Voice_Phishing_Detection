@@ -1,0 +1,393 @@
+{
+  "schema_version": "paper2-v2-work9-blinded-error-analysis-protocol-draft-1",
+  "protocol_id": "paper2-v2-work9-blinded-call-error-analysis-v1",
+  "status": "draft_not_frozen",
+  "created_date": "2026-08-12",
+  "scientific_protocol_frozen": false,
+  "case_selection_authorized": false,
+  "prediction_ledger_access_authorized": false,
+  "reviewer_packet_creation_authorized": false,
+  "purpose": "Describe which call-level cases the frozen within-corpus models find difficult and which human-observable cues, data-quality problems, and source/template/channel shortcuts co-occur with those cases.",
+  "evidence_scope": {
+    "evaluation_name": "relation-aware grouped within-corpus outer evaluation",
+    "independent_confirmatory_set": false,
+    "source_label_confounded": true,
+    "eligible_calls": 1188,
+    "eligible_relation_groups": 1073,
+    "primary_conditions_for_case_selection": [
+      "A-query",
+      "AT-concat",
+      "AT-gate",
+      "AT-cross"
+    ],
+    "diagnostic_condition_for_flip_sampling": "AT-cross-randtrain",
+    "capacity_role": "post_annotation_sensitivity_overlay_only",
+    "language": "Korean",
+    "unit_of_review": "call"
+  },
+  "evidence_bindings": [
+    {
+      "artifact_role": "primary_outer_ledger_index",
+      "path": "revised_experiments/artifacts/work9_runs_v1/_matrix/outer_ledger_index.json",
+      "sha256": "640ce46c8f4717b29dc97ee7936d3b3331f92878185a1510833ac6dab5c1684e",
+      "draft_validator_may_open": false
+    },
+    {
+      "artifact_role": "capacity_outer_ledger_index",
+      "path": "revised_experiments/artifacts/work9_capacity_matched_runs_v1/_matrix/outer_ledger_index.json",
+      "sha256": "a4757a44a7c8d38e7194c26ffd0af6e9da3cf94ce5a5f47db39896b6a759db3a",
+      "draft_validator_may_open": false
+    },
+    {
+      "artifact_role": "completed_gate1_report",
+      "path": "revised_experiments/artifacts/work9_gate1_v2/report.json",
+      "sha256": "e52c8d4fa07d9cbd77d36c1901220c5e7c286251f95ec75911209e1dcb77ed72",
+      "draft_validator_may_open": false
+    },
+    {
+      "artifact_role": "work5_call_provenance",
+      "path": "revised_experiments/artifacts/work5_data_audit_v1/call_provenance.jsonl",
+      "sha256": "ec74b5750d33dbdffe6e8cd263b3b26cc4e331a8fbd011b0803b33871ccce8b8",
+      "draft_validator_may_open": false
+    },
+    {
+      "artifact_role": "work6_relation_aware_assignments",
+      "path": "data/paper2_v2/folds/grouped_nested_v1/assignments.jsonl",
+      "sha256": "8ea63672a758b3fbb8cf3125fbcb46bafd4795ae900f0873f8c1142239440332",
+      "draft_validator_may_open": false
+    }
+  ],
+  "case_construction": {
+    "seed_collapse": {
+      "seeds": [17, 29, 43, 71, 101],
+      "consensus_hard_prediction": "majority_of_five_frozen_per_seed_hard_predictions",
+      "consensus_error": "consensus_hard_prediction_differs_from_frozen_call_label",
+      "stable_decision": "at_least_four_of_five_seed_hard_predictions_agree",
+      "unanimous_correct": "all_five_seed_hard_predictions_equal_frozen_call_label",
+      "signed_margin_per_seed": "call_probability_minus_that_seed_and_fold_condition_validation_selected_threshold",
+      "distance_to_threshold": "median_across_five_seeds_of_absolute_signed_margin",
+      "no_best_seed_selection": true
+    },
+    "relation_group_safeguards": {
+      "known_independence_unit": "recovered_work5_relation_group",
+      "quota_sampling": "select_relation_groups_first_and_at_most_one_call_per_group",
+      "exhaustive_error_exception": "retain_every_consensus_error_call_even_if_multiple_calls_share_a_relation_group",
+      "analysis_requirement": "report_both_call_and_unique_relation_group_denominators_and_cluster_any_permitted_resampling_by_relation_group",
+      "speaker_disjointness_claim_permitted": false
+    },
+    "stratum_priority": [
+      "E_consensus_errors",
+      "N_near_threshold",
+      "H_high_confidence_correct",
+      "F_high_confidence_flips",
+      "C_random_correct_controls"
+    ],
+    "multi_tag_rule": "Compute substantive membership in every stratum before deduplication. Then allocate cases in priority order: a previously selected case counts toward each lower-priority quota cell it satisfies, only enough new relation groups are added to reach that cell's quota, every case is reviewed once, and every substantive tag is retained.",
+    "empty_cell_rule": "Report an empty or undersized cell exactly; never backfill from another fold, label, direction, condition, or stratum.",
+    "tie_breaking": {
+      "key_method": "HMAC-SHA256",
+      "message": "protocol_id|stratum_id|outer_fold|label|direction|condition|relation_group_id|call_id",
+      "secret_requirement": "A data steward generates a 256-bit key after protocol freeze, stores it outside public artifacts, and publishes only its SHA-256 commitment before case selection.",
+      "case_id_method": "base32_prefix_of_HMAC_SHA256_over_protocol_id_and_call_id_with_collision_check",
+      "public_seed_label": 20260812,
+      "secret_commitment": null
+    },
+    "strata": [
+      {
+        "stratum_id": "E_consensus_errors",
+        "purpose": "Review every call on which at least one primary mechanism has a five-seed consensus false positive or false negative.",
+        "conditions": ["A-query", "AT-concat", "AT-gate", "AT-cross"],
+        "eligibility": "union_of_all_consensus_false_positive_and_false_negative_calls",
+        "cells": "condition_x_error_type_for_reporting_only",
+        "quota_per_cell": null,
+        "maximum_cases": null,
+        "selection_order": "all_eligible_calls",
+        "exclusions": []
+      },
+      {
+        "stratum_id": "N_near_threshold",
+        "purpose": "Characterize calls closest to the frozen AT-cross decision boundary, including difficult correct cases.",
+        "conditions": ["AT-cross"],
+        "eligibility": "all_eligible_AT-cross_calls_ranked_by_ascending_distance_to_threshold_before_priority_deduplication",
+        "cells": "outer_fold_x_frozen_label",
+        "quota_per_cell": 2,
+        "maximum_cases": 20,
+        "selection_order": "ascending_distance_to_threshold_then_HMAC_tie_break",
+        "exclusions": ["E_consensus_errors"]
+      },
+      {
+        "stratum_id": "H_high_confidence_correct",
+        "purpose": "Contrast difficult cases with stable correct calls far from the AT-cross threshold.",
+        "conditions": ["AT-cross"],
+        "eligibility": "unanimous_correct_before_priority_deduplication",
+        "cells": "outer_fold_x_frozen_label",
+        "quota_per_cell": 1,
+        "maximum_cases": 10,
+        "selection_order": "descending_distance_to_threshold_then_HMAC_tie_break",
+        "exclusions": ["E_consensus_errors", "N_near_threshold"]
+      },
+      {
+        "stratum_id": "F_high_confidence_flips",
+        "purpose": "Review stable model-decision disagreements without treating random-pair behavior as proof of utterance-specific alignment.",
+        "conditions": ["A-query", "AT-concat", "AT-gate", "AT-cross-randtrain"],
+        "eligibility": "AT-cross_consensus_prediction_differs_from_comparator_consensus_prediction_and_both_have_at_least_four_of_five_seed_agreement_and_both_median_absolute_margins_are_at_least_0.10",
+        "cells": "comparator_x_direction_where_direction_is_AT-cross_correct_or_comparator_correct",
+        "quota_per_cell": 3,
+        "maximum_cases": 24,
+        "selection_order": "descending_minimum_of_the_two_models_distance_to_threshold_then_HMAC_tie_break",
+        "exclusions": ["E_consensus_errors", "N_near_threshold", "H_high_confidence_correct"]
+      },
+      {
+        "stratum_id": "C_random_correct_controls",
+        "purpose": "Provide non-cherry-picked correctly classified comparison calls.",
+        "conditions": ["AT-cross"],
+        "eligibility": "unanimous_correct_before_priority_deduplication",
+        "cells": "outer_fold_x_frozen_label",
+        "quota_per_cell": 2,
+        "maximum_cases": 20,
+        "selection_order": "HMAC_deterministic_random_rank",
+        "exclusions": [
+          "E_consensus_errors",
+          "N_near_threshold",
+          "H_high_confidence_correct",
+          "F_high_confidence_flips"
+        ]
+      }
+    ],
+    "unavailable_strata": [
+      {
+        "name": "channel_control_flips",
+        "reason": "no compatible frozen call-level channel-control ledger is authorized"
+      },
+      {
+        "name": "ASR_control_flips",
+        "reason": "no compatible frozen call-level ASR-control ledger is authorized"
+      },
+      {
+        "name": "independent_confirmatory_errors",
+        "reason": "no independent untouched Korean real-case set is available"
+      }
+    ]
+  },
+  "review_design": {
+    "minimum_reviewer_count": 2,
+    "reviewer_count": null,
+    "reviewer_roster_commitment_sha256": null,
+    "all_reviewers_korean_fluent": null,
+    "at_least_one_reviewer_independent_of_model_development": null,
+    "packet_steward_confirmed": null,
+    "packet_steward_is_not_a_reviewer": null,
+    "independent_annotation_required": true,
+    "all_cases_dual_annotated": true,
+    "practice_material": "synthetic_or_out_of_scope_redacted_examples_only",
+    "reviewer_packet_hidden_fields": [
+      "call_id",
+      "relation_group_id",
+      "source",
+      "frozen_label",
+      "outer_fold",
+      "condition",
+      "prediction",
+      "probability",
+      "threshold",
+      "error_status",
+      "sampling_stratum",
+      "capacity_status",
+      "original_filename",
+      "original_path"
+    ],
+    "reviewer_packet_visible_fields": [
+      "opaque_case_id",
+      "redacted_transcript_if_authorized",
+      "redacted_audio_if_authorized_by_review_mode"
+    ],
+    "per_reviewer_order": "independent_HMAC_deterministic_random_order",
+    "model_output_unblinding_time": "after_both_independent_forms_are_locked_and_reconciliation_is_locked",
+    "review_mode": null,
+    "review_mode_choices": [
+      "redacted_audio_and_redacted_transcript",
+      "redacted_transcript_only"
+    ],
+    "mode_consequence": {
+      "redacted_audio_and_redacted_transcript": "permits_human_ASR_correctness_and_audible_channel_review_subject_to_redaction_quality",
+      "redacted_transcript_only": "ASR_correctness_and_audible_channel_fields_must_be_not_assessable"
+    },
+    "annotation_schema": "revised_experiments/registry/schemas/work9_error_analysis/work9_blinded_reviewer_annotation.schema.json",
+    "post_unblind_schema": "revised_experiments/registry/schemas/work9_error_analysis/work9_unblinded_case_merge.schema.json"
+  },
+  "annotation_codebook": {
+    "content_domains": [
+      "content_accessibility",
+      "transcript_and_ASR_quality",
+      "speaker_count_and_local_roles",
+      "scam_intent_cues",
+      "legitimate_hard_negative_cues",
+      "perceived_call_class_and_confidence",
+      "topic",
+      "channel_and_acquisition_artifacts",
+      "possible_script_template_or_shortcut_cues",
+      "ambiguity",
+      "privacy_or_redaction_failure",
+      "brief_nonverbatim_rationale"
+    ],
+    "source_fields": "added_only_after_reconciliation_from_frozen_work5_provenance",
+    "error_overlap_fields": "derived_only_after_reconciliation_from_frozen_primary_and_capacity_ledgers",
+    "missing_metadata_rule": "retain_unknown_or_not_available; never infer global speaker identity, missing taxonomy, source, topic, ASR quality, or channel from filenames or class label",
+    "free_text_rule": "No verbatim quotations and no names, phone numbers, account numbers, addresses, identity numbers, unique organizations, URLs, or other identifying details. Use controlled tags and non-identifying paraphrase.",
+    "attention_or_causality_claim_authorized": false
+  },
+  "agreement_and_reconciliation": {
+    "independent_forms_locked_before_discussion": true,
+    "raw_agreement": "fieldwise_percent_agreement_with_observed_denominator",
+    "nominal_agreement": "Cohen_kappa_for_exactly_two_complete_raters_or_Krippendorff_alpha_nominal_for_more_raters_or_missingness",
+    "ordinal_agreement": "quadratic_weighted_Cohen_kappa_for_exactly_two_complete_raters_or_Krippendorff_alpha_ordinal_for_more_raters_or_missingness",
+    "multilabel_agreement": "per_tag_positive_and_negative_agreement_plus_casewise_Jaccard; prevalence_is_reported_because_kappa_can_be_unstable",
+    "reconciliation": "reviewers_discuss_after_independent_lock_while_still_blinded_to_truth_and_models",
+    "unresolved_rule": "retain_both_independent_ratings_and_code_consensus_as_unresolved; do_not_force_a_majority_with_two_reviewers",
+    "amendment_rule": "after_annotation_begins_any_codebook_change_requires_a_versioned_amendment_and_reannotation_of_every_affected_case",
+    "report_independent_and_reconciled_separately": true
+  },
+  "privacy_and_governance": {
+    "authorized_for_human_review": null,
+    "authorization_reference": null,
+    "irb_or_exemption_status": null,
+    "source_license_and_permitted_use_reviewed": null,
+    "restricted_access_location_confirmed": null,
+    "retention_and_deletion_plan_confirmed": null,
+    "external_service_upload_permitted": false,
+    "raw_content_to_generative_AI_permitted": false,
+    "typed_redaction_tokens": [
+      "PERSON",
+      "PHONE",
+      "ACCOUNT",
+      "ADDRESS",
+      "IDENTITY_NUMBER",
+      "ORGANIZATION",
+      "DATE",
+      "AMOUNT",
+      "URL",
+      "OTHER_SENSITIVE"
+    ],
+    "audio_redaction_rule": "If audio review is chosen, every transcript redaction span must be time-aligned and masked in audio with conservative padding; unverified audio must not enter a reviewer packet.",
+    "redaction_verification": "packet_steward_checks_text_audio_alignment_and_a_second_authorized_checker_confirms_no_obvious_identifier_remains",
+    "packet_metadata_rule": "strip filenames, paths, embedded metadata, source tags, labels, folds, and model fields",
+    "privacy_incident_rule": "reviewer_marks_possible_identifier_exposure; stop access to that case, quarantine it, repair redaction, version the packet, and record the incident without publishing content",
+    "public_release_rule": "release_only_aggregate_counts_and_non_identifying_paraphrases; never release raw audio, verbatim transcript, case-to-call mapping, call IDs, relation-group IDs, reviewer names, or case-level model outputs"
+  },
+  "post_unblind_merge": {
+    "timing": "only_after_independent_and_reconciled_annotations_are_locked",
+    "source_and_provenance_fields": [
+      "collection_source",
+      "source_taxonomy_category_if_present",
+      "source_taxonomy_subcategory_if_present",
+      "ASR_engine_version",
+      "ASR_domain_code",
+      "ASR_domain_id",
+      "ASR_confidence_if_present",
+      "audio_format_metadata",
+      "telephone_network_if_present",
+      "relation_evidence_types",
+      "relation_group_case_key"
+    ],
+    "model_fields": [
+      "condition",
+      "five_seed_vote_count_positive",
+      "consensus_prediction",
+      "consensus_correct",
+      "seed_error_count",
+      "median_signed_margin",
+      "median_absolute_margin"
+    ],
+    "capacity_overlay": "Join capacity condition signatures only for already selected cases; do not add capacity-only cases and do not alter sampling tags.",
+    "error_overlap": "derive_the_set_of_primary_conditions_with_consensus_error_and_describe_complete_overlap_patterns_without_selecting_a_favorable_seed",
+    "source_as_label_warning": "collection_source_is_perfectly_associated_with_label_and_must_not_be_interpreted_as_independent_fraud_evidence"
+  },
+  "analysis_rules": {
+    "descriptive_only": true,
+    "report_by_stratum": true,
+    "report_calls_and_unique_relation_groups": true,
+    "report_empty_and_undersized_cells": true,
+    "primary_outputs": [
+      "sampling_flow_and_denominators",
+      "fieldwise_inter_rater_agreement",
+      "reconciled_taxonomy_counts_by_stratum_and_truth_class",
+      "error_overlap_across_primary_conditions",
+      "near_threshold_high_confidence_and_random_control_contrasts",
+      "source_topic_channel_ASR_and_template_cooccurrence_tables",
+      "capacity_overlay_for_the_same_selected_cases",
+      "privacy_incident_and_not_assessable_counts"
+    ],
+    "uncertainty": "Relation-group clustered descriptive bootstrap intervals are permitted only for exhaustive-error or probability-sampled estimands with a meaningful denominator; deterministic near-threshold, high-confidence, and flip strata receive counts and proportions without population confidence intervals.",
+    "hypothesis_tests_authorized": false,
+    "model_selection_or_retraining_authorized": false,
+    "attention_explanation_authorized": false,
+    "population_prevalence_from_enriched_sample_authorized": false,
+    "qualitative_saturation_claim_authorized": false,
+    "individual_case_publication_authorized": false
+  },
+  "stop_rules": [
+    "Stop before case selection unless the protocol is separately approved and frozen with all readiness blockers resolved.",
+    "Stop if an evidence hash differs from the approved frozen binding.",
+    "Stop if a call maps to multiple outer folds, lacks five seed records for a required condition, has inconsistent labels or relation groups, or uses an unsealed threshold.",
+    "Stop if reviewer packets expose any hidden field or unredacted identifier.",
+    "Stop and version the packet after any privacy incident; do not silently replace reviewed content.",
+    "Stop reconciliation until every intended independent form is locked or explicitly documented missing.",
+    "Stop post-unblind analysis if the private case mapping, roster commitment, draw-key commitment, annotation files, or packet manifest fails integrity verification."
+  ],
+  "claim_boundaries": {
+    "permitted": [
+      "descriptive_within_corpus_error_taxonomy",
+      "human_observed_cue_and_data_quality_cooccurrence_in_the_selected_sample",
+      "data_collection_and_annotation_priorities",
+      "transparent_documentation_of_source_template_channel_and_ASR_limitations"
+    ],
+    "forbidden": [
+      "causal_explanation_of_model_decisions",
+      "attention_is_explanation",
+      "source_independent_fraud_detection",
+      "cross_corpus_or_real_world_generalization",
+      "population_error_category_prevalence_from_the_enriched_sample",
+      "fairness_or_subgroup_performance_without_valid_demographic_metadata",
+      "speaker_disjointness",
+      "utterance_specific_alignment_from_AT-cross-randtrain",
+      "reopening_or_overturning_Gate1_or_Gate2",
+      "equivalence_or_no_effect_from_nonrejection",
+      "real_time_mobile_deployable_robust_or_privacy_preserving_system_claims"
+    ]
+  },
+  "unresolved_pi_decisions": [
+    {
+      "decision_id": "review_team",
+      "question": "Who are the authorized Korean-fluent reviewers and the separate packet/redaction steward?",
+      "required_choice": "Confirm at least two reviewers, confirm Korean fluency, identify whether at least one is independent of model development, and confirm a steward who will not annotate the packets they prepare.",
+      "current_value": null,
+      "blocking": true
+    },
+    {
+      "decision_id": "governance_authorization",
+      "question": "What documented authorization permits these reviewers to access redacted call content?",
+      "required_choice": "Record lawful/permitted research use for both sources, IRB approval or exemption/not-applicable determination, restricted-access location, and retention/deletion plan before any packet is created.",
+      "current_value": null,
+      "blocking": true
+    },
+    {
+      "decision_id": "review_mode",
+      "question": "Will reviewers receive redacted audio plus redacted transcript, or redacted transcript only?",
+      "required_choice": "Choose redacted_audio_and_redacted_transcript to assess ASR correctness and audible channel artifacts, or redacted_transcript_only and accept that those fields are not assessable.",
+      "current_value": null,
+      "blocking": true
+    }
+  ],
+  "freeze_readiness_checklist": [
+    "All three PI decisions are resolved in a new protocol candidate.",
+    "Reviewer private roster commitment and stewardship separation are recorded.",
+    "Governance authorization and restricted review environment are documented.",
+    "Review mode and its assessability limits are fixed.",
+    "Annotation codebook and both JSON schemas pass validation.",
+    "A private 256-bit HMAC key is generated and only its SHA-256 commitment enters the frozen protocol.",
+    "A no-outcome dry run on synthetic ledgers proves seed collapse, group-first quotas, multi-tag deduplication, empty-cell handling, and hidden-field exclusion.",
+    "An independent reviewer verifies evidence bindings by hash without opening named cases or transcripts.",
+    "The final protocol candidate is assigned a new immutable path, status, SHA-256, and read-only permissions before any real case selection.",
+    "Only after the freeze receipt passes may a separate outcome-access command construct the restricted case map and reviewer packets."
+  ]
+}

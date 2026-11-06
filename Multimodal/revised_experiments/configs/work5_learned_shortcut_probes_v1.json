@@ -1,0 +1,85 @@
+{
+  "schema_version": "paper2-v2-learned-shortcut-probe-config-1",
+  "artifact_id": "work5_learned_shortcut_probes_grouped_v1",
+  "diagnostic_only": true,
+  "fold_protocol_id": "paper2-v2-grouped-nested-v1",
+  "partition_repeat": 0,
+  "outer_folds": 5,
+  "random_seed": 20260809,
+  "threshold_selection": {
+    "partition": "val",
+    "metric": "call_macro_f1",
+    "grid_start": 0.05,
+    "grid_stop": 0.95,
+    "grid_step": 0.01,
+    "tie_break": "closest_to_0.5_then_lower"
+  },
+  "logistic_regression": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "solver": "liblinear",
+    "max_iter": 4000,
+    "tolerance": 0.0001
+  },
+  "probes": [
+    {
+      "probe_id": "char_tfidf_logreg",
+      "kind": "text",
+      "text_source": "transcript top-level text",
+      "unicode_normalization": "NFKC",
+      "whitespace": "collapse-to-one-space-and-strip",
+      "vectorizer": {
+        "analyzer": "char",
+        "ngram_range": [3, 5],
+        "lowercase": false,
+        "min_df": 1,
+        "max_df": 1.0,
+        "norm": "l2",
+        "use_idf": true,
+        "smooth_idf": true,
+        "sublinear_tf": false,
+        "dtype": "float64"
+      }
+    },
+    {
+      "probe_id": "nonlexical_asr_metadata_logreg",
+      "kind": "numeric",
+      "standardize": true,
+      "features": [
+        "call_duration_seconds",
+        "segment_count",
+        "word_count",
+        "mean_segment_duration_seconds",
+        "mean_segment_confidence",
+        "local_speaker_count",
+        "words_per_second"
+      ]
+    },
+    {
+      "probe_id": "duration_segment_logreg",
+      "kind": "numeric",
+      "standardize": true,
+      "features": [
+        "call_duration_seconds",
+        "segment_count"
+      ]
+    }
+  ],
+  "forbidden_learned_inputs": [
+    "call_id",
+    "group_id",
+    "historical_split",
+    "source",
+    "label",
+    "asr_domain_code",
+    "asr_domain_id",
+    "audio_path",
+    "transcript_path"
+  ],
+  "output_policy": {
+    "save_outer_predictions_once_per_call": true,
+    "save_validation_predictions": true,
+    "save_text_coefficients_or_ngrams": false,
+    "reason_coefficients_withheld": "raw n-grams may expose personal or sensitive transcript content"
+  }
+}

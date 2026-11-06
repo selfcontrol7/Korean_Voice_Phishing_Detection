@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.paper2.v2/work9_capacity/work9_capacity_analysis_report.schema.json",
+  "title": "Work 9 capacity-matched secondary sensitivity report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "analyzer_version", "status", "protocol_id", "run_family",
+    "analysis_role", "evidence_label", "completed_gate1", "lineage",
+    "normalization_audit", "inference", "condition_metrics", "condition_summaries",
+    "secondary_comparisons", "descriptive_primary_vs_capacity",
+    "parameter_profile", "compute_profile", "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "paper2-v2-work9-capacity-analysis-report-1"},
+    "analyzer_version": {"const": "paper2-v2-work9-capacity-analyzer-1"},
+    "status": {"enum": ["secondary_sensitivity_complete", "synthetic_contract_test"]},
+    "protocol_id": {"const": "paper2-v2-mfcc-matched-within-corpus-v1"},
+    "run_family": {"const": "capacity_matched_sensitivity"},
+    "analysis_role": {
+      "const": "preregistered_secondary_parameter_budget_sensitivity_not_a_second_primary_test"
+    },
+    "evidence_label": {
+      "const": "Capacity-matched secondary within-corpus sensitivity; cannot reopen Gate 1 or Gate 2"
+    },
+    "completed_gate1": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hash_manifest_sha256", "report_sha256", "gate2_decision",
+        "may_be_reopened", "role"
+      ],
+      "properties": {
+        "hash_manifest_sha256": {
+          "const": "b51da584d8e325d211f188d422f9fa26247be25da4af4aaa5d80f1d5e32a4bbc"
+        },
+        "report_sha256": {
+          "const": "e52c8d4fa07d9cbd77d36c1901220c5e7c286251f95ec75911209e1dcb77ed72"
+        },
+        "gate2_decision": {"const": "do_not_proceed"},
+        "may_be_reopened": {"const": false},
+        "role": {"const": "sealed_descriptive_primary_baseline_only"}
+      }
+    },
+    "lineage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "selection_index", "outer_index", "analysis_protocol_sha256",
+        "figure_spec_sha256", "experiment_card_sha256", "anchor_policy_sha256",
+        "execution_addendum_sha256"
+      ],
+      "properties": {
+        "selection_index": {"$ref": "#/$defs/artifact"},
+        "outer_index": {"$ref": "#/$defs/artifact"},
+        "analysis_protocol_sha256": {
+          "const": "012efe50fb604443d6db29f375ff181ff1c87a82056949693da4e98a5483b212"
+        },
+        "figure_spec_sha256": {
+          "const": "8a17cd066a9859407b7a51080daa29c4a79176ec9c62d22bc548cf6b64f7a033"
+        },
+        "experiment_card_sha256": {
+          "const": "38ad1c95aab53a7a0a77699d1dd9f8d5ad28bafcf38484ac8fb3c08348b13002"
+        },
+        "anchor_policy_sha256": {
+          "const": "4c34fc816bdd9d577d0dcc669f5ed5a703124d9afe151860972cc3846a4e3ff6"
+        },
+                "execution_addendum_sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                }
+      }
+    },
+    "normalization_audit": {
+      "type": "object",
+      "required": [
+        "expected_coordinate_count", "normalized_coordinate_count",
+        "new_capacity_coordinate_count", "immutable_primary_anchor_coordinate_count",
+        "unique_logical_coordinates", "exact_condition_fold_seed_set",
+        "paired_call_inventory_equal_within_each_outer_fold", "native_schema_counts"
+      ],
+      "properties": {
+        "expected_coordinate_count": {"const": 200},
+        "normalized_coordinate_count": {"const": 200},
+        "new_capacity_coordinate_count": {"const": 150},
+        "immutable_primary_anchor_coordinate_count": {"const": 50},
+        "unique_logical_coordinates": {"const": true},
+        "exact_condition_fold_seed_set": {"const": true},
+        "paired_call_inventory_equal_within_each_outer_fold": {"const": true},
+        "native_schema_counts": {
+          "type": "array", "minItems": 2, "maxItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "run_family", "segment_schema_version", "call_schema_version", "run_record_schema_version",
+              "coordinate_count"
+            ],
+            "properties": {
+              "run_family": {"enum": ["capacity_matched_sensitivity", "primary_matrix"]},
+              "segment_schema_version": {"type": "string"},
+              "call_schema_version": {"type": "string"},
+              "run_record_schema_version": {"type": "string"},
+              "coordinate_count": {"enum": [50, 150]}
+            }
+          }
+        }
+      }
+    },
+    "inference": {"type": "object"},
+    "condition_metrics": {
+      "type": "array", "minItems": 240, "maxItems": 240,
+      "items": {"type": "object"}
+    },
+    "condition_summaries": {
+      "type": "object",
+      "minProperties": 8,
+      "maxProperties": 8
+    },
+    "secondary_comparisons": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "prefixItems": [
+        {"$ref": "#/$defs/comparison_cross_query"},
+        {"$ref": "#/$defs/comparison_cross_concat"},
+        {"$ref": "#/$defs/comparison_cross_gate"}
+      ],
+      "items": false
+    },
+    "descriptive_primary_vs_capacity": {
+      "type": "array", "minItems": 8, "maxItems": 8,
+      "items": {"type": "object"}
+    },
+    "parameter_profile": {
+      "type": "array", "minItems": 8, "maxItems": 8,
+      "items": {"type": "object"}
+    },
+    "compute_profile": {
+      "type": "array", "minItems": 8, "maxItems": 8,
+      "items": {"type": "object"}
+    },
+    "claim_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "can_change_completed_gate1_decision", "can_reopen_gate2",
+        "external_generalization_authorized", "practical_utility_authorized",
+        "deployment_or_mobile_claim_authorized", "source_scope"
+      ],
+      "properties": {
+        "can_change_completed_gate1_decision": {"const": false},
+        "can_reopen_gate2": {"const": false},
+        "external_generalization_authorized": {"const": false},
+        "practical_utility_authorized": {"const": false},
+        "deployment_or_mobile_claim_authorized": {"const": false},
+        "source_scope": {"const": "within_corpus_source_confounded"}
+      }
+    }
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "bytes", "row_count"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "bytes": {"type": "integer", "minimum": 1},
+        "row_count": {"type": "null"}
+      }
+    },
+    "comparison_base": {
+      "type": "object",
+      "required": [
+        "schema_version", "primary_condition", "comparator_condition",
+        "observed_effect", "bootstrap", "permutation", "multiplicity",
+        "analysis_role", "can_change_completed_gate1", "can_reopen_gate2"
+      ],
+      "properties": {
+        "schema_version": {"const": "paper2-v2-work9-capacity-secondary-comparison-1"},
+        "primary_condition": {"const": "AT-cross"},
+        "comparator_condition": {"type": "string"},
+        "observed_effect": {"type": "number"},
+        "bootstrap": {"type": "object"},
+        "permutation": {"type": "object"},
+        "multiplicity": {"type": "object"},
+        "analysis_role": {"const": "secondary_capacity_sensitivity_not_gate1"},
+        "can_change_completed_gate1": {"const": false},
+        "can_reopen_gate2": {"const": false}
+      }
+    },
+    "comparison_cross_query": {
+      "allOf": [
+        {"$ref": "#/$defs/comparison_base"},
+        {"properties": {"comparator_condition": {"const": "A-query"}}}
+      ]
+    },
+    "comparison_cross_concat": {
+      "allOf": [
+        {"$ref": "#/$defs/comparison_base"},
+        {"properties": {"comparator_condition": {"const": "AT-concat"}}}
+      ]
+    },
+    "comparison_cross_gate": {
+      "allOf": [
+        {"$ref": "#/$defs/comparison_base"},
+        {"properties": {"comparator_condition": {"const": "AT-gate"}}}
+      ]
+    }
+  }
+}

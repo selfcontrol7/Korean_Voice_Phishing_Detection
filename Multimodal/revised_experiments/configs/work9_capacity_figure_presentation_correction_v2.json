@@ -1,0 +1,103 @@
+{
+  "affected_figure_ids": [
+    "capacity_condition_macro_f1",
+    "capacity_metric_profile"
+  ],
+  "analysis_report": {
+    "bytes": 351600,
+    "path": "revised_experiments/artifacts/work9_capacity_analysis_v1/report.json",
+    "sha256": "cae39e462a083b20f6963912c1837cefa138441a0dd91bea5c4c0d56cf3f5a0b"
+  },
+  "correction_reason": "The v1 full-scale 0-to-1 axes compressed near-ceiling values and made legitimate seed and condition dispersion visually unreadable.",
+  "figure_ids": [
+    "capacity_parameter_match",
+    "capacity_condition_macro_f1",
+    "capacity_primary_effects",
+    "primary_vs_capacity_condition_change",
+    "capacity_fold_seed_stability",
+    "capacity_metric_profile",
+    "capacity_compute_profile"
+  ],
+  "frozen_figure_spec": {
+    "bytes": 2540,
+    "path": "revised_experiments/configs/work9_capacity_figure_spec_v1.json",
+    "sha256": "8a17cd066a9859407b7a51080daa29c4a79176ec9c62d22bc548cf6b64f7a033"
+  },
+  "presentation_contract": {
+    "capacity_condition_macro_f1": {
+      "full_scale_context_ylim": [
+        0.0,
+        1.001
+      ],
+      "main_zoom_ylim": [
+        0.99,
+        1.001
+      ],
+      "required_disclosure": "Zoomed main axis; adjacent full-scale 0-to-1 context is mandatory. Visual distances on the zoomed axis do not represent absolute effect magnitude."
+    },
+    "capacity_metric_profile": {
+      "bounded_metric_zoom_ylim": {
+        "macro_f1": [
+          0.99,
+          1.001
+        ],
+        "pr_auc": [
+          0.998,
+          1.0002
+        ],
+        "roc_auc": [
+          0.998,
+          1.0002
+        ],
+        "sensitivity": [
+          0.989,
+          1.001
+        ],
+        "specificity": [
+          0.989,
+          1.001
+        ]
+      },
+      "full_scale_reference": [
+        0.0,
+        1.0
+      ],
+      "required_disclosure": "Every truncated panel must state its exact zoom range and full-scale 0-to-1 reference. Zoom is for legibility only and must not be interpreted as absolute effect magnitude."
+    }
+  },
+  "preservation": {
+    "aggregation_changes_allowed": false,
+    "analysis_report_changes_allowed": false,
+    "condition_metric_changes_allowed": false,
+    "effect_ci_p_or_holm_changes_allowed": false,
+    "figure_id_or_purpose_changes_allowed": false,
+    "frozen_figure_spec_changes_allowed": false,
+    "v1_bundle_changes_allowed": false,
+    "v1_renderer_changes_allowed": false
+  },
+  "schema_version": "paper2-v2-work9-capacity-figure-presentation-correction-2",
+  "status": "post_analysis_presentation_correction_frozen_before_v2_render",
+  "superseded_v1_figure_manifest": {
+    "bytes": 9718,
+    "path": "revised_experiments/artifacts/work9_capacity_figures_v1/figure_manifest.json",
+    "sha256": "bd17b32d0366ad22a38ce9262f4f617edf08860eca29d4abf0a05be0d8d31763"
+  },
+  "superseded_v1_hash_manifest": {
+    "bytes": 2304,
+    "path": "revised_experiments/artifacts/work9_capacity_figures_v1/hashes.sha256",
+    "sha256": "59fff3a87f6d98ed0df76bca53d47f6701ca8e1fdb0475951fdfe0850cb4bba6"
+  },
+  "superseded_v1_renderer": {
+    "bytes": 25782,
+    "path": "revised_experiments/src/paper2_v2/work9_capacity_figures.py",
+    "sha256": "cc556ea79569e3b52f86c389df67c40f87857d0b0ea2ea71f67b67fce141e08d"
+  },
+  "supersession_scope": "presentation_only_v1_remains_immutable_and_scientifically_valid",
+  "unaffected_figure_ids": [
+    "capacity_parameter_match",
+    "capacity_primary_effects",
+    "primary_vs_capacity_condition_change",
+    "capacity_fold_seed_stability",
+    "capacity_compute_profile"
+  ]
+}

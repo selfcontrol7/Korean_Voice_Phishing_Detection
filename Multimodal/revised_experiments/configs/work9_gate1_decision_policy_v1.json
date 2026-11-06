@@ -1,0 +1,35 @@
+{
+  "alpha": 0.05,
+  "cross_mechanism_superiority": {
+    "all_comparisons_required": [
+      "AT-cross_minus_AT-concat",
+      "AT-cross_minus_AT-gate"
+    ],
+    "per_comparison_requirements": {
+      "clustered_bootstrap_ci_lower_strictly_greater_than": 0.0,
+      "holm_adjusted_permutation_p_strictly_less_than": 0.05,
+      "observed_macro_f1_difference_strictly_greater_than": 0.0
+    }
+  },
+  "gate2_continuation": {
+    "proceed_with_cross_specific_pairing_controls_only_if": "statistical_incremental_text_conditioning_supported",
+    "otherwise": "stop_cross_specific_gate2_and_report_the_matched_null_or_inferiority_result"
+  },
+  "practical_utility": {
+    "claim_authorized": false,
+    "reason": "No cost policy or smallest practically meaningful effect was frozen before Work 9 outcomes."
+  },
+  "schema_version": "paper2-v2-work9-gate1-decision-policy-1",
+  "stability": {
+    "fold_and_seed_signs": "report_descriptively_not_as_additional_post_hoc_pass_rules"
+  },
+  "statistical_incremental_text_conditioning": {
+    "comparison": "AT-cross_minus_A-query",
+    "requirements": {
+      "clustered_bootstrap_ci_lower_strictly_greater_than": 0.0,
+      "holm_adjusted_permutation_p_strictly_less_than": 0.05,
+      "observed_macro_f1_difference_strictly_greater_than": 0.0
+    }
+  },
+  "status": "frozen_before_work9_model_outcomes"
+}

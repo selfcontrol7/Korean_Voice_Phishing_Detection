@@ -1,0 +1,375 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.paper2.v2/work9_error_analysis/work9_blinded_reviewer_annotation.schema.json",
+  "title": "Blinded reviewer annotation for one redacted call",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol_id",
+    "case_id",
+    "reviewer_id",
+    "annotation_round",
+    "review_mode",
+    "content_accessibility",
+    "transcript_asr",
+    "speakers",
+    "scam_cues",
+    "legitimate_cues",
+    "perceived_class",
+    "topic",
+    "channel_acquisition",
+    "shortcut_template",
+    "ambiguity",
+    "privacy_redaction",
+    "rationale",
+    "form_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "paper2-v2-work9-blinded-reviewer-annotation-1"
+    },
+    "protocol_id": {
+      "const": "paper2-v2-work9-blinded-call-error-analysis-v1"
+    },
+    "case_id": {"type": "string", "pattern": "^EA-[A-Z2-7]{16}$"},
+    "reviewer_id": {"type": "string", "pattern": "^R-[A-Z0-9_-]{2,32}$"},
+    "annotation_round": {"enum": ["independent", "reconciliation"]},
+    "review_mode": {
+      "enum": [
+        "redacted_audio_and_redacted_transcript",
+        "redacted_transcript_only"
+      ]
+    },
+    "content_accessibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "audio",
+        "transcript",
+        "redaction_blocks_judgment",
+        "overall_assessability"
+      ],
+      "properties": {
+        "audio": {"enum": ["usable", "partly_usable", "unusable", "not_provided"]},
+        "transcript": {"enum": ["usable", "partly_usable", "unusable"]},
+        "redaction_blocks_judgment": {"type": "boolean"},
+        "overall_assessability": {
+          "enum": ["assessable", "partly_assessable", "not_assessable"]
+        }
+      }
+    },
+    "transcript_asr": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["correctness", "issue_types", "comprehension_confidence"],
+      "properties": {
+        "correctness": {
+          "enum": [
+            "accurate",
+            "minor_errors_meaning_preserved",
+            "major_errors_meaning_changed",
+            "not_assessable_without_audio",
+            "not_assessable_other"
+          ]
+        },
+        "issue_types": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "none_observed",
+              "omission",
+              "insertion",
+              "substitution",
+              "segmentation",
+              "speaker_attribution",
+              "punctuation_or_spacing",
+              "hallucination",
+              "dialect_or_code_switching",
+              "redaction_prevents_assessment",
+              "other",
+              "not_assessable"
+            ]
+          }
+        },
+        "comprehension_confidence": {"type": "integer", "minimum": 1, "maximum": 5}
+      }
+    },
+    "speakers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["perceived_count", "local_roles", "role_confidence"],
+      "properties": {
+        "perceived_count": {"type": ["integer", "null"], "minimum": 1, "maximum": 20},
+        "local_roles": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "possible_scammer",
+              "possible_victim",
+              "legitimate_agent",
+              "customer",
+              "authority_or_institution_impersonator",
+              "third_party",
+              "unknown",
+              "not_assessable"
+            ]
+          }
+        },
+        "role_confidence": {"type": "integer", "minimum": 1, "maximum": 5}
+      }
+    },
+    "scam_cues": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "none_observed",
+          "credential_or_code_request",
+          "payment_transfer_or_cash_request",
+          "urgency_threat_or_fear",
+          "authority_or_institution_impersonation",
+          "secrecy_or_social_isolation",
+          "remote_app_or_device_control",
+          "loan_refund_or_investment_promise",
+          "account_security_or_fraud_pretext",
+          "legal_investigation_or_case_pretext",
+          "delivery_or_service_pretext",
+          "personal_data_confirmation",
+          "scripted_compliance_or_stepwise_instructions",
+          "other",
+          "not_assessable"
+        ]
+      }
+    },
+    "legitimate_cues": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "none_observed",
+          "routine_service_or_support",
+          "mutually_known_context",
+          "no_sensitive_request",
+          "verifiable_official_process",
+          "customer_initiated_request",
+          "ordinary_commerce_or_delivery",
+          "legitimate_financial_legal_or_public_service_language",
+          "normal_disagreement_or_complaint",
+          "other",
+          "not_assessable"
+        ]
+      }
+    },
+    "perceived_class": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "confidence"],
+      "properties": {
+        "label": {"enum": ["vishing", "benign", "indeterminate", "not_assessable"]},
+        "confidence": {"type": "integer", "minimum": 1, "maximum": 5}
+      }
+    },
+    "topic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary", "secondary"],
+      "properties": {
+        "primary": {
+          "enum": [
+            "banking_or_account_security",
+            "loan_or_debt",
+            "investment_or_virtual_asset",
+            "police_prosecution_court_or_government",
+            "delivery_post_or_ecommerce",
+            "telecom_or_subscription",
+            "insurance_or_health",
+            "employment_or_part_time_work",
+            "family_or_acquaintance_impersonation",
+            "customer_service_or_complaint",
+            "ordinary_personal_conversation",
+            "other",
+            "indeterminate",
+            "not_assessable"
+          ]
+        },
+        "secondary": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "maxLength": 80}
+        }
+      }
+    },
+    "channel_acquisition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["artifacts", "artifact_severity"],
+      "properties": {
+        "artifacts": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "none_observed",
+              "telephony_compression_or_codec",
+              "background_noise",
+              "clipping_or_distortion",
+              "low_or_variable_volume",
+              "long_silence",
+              "crosstalk_or_overlap",
+              "music_or_hold_audio",
+              "played_back_or_synthetic_sounding_audio",
+              "recording_boundary_or_edit",
+              "connection_or_disconnect_artifact",
+              "other",
+              "not_assessable"
+            ]
+          }
+        },
+        "artifact_severity": {
+          "enum": ["none", "minor", "moderate", "severe", "not_assessable"]
+        }
+      }
+    },
+    "shortcut_template": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["possible_cues", "template_likelihood"],
+      "properties": {
+        "possible_cues": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "none_observed",
+              "repetitive_or_boilerplate_script",
+              "source_or_dataset_specific_wording",
+              "speaker_or_acting_style",
+              "channel_or_recording_style",
+              "ASR_formatting_or_segmentation_style",
+              "topic_as_label_proxy",
+              "abrupt_beginning_or_end",
+              "other",
+              "not_assessable"
+            ]
+          }
+        },
+        "template_likelihood": {
+          "enum": ["unlikely", "possible", "likely", "not_assessable"]
+        }
+      }
+    },
+    "ambiguity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["is_ambiguous", "reasons"],
+      "properties": {
+        "is_ambiguous": {"type": "boolean"},
+        "reasons": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "insufficient_context",
+              "both_scam_and_legitimate_cues",
+              "unclear_speaker_roles",
+              "poor_transcript_or_audio",
+              "redaction",
+              "hard_negative_overlap",
+              "other"
+            ]
+          }
+        }
+      }
+    },
+    "privacy_redaction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "possible_unredacted_identifier",
+        "identifier_types",
+        "redaction_quality"
+      ],
+      "properties": {
+        "possible_unredacted_identifier": {"type": "boolean"},
+        "identifier_types": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "person",
+              "phone",
+              "account",
+              "address",
+              "identity_number",
+              "organization",
+              "date",
+              "amount",
+              "URL",
+              "other"
+            ]
+          }
+        },
+        "redaction_quality": {"enum": ["adequate", "over_redacted", "failed", "uncertain"]}
+      }
+    },
+    "rationale": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "summary_nonverbatim",
+        "contains_verbatim_quote",
+        "contains_known_identifier"
+      ],
+      "properties": {
+        "summary_nonverbatim": {"type": "string", "maxLength": 600},
+        "contains_verbatim_quote": {"const": false},
+        "contains_known_identifier": {"const": false}
+      }
+    },
+    "form_status": {"enum": ["draft", "locked", "quarantined_privacy"]}
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"review_mode": {"const": "redacted_transcript_only"}},
+        "required": ["review_mode"]
+      },
+      "then": {
+        "properties": {
+          "content_accessibility": {
+            "properties": {"audio": {"const": "not_provided"}}
+          },
+          "transcript_asr": {
+            "properties": {
+              "correctness": {"const": "not_assessable_without_audio"},
+              "issue_types": {"const": ["not_assessable"]}
+            }
+          },
+          "channel_acquisition": {
+            "properties": {
+              "artifacts": {"const": ["not_assessable"]},
+              "artifact_severity": {"const": "not_assessable"}
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "privacy_redaction": {
+            "properties": {"possible_unredacted_identifier": {"const": true}},
+            "required": ["possible_unredacted_identifier"]
+          }
+        },
+        "required": ["privacy_redaction"]
+      },
+      "then": {
+        "properties": {"form_status": {"const": "quarantined_privacy"}}
+      }
+    }
+  ]
+}

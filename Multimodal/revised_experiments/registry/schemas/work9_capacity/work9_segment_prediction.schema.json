@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.paper2.v2/work9/work9_segment_prediction.schema.json",
+  "title": "Work 9 selected-validation or outer-evaluation segment prediction",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "run_id", "protocol_id", "run_family", "partition",
+    "partition_repeat", "outer_fold", "seed", "condition", "segment_id",
+    "call_id", "group_id", "source", "label", "probability",
+    "hard_prediction", "start", "end", "duration_seconds", "threshold",
+    "checkpoint_sha256", "manifest_sha256"
+  ],
+  "properties": {
+    "schema_version": {"const": "paper2-v2-work9-capacity-segment-prediction-1"},
+    "run_id": {"type": "string", "minLength": 1},
+    "protocol_id": {"type": "string", "minLength": 1},
+    "run_family": {"const": "capacity_matched_sensitivity"},
+    "partition": {"enum": ["validation", "outer_eval"]},
+    "partition_repeat": {"const": 0},
+    "outer_fold": {"type": "integer", "minimum": 0, "maximum": 4},
+    "seed": {"type": "integer"},
+    "condition": {"type": "string"},
+    "segment_id": {"type": "string", "minLength": 1},
+    "call_id": {"type": "string", "minLength": 1},
+    "group_id": {"type": "string", "minLength": 1},
+    "source": {"type": "string"},
+    "label": {"type": "integer", "enum": [0, 1]},
+    "probability": {"type": "number", "minimum": 0, "maximum": 1},
+    "hard_prediction": {"type": "integer", "enum": [0, 1]},
+    "start": {"type": "number"},
+    "end": {"type": "number"},
+    "duration_seconds": {"type": "number", "minimum": 0},
+    "threshold": {"type": "number", "minimum": 0, "maximum": 1},
+    "checkpoint_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "analysis_execution_package": {
+    "implemented_and_synthetic_tested_before_capacity_outcomes": true,
+    "native_input_verification": {
+      "capacity_family_coordinates": 150,
+      "primary_anchor_coordinates": 50,
+      "recompute_complete_call_mean_probability_from_native_segment_ledgers": true,
+      "verify_native_segment_call_and_run_record_schemas_before_normalization": true
+    },
+    "only_frozen_three_comparisons": [
+      ["AT-cross", "A-query"],
+      ["AT-cross", "AT-concat"],
+      ["AT-cross", "AT-gate"]
+    ],
+    "only_frozen_figure_ids": [
+      "capacity_parameter_match",
+      "capacity_condition_macro_f1",
+      "capacity_primary_effects",
+      "primary_vs_capacity_condition_change",
+      "capacity_fold_seed_stability",
+      "capacity_metric_profile",
+      "capacity_compute_profile"
+    ],
+    "package_files": [
+      {
+        "bytes": 68288,
+        "path": "revised_experiments/src/paper2_v2/work9_capacity_analysis.py",
+        "role": "mixed_family_analyzer",
+        "sha256": "7474e11f57e7c9cbfa1567f220fef3ba2ac4cf7c840fd9ff0b66a68d0f15243a"
+      },
+      {
+        "bytes": 25782,
+        "path": "revised_experiments/src/paper2_v2/work9_capacity_figures.py",
+        "role": "seven_figure_renderer",
+        "sha256": "cc556ea79569e3b52f86c389df67c40f87857d0b0ea2ea71f67b67fce141e08d"
+      },
+      {
+        "bytes": 2070,
+        "path": "revised_experiments/scripts/run_work9_capacity_analysis.py",
+        "role": "analysis_cli",
+        "sha256": "1b78a52144cd9cc4d8881b3ec7f91c08f2c7625bddfbc9ad1087878b04d97ce0"
+      },
+      {
+        "bytes": 1712,
+        "path": "revised_experiments/scripts/generate_work9_capacity_figures.py",
+        "role": "figure_cli",
+        "sha256": "da0328fd1e2156d3fdeafd934977e05fa9a5ab3b724e31239463be2ad57bb56c"
+      },
+      {
+        "bytes": 8228,
+        "path": "revised_experiments/registry/schemas/work9_capacity/work9_capacity_analysis_report.schema.json",
+        "role": "analysis_report_schema",
+        "sha256": "5d48aa95bc93e1c3f681cfe5a178919ee1e8b34f671a08412e29df2b472bd980"
+      },
+      {
+        "bytes": 6814,
+        "path": "revised_experiments/registry/schemas/work9_capacity/work9_capacity_figure_manifest.schema.json",
+        "role": "figure_manifest_schema",
+        "sha256": "adf3981ae2fcffb0a19948a282f14369882f2a1032b8c20eb64b6b322cf5c78f"
+      },
+      {
+        "bytes": 22264,
+        "path": "revised_experiments/tests/test_work9_capacity_analysis_figures.py",
+        "role": "synthetic_mixed_family_analysis_renderer_and_input_path_tests",
+        "sha256": "724c2dc1a1f35f8c800bff9e49898e3918ec6fb4e60131cb1be61879bc194f70"
+      }
+    ],
+    "production_analysis_output": "revised_experiments/artifacts/work9_capacity_analysis_v1",
+    "production_figure_output": "revised_experiments/artifacts/work9_capacity_figures_v1"
+  },
+  "analysis_publication_gate": {
+    "analyzer_and_renderer_are_implemented_and_hash_frozen": true,
+    "capacity_outcomes_must_not_be_opened_before_analyzer_renderer_source_tests_and_acceptance_are_frozen": true,
+    "mixed_input_families": {
+      "capacity_matched_sensitivity": 150,
+      "primary_matrix": 50
+    },
+    "required_normalization": "verify_each_native_family_schema_lineage_and_segment_to_call_aggregation_before_normalizing_to_one_hybrid_analysis_table"
+  },
+  "bound_pre_outcome_policies": {
+    "analysis_protocol_sha256": "012efe50fb604443d6db29f375ff181ff1c87a82056949693da4e98a5483b212",
+    "anchor_policy_sha256": "4c34fc816bdd9d577d0dcc669f5ed5a703124d9afe151860972cc3846a4e3ff6",
+    "experiment_card_sha256": "38ad1c95aab53a7a0a77699d1dd9f8d5ad28bafcf38484ac8fb3c08348b13002",
+    "figure_spec_sha256": "8a17cd066a9859407b7a51080daa29c4a79176ec9c62d22bc548cf6b64f7a033"
+  },
+  "completed_gate1": {
+    "gate2_decision": "do_not_proceed",
+    "hash_manifest_sha256": "b51da584d8e325d211f188d422f9fa26247be25da4af4aaa5d80f1d5e32a4bbc",
+    "may_be_reopened": false
+  },
+  "dry_receipt_binding": {
+    "acceptance_draft_must_recompute_and_exactly_match_source_contracts": true,
+    "acceptance_draft_must_recompute_and_exactly_match_source_schema_test_bundle_digests": true,
+    "acceptance_draft_must_reverify_core_lineage_and_safety": true
+  },
+  "environment_and_device_contract": {
+    "compute_capability": [8, 9],
+    "cuda_version": "12.4",
+    "cudnn_version": 90100,
+    "device_name": "NVIDIA GeForce RTX 4070 SUPER",
+    "environment_lock_sha256": "1b86de4ede7260724ff8e7f0ed1e0f38ad738de10798fac797aec688949e9a4a",
+    "torch_version": "2.6.0+cu124",
+    "two_smokes_and_every_production_coordinate_must_match": true
+  },
+  "hybrid_contract": {
+    "anchor_coordinate_count": 50,
+    "anchor_role": "immutable_primary_anchor",
+    "anchor_run_family": "primary_matrix",
+    "exact_condition_fold_seed_run_id_set_required": true,
+    "logical_coordinate_count": 200,
+    "new_coordinate_count": 150,
+    "new_role": "new_capacity_fit",
+    "new_run_family": "capacity_matched_sensitivity",
+    "unique_coordinates_required": true
+  },
+  "outer_access_boundary": {
+    "phase_a_dry_smoke_and_fit_may_open_primary_outer_index_or_artifacts": false,
+    "primary_outer_anchor_verification_first_allowed_after_hybrid_selection_index_is_frozen": true,
+    "selection_phase_may_verify_only_primary_selection_index_and_selection_artifacts": true
+  },
+  "path_isolation": {
+    "custom_outputs_must_be_under_dedicated_capacity_acceptance_or_test_artifact_roots": true,
+    "primary_registry": "revised_experiments/artifacts/work9_runs_v1",
+    "production_capacity_registry": "revised_experiments/artifacts/work9_capacity_matched_runs_v1",
+    "reject_absolute_relative_escape_and_symlink_components": true,
+    "test_or_acceptance_outputs_may_overlap_either_production_registry": false,
+    "test_or_acceptance_outputs_may_write_source_configs_or_frozen_inputs": false
+  },
+  "post_v2_audit_hardening": {
+    "acceptance_input_contract": {
+      "preserve_lexical_receipt_paths_until_symlink_component_rejection": true,
+      "semantic_output_declared_bytes_must_match": true,
+      "unit_test_log_must_be_a_real_non_symlink_sibling_of_its_receipt": true
+    },
+    "analysis_input_contract": {
+      "analyzer_and_renderer_top_level_inputs_reject_lexical_traversal_and_symlink_aliases_before_resolve": true,
+      "serialized_native_artifact_references_reject_every_symlink_component": true
+    },
+    "crash_resume_contract": {
+      "existing_outer_run_record_must_be_fully_rederived_before_artifact_index_or_terminal_publication": true,
+      "only_nonnegative_runtime_cost_telemetry_may_be_carried_across_process_crash": true,
+      "schema_validation_alone_is_insufficient": true
+    },
+    "package_files": [
+      {
+        "bytes": 15580,
+        "path": "revised_experiments/src/paper2_v2/work9_capacity_registry.py",
+        "role": "append_only_registry_and_symlink_safe_workspace_claim_paths",
+        "sha256": "2ce6af46d39ae2ac24789cf34cc98bdee1a55d392ac8c60bca36b4eadbaaf532"
+      },
+      {
+        "bytes": 171261,
+        "path": "revised_experiments/src/paper2_v2/work9_capacity_training.py",
+        "role": "two_phase_runner_strict_resume_and_reference_verifier",
+        "sha256": "2a276bea61b1986705c4499e238f02bce3aaf6ea65ad24b25d913a87028dea8c"
+      },
+      {
+        "bytes": 36765,
+        "path": "revised_experiments/src/paper2_v2/work9_capacity_acceptance.py",
+        "role": "dry_draft_smoke_test_and_environment_acceptance_contract",
+        "sha256": "4ea7d661c783456f3e6fa553c49b1ef36742a488480da5ccad66cfa33742d44e"
+      },
+      {
+        "bytes": 15666,
+        "path": "revised_experiments/tests/test_work9_capacity_registry.py",
+        "role": "registry_acceptance_path_and_claim_negative_tests",
+        "sha256": "eb54e1c6dcc0c5fd6cbd7dca167c0cf6bc5bae49f5943a41309bce4f03d954f6"
+      },
+      {
+        "bytes": 17765,
+        "path": "revised_experiments/tests/test_work9_capacity_training.py",
+        "role": "preterminal_crash_resume_and_serialized_reference_negative_tests",
+        "sha256": "b17f801906b48f0ee6076ec72187c985cce0b2a5487bb41ce352573cfad5c876"
+      },
+      {
+        "bytes": 7796,
+        "path": "revised_experiments/tests/test_work9_capacity_lineage.py",
+        "role": "immutable_addendum_and_package_hash_tests",
+        "sha256": "39d68e4eebd431924e1b66d46b2a8edd3f4ab68d500a327d4599fb13acb559a6"
+      }
+    ],
+    "registry_write_contract": {
+      "global_claim_directory_and_target_reject_symlinks_before_write": true,
+      "run_artifact_and_lock_paths_reject_inner_symlink_components": true,
+      "workspace_must_belong_to_claiming_registry": true
+    },
+    "self_hash_boundary": {
+      "acceptance_draft_must_bind_current_types_source_by_exact_source_contract_and_bundle_digest": true,
+      "reason": "work9_capacity_types.py stores this addendum SHA-256 and therefore cannot also be a byte-hashed member of the addendum without a circular self-hash",
+      "types_path": "revised_experiments/src/paper2_v2/work9_capacity_types.py"
+    }
+  },
+  "primary_runner_acceptance": {
+    "bytes": 108969,
+    "path": "revised_experiments/artifacts/work9_runner_acceptance_v3/runner_acceptance.json",
+    "sha256": "c2055896634626f2de303fa1586e616039423313766075b71eb9f051fce2933b"
+  },
+  "protocol_id": "paper2-v2-mfcc-matched-within-corpus-v1",
+  "run_family": "capacity_matched_sensitivity",
+  "schema_version": "paper2-v2-work9-capacity-execution-lineage-addendum-3",
+  "selection_seal_verification": {
+    "all_lineage_fields_must_be_reverified_at_resume_freeze_and_outer_release": true,
+    "authorization_and_global_claim_must_be_bound_by_outer_artifact_index_and_terminal": true,
+    "schema_validation_alone_is_insufficient": true
+  },
+  "status": "frozen_before_capacity_model_outcomes",
+  "supersedes": {
+    "bytes": 6827,
+    "path": "revised_experiments/configs/work9_capacity_execution_lineage_addendum_v2.json",
+    "sha256": "6036f5aba1985664d06bed250c532ce0c201d8e2b0b8b1de7943ac2a2184a642"
+  }
+}

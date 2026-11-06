@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.paper2.v2/work9/work9_outer_ledger_index.schema.json",
+  "title": "Work 9 complete outer-evaluation ledger index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "protocol_id", "run_family", "status",
+    "selection_index", "gate1_analysis_protocol", "expected_coordinate_count", "entries"
+  ],
+  "properties": {
+    "schema_version": {"const": "paper2-v2-work9-outer-ledger-index-1"},
+    "protocol_id": {"type": "string"}, "run_family": {"const": "primary_matrix"},
+    "status": {"const": "frozen_complete"},
+    "selection_index": {"$ref": "#/$defs/artifact"},
+    "gate1_analysis_protocol": {"$ref": "#/$defs/artifact"},
+    "expected_coordinate_count": {"const": 200},
+    "entries": {
+      "type": "array", "minItems": 200, "maxItems": 200,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": [
+          "run_id", "condition", "partition_repeat", "outer_fold", "seed",
+          "threshold", "checkpoint_sha256", "outer_eval_segment_ledger",
+          "outer_eval_call_ledger", "outer_eval_metrics", "run_record"
+        ],
+        "properties": {
+          "run_id": {"type": "string"}, "condition": {"type": "string"},
+          "partition_repeat": {"const": 0},
+          "outer_fold": {"type": "integer", "minimum": 0, "maximum": 4},
+          "seed": {"type": "integer"},
+          "threshold": {"type": "number", "minimum": 0, "maximum": 1},
+          "checkpoint_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "outer_eval_segment_ledger": {"$ref": "#/$defs/artifact"},
+          "outer_eval_call_ledger": {"$ref": "#/$defs/artifact"},
+          "outer_eval_metrics": {"$ref": "#/$defs/artifact"},
+          "run_record": {"$ref": "#/$defs/artifact"}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "sha256", "bytes", "row_count"],
+      "properties": {
+        "path": {"type": "string"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "bytes": {"type": "integer", "minimum": 1},
+        "row_count": {"type": ["integer", "null"], "minimum": 1}
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "bootstrap": {
+    "confidence_level": 0.95,
+    "interval": "percentile",
+    "lower_quantile": 0.025,
+    "method": "paired_relation_group_cluster_keep_all_calls_segments_seeds",
+    "numpy_bit_generator": "PCG64",
+    "numpy_generator": "default_rng",
+    "quantile_method": "linear",
+    "replicates": 10000,
+    "seed": 20260809,
+    "upper_quantile": 0.975
+  },
+  "call_primary": {
+    "complete_call_aggregation": "arithmetic_mean_probability_over_all_manifest_segments",
+    "independent_unit": "call",
+    "threshold_source": "sealed_validation_only_per_coordinate"
+  },
+  "coordinate_contract": {
+    "conditions": [
+      "T",
+      "A-mean",
+      "A-query",
+      "A-temp",
+      "AT-concat",
+      "AT-gate",
+      "AT-cross",
+      "AT-cross-randtrain"
+    ],
+    "expected_coordinate_count": 200,
+    "outer_folds": [0, 1, 2, 3, 4],
+    "partition_repeat": 0,
+    "seeds": [17, 29, 43, 71, 101]
+  },
+  "decision_policy_sha256": "a6697bebd0df3d6dca99bcfd82dd07bf874f2cf7923fae5d07d0b1201444880b",
+  "effect_sizes": [
+    "macro_f1_difference",
+    "absolute_macro_f1_difference_magnitude",
+    "paired_seed_cohens_dz"
+  ],
+  "estimand": "mean_across_seeds_of_paired_call_macro_f1_difference",
+  "fold_seed_stability": "descriptive_only_not_additional_post_hoc_pass_rules",
+  "multiplicity": {
+    "family": [
+      ["AT-cross", "A-query"],
+      ["AT-cross", "AT-concat"],
+      ["AT-cross", "AT-gate"]
+    ],
+    "familywise_alpha": 0.05,
+    "method": "holm",
+    "rejection_rule": "adjusted_p_strictly_less_than_alpha"
+  },
+  "permutation": {
+    "alternative": "two_sided_absolute_effect",
+    "finite_sample_correction": "plus_one_numerator_and_denominator",
+    "method": "paired_relation_group_cluster_swap_all_calls_seeds",
+    "numpy_bit_generator": "PCG64",
+    "numpy_generator": "default_rng",
+    "replicates": 10000,
+    "seed": 20260810,
+    "swap_unit": "relation_group_shared_across_all_calls_and_seeds"
+  },
+  "practical_utility": {
+    "claim_authorized": false,
+    "reason": "no_pre_work9_cost_policy_or_smallest_practically_meaningful_effect"
+  },
+  "protocol_id": "paper2-v2-mfcc-matched-within-corpus-v1",
+  "resampling_cluster": {
+    "paired_conditions": true,
+    "retain_all_calls_in_sampled_group": true,
+    "retain_all_seeds_for_sampled_group": true,
+    "unit": "hard_relation_group"
+  },
+  "run_family": "primary_matrix",
+  "schema_version": "paper2-v2-work9-gate1-analysis-protocol-1",
+  "status": "frozen_before_work9_outer_outcomes",
+  "work8_config_sha256": "ab04b6c00979ae94b1adc4cb952cf1d7a3db7e7f2c98c87cda520b8ad18b2fb4",
+  "work8_receipt_sha256": "5c81d5367be670f9bb863a31c54c847ff7b7340c8bfd80b63fe16e057d1860ed"
+}

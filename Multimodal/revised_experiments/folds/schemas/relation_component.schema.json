@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Paper 2 v2 Work 5 accepted relation component row",
+  "type": "object",
+  "required": ["component_id", "members", "accepted_relation_types"],
+  "properties": {
+    "component_id": {"type": "string", "minLength": 1},
+    "members": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "accepted_relation_types": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "member_count": {"type": "integer", "minimum": 1},
+    "labels": {"type": "array", "uniqueItems": true},
+    "sources": {"type": "array", "uniqueItems": true},
+    "historical_splits": {"type": "array", "uniqueItems": true},
+    "burned_call_ids": {"type": "array", "uniqueItems": true},
+    "touches_burned": {"type": "boolean"},
+    "development_members_to_quarantine": {"type": "array", "uniqueItems": true},
+    "redundant_exact_audio_members": {"type": "array", "uniqueItems": true},
+    "status": {"type": "string"},
+    "include_in_grouping": {"type": "boolean"}
+  },
+  "additionalProperties": true
+}
