@@ -22,7 +22,7 @@ Speaker labels are **call-local**: speaker `"1"` in one call has no relation to 
 
 **Not contained:**
 
-- audio recordings (no `.wav`, `.mp3`, `.mp4` files). We may be able to provide the FSS audio files upon request;
+- audio recordings (no `.wav`, `.mp3`, `.mp4` files). The **FSS (vishing) audio is shared separately** in the Google Drive folder [FSS Dataset](https://drive.google.com/drive/folders/1zxkFQQplAPGU028wWRyFkhf59pTP8-TV) (§2.1). The AI Hub (non-vishing) audio cannot be redistributed (§2.2);
 - precomputed feature arrays (`.npy`: MFCC, eGeMAPS, Wav2Vec2.0, KoBERT, KR-SBERT). We may be able to provide them as well upon request.
 
 > **Please read this carefully if you plan to reuse the manifests or transcripts.** The transcript text and its derivatives are provided to make the experimental protocol reproducible and inspectable. They are **derived from third-party recordings and are not relicensed by us.** The terms in §2 apply to them exactly as they apply to the audio. See also the privacy notice in §5.
@@ -41,6 +41,7 @@ Real voice-phishing call recordings published by the Korean Financial Supervisor
 
 - Source: [https://www.fss.or.kr/fss/main/sub1voice.do?menuNo=200012](https://www.fss.or.kr/fss/main/sub1voice.do?menuNo=200012)
 - 654 recordings were collected; recordings containing multiple calls were split, yielding **706 vishing calls**.
+- **Audio copy:** the Google Drive folder [FSS Dataset](https://drive.google.com/drive/folders/1zxkFQQplAPGU028wWRyFkhf59pTP8-TV) holds the original FSS downloads in `raw_fss_originals/` and the 706 corpus files (`vishing_N.wav`, 16 kHz mono) in `fss_preprocessed/`. [`Multimodal/data/fss_source_file_mapping.csv`](Multimodal/data/fss_source_file_mapping.csv) maps each `vishing_N.wav` to the download(s) it was cut from.
 - **Terms:** governed by FSS. Confirm permitted use with FSS directly for your intended purpose. We make no representation on your behalf.
 
 
@@ -93,11 +94,11 @@ Anyone building on this corpus should be aware of the following, and we would ra
 
 **Every vishing call comes from FSS and every non-vishing call comes from AI Hub. There are no FSS non-vishing calls and no AI Hub vishing calls.** The recording channel is therefore perfectly correlated with the class label, and a classifier can achieve very high scores by recognising the *source* rather than the *fraud*.
 
-Measured consequences (reported in our acoustic paper, §2.1 of the citations below):
+Measured consequences (reported in our acoustic paper, currently under review; see §6):
 
-- A probe trained on **eleven channel-only acoustic statistics** (no linguistic content whatsoever) separates the two sources at test F1 ≈ 0.98.
-- Under a **channel-matched evaluation** (GSM codec round-trip applied to the non-vishing audio to close the channel gap), frozen handcrafted-feature classifiers lose ≈ 30 F1 points and their false-positive rate rises from ≈ 1 % to 92–100 %.
-- A frozen **Wav2Vec2.0** representation is essentially unaffected under the same test, and is the channel-robust configuration we recommend.
+- **Source probes** trained on acoustic statistics, with no linguistic content, separate the two sources almost perfectly on the 142 test calls, even after the same GSM codec is applied to both classes.
+- Applying the **same GSM codec to both classes** of the 142 test calls lowers the end-of-call vishing-class F1 of the frozen eGeMAPS classifier from 0.9930 to 0.6667, the score obtained by calling every call vishing. The MFCC and combined (Audio-All) classifiers flag 65 and 68 of the 71 non-vishing calls as vishing.
+- The **Wav2Vec2.0** representation selected on development data is perfect on the original audio, but its call-level macro-F1 falls to 0.745 under GSM processing. **None of the tested configurations is established as channel-robust.**
 
 **Practical implication:** high accuracy on KorCCVi alone should not be read as evidence of real-world vishing detection performance. Evaluations that include a channel-matched or independently-collected condition are substantially more credible. No public Korean telephone-channel *non-vishing* corpus currently exists; building one remains an open and valuable contribution.
 
@@ -168,8 +169,8 @@ Please also cite the two data providers, the Financial Supervisory Service (FSS)
 - **Milandu Keith Moussavou Boussougou**: Department of Computer Science and Engineering, Soongsil University, Seoul, Republic of Korea. E-mail: [mbmk92@soongsil.ac.kr, mbmk92@gmail.com](mailto:mbmk92@soongsil.ac.kr)
 - **Prof. Dong-Joo Park:** School of Computer Science and Engineering, Soongsil University, Seoul, Republic of Korea. E-mail: [djpark@ssu.ac.kr](mailto:djpark@ssu.ac.kr)
 
-For data-access questions, please note that we can help with **methodology, code, and the transcription/segmentation pipeline**. We cannot supply the AI Hub source data (apply through the AI Hub portal, §2.2), but we may be able to provide the FSS source data (audio files) upon request (§2.1).
+For data-access questions, please note that we can help with **methodology, code, and the transcription/segmentation pipeline**. We cannot supply the AI Hub source data (apply through the AI Hub portal, §2.2). The FSS audio is in the [FSS Dataset](https://drive.google.com/drive/folders/1zxkFQQplAPGU028wWRyFkhf59pTP8-TV) folder (§2.1).
 
 ---
 
-*Last updated: 2026-08-06*
+*Last updated: 2026-11-06*

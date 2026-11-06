@@ -114,3 +114,34 @@ celerybeat-schedule.json
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
+
+# Local-only material, not for GitHub [2026-11-06]
+# Large data and models (regenerable or too big)
+Multimodal/features/
+Multimodal/deepspec_env/
+Multimodal/modeling/models/
+Multimodal/revised_experiments/artifacts/
+Multimodal/data/paper2_v2/folds/*/repeat_*/
+Multimodal/analysis/phone_package/
+Multimodal/analysis/phone_package_delta/
+Multimodal/analysis/phone_package*.tar.gz
+# Exploratory 2025 TensorBoard logs and the Paper 1 round-two workspace (held until acceptance)
+Multimodal/modeling/logs/eval_results/
+Multimodal/modeling/logs/multibranchmodal_experiment/
+Multimodal/modeling/logs/multimodal_experiment/
+Multimodal/modeling/logs/track_e/
+# Manuscripts, reviews, correspondence and plans (private)
+Multimodal/paper1/
+Multimodal/paper2/
+Multimodal/plots/
+Multimodal/other/
+dissertation/
+proposal/
+correspondence/
+# Photos and tool state
+Multimodal/analysis/photo_*.jpg
+Multimodal/modeling/logs/track_b/phone_raw/photo_*.jpg
+.specstory/
+.claude/
+.cursorignore
+.cursorindexingignore
