@@ -16,9 +16,27 @@ This document explains where the data used in this repository comes from, what i
 | Source code (preprocessing, feature extraction, models, training, evaluation)                                                                                                 | `Multimodal/`, `Attention/`, `KoBERT/`, `ML_DL_models/`, `Federated_Learning/`, `Multilingual_BT_approach/` |
 | Dataset manifests: segment boundaries, labels, feature paths, **transcript text**, and **speaker-diarization labels** (`speaker`, `speaker_name`)                             | `Multimodal/data/*.jsonl`                                                                                   |
 | Full ASR transcript JSON files (produced with Naver CLOVA) for all 1,417 calls: segment timestamps, text, word-level timings, per-segment confidence, and speaker diarization | `Multimodal/data/transcripts/{vishing,non_vishing}/`                                                        |
+| One-row-per-call CSV of all 1,417 calls combining the files above: labels, source, split, duration, the filtered 1,188-call population, the original FSS file names, and the full transcript (columns below) | `Multimodal/data/KorCCVi_v2_multimodal_calls.csv` |
 
 
 Speaker labels are **call-local**: speaker `"1"` in one call has no relation to speaker `"1"` in another call. No global speaker identity exists in the corpus.
+
+**Call-level CSV.** `Multimodal/data/KorCCVi_v2_multimodal_calls.csv` has one row per call and was built by `Multimodal/preprocessing/build_call_level_csv.py` (rebuilding `duration_s` needs the audio). It is UTF-8 with a byte-order mark so that Excel shows Hangul correctly.
+
+| Column | Meaning |
+| --- | --- |
+| `call_id` | Corpus call ID |
+| `label`, `class` | 1 / `vishing` or 0 / `non_vishing` |
+| `source` | `FSS` or `AI Hub` (spelled `AllHub` in the manifests) |
+| `split` | Historical call-level split (§3): train 1,134, validation 141, test 142 |
+| `duration_s` | Full audio length in seconds, silences included |
+| `n_segments`, `n_speakers` | ASR segments and diarized speakers in the call |
+| `asr_confidence` | CLOVA confidence for the whole call |
+| `in_filtered_1188`, `population_status` | 1 if the call belongs to the filtered population of 1,188 calls (548 vishing, 640 non-vishing) used in our grouped cross-validation experiments; otherwise why it was set aside: `historical_test`, `related_to_historical_test`, or `duplicate_audio` |
+| `relation_group_id` | Group of related calls kept together when building those cross-validation folds |
+| `audio_file` | Audio file name; for FSS calls, the file in the Drive folder `fss_preprocessed/` (§2.1) |
+| `fss_source_file`, `fss_match_type` | Original FSS download(s) in `raw_fss_originals/`, joined with ` + ` when one call was assembled from several clips, and how the match was made (from `fss_source_file_mapping.csv`) |
+| `transcript` | Full CLOVA transcript of the call on one line |
 
 **Not contained:**
 
