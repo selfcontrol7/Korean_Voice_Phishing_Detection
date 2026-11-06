@@ -165,6 +165,14 @@ if __name__ == "__main__":
     parser.add_argument("--epochs", type=int, default=20)
     parser.add_argument("--batch_size", type=int, default=16)
     parser.add_argument("--lr", type=float, default=2e-4) # Learning rate 1e-3, 2e-4, 1e-4
+    # Track C extension: parameterize manifests + checkpoint suffix so the same
+    # script can train on band-limited or codec-augmented features without
+    # forking the file. Defaults preserve original behavior.
+    parser.add_argument("--train_manifest", default="data/train_segment_manifest_merged.jsonl")
+    parser.add_argument("--val_manifest", default="data/val_segment_manifest_merged.jsonl")
+    parser.add_argument("--test_manifest", default="data/test_segment_manifest_merged.jsonl")
+    parser.add_argument("--model_suffix", default="",
+                        help="Appended to the checkpoint filename, e.g. '_bandlimited'")
     args = parser.parse_args() # Parse the command line arguments
 
     print(f"📦 Training with feature type: {args.feature_type}, epochs: {args.epochs}, batch size: {args.batch_size}, learning rate: {args.lr}")
@@ -173,9 +181,9 @@ if __name__ == "__main__":
     print(f"Using device: {device}")
 
     # Load the dataset
-    train_loader = DataLoader(AudioOnlyDataset("data/train_segment_manifest_merged.jsonl", args.feature_type), batch_size=args.batch_size, shuffle=True)
-    val_loader = DataLoader(AudioOnlyDataset("data/val_segment_manifest_merged.jsonl", args.feature_type), batch_size=args.batch_size, shuffle=False)
-    test_loader = DataLoader(AudioOnlyDataset("data/test_segment_manifest_merged.jsonl", args.feature_type), batch_size=args.batch_size, shuffle=False)
+    train_loader = DataLoader(AudioOnlyDataset(args.train_manifest, args.feature_type), batch_size=args.batch_size, shuffle=True)
+    val_loader = DataLoader(AudioOnlyDataset(args.val_manifest, args.feature_type), batch_size=args.batch_size, shuffle=False)
+    test_loader = DataLoader(AudioOnlyDataset(args.test_manifest, args.feature_type), batch_size=args.batch_size, shuffle=False)
 
     # Get input dimension from the first batch of the training data
     dummy_input, _ = next(iter(train_loader))
@@ -200,7 +208,7 @@ if __name__ == "__main__":
     print("-" * 150)  # Print a separator line
 
     print("Training the model...")  # Print a message indicating that the model is being trained
-    save_model_path = f"modeling/models/best_audio_model_{args.feature_type}.pth"
+    save_model_path = f"modeling/models/best_audio_model_{args.feature_type}{args.model_suffix}.pth"
     train_model(model, train_loader, val_loader, device, args.epochs, args.lr, save_model_path)
     print("=" * 150)  # Print a separator line
 
@@ -210,7 +218,7 @@ if __name__ == "__main__":
     print(f"Model loaded from {save_model_path}")
     model.to(device) # Move the model to the device
 
-    results_path = f"modeling/logs/eval_results/audio_only_{args.feature_type}"
+    results_path = f"modeling/logs/eval_results/audio_only_{args.feature_type}{args.model_suffix}"
     # evaluate the model on the test set
     test_acc, test_f1, test_precision, test_recall, test_roc, test_cm = evaluate_model(model, test_loader, device,
                                                                                        output_dir=results_path,
